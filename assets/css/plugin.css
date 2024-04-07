@@ -20,10 +20,20 @@ a{
    text-decoration: none;
 }
 
+input:focus-visible{
+   outline: none;
+}
+
+.p-60{
+   padding: 0px 60px;
+}
+
 :root{
    --tc-primary-color: #2a431c;
    --tc-black-color: #333;
    --tc-black-hover: rgba(51, 51, 51, 0.7);
+   --tc-alternative: rgb(243, 189, 36);
+   --tc-gray: #777;
    --tc-lato-font: "Lato", sans-serif;
    --tc-inter-font: "Inter", sans-serif;
    --tc-signika-font: "Signika", sans-serif;
