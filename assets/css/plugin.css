@@ -56,8 +56,19 @@ input:focus-visible{
 /* Header Responsive Start */
 
 @media all and (max-width: 1026px){
-   .container{
-      max-width: 1222px!important;
+   .responsive-container{
+      margin: 0 auto;
+      max-width: 992px!important;
+   }
+   .navigation-menu{
+      & .search-submit{
+         border: none;
+         outline: none;
+         /* font-size: 13px; */
+         background: none;
+         font-weight: 600;
+         font-family: var(--tc-lato-font);
+      }
    }
    .desktop-header{
       display: none!important;
