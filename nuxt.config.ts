@@ -3,6 +3,8 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   app:{
     head: {
+      title: "Helthy Eats BD",
+      titleTemplate: "%s | Helthy Eats BD",
       script: [
         {
           src: '/js/swiper.js',
@@ -12,4 +14,5 @@ export default defineNuxtConfig({
     }
   },
   css:["@/assets/css/plugin.css"],
+  modules: ['nuxt-icon'],
 })

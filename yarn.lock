@@ -445,6 +445,25 @@
   resolved "https://registry.yarnpkg.com/@fastify/busboy/-/busboy-2.1.1.tgz#b9da6a878a371829a0502c9b6c1c143ef6663f4d"
   integrity sha512-vBZP4NlzfOlerQTnba4aqZoMhE/a9HY7HRqoOPaETQcSQuWEIyZMHGfVu6w9wGtGK5fED5qRs2DteVCjOH60sA==
 
+"@iconify/collections@^1.0.406":
+  version "1.0.411"
+  resolved "https://registry.yarnpkg.com/@iconify/collections/-/collections-1.0.411.tgz#a8245f907fef159da7f56f47956523b954682f33"
+  integrity sha512-ehwyL5mqV4IVbHDOnwh13dsIZZXUKEgEvt2AweufrX+25kHM5l8piYEE+kB7vLXUih5Rg/xagmGpCIa7y32O+w==
+  dependencies:
+    "@iconify/types" "*"
+
+"@iconify/types@*", "@iconify/types@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@iconify/types/-/types-2.0.0.tgz#ab0e9ea681d6c8a1214f30cd741fe3a20cc57f57"
+  integrity sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==
+
+"@iconify/vue@^4.1.1":
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/@iconify/vue/-/vue-4.1.1.tgz#c143c2973a4990ba2b47b766f80a9bca97937305"
+  integrity sha512-RL85Bm/DAe8y6rT6pux7D2FJSiUEM/TPfyK7GrbAOfTSwrhvwJW+S5yijdGcmtXouA8MtuH9C7l4hiSE4mLMjg==
+  dependencies:
+    "@iconify/types" "^2.0.0"
+
 "@ioredis/commands@^1.1.1":
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/@ioredis/commands/-/commands-1.2.0.tgz#6d61b3097470af1fdbbe622795b8921d42018e11"
@@ -651,7 +670,7 @@
   resolved "https://registry.yarnpkg.com/@nuxt/devalue/-/devalue-2.0.2.tgz#5749f04df13bda4c863338d8dabaf370f45ef7c7"
   integrity sha512-GBzP8zOc7CGWyFQS6dv1lQz8VVpz5C2yRszbXufwG/9zhStTIH50EtD87NmWbTMwXDvZLNg8GIpb1UFdH93JCA==
 
-"@nuxt/devtools-kit@1.1.5":
+"@nuxt/devtools-kit@1.1.5", "@nuxt/devtools-kit@^1.1.1":
   version "1.1.5"
   resolved "https://registry.yarnpkg.com/@nuxt/devtools-kit/-/devtools-kit-1.1.5.tgz#d5c1d2e70019754627c52bbe02c717c543dc596f"
   integrity sha512-Nb/NKFCRtxyqcPD6snB52rXtbRQMjGtn3ncpa8cLWsnoqnkd9emQ4uwV8IwCNxTnqUBtbGU79/TlJ79SKH9TAw==
@@ -3824,6 +3843,16 @@ nuxi@^3.11.0:
   integrity sha512-AW71TpxRHNg8MplQVju9tEFvXPvX42e0wPYknutSStDuAjV99vWTWYed4jxr/grk2FtKAuv2KvdJxcn2W59qyg==
   optionalDependencies:
     fsevents "~2.3.3"
+
+nuxt-icon@^0.6.10:
+  version "0.6.10"
+  resolved "https://registry.yarnpkg.com/nuxt-icon/-/nuxt-icon-0.6.10.tgz#a39afa47286a20dd78a9f9b4235ed143d9b44e1b"
+  integrity sha512-S9zHVA66ox4ZSpMWvCjqKZC4ZogC0s2z3vZs+M4D95YXGPEXwxDZu+insMKvkbe8+k7gvEmtTk0eq3KusKlxiw==
+  dependencies:
+    "@iconify/collections" "^1.0.406"
+    "@iconify/vue" "^4.1.1"
+    "@nuxt/devtools-kit" "^1.1.1"
+    "@nuxt/kit" "^3.11.1"
 
 nuxt@^3.11.1:
   version "3.11.1"

@@ -4,4 +4,6 @@
     </div>
 </template>
 <style></style>
-<script></script>
+<script setup>
+useHead({title:'Home'});
+</script>

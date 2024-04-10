@@ -3,6 +3,7 @@
     <LazyTheHeader />
     <NuxtPage />
     <div class="dropdown">
+
    </div>
     <LazyTheFooter />
   </div>
