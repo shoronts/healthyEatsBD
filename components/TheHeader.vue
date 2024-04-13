@@ -41,9 +41,9 @@
                                 <LazyIcon class="header-icon" name="ph:user-light" /></NuxtLink></li>
                             <li><NuxtLink href="#">
                                 <LazyIcon class="header-icon" name="mdi:cards-heart-outline" /></NuxtLink></li>
-                            <li><NuxtLink href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                            <li class="shop-cart"><NuxtLink href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
                                 <LazyIcon class="header-icon" name="ri:shopping-cart-line" />    
-                            <span>0</span></NuxtLink></li>
+                            <i>0</i></NuxtLink></li>
                         </ul>
                     </div>
                 </div>
@@ -60,8 +60,8 @@
                     <NuxtLink href="#"><img src="../public/img/he-logo-green.png" alt=""></NuxtLink>
                 </div>
                 <div class="tc-cart">
-                    <li><NuxtLink href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
-                        <LazyIcon class="header-icon" name="ri:shopping-cart-line" /><span>0</span>
+                    <li class="shop-cart"><NuxtLink href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                        <LazyIcon class="header-icon" name="ri:shopping-cart-line" /><i>0</i>
                         </NuxtLink>
                     </li>
                 </div>
@@ -69,30 +69,28 @@
         </div>
         <div class="tc-responsive-toolbar">
             <div class="container">
-                <div class="tc-cart toolbar d-flex ">
+                <div class="tc-bottom-cart tc-cart toolbar d-flex ">
                     <li><NuxtLink href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
-                        <LazyIcon class="header-icon" name="ion:storefront-outline" /><span>0</span>
+                        <LazyIcon class="header-icon" name="ion:storefront-outline" />
+                        <span class="tc-cart-label">Store</span>
                         </NuxtLink>
                     </li>
                     <li><NuxtLink href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
-                        <LazyIcon class="header-icon" name="ri:shopping-cart-line" /><span>0</span>
+                        <LazyIcon class="header-icon shop-cart" name="ri:shopping-cart-line" />
+                          <i>0</i>
+                          <span class="tc-cart-label">Cart</span>
                         </NuxtLink>
                     </li>
-                    <li><NuxtLink href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
-                        <LazyIcon class="header-icon" name="ri:shopping-cart-line" /><span>0</span>
+                    <li><NuxtLink href="#">
+                           <LazyIcon class="header-icon" name="mdi:cards-heart-outline" />
+                           <span class="tc-cart-label">Wish List</span>
                         </NuxtLink>
                     </li>
-                    <li><NuxtLink href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
-                        <LazyIcon class="header-icon" name="ri:shopping-cart-line" /><span>0</span>
+                    <li><NuxtLink href="#" data-bs-toggle="offcanvas" data-bs-target="#useroffcanvasRight" aria-controls="offcanvasRight">
+                            <LazyIcon class="header-icon" name="ph:user-light" />
+                            <span class="tc-cart-label">My Account</span>
                         </NuxtLink>
                     </li>
-
-
-                    <div class="toolbar-item">
-                        <NuxtLink href="#">
-                            <LazyIcon name="ion:storefront-outline" />
-                        </NuxtLink>
-                    </div>
                 </div>
             </div>
         </div>
@@ -282,30 +280,36 @@
 
 .tc-cart{
     padding: 0;
+    & .shop-cart{
+        position: relative;
+        & i{
+            position: absolute;
+            top: 7px;
+            inset-inline-end: -6px;
+            z-index: 1;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: var(--tc-primary-color);
+            color: #fff;
+            text-align: center;
+            letter-spacing: 0;
+            font-weight: 400;
+            font-size: 9px;
+            line-height: 15px;
+            }
+    }
     & li{
         margin-left: 18px;
-        position: relative;
         & a {
             color: #333;
             &:hover{
                 color: var(--tc-gray);
             }
-            & span{
-                    position: absolute;
-                    top: 7px;
-                    inset-inline-end: -6px;
-                    z-index: 1;
-                    width: 15px;
-                    height: 15px;
-                    border-radius: 50%;
-                    background-color: var(--tc-primary-color);
-                    color: #fff;
-                    text-align: center;
-                    letter-spacing: 0;
-                    font-weight: 400;
-                    font-size: 9px;
-                    line-height: 15px;
-                }
+            & .tc-cart-label{
+                display: block;
+                color: black;
+            }
         }
     }
 }

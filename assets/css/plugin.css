@@ -87,5 +87,27 @@ input:focus-visible{
       }
    }
 
+   .tc-responsive-toolbar{
+      bottom: 0;
+      position: absolute;
+
+      & .tc-bottom-cart{
+         & li{
+            padding: 2px 84px!important;
+            & a{
+               & .header-icon{
+                  
+               }
+               & .tc-cart-label{
+                  display: block;
+                  line-height: 1;
+                  font-size: 13px;
+                  font-weight: 600;
+               }
+            }
+         }
+      }
+   }
+
 
 }
