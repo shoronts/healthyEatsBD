@@ -360,7 +360,9 @@
     }
 }
 
-
+.tc-responsive-toolbar{
+        display: none;
+}
 
 
 
