@@ -126,4 +126,12 @@ input:focus-visible{
          padding-left: 0!important;
       }
    }
+
+   .border-line {
+      width: 100%;
+      height: 1px;
+      display: block!important;
+      margin: 45px 0px;
+      background: var(--tc-alternative);
+    }
 }

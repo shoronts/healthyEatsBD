@@ -9,7 +9,7 @@
         <NuxtLink :to="{name:'index'}"><img src="../public/img/he-logo-green.png" alt=""></NuxtLink>
         <p>Healthy Eats collects pure and fresh groceries directly from core farmers and serve you to your doorstep.</p>
         </div>
-
+        <div class="border-line"></div>
         <div class="col-lg-2 col-md-2 footer-links">
             <ul>
                 <li>
@@ -59,16 +59,17 @@
                 </li>
             </ul>
         </div>
+        <div class="border-line"></div>
 
         <div class="col-lg-3 col-md-6">
-            <div class="social-links">
+            <div class="footer-contact">
                 <h6>Contact</h6>
                     <p>info@healthyeatsbd.com <br>
                     +8801581 044 495 <br>
                     Timing: 10am to 7pm (Sunday to Saturday)
                 </p>
             </div>
-            <div class="social-contact">
+            <div class="footer-contact">
                 <h6>Contact</h6>
                 <p>Tejgaon, Dhaka – 1215, Bangladesh</p>
             </div>
@@ -87,6 +88,18 @@
 .footer-container{
     max-width: 1750px;
     margin: 0 auto;
+    & .border-line{
+        display: none;
+    }
+}
+
+.footer-contact{
+    & p, h6{
+        color: #fff;
+        font-size: 14px;
+        font-weight: 400;
+        font-family: sans-serif;
+    }
 }
 
 .footer-top{
