@@ -199,23 +199,45 @@
                 <div class="tab-content " id="pills-tabContent">
                     <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
                         aria-labelledby="pills-home-tab" tabindex="0">
-                        <ul class="list-group list-group-flush">
+                        <ul class="list-group list-group-flush responsive-nav">
                             <li class="list-group-item">
-                                <a class="text-black" href="#">Home</a>
+                                <NuxtLink class="active" :to="{ name: 'index' }">Home</NuxtLink>
                             </li>
                             <li class="list-group-item">
-                                <a class="text-black" href="#">About</a>
+                                <NuxtLink :to="{ name: 'index' }">Store</NuxtLink>
                             </li>
                             <li class="list-group-item">
-                                <a class="text-black" href="#">Contact</a>
+                                <NuxtLink :to="{ name: 'index' }">New Arrivals</NuxtLink>
+                                <span class="menu-label menu-label-secondary">NEW</span>
                             </li>
                             <li class="list-group-item">
-                                <a class="text-black" href="#">Program</a>
+                                <NuxtLink :to="{ name: 'index' }">OFFERS</NuxtLink>
+                            </li>
+                            <li class="list-group-item">
+                                <NuxtLink :to="{ name: 'contact' }">Contact Us</NuxtLink>
                             </li>
                         </ul>
                     </div>
                     <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab"
-                        tabindex="0">...</div>
+                        tabindex="0">
+                        <ul class="list-group list-group-flush responsive-nav">
+                            <li class="list-group-item">
+                                <NuxtLink class="active" :to="{ name: 'index' }">Natural Sweetners</NuxtLink>
+                            </li>
+                            <li class="list-group-item">
+                                <NuxtLink :to="{ name: 'index' }">Pickles</NuxtLink>
+                            </li>
+                            <li class="list-group-item">
+                                <NuxtLink :to="{ name: 'index' }">Kitchen Essentials</NuxtLink>
+                            </li>
+                            <li class="list-group-item">
+                                <NuxtLink :to="{ name: 'index' }">Special Products</NuxtLink>
+                            </li>
+                            <li class="list-group-item">
+                                <NuxtLink :to="{ name: 'contact' }">Nuts & Seeds</NuxtLink>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -257,71 +279,7 @@
     }
 }
 
-.navigation {
-    flex-wrap: wrap;
 
-    & li {
-        margin-left: 15px;
-        position: relative;
-
-        & a {
-            font-size: 13px;
-            font-weight: 700;
-            color: var(--tc-black-color);
-
-            &:hover {
-                color: var(--tc-black-hover);
-
-            }
-
-            &::after {
-                content: '';
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 0;
-                height: 2px;
-                transition: width 0.4s cubic-bezier(.19, 1, .22, 1);
-                background: var(--tc-primary-color);
-            }
-
-            &:hover::after {
-                width: 100%;
-            }
-        }
-
-        & .menu-label {
-            position: absolute;
-            bottom: 93%;
-            z-index: 1;
-            display: inline-block;
-            margin-inline-start: -30px;
-            padding: 2px 4px;
-            border-radius: 1px;
-            background-color: var(--tc-alternative);
-            color: #fff;
-            vertical-align: middle;
-            text-transform: uppercase;
-            white-space: nowrap;
-            font-weight: 600;
-            font-size: 9px;
-            font-family: var(--wd-text-font);
-            line-height: 12px;
-
-            &::before {
-                content: "";
-                top: 100%;
-                position: absolute;
-                inset-inline-start: 10px;
-                border: 4px solid var(--tc-alternative);
-                border-bottom-color: transparent !important;
-                border-inline-end-color: transparent !important;
-                border-inline-end-width: 7px;
-                border-inline-start-width: 0;
-            }
-        }
-    }
-}
 
 .header-icon {
     width: 22px;
@@ -523,18 +481,70 @@
             &.active {
                 color: #333;
                 background-color: rgba(0, 0, 0, 0.05);
-                border-bottom: 2px solid #2a431c;
+                border-bottom: 2px solid var(--tc-primary-color);
 
             }
         }
     }
 }
 
-.list-group-flush li a{
+.list-group-flush li a {
     font-size: 13px;
     font-weight: 600;
     font-family: var(--tc-lato-font);
     text-transform: uppercase;
+}
+
+.responsive-nav {
+    & li {
+        position: relative;
+
+        & a {
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--tc-black-color);
+            text-transform: uppercase;
+
+            &:hover {
+                color: var(--tc-black-hover);
+
+            }
+
+            &.active {
+                color: var(--tc-primary-color);
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 0;
+                height: 2px;
+                transition: width 0.4s cubic-bezier(.19, 1, .22, 1);
+                background: var(--tc-primary-color);
+            }
+
+            &:hover::after {
+                width: 100%;
+            }
+        }
+
+        & .menu-label {
+            z-index: 1;
+            color: #fff;
+            font-size: 9px;
+            margin: 4px 10px;
+            font-weight: 600;
+            padding: 2px 4px;
+            border-radius: 1px;
+            position: absolute;
+            display: inline-block;
+            vertical-align: middle;
+            text-transform: uppercase;
+            background-color: var(--tc-alternative);
+        }
+    }
 }
 </style>
 <script>

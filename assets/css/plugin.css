@@ -71,7 +71,7 @@ input:focus-visible{
 @media all and (max-width: 1026px){
    .responsive-container{
       margin: 0 auto;
-      max-width: 992px!important;
+      max-width: 960px!important;
    }
    .navigation-menu{
       & .search-submit{
@@ -164,6 +164,11 @@ input:focus-visible{
 
 
 @media all and (max-width: 768px){
+   .responsive-container{
+      margin: 0 auto;
+      max-width: 715px!important;
+   }
+
    .footer-container{
       max-width: 650px!important;
       margin: 0 auto;
@@ -210,6 +215,11 @@ input:focus-visible{
 
 
 @media all and (max-width: 480px) {
+   .responsive-container{
+      margin: 0 auto;
+      max-width: 440px!important;
+   }
+
    .footer-container{
       max-width: 430px!important;
       margin: 0 auto;
@@ -227,6 +237,10 @@ input:focus-visible{
 
 
 @media all and (max-width: 340px) {
+   .responsive-container{
+      margin: 0 auto;
+      max-width: 300px!important;
+   }
    .footer-container{
       max-width: 280px!important;
       margin: 0 auto;
