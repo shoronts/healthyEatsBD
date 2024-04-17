@@ -1,8 +1,6 @@
 <template>
-    <div>
-
-        
-    </div>
+    <!-- <LazyTheBreadcrumb /> -->
+    <!-- <LazyTheContactInfo /> -->
 </template>
 <style lang="scss">
 
