@@ -53,6 +53,19 @@ input:focus-visible{
 }
 
 
+.page-header-bg{
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   position: absolute;
+   z-index: -1;
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+}
+
+
 /* Header Responsive Start */
 
 @media all and (max-width: 1026px){
@@ -107,6 +120,10 @@ input:focus-visible{
             }
          }
       }
+   }
+
+   .page-title{
+      font-size: 36px!important;
    }
 
 

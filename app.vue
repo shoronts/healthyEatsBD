@@ -2,9 +2,7 @@
   <div>
     <LazyTheHeader />
     <NuxtPage />
-    <div class="dropdown">
-
-   </div>
+    <ThePageHeader />
     <LazyTheFooter />
   </div>
 </template>
