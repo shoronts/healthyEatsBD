@@ -155,21 +155,24 @@
                     </svg> Close</button>
             </div>
             <div class="offcanvas-body user-offcanvas">
-                <form>
-                    <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">Username or email address *</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                    </div>
-                    <div class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label">Password</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1">
-                    </div>
-                    <div class="mb-3 form-check">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                        <label class="form-check-label" for="exampleCheck1"> Remember me</label>
-                    </div>
-                    <button type="submit" class="tc-btn-1">SING IN</button>
-                </form>
+                <div class="offcanvas-inner">
+                    <form>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Username or email address <span
+                                    style="color: red;">*</span></label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1">
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1"> Remember me</label>
+                        </div>
+                        <button type="submit" class="tc-btn-1">SING IN</button>
+                    </form>
+                </div>
             </div>
         </div>
 
@@ -341,6 +344,7 @@
         position: relative;
         justify-content: end;
         display: grid;
+
         & i {
             position: absolute;
             top: 7px;
@@ -449,6 +453,10 @@
 
 .offcanvas-body {
     padding: 0 !important;
+}
+
+.offcanvas-inner {
+  padding: 15px;
 }
 
 .mobile-nav-search-form {
@@ -609,7 +617,8 @@
             & li {
                 /* max-width: 50%; */
                 text-align: center;
-                & a{
+
+                & a {
                     & .tc-cart-label {
                         display: block;
                         line-height: 1;
@@ -648,45 +657,8 @@
         }
     }
 
-
-
     .page-title {
         font-size: 36px !important;
-    }
-
-
-    /* footer css start */
-
-    ul {
-        padding-left: 0 !important;
-    }
-
-    .link-2,
-    .link-3 {
-        padding-left: 0 !important;
-    }
-
-    .link-4 {
-        margin-left: 0 !important;
-    }
-
-    .footer-container {
-        max-width: 945px !important;
-    }
-
-    .footer-logo {
-        text-align: center;
-        padding-right: 75px;
-
-        & a {
-            width: 150px !important;
-            height: 90px !important;
-
-            & img {
-                width: 100%;
-                height: 100%;
-            }
-        }
     }
 
 }
@@ -706,50 +678,6 @@
         }
     }
 
-    .footer-container {
-        max-width: 650px !important;
-        margin: 0 auto;
-    }
-
-    .footer-links {
-        display: flex;
-        width: 45% !important;
-
-        ul {
-            padding-left: 0 !important;
-        }
-    }
-
-    .border-line {
-        width: 100%;
-        height: 1px;
-        display: block !important;
-        margin: 45px 0px;
-        background: var(--tc-alternative);
-    }
-
-
-    .footer-logo {
-        padding-right: 0 !important;
-
-        & a {
-            width: 250px !important;
-            height: 150px !important;
-
-            & img {
-                width: 100%;
-                height: 100%;
-            }
-        }
-    }
-
-    .link-2 {
-        margin-right: 0 !important;
-    }
-
-    .link-3 {
-        padding-left: 55px !important;
-    }
 }
 
 
@@ -758,20 +686,6 @@
         margin: 0 auto;
         max-width: 440px !important;
     }
-
-    .footer-container {
-        max-width: 430px !important;
-        margin: 0 auto;
-    }
-
-    .link-2 {
-        margin-right: 30px !important;
-    }
-
-    .link-3 {
-        padding-left: 45px !important;
-    }
-
 }
 
 
@@ -780,39 +694,5 @@
         margin: 0 auto;
         max-width: 300px !important;
     }
-
-    .footer-container {
-        max-width: 280px !important;
-        margin: 0 auto;
-    }
-
-    .footer-logo {
-        padding-right: 0 !important;
-
-        & a {
-            width: 145px !important;
-            height: 85px !important;
-
-            & img {
-                width: 100%;
-                height: 100%;
-            }
-        }
-    }
-
-    .link-2 {
-        margin-right: 0px !important;
-    }
-
-    .link-3 {
-        padding-left: 0px !important;
-    }
 }
 </style>
-<script>
-
-
-
-
-
-</script>
