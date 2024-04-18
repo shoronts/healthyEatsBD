@@ -2,20 +2,20 @@
     <nav>
         <ul class="navigation d-flex ">
             <li>
-                <NuxtLink :to="{ name: 'index' }">HOME</NuxtLink>
+                <NuxtLink :to="{ name: 'index' }">Home</NuxtLink>
             </li>
             <li>
-                <NuxtLink :to="{ name: 'index' }">STORE</NuxtLink>
+                <NuxtLink :to="{ name: 'index' }">Store</NuxtLink>
             </li>
             <li>
-                <NuxtLink :to="{ name: 'index' }">NEW ARRIVALS</NuxtLink>
+                <NuxtLink :to="{ name: 'index' }">New Arrivals</NuxtLink>
                 <span class="menu-label menu-label-secondary">NEW</span>
             </li>
             <li>
-                <NuxtLink :to="{ name: 'index' }">OFFERS</NuxtLink>
+                <NuxtLink :to="{ name: 'index' }">Offers</NuxtLink>
             </li>
             <li>
-                <NuxtLink :to="{ name: 'contact' }">CONTACT US</NuxtLink>
+                <NuxtLink :to="{ name: 'contact' }">Contact Us</NuxtLink>
             </li>
         </ul>
     </nav>

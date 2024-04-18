@@ -53,19 +53,19 @@
             </div>
         </div>
         <div class="responsive-header d-none">
-            <div class="responsive-container d-flex justify-content-between ">
-                <div class="navigation-menu">
+            <div class="responsive-container  justify-content-between row">
+                <div class="navigation-menu col-4">
                     <button type="button" class="search-submit" data-bs-toggle="offcanvas"
                         data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
                         <LazyIcon class="header-icon" name="material-symbols:menu-rounded" /> Menu
                     </button>
                 </div>
-                <div class="responsive-logo">
+                <div class="responsive-logo col-4">
                     <NuxtLink :to="{ name: 'index' }">
                         <img src="/img/main-logo.png" alt="Main Logo" loading="lazy" decoding="async">
                     </NuxtLink>
                 </div>
-                <div class="tc-cart">
+                <div class="tc-cart col-4">
                     <li class="shop-cart">
                         <NuxtLink href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
                             aria-controls="offcanvasRight">
@@ -77,35 +77,43 @@
         </div>
         <div class="tc-responsive-toolbar">
             <div class="container">
-                <div class="tc-bottom-cart tc-cart toolbar d-flex ">
-                    <li>
-                        <NuxtLink href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
-                            aria-controls="offcanvasRight">
-                            <LazyIcon class="header-icon" name="ion:storefront-outline" />
-                            <span class="tc-cart-label">Store</span>
-                        </NuxtLink>
-                    </li>
-                    <li>
-                        <NuxtLink href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
-                            aria-controls="offcanvasRight">
-                            <LazyIcon class="header-icon shop-cart" name="ri:shopping-cart-line" />
-                            <i>0</i>
-                            <span class="tc-cart-label">Cart</span>
-                        </NuxtLink>
-                    </li>
-                    <li>
-                        <NuxtLink href="#">
-                            <LazyIcon class="header-icon" name="mdi:cards-heart-outline" />
-                            <span class="tc-cart-label">Wish List</span>
-                        </NuxtLink>
-                    </li>
-                    <li>
-                        <NuxtLink href="#" data-bs-toggle="offcanvas" data-bs-target="#useroffcanvasRight"
-                            aria-controls="offcanvasRight">
-                            <LazyIcon class="header-icon" name="ph:user-light" />
-                            <span class="tc-cart-label">My Account</span>
-                        </NuxtLink>
-                    </li>
+                <div class="tc-bottom-cart tc-cart toolbar row">
+                    <div class="col-md-3 col-sm-3 col-3">
+                        <li>
+                            <NuxtLink href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+                                aria-controls="offcanvasRight">
+                                <LazyIcon class="header-icon" name="ion:storefront-outline" />
+                                <span class="tc-cart-label">Store</span>
+                            </NuxtLink>
+                        </li>
+                    </div>
+                    <div class="col-md-3 col-sm-3 col-3">
+                        <li class="bottom-cart-icon">
+                            <NuxtLink href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+                                aria-controls="offcanvasRight">
+                                <LazyIcon class="header-icon shop-cart" name="ri:shopping-cart-line" />
+                                <i>0</i>
+                                <span class="tc-cart-label">Cart</span>
+                            </NuxtLink>
+                        </li>
+                    </div>
+                    <div class="col-md-3 col-sm-3 col-3">
+                        <li>
+                            <NuxtLink href="#">
+                                <LazyIcon class="header-icon" name="mdi:cards-heart-outline" />
+                                <span class="tc-cart-label">Wish List</span>
+                            </NuxtLink>
+                        </li>
+                    </div>
+                    <div class="col-md-3 col-sm-3 col-3">
+                        <li>
+                            <NuxtLink href="#" data-bs-toggle="offcanvas" data-bs-target="#useroffcanvasRight"
+                                aria-controls="offcanvasRight">
+                                <LazyIcon class="header-icon" name="ph:user-light" />
+                                <span class="tc-cart-label">My Account</span>
+                            </NuxtLink>
+                        </li>
+                    </div>
                 </div>
             </div>
         </div>
@@ -121,7 +129,6 @@
                             d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
                     </svg> Close</button>
             </div>
-            <hr>
             <div class="offcanvas-body tc-offcanvas-body">
                 <svg xmlns="http://www.w3.org/2000/svg" width="86" height="86" fill="currentColor" class="bi bi-cart-x"
                     viewBox="0 0 16 16">
@@ -147,7 +154,6 @@
                             d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
                     </svg> Close</button>
             </div>
-            <hr>
             <div class="offcanvas-body user-offcanvas">
                 <form>
                     <div class="mb-3">
@@ -330,11 +336,11 @@
 }
 
 .tc-cart {
-    padding: 0;
 
     & .shop-cart {
         position: relative;
-
+        justify-content: end;
+        display: grid;
         & i {
             position: absolute;
             top: 7px;
@@ -354,10 +360,9 @@
     }
 
     & li {
-        margin-left: 18px;
-
         & a {
             color: #333;
+
 
             &:hover {
                 color: var(--tc-gray);
@@ -426,6 +431,7 @@
 
 .tc-responsive-toolbar {
     display: none;
+
 }
 
 .canvas-container {
@@ -544,6 +550,262 @@
             text-transform: uppercase;
             background-color: var(--tc-alternative);
         }
+    }
+}
+
+
+
+/* Header Responsive Start */
+
+@media all and (max-width: 1026px) {
+    .responsive-container {
+        margin: 0 auto;
+        max-width: 960px !important;
+    }
+
+    .navigation-menu {
+        & .search-submit {
+            border: none;
+            outline: none;
+            /* font-size: 13px; */
+            background: none;
+            font-weight: 600;
+            font-family: var(--tc-lato-font);
+        }
+    }
+
+    .desktop-header {
+        display: none !important;
+    }
+
+    .responsive-header {
+        display: block !important;
+    }
+
+    .responsive-logo {
+        width: 85px;
+
+        & a {
+            & img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
+
+
+    .tc-responsive-toolbar {
+        display: block !important;
+        bottom: 0;
+        z-index: 1;
+        width: 100%;
+        padding-bottom: 10px;
+        position: fixed;
+        background-color: #fff;
+        box-shadow: 0 0 9px rgba(0, 0, 0, 0.12);
+
+        .tc-bottom-cart {
+            & li {
+                /* max-width: 50%; */
+                text-align: center;
+                & a{
+                    & .tc-cart-label {
+                        display: block;
+                        line-height: 1;
+                        font-size: 13px;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+
+        .bottom-cart-icon {
+            & a {
+                position: relative;
+
+                & i {
+                    position: absolute;
+                    top: -5px;
+                    inset-inline-end: -6px;
+                    z-index: 1;
+                    width: 15px;
+                    height: 15px;
+                    border-radius: 50%;
+                    background-color: var(--tc-primary-color);
+                    color: #fff;
+                    text-align: center;
+                    letter-spacing: 0;
+                    font-weight: 400;
+                    font-size: 9px;
+                    line-height: 15px;
+                }
+            }
+        }
+
+        .tc-cart {
+            margin-left: 0 !important;
+        }
+    }
+
+
+
+    .page-title {
+        font-size: 36px !important;
+    }
+
+
+    /* footer css start */
+
+    ul {
+        padding-left: 0 !important;
+    }
+
+    .link-2,
+    .link-3 {
+        padding-left: 0 !important;
+    }
+
+    .link-4 {
+        margin-left: 0 !important;
+    }
+
+    .footer-container {
+        max-width: 945px !important;
+    }
+
+    .footer-logo {
+        text-align: center;
+        padding-right: 75px;
+
+        & a {
+            width: 150px !important;
+            height: 90px !important;
+
+            & img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
+}
+
+
+@media all and (max-width: 768px) {
+    .responsive-container {
+        margin: 0 auto;
+        max-width: 715px !important;
+    }
+
+    .tc-responsive-toolbar {
+        & .tc-bottom-cart {
+            & li {
+                /* padding: 2px 70px !important; */
+            }
+        }
+    }
+
+    .footer-container {
+        max-width: 650px !important;
+        margin: 0 auto;
+    }
+
+    .footer-links {
+        display: flex;
+        width: 45% !important;
+
+        ul {
+            padding-left: 0 !important;
+        }
+    }
+
+    .border-line {
+        width: 100%;
+        height: 1px;
+        display: block !important;
+        margin: 45px 0px;
+        background: var(--tc-alternative);
+    }
+
+
+    .footer-logo {
+        padding-right: 0 !important;
+
+        & a {
+            width: 250px !important;
+            height: 150px !important;
+
+            & img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
+    .link-2 {
+        margin-right: 0 !important;
+    }
+
+    .link-3 {
+        padding-left: 55px !important;
+    }
+}
+
+
+@media all and (max-width: 480px) {
+    .responsive-container {
+        margin: 0 auto;
+        max-width: 440px !important;
+    }
+
+    .footer-container {
+        max-width: 430px !important;
+        margin: 0 auto;
+    }
+
+    .link-2 {
+        margin-right: 30px !important;
+    }
+
+    .link-3 {
+        padding-left: 45px !important;
+    }
+
+}
+
+
+@media all and (max-width: 340px) {
+    .responsive-container {
+        margin: 0 auto;
+        max-width: 300px !important;
+    }
+
+    .footer-container {
+        max-width: 280px !important;
+        margin: 0 auto;
+    }
+
+    .footer-logo {
+        padding-right: 0 !important;
+
+        & a {
+            width: 145px !important;
+            height: 85px !important;
+
+            & img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
+    .link-2 {
+        margin-right: 0px !important;
+    }
+
+    .link-3 {
+        padding-left: 0px !important;
     }
 }
 </style>
