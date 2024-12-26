@@ -1,0 +1,58 @@
+:root {
+    --primary-color: #2A431C;
+}
+
+input.form-control:focus {
+    box-shadow: none !important;
+}
+
+/* Header CSS */
+/* Topbar CSS */
+header .top-bar {
+    background-color: var(--primary-color);
+}
+
+/* Navigation CSS */
+
+header .navigation {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+header .navigation .menu-box {
+    padding: 25px 0;
+}
+
+header .navigation .menu-box .logo {
+    width: 150px;
+    height: 88px;
+}
+
+header .navigation .menu-box .logo img {
+    width: 100%;
+    height: 100%;
+}
+
+header .navigation .menu-box ul {
+    list-style: none;
+}
+
+header .navigation .menu-box ul li a {
+    padding: 20px;
+    font-family: Inter;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+header .navigation .others form input {
+    width: 316px;
+}
+
+header .navigation .others form input:focus {
+    border-color: var(--primary-color);
+}
+
+header .navigation .others a svg {
+    color: #000;
+}
