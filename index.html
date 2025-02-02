@@ -5,19 +5,23 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Healthy Eats BD</title>
+  <!-- google fonts  -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Signika:wght@300..700&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="./assets/css/bootstrap.css">
   <link rel="stylesheet" href="./assets/css/main.css">
+  <link rel="stylesheet" href="./assets//css/common.css">
+  <!-- swiper slider  -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 
 <body>
   <header>
     <!-- Topbar Start -->
-    <section class="top-bar py-3">
+    <section class="top-bar">
       <div class="container">
         <p class="top-bar-text text-center text-white mb-0">Shipping All Over Bangladesh!! The Pure Taste Of Nature.</p>
       </div>
@@ -25,90 +29,1085 @@
     <!-- Topbar End -->
     <!-- Navigation Start -->
     <section class="navigation">
-      <div class="container">
-        <div class="d-flex justify-content-between align-items-center">
-          <!-- Left Side -->
-          <div class="menu-box d-flex justify-content-between align-items-center">
-            <div class="logo">
-              <img src="/assets/media/new-logo.png" alt="Main Logo" loading="lazy" decoding="async">
+      <div class="main-navbar">
+        <div class="large-navbar d-none d-lg-block">
+          <div class="d-flex justify-content-between align-items-center">
+            <!-- Left Side -->
+            <div class="menu-box d-flex justify-content-between align-items-center">
+              <div class="logo">
+                <img src="assets/media/Home/logo.png" alt="Main Logo" loading="lazy" decoding="async">
+              </div>
+              <ul class="d-flex flex-wrap justify-content-start align-items-center mb-0">
+                <li><a class="text-decoration-none text-black" href="#">Home</a></li>
+                <li><a class="text-decoration-none text-black" href="#">Store</a></li>
+                <li><a class="text-decoration-none text-black" href="#">New Arriveals</a></li>
+                <li><a class="text-decoration-none text-black" href="#">Offers</a></li>
+                <li><a class="text-decoration-none text-black" href="#">Contact Us</a></li>
+              </ul>
             </div>
-            <ul class="d-flex justify-content-between align-items-center mb-0">
-              <li><a class="text-decoration-none text-black" href="#">Home</a></li>
-              <li><a class="text-decoration-none text-black" href="#">Store</a></li>
-              <li><a class="text-decoration-none text-black" href="#">New Arriveals</a></li>
-              <li><a class="text-decoration-none text-black" href="#">Offers</a></li>
-              <li><a class="text-decoration-none text-black" href="#">Contact Us</a></li>
-            </ul>
+            <!-- Lefi Side End -->
+            <!-- Right Side Start -->
+            <div class="others d-flex justify-content-between align-items-center">
+              <form>
+                <div class="search-box position-relative">
+                  <input type="text" class="form-control p-3" id="header-search" aria-describedby="Search"
+                    placeholder="Search for products">
+                  <button type="submit" class="btn position-absolute top-50 end-0 translate-middle-y p-0">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink">
+                      <rect width="32" height="32" fill="url(#pattern0_106_680)" />
+                      <defs>
+                        <pattern id="pattern0_106_680" patternContentUnits="objectBoundingBox" width="1" height="1">
+                          <use xlink:href="#image0_106_680" transform="scale(0.01)" />
+                        </pattern>
+                        <image id="image0_106_680" width="100" height="100"
+                          xlink:href="data:image/png;base64,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" />
+                      </defs>
+                    </svg>
+                  </button>
+                </div>
+              </form>
+              <a class="ms-3" href="#">
+                <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <rect width="33" height="33" fill="url(#pattern0_106_674)" />
+                  <defs>
+                    <pattern id="pattern0_106_674" patternContentUnits="objectBoundingBox" width="1" height="1">
+                      <use xlink:href="#image0_106_674" transform="scale(0.01)" />
+                    </pattern>
+                    <image id="image0_106_674" width="100" height="100"
+                      xlink:href="data:image/png;base64,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" />
+                  </defs>
+                </svg>
+              </a>
+              <a class="mx-3" href="#">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <rect width="32" height="32" fill="url(#pattern0_106_675)" />
+                  <defs>
+                    <pattern id="pattern0_106_675" patternContentUnits="objectBoundingBox" width="1" height="1">
+                      <use xlink:href="#image0_106_675" transform="scale(0.01)" />
+                    </pattern>
+                    <image id="image0_106_675" width="100" height="100"
+                      xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAAAXNSR0IArs4c6QAAC21JREFUeF7tnXnwtlMZx79vG4UsM0rWxjKokexbKspOllT2LbshxB+NEGFEgyb7WtlptFpCERqFxi77VilE1ops5zNzHn6e92z3ue9zP/fz+93XjPHO+5zlOtf3Pudc59reaeqpUxKY1iluembUA9Kxj6AHpAekYxLoGDv9DukB6ZgEOsZOv0N6QDomgY6x0++QHpCOSaBj7PQ7pAekYxLoGDv9DpnigMwpaTFJc0maRdL7JP3b/veApMdGJJ+PS1pY0hySZpP0mqQXJf1D0n2Snm6Lr9I7hAV+WdIXJX1O0kcjC2PhN0q6WNIvrFBKyIKPYSNJm0paSRIfSoielHStpKskXWI/oBJ8FbP2riBpP0kbSJohk/P/SjpL0pGS/po5xnC3+SV9S9K2kj6YOeYrkn4p6WhJN2eO4e3W9A75hKRjJa3ZIKOvmp11kjlGvm1AfilzXHbEdyXtJukDmWO4ul0haR9J9zY1ZlOAvN8w9B1J+0vizyXoUUk722OjyvhrSTrF7LYFqnSq0JYP5nuSDrV3T4Wu0zdtApD5JF1oz+JazCR0fkPSwQb0w83/34y0Z20H2g+liXXG2LvB7JTNJP091jD0e11GP2mA+I2keSoyMdCsECrHyewVdxaX/jaS/ueZd0ZJZ9tLO5W1/9vLGu0KuQw0rtT+tOOuW1vSPVU6TWxbB5AljeZ0jRVmbP77reb0O6Pd3Cbp2aEOHHOMt4qkLSQtHxtQEuf3xg5QuKx/nniP/UnS+ZL+YMa6XRKgTCRAWUrS6pK+ImmRBL5Y22qS7khoO12TXEAWNKosW/RjkUlRE4+wKmMV/gCHfusmjP+lCaCwM35l1exQ10uttnVnFaasoA+Q9IVIvyfsx8W9V4lyAOEL/KPRxz8VmOlvkna3wqnE0FDj9SSdEXm/nCdpK9uPP3OO++if5lj5utmBl9Vhyr5hTpA0d2AcTgLeOL5j1dk1B5CTzQt2lwAjV0raUtK/ai560J376SJJKwfGQ8MZXOK+ZuzorxlNja+3CeIxyXEX2i0nmlf+HlUmqwrIZ+3x4+t3gb1sh8/iKjy52nIU8UJexzPQQOPy8cWO2MQcUzzqmiTeND+xQLvGha9V7R2VNG8VQN5rLz40KxdxdrNo7EAliBf/zwKg+ObkvsB80zQYg/lQSFAifPcdlzuKASp7lKoAwtnMFnXRg+a+WEbSC9EZ6zXg/rrezpUyEuf4Z8yD9eWUxjXazCzpFiOfRT1joKH9NGX8KoCwOLSfYQJ5zndUyDaIFzc2pJhB8ClJy0l6vA2m7AXOPfUex3y3GvvX0il8pAKybMCQhha0Y8pkDbbBVsY7xMc/Zzdtrm5wzpShMIZu52kIIAATpFRAjjOv2G84RuK+YJs+HJuowO+onajWLjpe0p4F5owNiU8FQyP37TAdY9wJ34wNkAoIk7jOR8zQG8YmKfT7TPaLG3494+j6tKT/FJo3NuyvzWnC+2mY/mLUd6zhtXcI7wAeei7iosewOCpC40OLGlhy8TgijLtHxZB9g53jmJ9jFFnihfRSyg5Z3/PiZoKPNPgAzJUh6jCaFMSlWkq9TeUPmWARcMmWjyVoJUgBhHPv+w5uUHVTjG2pC5lM7R4yD0bsfcO0r3Xg1dohPzDW2b0cI4C066ycTILNXcvl1gw/3B/lCA9jLUDONNEg2ztG+HFAxctdyGTphzlla8diok+ElCMLC+rmjsFPsy7VySLEJtdxqvEc7uQYEEsH/p5aOwSd3mWxxHaFL6Kn6SWAbFCGhumHnuP/7XYpOwS/NObtYcJN6TM0TnWQkM3iDiEQOUM8QK0dgkPndMcIqL1E/LVlKxoXkJHJIx5md7CxZrUA4XXpe2hhnuBI6+kdCaCRopm6iF0TjOFKObIYmGiKeR0zEPcKYEm2/imAGvLk43UdV4QHuWT4LrGkAvIjG37pkmn09TkFgBgsESWHmGQXYQnmyApSKiCEtRDC4yL8IDjzY4FrMV7G/Xf8IDcFnGefN1Erv48tMhUQxiFuyRdpQtAagWlTmXg884h20V2SlkgRThVAiDQh4sRFnI+cm0T9TUUi+pLL2hcWxCPRpalOJ6sqgBBhwYWFE8ZFBDTvOhXRMGZ1rBY+rynOOxSfJCt0FUCQNc56YqRcxB3CBY9hbSrRGja+2SdLInGIlkmiqoDQ/roJ/ofhSVCPCXl5Jmn28W9EoAXBH76jClmROZZMVQFhYO6KPwcykH5r0tLIyXg9mYvxbIhWhQuCtbqII4rgEC70ZMoBhMFJVyOly0dRm00yh91tSJ4KSUo+2jvwYvd2ygWEr4NUBEJLXcTuIL9wst4n3JUEeLhisJAHsiHRtbIFIxcQJiWBkmg9X8AaUYzke1Tast3dEG9zxlsM3z2qrovI2CWKMyuTqg4gMMMLnmh38s1dRBQIGbkwORmI/HosE3yMLiJOjZ0RfZH7hFEXEMaN3SeYEwjZz82g7QqQ7AjMR1zUPsJfjt88m5oAhDEwPmI+8RGZVHjQyFgdRyLUiAA4vn4fJRkPY4tvAhDmICQfFTDEMCH7VE4YN3WYixtf+FcDwqTKA+pv7Q+uKUDg9cM2VSCU6sZOwgNZWfuIfVmFfkc+FC0IZYzhrkV5ea4JHpoEBH647NBAyF33EaEwFADoOijsDKJH+IB8hPuaqMmmSn8UqXVCNCNJNaFCM5ipsYB2FRQ+VKLrKcXhI3IoeYcRRN0YNb1DBoyR2MO5SqmjcdspyIQ4AV+qA+vhjUXuOiakRqkUIDDJ18NFT9qAjzififnqircx5c4gPY58QgyHjVNJQGAWtyXq4jiAwp1BGnPoAgcM1Hd2fxEqDQhMc+lh0yIx0kfn2jjhUhm8MeGR8YSTyRXDPOhLAhD2OV9sQWyOpN/bAARGyNXm+AqBguOLigxN57jHBMEbig8C55uPWgGDydsCJBUUsqEQDNXk2iBe4BQ7oNzfyMFoGxDmS7noOZ85Gkrbvj5kE/5xwYbAINYKp1sr1OYOGSwI8wpmlNBFzzuGy7NUIYJZbW4iL2wfcYEDRtE7Y3jyUQACD9TD4qKnHpWP0PEpBtZUEZvBPBRLY27cAj563gZsUEerVRoVICySRHqS/0MVGXgFc6RkOXscksSfgf8mFLRGATKK3OA2aJ1GCQiLpagy1RZCJQIJ7QcUEinrEKnTuAFCiapkz1IBomphszp8vavvqAGBGfIpAGWhwKrI7QaU3Pxzih4ARsjoiXeT+43s4pFRFwBh8ZQKRGChjCyKyeBzIA6qCjEmx1So+htpFQDemNW2CoMT23YFEHjCOkyFU1fFoQHPVDPlfE+tPLSifZBykfuIIHKOKQAfOXUJEISBdRjbV0wd5SEXq/RDxCDJl77oEOajzBMAdybSsmuAICQebJTz80UE0oaoQOqs8J5xEdZYCoaF6rsTO0XhnE5F7HcREARMpD32JXzwPsIQSUbScF4KhS75u1DJc4LcaFepYmgb51lXAWHtWGBxoYbSwAiYIAVikHuBcZLoD1+cGONSqQer7qgsy0FcuwwIjMMfhW8o2uIjnFvEhvG1k5jvC++kP25ZsmS76jpu1dpbZ8cfYoR4UJ0BTF8Coxmn09T1HTJRePxTGEdlSpNqFIdl9m212zgBgmCIAuHYSeWb44zjrlZ4Z5uIpC6sTZ5icxE+RPJp6K5gDMDgvhirShPjCAjCpsQR9bp82hTaF8ChcY0VjSsgCJlYW1TY4fcGYKDWjmXe/DgDAij8gy7ECxNXDOFYopCx7wXf+d0y7oAgYHwpg9qP2MGa+ucoRgLeZABkJIIrNWkPSCnJZo7bA5IpuFLdekBKSTZz3B6QTMGV6tYDUkqymeP2gGQKrlS3HpBSks0ctwckU3CluvWAlJJs5rg9IJmCK9WtB6SUZDPHfQuBh7904Vf2vwAAAABJRU5ErkJggg==" />
+                  </defs>
+                </svg>
+              </a>
+              <a href="#">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <rect width="32" height="32" fill="url(#pattern0_106_673)" />
+                  <defs>
+                    <pattern id="pattern0_106_673" patternContentUnits="objectBoundingBox" width="1" height="1">
+                      <use xlink:href="#image0_106_673" transform="scale(0.01)" />
+                    </pattern>
+                    <image id="image0_106_673" width="100" height="100"
+                      xlink:href="data:image/png;base64,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" />
+                  </defs>
+                </svg>
+              </a>
+            </div>
+            <!-- Right Side End -->
           </div>
-          <!-- Lefi Side End -->
-          <!-- Right Side Start -->
-          <div class="others d-flex justify-content-between align-items-center">
-            <form>
-              <div class="search-box position-relative">
-                <input type="text" class="form-control p-3" id="header-search" aria-describedby="Search"
-                  placeholder="Search for products">
-                <button type="submit" class="btn position-absolute top-50 end-0 translate-middle-y p-0">
-                  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink">
-                    <rect width="32" height="32" fill="url(#pattern0_106_680)" />
-                    <defs>
-                      <pattern id="pattern0_106_680" patternContentUnits="objectBoundingBox" width="1" height="1">
-                        <use xlink:href="#image0_106_680" transform="scale(0.01)" />
-                      </pattern>
-                      <image id="image0_106_680" width="100" height="100"
-                        xlink:href="data:image/png;base64,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" />
-                    </defs>
-                  </svg>
+        </div>
+        <div class="midium-small-navbar d-block d-lg-none row d-flex flex-nowrap">
+          <div class="slide-bar col-4 d-flex flex-nowrap align-items-center">
+            <button class="btn m-0 p-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenuBox"
+              aria-controls="mobileMenuBox">
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list"
+                viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                  d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+              </svg>
+            </button>
+            <span class="m-0 p-0" data-bs-toggle="offcanvas" data-bs-target="#mobileMenuBox"
+            aria-controls="mobileMenuBox">MENU</span>
+            <!-- canvas body  -->
+            <div class="offcanvas offcanvas-start " tabindex="-1" id="mobileMenuBox"
+              aria-labelledby="mobileMenuBoxLabel">
+              <div class="offcanvas-header d-flex justify-content-end">
+                <button type="button" class="custom-close-btn" data-bs-dismiss="offcanvas" aria-label="Close">
+                  <span class="btn-close"></span>
+                  <span class="close-btn">Close</span>
                 </button>
               </div>
-            </form>
-            <a class="ms-3" href="#">
-              <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg"
+              <div class="offcanvas-body">
+                <div class="container-fluid p-0">
+                  <!-- Header with close button -->
+                  <div class="d-flex justify-content-end border-bottom">
+                    <button class="close-btn" aria-label="Close">
+                      <i class="bi bi-x-lg"></i>
+                    </button>
+                  </div>
+
+                  <!-- Search bar -->
+                  <div class="p-3-bottom">
+                    <div class="search-container">
+                      <input type="search" class="form-control" id="searchInput" placeholder="Search for products">
+                      <i class="bi bi-search"></i>
+                    </div>
+                  </div>
+
+                  <!-- Tabs -->
+                  <ul class="nav nav-tabs" id="menuTabs" role="tablist">
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link active" id="menu-tab" data-bs-toggle="tab" data-bs-target="#menu"
+                        type="button" role="tab">MENU</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link" id="categories-tab" data-bs-toggle="tab" data-bs-target="#categories"
+                        type="button" role="tab">CATEGORIES</button>
+                    </li>
+                  </ul>
+
+                  <!-- Tab content -->
+                  <div class="tab-content" id="menuTabsContent">
+                    <div class="tab-pane fade show active" id="menu" role="tabpanel">
+                      <ul class="menu-list">
+                        <li><a href="#">HOME</a></li>
+                        <li><a href="#">STORE</a></li>
+                        <li>
+                          <a href="#" class="d-flex justify-content-between align-items-center">
+                            NEW ARRIVALS
+                            <span class="new-badge">NEW</span>
+                          </a>
+                        </li>
+                        <li><a href="#">OFFERS</a></li>
+                        <li><a href="#">CONTACT US</a></li>
+                      </ul>
+                    </div>
+                    <div class="tab-pane fade" id="categories" role="tabpanel">
+                      <div class="p-3">
+                        <h6>Product Categories</h6>
+                        <ul class="menu-list">
+                          <li><a href="#">Electronics</a></li>
+                          <li><a href="#">Clothing</a></li>
+                          <li><a href="#">Home & Garden</a></li>
+                          <li><a href="#">Sports</a></li>
+                          <li><a href="#">Books</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- <div class="">
+                  <ul class="mb-0">
+                    <li><a class="text-decoration-none text-black" href="#">Home</a></li>
+                    <li><a class="text-decoration-none text-black" href="#">Store</a></li>
+                    <li><a class="text-decoration-none text-black" href="#">New Arriveals</a></li>
+                    <li><a class="text-decoration-none text-black" href="#">Offers</a></li>
+                    <li><a class="text-decoration-none text-black" href="#">Contact Us</a></li>
+                  </ul>
+                </div> -->
+              </div>
+            </div>
+          </div>
+          <div class="small-logo col-4 text-center">
+            <img src="assets/media/Home/logo.png" alt="Main Logo" loading="lazy" decoding="async">
+          </div>
+          <!-- shop icons  -->
+          <div class="shop-icons col-4 text-end">
+            <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+              aria-controls="offcanvasRight">
+              <svg width="26" height="26" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"
                 xmlns:xlink="http://www.w3.org/1999/xlink">
-                <rect width="33" height="33" fill="url(#pattern0_106_674)" />
+                <rect width="32" height="32" fill="url(#pattern0_296_390)" />
                 <defs>
-                  <pattern id="pattern0_106_674" patternContentUnits="objectBoundingBox" width="1" height="1">
-                    <use xlink:href="#image0_106_674" transform="scale(0.01)" />
+                  <pattern id="pattern0_296_390" patternContentUnits="objectBoundingBox" width="1" height="1">
+                    <use xlink:href="#image0_296_390" transform="scale(0.01)" />
                   </pattern>
-                  <image id="image0_106_674" width="100" height="100"
-                    xlink:href="data:image/png;base64,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" />
-                </defs>
-              </svg>
-            </a>
-            <a class="mx-3" href="#">
-              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink">
-                <rect width="32" height="32" fill="url(#pattern0_106_675)" />
-                <defs>
-                  <pattern id="pattern0_106_675" patternContentUnits="objectBoundingBox" width="1" height="1">
-                    <use xlink:href="#image0_106_675" transform="scale(0.01)" />
-                  </pattern>
-                  <image id="image0_106_675" width="100" height="100"
-                    xlink:href="data:image/png;base64,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" />
-                </defs>
-              </svg>
-            </a>
-            <a href="#">
-              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink">
-                <rect width="32" height="32" fill="url(#pattern0_106_673)" />
-                <defs>
-                  <pattern id="pattern0_106_673" patternContentUnits="objectBoundingBox" width="1" height="1">
-                    <use xlink:href="#image0_106_673" transform="scale(0.01)" />
-                  </pattern>
-                  <image id="image0_106_673" width="100" height="100"
+                  <image id="image0_296_390" width="100" height="100"
                     xlink:href="data:image/png;base64,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" />
                 </defs>
               </svg>
-            </a>
+            </button>
+
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
+              aria-labelledby="offcanvasRightLabel">
+              <div class="offcanvas-header d-flex justify-content-between">
+                <h5 class="offcanvas-title" id="offcanvasRightLabel">Shopping Cart</h5>
+                <button type="button" class="custom-close-btn" data-bs-dismiss="offcanvas" aria-label="Close">
+                  <span class="btn-close"></span>
+                  <span class="close-btn">Close</span>
+                </button>
+              </div>
+
+
+              <div class="offcanvas-body">
+                <!-- Empty Cart Content -->
+                <div class="empty-cart-content">
+                  <div class="cart-icon">
+                    <i class="bi bi-cart-x"></i>
+                  </div>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" fill="lightgray" class="bi bi-cart-x"
+                    viewBox="0 0 16 16">
+                    <path
+                      d="M7.354 5.646a.5.5 0 1 0-.708.708L7.793 7.5 6.646 8.646a.5.5 0 1 0 .708.708L8.5 8.207l1.146 1.147a.5.5 0 0 0 .708-.708L9.207 7.5l1.147-1.146a.5.5 0 0 0-.708-.708L8.5 6.793z" />
+                    <path
+                      d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0" />
+                  </svg>
+
+                  <p class="empty-message">No products in the cart.</p>
+                  <button class="btn btn-success return-shop-btn">
+                    RETURN TO SHOP
+                  </button>
+                </div>
+              </div>
+            </div>
           </div>
-          <!-- Right Side End -->
         </div>
       </div>
+
     </section>
     <!-- Navigarion End -->
   </header>
+  <main>
+    <!-- hero section start  -->
+    <section class="image-slider m-0 p-0">
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="assets/media/Home/slider2-1-1-6609b964df574 1 (1).png" alt="Image 1"
+              decoding="async" loading="lazy">
+          </div>
+          <div class="swiper-slide"><img src="assets/media/Home/slider2-1-1-6609b964df574 1 (1).png" decoding="async"
+              loading="lazy" alt="Image 2"></div>
+          <div class="swiper-slide"><img src="assets/media/Home/slider2-1-1-6609b964df574 1 (1).png" decoding="async"
+              loading="lazy" alt="Image 3"></div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+    <!-- hero section end  -->
+    <!-- product card section for large device -->
+    <section class="">
+      <div class="product-section">
+        <div class="container">
+          <div class="loved-product text-center">
+            <img src="assets/media/Home/Most-Legends 1.png" class="img-fluid" alt="lovedProduct" loading="lazy"
+              decoding="async">
+          </div>
+          <!-- card container  -->
+          <div class="card-container ">
+            <!-- card 1  -->
+            <div class="card text-center position-relative">
+              <div class="card-img">
+                <img src="assets/media/Home/Chocolate-Peanut-Butter-DSC00554-1024x1024 1.png" alt="cardimage"
+                  decoding="async" loading="lazy">
+              </div>
+              <p class="chocolate-p my-1 p-0">Chocolate Peanut Butter-
+                চকলেট পিনাট বাটার</p>
+              <p class="price text-center mb-2 p-0">৳ 520 - ৳ 960 </p>
+              <div>
+                <button class="card-btn card-btn-completed"></button>
+              </div>
+              <div class="hover-icon position-absolute d-flex flex-column">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-search"
+                  viewBox="0 0 16 16">
+                  <path
+                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                </svg>
+
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                  class="bi bi-heart my-3" viewBox="0 0 16 16">
+                  <path
+                    d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+                </svg>
+              </div>
+            </div>
+            <!-- card 2 -->
+            <div class="card text-center position-relative">
+              <div class="card-img">
+                <img src="assets/media/Home/Chocolate-Peanut-Butter-DSC00554-1024x1024 1.png" alt="cardimage"
+                  decoding="async" loading="lazy">
+              </div>
+              <p class="chocolate-p my-1 p-0">Chocolate Peanut Butter-
+                চকলেট পিনাট বাটার</p>
+              <p class="price text-center mb-2 p-0">৳ 520 - ৳ 960 </p>
+              <div>
+                <button class="card-btn card-btn-completed"></button>
+              </div>
+              <div class="hover-icon position-absolute d-flex flex-column">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-search"
+                  viewBox="0 0 16 16">
+                  <path
+                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                </svg>
+
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                  class="bi bi-heart my-3" viewBox="0 0 16 16">
+                  <path
+                    d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+                </svg>
+              </div>
+            </div>
+
+            
+          </div>
+          <div class="see-btn-container">
+            <button class="see-all d-flex align-items-center">SEE ALL
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink">
+                <rect width="28" height="28" fill="url(#pattern0_187_1229)" />
+                <defs>
+                  <pattern id="pattern0_187_1229" patternContentUnits="objectBoundingBox" width="1" height="1">
+                    <use xlink:href="#image0_187_1229" transform="scale(0.01)" />
+                  </pattern>
+                  <image id="image0_187_1229" width="100" height="100"
+                    xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAAAXNSR0IArs4c6QAAAidJREFUeAHt3FFKw0AUheHqMtyGProIXYsbcBOi+/StDx4JZKCWkDtevCcj8xckaDIz8ftbtY30dOKGAAIIIIAAAggggAACCCCAAAIIIIAAAggggAACCCCAAAIIIIAAAtMKSLqV9DAtwEjfuKQbSR+SzpKeRzq36c7lIobWG1GOuhdsxCDKgDGI4o6y88hoMdqWH1+OOJLemnjHdony5DivadeQ9CjpsyNGO4RHSvW9hSjVwon5iZJAqx5ClGrhxPxESaBVDyFKtXBifqIk0KqHEKVaODE/URJo1UOIUi2cmJ8oCbTqIUSpFk7MT5QEWvUQolQLJ+YnSgKteghRqoUT8xMlgVY95F9FkXQn6X6CjxdJX+2yYsf2mMvBkl47Tm7WQ/yXgwkS3te8UQgSBlkO8EUhSFcQXxSC/CpI/f98EaQriO8vLoKEQXwxlidkBNkN4o2xBuGJ4XYTf4zqlyxGmT/50kn9L/BRgJznQQyndrAWMQIg525iOLWDtYgRADl3E8OpHaxFjADIuZsYTu1gLWIEQM7dxHBqB2sRIwBy7iaGUztYixgBkHM3MZzawVrECICcu4nh1A7WIkYA5NxNDKd2x1q8PVMHkvOQ9Q3M3rcve//4KtfAXWE6ohDDFaOtsxOFGA3Jvd2IQgx3hOv1LqIQ4xrnqM95q/Gj5FkXAQQQQAABBBBAAAEEEEAAAQQQQAABBBBAAAEEEEAAAQQQQACBvxP4BtSmWi1cR+S8AAAAAElFTkSuQmCC" />
+                </defs>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- product section end  for large device-->
+    <!-- product section start for small device-->
+     <section>
+        <div class="card-small-container d-none">
+          <div class="card-small-content">
+            <!-- card 1 -->
+            <div class="card text-center position-relative">
+              <div class="card-img">
+                <img src="assets/media/Home/Chocolate-Peanut-Butter-DSC00554-1024x1024 1.png" alt="cardimage"
+                  decoding="async" loading="lazy">
+              </div>
+              <p class="chocolate-p my-1 p-0">Chocolate Peanut Butter-
+                চকলেট পিনাট বাটার</p>
+              <p class="price text-center mb-2 p-0">৳ 520 - ৳ 960 </p>
+              <div>
+                <button class="card-btn card-btn-completed"></button>
+              </div>
+              <div class="hover-icon position-absolute d-flex flex-column">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-search"
+                  viewBox="0 0 16 16">
+                  <path
+                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                </svg>
+
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                  class="bi bi-heart my-3" viewBox="0 0 16 16">
+                  <path
+                    d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+                </svg>
+              </div>
+            </div>
+            <!-- card 2 -->
+            <div class="card text-center position-relative">
+              <div class="card-img">
+                <img src="assets/media/Home/Chocolate-Peanut-Butter-DSC00554-1024x1024 1.png" alt="cardimage"
+                  decoding="async" loading="lazy">
+              </div>
+              <p class="chocolate-p my-1 p-0">Chocolate Peanut Butter-
+                চকলেট পিনাট বাটার</p>
+              <p class="price text-center mb-2 p-0">৳ 520 - ৳ 960 </p>
+              <div>
+                <button class="card-btn card-btn-completed"></button>
+              </div>
+              <div class="hover-icon position-absolute d-flex flex-column">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-search"
+                  viewBox="0 0 16 16">
+                  <path
+                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                </svg>
+
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                  class="bi bi-heart my-3" viewBox="0 0 16 16">
+                  <path
+                    d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+                </svg>
+              </div>
+            </div>
+            <!-- card-3  -->
+            <div class="card text-center position-relative">
+              <div class="card-img">
+                <img src="assets/media/Home/Chocolate-Peanut-Butter-DSC00554-1024x1024 1.png" alt="cardimage"
+                  decoding="async" loading="lazy">
+              </div>
+              <p class="chocolate-p my-1 p-0">Chocolate Peanut Butter-
+                চকলেট পিনাট বাটার</p>
+              <p class="price text-center mb-2 p-0">৳ 520 - ৳ 960 </p>
+              <div>
+                <button class="card-btn card-btn-completed"></button>
+              </div>
+              <div class="hover-icon position-absolute d-flex flex-column">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-search"
+                  viewBox="0 0 16 16">
+                  <path
+                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                </svg>
+
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                  class="bi bi-heart my-3" viewBox="0 0 16 16">
+                  <path
+                    d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+                </svg>
+              </div>
+            </div>
+            <!-- card 4 -->
+            <div class="card text-center position-relative">
+              <div class="card-img">
+                <img src="assets/media/Home/Chocolate-Peanut-Butter-DSC00554-1024x1024 1.png" alt="cardimage"
+                  decoding="async" loading="lazy">
+              </div>
+              <p class="chocolate-p my-1 p-0">Chocolate Peanut Butter-
+                চকলেট পিনাট বাটার</p>
+              <p class="price text-center mb-2 p-0">৳ 520 - ৳ 960 </p>
+              <div>
+                <button class="card-btn card-btn-completed"></button>
+              </div>
+              <div class="hover-icon position-absolute d-flex flex-column">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-search"
+                  viewBox="0 0 16 16">
+                  <path
+                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                </svg>
+
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                  class="bi bi-heart my-3" viewBox="0 0 16 16">
+                  <path
+                    d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+                </svg>
+              </div>
+            </div>
+            <!-- card 5  -->
+            <div class="card text-center position-relative">
+              <div class="card-img">
+                <img src="assets/media/Home/Chocolate-Peanut-Butter-DSC00554-1024x1024 1.png" alt="cardimage"
+                  decoding="async" loading="lazy">
+              </div>
+              <p class="chocolate-p my-1 p-0">Chocolate Peanut Butter-
+                চকলেট পিনাট বাটার</p>
+              <p class="price text-center mb-2 p-0">৳ 520 - ৳ 960 </p>
+              <div>
+                <button class="card-btn card-btn-completed"></button>
+              </div>
+              <div class="hover-icon position-absolute d-flex flex-column">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-search"
+                  viewBox="0 0 16 16">
+                  <path
+                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                </svg>
+
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                  class="bi bi-heart my-3" viewBox="0 0 16 16">
+                  <path
+                    d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+                </svg>
+              </div>
+            </div>
+            <!-- card-6  -->
+            <div class="card text-center position-relative">
+              <div class="card-img">
+                <img src="assets/media/Home/Chocolate-Peanut-Butter-DSC00554-1024x1024 1.png" alt="cardimage"
+                  decoding="async" loading="lazy">
+              </div>
+              <p class="chocolate-p my-1 p-0">Chocolate Peanut Butter-
+                চকলেট পিনাট বাটার</p>
+              <p class="price text-center mb-2 p-0">৳ 520 - ৳ 960 </p>
+              <div>
+                <button class="card-btn card-btn-completed"></button>
+              </div>
+              <div class="hover-icon position-absolute d-flex flex-column">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-search"
+                  viewBox="0 0 16 16">
+                  <path
+                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                </svg>
+
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                  class="bi bi-heart my-3" viewBox="0 0 16 16">
+                  <path
+                    d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+                </svg>
+              </div>
+            </div>
+            <!-- card 7  -->
+            <div class="card text-center position-relative">
+              <div class="card-img">
+                <img src="assets/media/Home/Chocolate-Peanut-Butter-DSC00554-1024x1024 1.png" alt="cardimage"
+                  decoding="async" loading="lazy">
+              </div>
+              <p class="chocolate-p my-1 p-0">Chocolate Peanut Butter-
+                চকলেট পিনাট বাটার</p>
+              <p class="price text-center mb-2 p-0">৳ 520 - ৳ 960 </p>
+              <div>
+                <button class="card-btn card-btn-completed"></button>
+              </div>
+              <div class="hover-icon position-absolute d-flex flex-column">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-search"
+                  viewBox="0 0 16 16">
+                  <path
+                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                </svg>
+
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                  class="bi bi-heart my-3" viewBox="0 0 16 16">
+                  <path
+                    d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+                </svg>
+              </div>
+            </div>
+            <!-- card 8 -->
+            <div class="card text-center position-relative">
+              <div class="card-img">
+                <img src="assets/media/Home/Chocolate-Peanut-Butter-DSC00554-1024x1024 1.png" alt="cardimage"
+                  decoding="async" loading="lazy">
+              </div>
+              <p class="chocolate-p my-1 p-0">Chocolate Peanut Butter-
+                চকলেট পিনাট বাটার</p>
+              <p class="price text-center mb-2 p-0">৳ 520 - ৳ 960 </p>
+              <div>
+                <button class="card-btn card-btn-completed"></button>
+              </div>
+              <div class="hover-icon position-absolute d-flex flex-column">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-search"
+                  viewBox="0 0 16 16">
+                  <path
+                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                </svg>
+
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                  class="bi bi-heart my-3" viewBox="0 0 16 16">
+                  <path
+                    d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+                </svg>
+              </div>
+            </div>
+            <!-- card 9  -->
+             <div class="card text-center position-relative">
+              <div class="card-img">
+                <img src="assets/media/Home/Chocolate-Peanut-Butter-DSC00554-1024x1024 1.png" alt="cardimage"
+                  decoding="async" loading="lazy">
+              </div>
+              <p class="chocolate-p my-1 p-0">Chocolate Peanut Butter-
+                চকলেট পিনাট বাটার</p>
+              <p class="price text-center mb-2 p-0">৳ 520 - ৳ 960 </p>
+              <div>
+                <button class="card-btn card-btn-completed"></button>
+              </div>
+              <div class="hover-icon position-absolute d-flex flex-column">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-search"
+                  viewBox="0 0 16 16">
+                  <path
+                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                </svg>
+
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                  class="bi bi-heart my-3" viewBox="0 0 16 16">
+                  <path
+                    d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+                </svg>
+              </div>
+            </div>
+            <!-- card 10  -->
+            <div class="card text-center position-relative">
+              <div class="card-img">
+                <img src="assets/media/Home/Chocolate-Peanut-Butter-DSC00554-1024x1024 1.png" alt="cardimage"
+                  decoding="async" loading="lazy">
+              </div>
+              <p class="chocolate-p my-1 p-0">Chocolate Peanut Butter-
+                চকলেট পিনাট বাটার</p>
+              <p class="price text-center mb-2 p-0">৳ 520 - ৳ 960 </p>
+              <div>
+                <button class="card-btn card-btn-completed"></button>
+              </div>
+              <div class="hover-icon position-absolute d-flex flex-column">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-search"
+                  viewBox="0 0 16 16">
+                  <path
+                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                </svg>
+
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                  class="bi bi-heart my-3" viewBox="0 0 16 16">
+                  <path
+                    d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+                </svg>
+              </div>
+            </div>
+            <!-- card 11  -->
+            <div class="card text-center position-relative">
+              <div class="card-img">
+                <img src="assets/media/Home/Chocolate-Peanut-Butter-DSC00554-1024x1024 1.png" alt="cardimage"
+                  decoding="async" loading="lazy">
+              </div>
+              <p class="chocolate-p my-1 p-0">Chocolate Peanut Butter-
+                চকলেট পিনাট বাটার</p>
+              <p class="price text-center mb-2 p-0">৳ 520 - ৳ 960 </p>
+              <div>
+                <button class="card-btn card-btn-completed"></button>
+              </div>
+              <div class="hover-icon position-absolute d-flex flex-column">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-search"
+                  viewBox="0 0 16 16">
+                  <path
+                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                </svg>
+
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                  class="bi bi-heart my-3" viewBox="0 0 16 16">
+                  <path
+                    d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+                </svg>
+              </div>
+            </div>
+
+            <!-- card 13  -->
+            <div class="card text-center position-relative">
+              <div class="card-img">
+                <img src="assets/media/Home/Chocolate-Peanut-Butter-DSC00554-1024x1024 1.png" alt="cardimage"
+                  decoding="async" loading="lazy">
+              </div>
+              <p class="chocolate-p my-1 p-0">Chocolate Peanut Butter-
+                চকলেট পিনাট বাটার</p>
+              <p class="price text-center mb-2 p-0">৳ 520 - ৳ 960 </p>
+              <div>
+                <button class="card-btn card-btn-completed"></button>
+              </div>
+              <div class="hover-icon position-absolute d-flex flex-column">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-search"
+                  viewBox="0 0 16 16">
+                  <path
+                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                </svg>
+
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                  class="bi bi-heart my-3" viewBox="0 0 16 16">
+                  <path
+                    d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+                </svg>
+              </div>
+            </div>
+
+            <!-- card 14  -->
+            <div class="card text-center position-relative">
+              <div class="card-img">
+                <img src="assets/media/Home/Chocolate-Peanut-Butter-DSC00554-1024x1024 1.png" alt="cardimage"
+                  decoding="async" loading="lazy">
+              </div>
+              <p class="chocolate-p my-1 p-0">Chocolate Peanut Butter-
+                চকলেট পিনাট বাটার</p>
+              <p class="price text-center mb-2 p-0">৳ 520 - ৳ 960 </p>
+              <div>
+                <button class="card-btn card-btn-completed"></button>
+              </div>
+              <div class="hover-icon position-absolute d-flex flex-column">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-search"
+                  viewBox="0 0 16 16">
+                  <path
+                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                </svg>
+
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                  class="bi bi-heart my-3" viewBox="0 0 16 16">
+                  <path
+                    d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+     </section>
+    <!-- product section end  for small device-->
+    <!--  pinat batter section start -->
+    <section class="">
+      <div class="pinat-batter-section">
+        <div class="container">
+          <div class="row align-items-center g-3">
+            <div class="pinat-img col-12 col-lg-5 p-3">
+              <img src="assets/media/Home/pinatbannar-banner.png" class="img-fluid" alt="pinatImage" loading="lazy"
+                decoding="async">
+            </div>
+            <div class="pinat-text col-12 col-lg-7 p-3">
+              <h2 class="pinat-head">‘’প্রোটিনে ভরপুর পিনাট বাটার <br> সারাদিনের শক্তির আধার ‘’</h2>
+              <div class="d-flex align-items-center gap-2">
+                <div class="rating">
+                  <input type="radio" id="star5" name="rating" value="5"><label for="star5">&#9733;</label>
+                  <input type="radio" id="star4" name="rating" value="4"><label for="star4">&#9733;</label>
+                  <input type="radio" id="star3" name="rating" value="3"><label for="star3">&#9733;</label>
+                  <input type="radio" id="star2" name="rating" value="2"><label for="star2">&#9733;</label>
+                  <input type="radio" id="star1" name="rating" value="1"><label for="star1">&#9733;</label>
+                </div>
+                <p class="rating-review m-0 p-0">208 reviews</p>
+              </div>
+              <p class="upokarita">চিনাবাদাম ও বাছাইকৃত সেরা লিচু ফুলের মধুর সংমিশ্রণে তৈরি একটু বেশিই
+                হেলদি এই পিনাটবাটার থাকুক আপনার নাস্তার টেবিলে।</p>
+              <div class="pinat-batter-text d-flex align-items-center gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+                  <rect width="28" height="28" rx="4" fill="#276B41" />
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M10.0998 21.5075L3.5 14.9077L5.14967 13.258L10.9247 19.033L24.1243 5.83334L25.774 7.48301L11.7507 21.5075C11.6423 21.616 11.5136 21.702 11.372 21.7607C11.2304 21.8195 11.0786 21.8497 10.9253 21.8497C10.7719 21.8497 10.6201 21.8195 10.4785 21.7607C10.3369 21.702 10.2082 21.616 10.0998 21.5075Z"
+                    fill="#FFFCFC" />
+                </svg>
+                <p class="m-0 p-0">রোগ প্রতিরোধ ক্ষমতা বৃদ্ধি করে</p>
+              </div>
+              <div class="pinat-batter-text d-flex align-items-center gap-3 my-1">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+                  <rect width="28" height="28" rx="4" fill="#276B41" />
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M10.0998 21.5075L3.5 14.9077L5.14967 13.258L10.9247 19.033L24.1243 5.83334L25.774 7.48301L11.7507 21.5075C11.6423 21.616 11.5136 21.702 11.372 21.7607C11.2304 21.8195 11.0786 21.8497 10.9253 21.8497C10.7719 21.8497 10.6201 21.8195 10.4785 21.7607C10.3369 21.702 10.2082 21.616 10.0998 21.5075Z"
+                    fill="#FFFCFC" />
+                </svg>
+                <p class="m-0 p-0">ব্রেইনকে করবে আরো বেশি শার্পার</p>
+              </div>
+              <div class="pinat-batter-text d-flex align-items-center gap-3 my-1">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+                  <rect width="28" height="28" rx="4" fill="#276B41" />
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M10.0998 21.5075L3.5 14.9077L5.14967 13.258L10.9247 19.033L24.1243 5.83334L25.774 7.48301L11.7507 21.5075C11.6423 21.616 11.5136 21.702 11.372 21.7607C11.2304 21.8195 11.0786 21.8497 10.9253 21.8497C10.7719 21.8497 10.6201 21.8195 10.4785 21.7607C10.3369 21.702 10.2082 21.616 10.0998 21.5075Z"
+                    fill="#FFFCFC" />
+                </svg>
+                <p class="m-0 p-0">পিনাট বাটারে থাকা স্বাস্থ্যকর চর্বি ও প্রোটিন দীর্ঘক্ষণ শক্তি জোগায়</p>
+              </div>
+              <div class="pinat-batter-text d-flex align-items-center gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+                  <rect width="28" height="28" rx="4" fill="#276B41" />
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M10.0998 21.5075L3.5 14.9077L5.14967 13.258L10.9247 19.033L24.1243 5.83334L25.774 7.48301L11.7507 21.5075C11.6423 21.616 11.5136 21.702 11.372 21.7607C11.2304 21.8195 11.0786 21.8497 10.9253 21.8497C10.7719 21.8497 10.6201 21.8195 10.4785 21.7607C10.3369 21.702 10.2082 21.616 10.0998 21.5075Z"
+                    fill="#FFFCFC" />
+                </svg>
+                <p class="m-0 p-0">রয়েছে প্রচুর পরিমাণে প্রোটিন যা পেশী গঠনে ভূমিকা রাখে</p>
+              </div>
+              <button class="order-btn my-3">অর্ডার করুন</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- pinat batter sectin end  -->
+    <!-- ghee & banner section start  -->
+    <section class="d-none">
+      <!-- healthry eats banner start -->
+      <div class="healthry-banner">
+        <div class="banner-text container d-flex flex-column flex-md-row justify-content-around text-center">
+          <p class="text-one">WE ARE <br>HEALTHY <br>EATS</p>
+          <p class="text-two">We collect pure and fresh <br>groceries directly from <br>core farmers and serve <br>you
+            to your doorstep.</p>
+          <div class="small-chachi d-block d-md-none">
+
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- healthry eats banner end -->
+    <!-- ghee section start  -->
+    <section class="">
+      <div class="ghee-section">
+        <div class="ghee-container">
+          <div class="row g-5 ">
+            <div class="ghee-img col-12 col-lg-4 p-5">
+              <img src="assets/media/Home/ghee-1 1.png" class="img-fluid" alt="gheeImage" loading="lazy"
+                decoding="async">
+            </div>
+            <div class="ghee-text-content col-12 col-lg-8 p-5">
+              <h2 class="ghee-head">বিলোনা ঘি এর উপকারিতা:</h2>
+
+              <div class="ghee-upokarita d-flex align-items-center gap-3">
+                <!-- svg  -->
+                <div class="ghee-text">
+                  <h2>টক্সিনমুক্ত পরিপাকতন্ত্র</h2>
+                  <p class="m-0 p-0">খাবারের সময় অন্তত এক চা চামচ বেলনা ঘি খেলে তা পরিপাকতন্ত্রের মাধ্যমে
+                    লিপিড-দ্রবণীয় টক্সিন দ্রবীভূত ও নির্মূল করতে সাহায্য করে এবং শরীরকে সুস্থ ও টক্সিনমুক্ত রাখে।</p>
+                </div>
+
+              </div>
+
+              <div class="ghee-upokarita d-flex align-items-center gap-3 my-4">
+                <!-- svg  -->
+
+                <div class="ghee-text">
+                  <h2>হার্টের সুস্থতা নিয়ন্ত্রন</h2>
+                  <p class="m-0 p-0">বেলনা ঘি তে আছে লিনোলিক অ্যাসিড, যা খারাপ কোলেস্টেরলের মাত্রা কমাতে ও
+                    ভালোকোলেস্টেরলের মাত্রা বাড়াতে সাহায্য করে এবং হার্টকে সুস্থ রাখে।</p>
+                </div>
+
+              </div>
+
+              <div class="ghee-upokarita d-flex align-items-center gap-3">
+                <!-- svg  -->
+                <div class="ghee-text">
+                  <h2>রোগ প্রতিরোধ ক্ষমতা বৃদ্ধি ও সুস্থতা</h2>
+                  <p class="m-0 p-0">বেলনা ঘি তে ভিটামিন এ, ডি, ই ও কে বেশি থাকে, যা রোগ প্রতিরোধ ক্ষমতা বাড়াতে সাহায্য
+                    করে। এই ভিটামিনগুলো হার্ট এবং মস্তিষ্কের কার্যকারিতার পাশাপাশি হাড়ের বৃদ্ধির জন্য অপরিহার্য।</p>
+                </div>
+              </div>
+              <button class="order-btn my-4">অর্ডার করুন</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+    <!-- ghee section end  -->
+    <!-- bear banner section start  -->
+    <section class="">
+      <div class="banner-section">
+      </div>
+    </section>
+    <!-- bear banner section end  -->
+    <!-- client review section start  -->
+    <section class="">
+      <div class="client-section">
+        <h2 class="client-header text-center">WHAT OUR CLIENTS SAYS</h2>
+        <div class="review-container d-flex align-items-center gap-4 justify-content-center">
+          <!-- card 1  -->
+          <!-- <div class="review-card">
+            <p class="review-text">নামি দামি অনেক পেইজ থেকে ঘি নিয়েও কথায় আর ঘি এর
+              স্বাদের কোনো মিল পাই নি।হেলদি ইটস থেকে ঘি নিয়ে বুঝতেই
+              পারি নি যে এই ঘি এত টা সুঘ্রাণ আর স্বাদে অতুলণীয়।ধন্যবাদ
+              হেলদি ইটসকে এত চমৎকার কার একটি পণ্য আমাদের দার
+              প্রান্তে পৌছে দেয়ার জন্য।</p>
+            <div class="d-flex">
+              <svg xmlns="http://www.w3.org/2000/svg" width="43" height="55" viewBox="0 0 43 55" fill="none">
+                <mask id="mask0_187_1329" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="43"
+                  height="55">
+                  <path d="M43 0H0V55H43V0Z" fill="white" />
+                </mask>
+                <g mask="url(#mask0_187_1329)">
+                  <mask id="mask1_187_1329" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="5"
+                    width="37" height="39">
+                    <path d="M36.7735 5.89331H0V43.667H36.7735V5.89331Z" fill="white" />
+                  </mask>
+                  <g mask="url(#mask1_187_1329)">
+                    <path
+                      d="M35.6232 24.5296C34.3937 23.4887 32.4503 23.3995 31.1748 24.8056L28.0082 28.2972C27.5989 26.9457 26.3701 25.9616 24.9215 25.9616H19.2709C18.842 25.9616 18.6985 25.7934 17.9536 25.204C15.1139 22.6611 10.8486 22.6692 8.0175 25.2283L5.9405 27.1066C5.00687 26.5989 3.91667 26.5864 2.97794 27.0682L0.595703 28.2913C0.0634922 28.565 -0.151905 29.2297 0.113768 29.7764L6.57751 43.0554C6.84395 43.6021 7.49103 43.8233 8.02325 43.5504L10.4055 42.3265C11.5797 41.7239 12.2332 40.4933 12.1908 39.2407H24.9215C27.2821 39.2407 29.538 38.0824 30.9543 36.1423L36.126 29.0587C37.1293 27.6857 36.9706 25.6724 35.6232 24.5296ZM9.44157 40.3472L8.02318 41.076L2.52258 29.7764L3.94173 29.0475C4.47395 28.7746 5.12028 28.9952 5.38674 29.5425L9.92357 38.863C10.1893 39.4096 9.97378 40.0734 9.44157 40.3472ZM34.4023 27.7307L29.2307 34.8143C28.2187 36.2005 26.6078 37.0274 24.9215 37.0274H11.4389L7.40197 28.7332L9.4409 26.8897C11.4697 25.0564 14.5293 25.0564 16.5581 26.8897C17.7532 27.9705 18.4965 28.1748 19.2707 28.1748H24.9215C25.5154 28.1748 25.9987 28.6713 25.9987 29.2814C25.9987 29.8914 25.5153 30.388 24.9215 30.388H19.4194C18.8248 30.388 18.3422 30.8838 18.3422 31.4946C18.3422 32.1054 18.8248 32.6011 19.4194 32.6011H25.6433C26.5374 32.6011 27.3993 32.216 28.0082 31.544L32.7512 26.3143C33.185 25.8362 33.85 25.876 34.258 26.2427C34.6845 26.6263 34.7306 27.2821 34.4023 27.7307Z"
+                      fill="#51983C" stroke="#51983C" stroke-width="0.107422" />
+                    <path
+                      d="M22.6514 13.4456C23.389 12.6511 23.8436 11.577 23.8436 10.3944C23.8436 7.95842 21.9275 5.89429 19.5345 5.89429C17.1595 5.89429 15.1536 7.95472 15.1536 10.3944C15.1536 11.5408 15.591 12.623 16.3853 13.4545C14.4153 14.5891 12.999 16.7668 12.999 19.3209V20.4274C12.999 21.0382 13.4817 21.534 14.0763 21.534H24.921C25.5156 21.534 25.9983 21.0382 25.9983 20.4274V19.3209C25.9982 16.817 24.6575 14.6053 22.6514 13.4456ZM19.5345 8.10752C20.7023 8.10752 21.6891 9.15508 21.6891 10.3945C21.6891 11.6146 20.7224 12.6076 19.5345 12.6076C18.3279 12.6076 17.3082 11.594 17.3082 10.3945C17.3082 9.17647 18.3488 8.10752 19.5345 8.10752ZM15.1536 19.3209C15.1536 16.8812 17.1595 14.8208 19.5345 14.8208C21.9103 14.8208 23.8436 16.8391 23.8436 19.3209H15.1536Z"
+                      fill="#51983C" stroke="#51983C" stroke-width="0.107422" />
+                  </g>
+                </g>
+              </svg>
+              <div class="ms-3">
+                <p class="review-name m-0 p-0">Rayan Rahman</p>
+                <p class="review-intro">Businessman</p>
+              </div>
+            </div>
+          </div> -->
+          <!-- card 2  -->
+          <!-- <div class="review-card">
+            <p class="review-text">আপনাদের ঘি এর প্যাকেজিং অনেক ভালো লেগেছে।
+              কাচেরজার এ পরিবেশন সত্যিই ইউনিক ছিল।</p>
+            <div class="d-flex">
+              <svg xmlns="http://www.w3.org/2000/svg" width="43" height="55" viewBox="0 0 43 55" fill="none">
+                <mask id="mask0_187_1329" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="43"
+                  height="55">
+                  <path d="M43 0H0V55H43V0Z" fill="white" />
+                </mask>
+                <g mask="url(#mask0_187_1329)">
+                  <mask id="mask1_187_1329" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="5"
+                    width="37" height="39">
+                    <path d="M36.7735 5.89331H0V43.667H36.7735V5.89331Z" fill="white" />
+                  </mask>
+                  <g mask="url(#mask1_187_1329)">
+                    <path
+                      d="M35.6232 24.5296C34.3937 23.4887 32.4503 23.3995 31.1748 24.8056L28.0082 28.2972C27.5989 26.9457 26.3701 25.9616 24.9215 25.9616H19.2709C18.842 25.9616 18.6985 25.7934 17.9536 25.204C15.1139 22.6611 10.8486 22.6692 8.0175 25.2283L5.9405 27.1066C5.00687 26.5989 3.91667 26.5864 2.97794 27.0682L0.595703 28.2913C0.0634922 28.565 -0.151905 29.2297 0.113768 29.7764L6.57751 43.0554C6.84395 43.6021 7.49103 43.8233 8.02325 43.5504L10.4055 42.3265C11.5797 41.7239 12.2332 40.4933 12.1908 39.2407H24.9215C27.2821 39.2407 29.538 38.0824 30.9543 36.1423L36.126 29.0587C37.1293 27.6857 36.9706 25.6724 35.6232 24.5296ZM9.44157 40.3472L8.02318 41.076L2.52258 29.7764L3.94173 29.0475C4.47395 28.7746 5.12028 28.9952 5.38674 29.5425L9.92357 38.863C10.1893 39.4096 9.97378 40.0734 9.44157 40.3472ZM34.4023 27.7307L29.2307 34.8143C28.2187 36.2005 26.6078 37.0274 24.9215 37.0274H11.4389L7.40197 28.7332L9.4409 26.8897C11.4697 25.0564 14.5293 25.0564 16.5581 26.8897C17.7532 27.9705 18.4965 28.1748 19.2707 28.1748H24.9215C25.5154 28.1748 25.9987 28.6713 25.9987 29.2814C25.9987 29.8914 25.5153 30.388 24.9215 30.388H19.4194C18.8248 30.388 18.3422 30.8838 18.3422 31.4946C18.3422 32.1054 18.8248 32.6011 19.4194 32.6011H25.6433C26.5374 32.6011 27.3993 32.216 28.0082 31.544L32.7512 26.3143C33.185 25.8362 33.85 25.876 34.258 26.2427C34.6845 26.6263 34.7306 27.2821 34.4023 27.7307Z"
+                      fill="#51983C" stroke="#51983C" stroke-width="0.107422" />
+                    <path
+                      d="M22.6514 13.4456C23.389 12.6511 23.8436 11.577 23.8436 10.3944C23.8436 7.95842 21.9275 5.89429 19.5345 5.89429C17.1595 5.89429 15.1536 7.95472 15.1536 10.3944C15.1536 11.5408 15.591 12.623 16.3853 13.4545C14.4153 14.5891 12.999 16.7668 12.999 19.3209V20.4274C12.999 21.0382 13.4817 21.534 14.0763 21.534H24.921C25.5156 21.534 25.9983 21.0382 25.9983 20.4274V19.3209C25.9982 16.817 24.6575 14.6053 22.6514 13.4456ZM19.5345 8.10752C20.7023 8.10752 21.6891 9.15508 21.6891 10.3945C21.6891 11.6146 20.7224 12.6076 19.5345 12.6076C18.3279 12.6076 17.3082 11.594 17.3082 10.3945C17.3082 9.17647 18.3488 8.10752 19.5345 8.10752ZM15.1536 19.3209C15.1536 16.8812 17.1595 14.8208 19.5345 14.8208C21.9103 14.8208 23.8436 16.8391 23.8436 19.3209H15.1536Z"
+                      fill="#51983C" stroke="#51983C" stroke-width="0.107422" />
+                  </g>
+                </g>
+              </svg>
+              <div class="ms-3">
+                <p class="review-name m-0 p-0">Jaman Rayhan</p>
+                <p class="review-intro">Govt. Service</p>
+              </div>
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </section>
+    <!-- client review section end  -->
+    <!-- blog sectino start  -->
+    <section class="">
+      <div class="blog-section">
+        <h2 class="blog-header text-center">BLOGS</h2>
+        <div class="blog-card-container row g-4 align-items-stretch">
+          <!-- card 1 -->
+          <div class="col-12 col-md-4">
+            <div class="card h-100 border border-0">
+              <img src="assets/media/Home/blogcard1.png" class="card-img-top" alt="BlogImage">
+              <div class="card-body d-flex flex-column">
+                <p class="card-date">04 Sep 2024</p>
+                <h5 class="card-title">বেলোনা ঘি এর বৈশিষ্ট্য</h5>
+                <p class="card-text">আপনি কি জানেন যে আপনি যে ঘি গ্রহণ করেন তার গুণমান তার পুষ্টিগুণ এবং স্বাস্থ্য
+                  উপকারিতাকে ব্যাপকভাবে সংজ্ঞায়িত করে? গুণমান নিশ্চিত করতে...</p>
+                <p class="card-logo mt-auto">CONTINUE READING</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- card 2 -->
+          <div class="col-12 col-md-4">
+            <div class="card h-100">
+              <img src="assets/media/Home/blogcard2.png" class="card-img-top" alt="BlogImage">
+              <div class="card-body d-flex flex-column">
+                <p class="card-date">29 Dec 2023</p>
+                <h5 class="card-title">মৌসুমি আচার</h5>
+                <p class="card-text">আচার হলো বাংলাদেশীদের ঐতিহ্য যাতে ফল, শাকসবজি এবং অন্যান্য খাদ্য সামগ্রীকে মশলা,
+                  লবণ…</p>
+                <p class="card-logo mt-auto">CONTINUE READING</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- card 3 -->
+          <div class="col-12 col-md-4">
+            <div class="card h-100">
+              <img src="assets/media/Home/blogcard3.png" class="card-img-top" alt="BlogImage">
+              <div class="card-body d-flex flex-column">
+                <p class="card-date">29 Dec 2023</p>
+                <h5 class="card-title">প্রাকৃতিক মিষ্টান্ন এর কার্যকারিতা</h5>
+                <p class="card-text">গুড় হলো আখ বা খেজুর গাছ বা খেজুরের ঘন রস থেকে প্রাপ্ত একটি প্রাকৃতিক মিষ্টান্ন।...
+                </p>
+                <p class="card-logo mt-auto">CONTINUE READING</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- blog sectino end  -->
+    <!-- policy section start  -->
+
+    <!-- policy section end  -->
+
+
+
+
+  </main>
+  <!-- footer section  -->
+  <footer>
+      <div class="footer-section">
+        <div class="footer-container row align-items-center">
+          <div class="col-12 col-md-4 d-flex justify-content-center">
+            <div class="text-center">
+              <img src="assets/media/Home/logo.png" class="img-fluid" alt="FooterLogo" decoding="async" loading="lazy">
+              <p class="img-text my-4">Healthy Eats collects pure and fresh groceries
+                directly from core farmers and serve you to your
+                doorstep.</p>
+            </div>
+   
+          </div>
+
+           <!-- <hr class="horizental"> -->
+          <div class=" contact-us col-12 col-md-4 d-flex align-items-center justify-content-around">
+            <div class="half-of-middle">
+              <div class="d-flex align-items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="27" viewBox="0 0 37 33" fill="none">
+                  <path d="M13.876 8.17017L23.126 16.3393L13.876 24.5084" stroke="white" stroke-width="3"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <p class="my-2">Contact Us</p>
+              </div>
+  
+              <div class="d-flex align-items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="27" viewBox="0 0 37 33" fill="none">
+                  <path d="M13.875 8.22168L23.125 16.3908L13.875 24.5599" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <p class="my-2">Privacy Policy</p>
+              </div>
+  
+              <div class="d-flex align-items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="27" viewBox="0 0 37 33" fill="none">
+                  <path d="M13.876 8.17017L23.126 16.3393L13.876 24.5084" stroke="white" stroke-width="3"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <p class="my-2">Terms of Services</p>
+              </div>
+  
+              <div class="d-flex align-items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="27" viewBox="0 0 37 33" fill="none">
+                  <path d="M13.876 8.17017L23.126 16.3393L13.876 24.5084" stroke="white" stroke-width="3"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <p class="my-2">Refund Policy</p>
+              </div>
+            </div>
+            <div class="half-of-middle">
+              <div class="d-flex align-items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="27" viewBox="0 0 37 33" fill="none">
+                  <path d="M13.876 8.17017L23.126 16.3393L13.876 24.5084" stroke="white" stroke-width="3"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <p class="my-2">Contact Us</p>
+              </div>
+  
+              <div class="d-flex align-items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="27" viewBox="0 0 37 33" fill="none">
+                  <path d="M13.875 8.22168L23.125 16.3908L13.875 24.5599" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <p class="my-2">Privacy Policy</p>
+              </div>
+  
+              <div class="d-flex align-items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="27" viewBox="0 0 37 33" fill="none">
+                  <path d="M13.876 8.17017L23.126 16.3393L13.876 24.5084" stroke="white" stroke-width="3"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <p class="my-2">Terms of Services</p>
+              </div>
+  
+              <div class="d-flex align-items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="27" viewBox="0 0 37 33" fill="none">
+                  <path d="M13.876 8.17017L23.126 16.3393L13.876 24.5084" stroke="white" stroke-width="3"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <p class="my-2">Refund Policy</p>
+              </div>
+            </div>
+          </div>
+          <!-- <hr class="horizental"> -->
+          <div class="contact col-12 col-md-4 d-flex justify-content-center">
+            <div class="footer-contact">
+              <p class="my-4 p-0 fw-bolder fs-6">Contact </p>
+              <p class="m-0 p-0">moazzem@healthyeatsbd.com </p>
+              <p class="m-0 p-0">+8801581 044 495</p>
+              <p class="m-0 p-0">Timing: 10am to 7pm (Sunday to Saturday)</p>
+              <p class="my-4 p-0">Address</p>
+              <p class="my-4 p-0">Tejgaon,Dhaka- 1215, Bangladesh</p>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <!-- <div class="p-5"> -->
+        <p class="footer-copyright text-center">© Copyright Healthy Eats BD - 2024 | All rights reserved.</p>
+        <!-- </div> -->
+      </div>
+  </footer>
+
+
+
+
+
+
   <script src="./assets/js/bootstrap.js"></script>
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      cssMode: true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      pagination: {
+        el: ".swiper-pagination",
+      },
+      mousewheel: true,
+      keyboard: true,
+    });
+  </script>
+
 </body>
 
 </html>

@@ -1,0 +1,46 @@
+/* 
+.inter{
+    font-family: "Inter", serif;
+    font-optical-sizing: auto;
+  }
+  .lato{
+    font-family: "Lato", serif;
+    font-weight: 100;
+    font-style: normal;
+  }
+
+
+.signika{
+    font-family: "Signika", serif;
+    font-optical-sizing: auto;
+  }
+
+  .hind-siliguri{
+    font-family: "Hind Siliguri", serif;
+    font-optical-sizing: auto;
+  }
+
+
+.roboto{
+    font-family: "Roboto", serif;
+    font-optical-sizing: auto;
+  } */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+ul li a {
+  padding: 20px;
+  font-family: Inter;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration: none;
+}
