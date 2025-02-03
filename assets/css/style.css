@@ -1,0 +1,32 @@
+/* 
+    font-family: "Inter",serif;
+    font-family: "Lato", serif;
+    font-family: "Signika", serif;
+    font-family: "Hind Siliguri", serif;
+    font-family: "Roboto", serif;
+*/
+
+:root {
+  --primary-color: #2A431C;
+  --black-text-color: #000;
+  --green-text-color: #2E7046;
+  --grey-text-color: #818181;
+  --white-text-color: #FFFFFF;
+  --footer-green: #2d5a27;
+  --footer-yellow: #f4b840;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.fixed-img {
+  height: 100%;
+  width: 100%;
+}
+
+input:focus {
+  box-shadow: none !important;
+}
