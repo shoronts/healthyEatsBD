@@ -145,7 +145,7 @@
                     <div class="d-flex justify-content-between align-items-center">
                         <div class="mobile-menu-icon">
                             <button class="d-flex align-items-center p-0 btn" type="button" data-bs-toggle="offcanvas"
-                            data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                                data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
                                     fill="currentColor">
                                     <path
@@ -161,7 +161,8 @@
                             </a>
                         </div>
                         <div class="cart">
-                            <a href="#" class="position-relative">
+                            <a href="#" class="position-relative btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+                            aria-controls="offcanvasRight">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"
                                     fill="currentColor">
                                     <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
@@ -185,38 +186,110 @@
                             <button type="button" class="btn p-0 d-flex align-items-center" data-bs-dismiss="offcanvas"
                                 aria-label="Close">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
-                                    <path fill="currentColor" d="M6.4 19L5 17.6l5.6-5.6L5 6.4L6.4 5l5.6 5.6L17.6 5L19 6.4L13.4 12l5.6 5.6l-1.4 1.4l-5.6-5.6z"/>
+                                    <path fill="currentColor"
+                                        d="M6.4 19L5 17.6l5.6-5.6L5 6.4L6.4 5l5.6 5.6L17.6 5L19 6.4L13.4 12l5.6 5.6l-1.4 1.4l-5.6-5.6z" />
                                 </svg>
                                 Close</button>
                         </div>
                         <div class="offcanvas-body">
-                            <div>
-                                Some text as placeholder. In real life you can have the elements you have chosen. Like,
-                                text, images, lists, etc.
-                            </div>
-                            <div class="dropdown mt-3">
-                                <button class="btn btn-secondary dropdown-toggle" type="button"
-                                    data-bs-toggle="dropdown">
-                                    Dropdown button
-                                </button>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            <div class="container-fluid p-0">
+                           
+                                <div class="p-3-bottom">
+                                  <div class="search-container">
+                                    <input type="search" class="form-control" id="searchInput" placeholder="Search for products">
+                                  </div>
+                                </div>
+              
+                            
+                                <ul class="nav nav-tabs" id="menuTabs" role="tablist">
+                                  <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="menu-tab" data-bs-toggle="tab" data-bs-target="#menu"
+                                      type="button" role="tab">MENU</button>
+                                  </li>
+                                  <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="categories-tab" data-bs-toggle="tab" data-bs-target="#categories"
+                                      type="button" role="tab">CATEGORIES</button>
+                                  </li>
                                 </ul>
-                            </div>
+              
+
+                                <div class="tab-content" id="menuTabsContent">
+                                  <div class="tab-pane fade show active" id="menu" role="tabpanel">
+                                    <ul class="menu-list">
+                                      <li><a href="#">HOME</a></li>
+                                      <li><a href="#">STORE</a></li>
+                                      <li>
+                                        <a href="#" class="d-flex justify-content-between align-items-center">
+                                          NEW ARRIVALS
+                                          <span class="new-badge">NEW</span>
+                                        </a>
+                                      </li>
+                                      <li><a href="#">OFFERS</a></li>
+                                      <li><a href="#">CONTACT US</a></li>
+                                    </ul>
+                                  </div>
+                                  <div class="tab-pane fade" id="categories" role="tabpanel">
+                                    <div class="">
+                                      <ul class="menu-list">
+                                        <li><a href="#">NATURAL SWEETENERS</a></li>
+                                        <li><a href="#">PICKLES</a></li>
+                                        <li><a href="#">KITCHEN ESSENTIALS</a></li>
+                                        <li><a href="#">SPECIAL PRODUCTS</a></li>
+                                        <li><a href="#">NUTS&SEEDS</a></li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
                         </div>
                     </div>
+
+                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
+                    aria-labelledby="offcanvasRightLabel">
+                    <div class="offcanvas-header d-flex justify-content-between align-content-center">
+                        <h5 class="fw-bold">Shoping Cart</h5>
+                        <button type="button" class="btn p-0 d-flex align-items-center" data-bs-dismiss="offcanvas"
+                        aria-label="Close">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                            <path fill="currentColor"
+                                d="M6.4 19L5 17.6l5.6-5.6L5 6.4L6.4 5l5.6 5.6L17.6 5L19 6.4L13.4 12l5.6 5.6l-1.4 1.4l-5.6-5.6z" />
+                        </svg>
+                        Close</button>
+                    </div>
+                    <div class="offcanvas-body">
+                      <div class="empty-cart-content">
+                        <div class="cart-icon">
+                          <i class="bi bi-cart-x"></i>
+                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" fill="lightgray" class="bi bi-cart-x"
+                          viewBox="0 0 16 16">
+                          <path
+                            d="M7.354 5.646a.5.5 0 1 0-.708.708L7.793 7.5 6.646 8.646a.5.5 0 1 0 .708.708L8.5 8.207l1.146 1.147a.5.5 0 0 0 .708-.708L9.207 7.5l1.147-1.146a.5.5 0 0 0-.708-.708L8.5 6.793z" />
+                          <path
+                            d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0" />
+                        </svg>
+      
+                        <p class="empty-message my-3 fs-6 fw-bold">No products in the cart.</p>
+                        <button class="btn btn-success return-shop-btn">
+                          RETURN TO SHOP
+                        </button>
+                      </div>
+                    </div>
+                  </div>
                 </div>
             </div>
         </section>
         <!-- Navigarion End -->
     </header>
     <!-- Header End -->
-
+     <!-- main start  -->
+    <main>
+        
+    </main>
+    <!-- main end  -->
     <!-- Footer Section  -->
     <footer>
-        <div class="footer-section">
+        <!-- <div class="footer-section">
             <div class="footer-container row align-items-center">
                 <div class="col-12 col-md-4 d-flex justify-content-center">
                     <div class="text-center">
@@ -229,7 +302,7 @@
 
                 </div>
 
-                <!-- <hr class="horizental"> -->
+                <hr class="horizental">
                 <div class=" contact-us col-12 col-md-4 d-flex align-items-center justify-content-around">
                     <div class="half-of-middle">
                         <div class="d-flex align-items-center">
@@ -306,7 +379,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- <hr class="horizental"> -->
+                <hr class="horizental">
                 <div class="contact col-12 col-md-4 d-flex justify-content-center">
                     <div class="footer-contact">
                         <p class="my-4 p-0 fw-bolder fs-6">Contact </p>
@@ -319,10 +392,10 @@
                 </div>
             </div>
             <hr>
-            <!-- <div class="p-5"> -->
+            <div class="p-5">
             <p class="footer-copyright text-center">© Copyright Healthy Eats BD - 2024 | All rights reserved.</p>
-            <!-- </div> -->
-        </div>
+            </div>
+        </div> -->
     </footer>
     <!-- Footer Section End  -->
 

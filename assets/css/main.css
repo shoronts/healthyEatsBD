@@ -152,68 +152,79 @@ header .main-navbar .mobile-menu {
     display: none;
 }
 
-/* Mobile Menu */
+/* Mobile Menu css*/
 
-
-/* footer section start  */
-footer {
-    background-image: url("/assets/media/Home/Footer-Image-scaled-1\ 2.png");
-    height: 450px;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+header .main-navbar .mobile-menu .nav-tabs {
+    border-bottom: 1px solid #dee2e6;
 }
-
-footer .footer-section .footer-container {
-    padding: 80px 40px;
-}
-
-footer .footer-section .footer-container img {
-    width: 249px;
-    height: 145.186px;
-    flex-shrink: 0;
-}
-
-footer .footer-section .footer-container .img-text {
-    width: 460px;
-    color: #FFF;
-    padding: 0 10px;
+.nav-tabs .nav-link {
+    color: #6c757d;
+    border: none;
+    padding: 1rem;
+    flex: 1;
     text-align: center;
-    font-family: Roboto;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 31px;
-    letter-spacing: -0.64px;
 }
 
-footer .footer-section .footer-container .half-of-middle p {
-    margin: 0;
+.nav-tabs .nav-link.active {
+    color: #059669;
+    border-bottom: 2px solid #059669;
+}
+
+.menu-list {
+    list-style: none;
     padding: 0;
-    color: #FFF;
-    font-family: Roboto;
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 31px;
-    flex-wrap: nowrap;
+    margin: 0;
 }
 
-footer .footer-section .footer-container .footer-contact {
-    color: #FFF;
-    font-family: Roboto;
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 31px;
-    flex-wrap: nowrap;
+.menu-list li {
+    border-bottom: 1px solid #dee2e6;
 }
 
-footer .footer-section hr {
-    color: #fff;
+.menu-list a {
+    display: block;
+    padding: 1rem;
+    color: #212529;
+    text-decoration: none;
 }
 
-footer .footer-section .footer-copyright {
-    color: #FFF;
-    font-family: Roboto;
-    font-size: 14px;
+.new-badge {
+    background: #fff3e6;
+    color: #ff6b00;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 10px;
     font-weight: 500;
-    line-height: 31px;
 }
+
+#searchInput {
+    padding-right: 40px;
+}
+
+.empty-cart-content {
+    text-align: center;
+    padding: 3rem 1rem;
+}
+
+.cart-icon {
+    font-size: 3rem;
+    color: #dee2e6;
+    margin-bottom: 1rem;
+}
+
+.empty-message {
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.return-shop-btn {
+    background: #1e7e34;
+    border-color: #1e7e34;
+    padding: 0.75rem 2rem;
+    font-size: 0.875rem;
+}
+
+.return-shop-btn:hover {
+    background: #186429;
+    border-color: #186429;
+}
+/* mobile menu css end  */
