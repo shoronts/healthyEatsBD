@@ -1,18 +1,24 @@
 document.addEventListener("DOMContentLoaded", () => {
     // Sticky Header
-
+    document.addEventListener("scroll", () => {
+        const header = document.getElementById("header");
+        header.classList.toggle("scrolled", window.scrollY > 30);
+    });
     // Home Rero Slider
-    const swiper = new Swiper(".home-hero-slider", {
+    const swiper = new Swiper(".mySwiper", {
         loop: true,
-        cssMode: true,
         navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
         },
         pagination: {
-            el: ".swiper-pagination",
+          el: ".swiper-pagination",
+          clickable: true,
         },
-        mousewheel: true,
+        autoplay: {
+          delay: 4000,
+          disableOnInteraction: false,
+        },
         keyboard: true,
-    });
+      });
 });

@@ -26,7 +26,7 @@
 
 <body>
     <!-- Header Section -->
-    <header class="sticky_">
+    <header>
         <!-- Topbar Start -->
         <section class="top-bar">
             <div class="container">
@@ -36,93 +36,135 @@
         </section>
         <!-- Topbar End -->
         <!-- Navigation Start -->
-        <section class="main-navbar">
-            <div class="container-fluid">
-                <div class="desktop-menu">
-                    <div class="d-flex justify-content-between align-items-center">
-                        <div class="nav-left">
-                            <div class="d-flex justify-content-between align-content-center">
-                                <div class="main-logo">
-                                    <a href="/index.html">
-                                        <img src="./assets/media/logo.png" alt="Main Logo" loading="lazy"
-                                            decoding="async" class="fixed-img">
+        <section>
+            <div class="main-navbar" id="header">
+                <div class="container-fluid">
+                    <div class="desktop-menu">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="nav-left">
+                                <div class="d-flex justify-content-between align-content-center">
+                                    <div class="main-logo">
+                                        <a href="/index.html">
+                                            <img src="./assets/media/logo.png" alt="Main Logo" loading="lazy"
+                                                decoding="async" class="fixed-img">
+                                        </a>
+                                    </div>
+                                    <div class="main-menu">
+                                        <ul>
+                                            <li class="current-menu-item">
+                                                <a href="#">Home</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Store</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">New Arrivals</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Offers</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Contact us</a>
+                                            </li>
+                                            <li class="have-sub-menu">
+                                                <a href="#">Dropdown</a>
+                                                <ul class="sub-menu">
+                                                    <li>
+                                                        <a href="#">Submenu 1</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">Submenu 2</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">Submenu 3</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">Submenu 4</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">Submenu 5</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="nav-right">
+                                <form class="search-bar me-3">
+                                    <div class="form-floating position-relative">
+                                        <input type="text" class="form-control" id="search" placeholder="Search Here">
+                                        <label for="search">Search Here</label>
+                                        <button class="btn p-0 pe-3 position-absolute top-50 end-0 translate-middle-y">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                                                viewBox="0 0 24 24">
+                                                <path fill="currentColor"
+                                                    d="M9.5 16q-2.725 0-4.612-1.888T3 9.5t1.888-4.612T9.5 3t4.613 1.888T16 9.5q0 1.1-.35 2.075T14.7 13.3l5.6 5.6q.275.275.275.7t-.275.7t-.7.275t-.7-.275l-5.6-5.6q-.75.6-1.725.95T9.5 16m0-2q1.875 0 3.188-1.312T14 9.5t-1.312-3.187T9.5 5T6.313 6.313T5 9.5t1.313 3.188T9.5 14" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </form>
+                                <div class="user">
+                                    <a href="#">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28"
+                                            viewBox="0 0 24 24" fill="currentColor">
+                                            <path fill="currentColor"
+                                                d="M12 5.9a2.1 2.1 0 1 1 0 4.2a2.1 2.1 0 0 1 0-4.2m0 9c2.97 0 6.1 1.46 6.1 2.1v1.1H5.9V17c0-.64 3.13-2.1 6.1-2.1M12 4C9.79 4 8 5.79 8 8s1.79 4 4 4s4-1.79 4-4s-1.79-4-4-4m0 9c-2.67 0-8 1.34-8 4v3h16v-3c0-2.66-5.33-4-8-4" />
+                                        </svg>
                                     </a>
                                 </div>
-                                <div class="main-menu">
-                                    <ul>
-                                        <li class="current-menu-item">
-                                            <a href="#">Home</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Store</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">New Arrivals</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Offers</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Contact us</a>
-                                        </li>
-                                        <li class="have-sub-menu">
-                                            <a href="#">Dropdown</a>
-                                            <ul class="sub-menu">
-                                                <li>
-                                                    <a href="#">Submenu 1</a>
-                                                </li>
-                                                <li>
-                                                    <a href="#">Submenu 2</a>
-                                                </li>
-                                                <li>
-                                                    <a href="#">Submenu 3</a>
-                                                </li>
-                                                <li>
-                                                    <a href="#">Submenu 4</a>
-                                                </li>
-                                                <li>
-                                                    <a href="#">Submenu 5</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                    </ul>
+                                <div class="white-list mx-3">
+                                    <a href="#">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
+                                            viewBox="0 0 24 24" fill="currentColor">
+                                            <path
+                                                d="m12 21l-1.45-1.3q-2.525-2.275-4.175-3.925T3.75 12.812T2.388 10.4T2 8.15Q2 5.8 3.575 4.225T7.5 2.65q1.3 0 2.475.55T12 4.75q.85-1 2.025-1.55t2.475-.55q2.35 0 3.925 1.575T22 8.15q0 1.15-.387 2.25t-1.363 2.412t-2.625 2.963T13.45 19.7zm0-2.7q2.4-2.15 3.95-3.687t2.45-2.675t1.25-2.026T20 8.15q0-1.5-1-2.5t-2.5-1q-1.175 0-2.175.662T12.95 7h-1.9q-.375-1.025-1.375-1.687T7.5 4.65q-1.5 0-2.5 1t-1 2.5q0 .875.35 1.763t1.25 2.025t2.45 2.675T12 18.3m0-6.825" />
+                                        </svg>
+                                    </a>
+                                </div>
+                                <div class="cart">
+                                    <a href="#" class="position-relative">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
+                                            viewBox="0 0 24 24" fill="currentColor">
+                                            <g fill="none" stroke="currentColor" stroke-linecap="round"
+                                                stroke-linejoin="round" stroke-width="2">
+                                                <path d="M3 3h2l.5 3m0 0L7 15h11l3-9z" />
+                                                <circle cx="8" cy="20" r="1" />
+                                                <circle cx="17" cy="20" r="1" />
+                                            </g>
+                                        </svg>
+                                        <span
+                                            class="position-absolute top-0 start-100 translate-middle badge rounded-pill text-bg-secondary">0
+                                            <span class="visually-hidden">unread messages</span>
+                                        </span>
+                                    </a>
                                 </div>
                             </div>
                         </div>
-                        <div class="nav-right">
-                            <form class="search-bar me-3">
-                                <div class="form-floating position-relative">
-                                    <input type="text" class="form-control" id="search" placeholder="Search Here">
-                                    <label for="search">Search Here</label>
-                                    <button class="btn p-0 pe-3 position-absolute top-50 end-0 translate-middle-y">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
-                                            viewBox="0 0 24 24">
-                                            <path fill="currentColor"
-                                                d="M9.5 16q-2.725 0-4.612-1.888T3 9.5t1.888-4.612T9.5 3t4.613 1.888T16 9.5q0 1.1-.35 2.075T14.7 13.3l5.6 5.6q.275.275.275.7t-.275.7t-.7.275t-.7-.275l-5.6-5.6q-.75.6-1.725.95T9.5 16m0-2q1.875 0 3.188-1.312T14 9.5t-1.312-3.187T9.5 5T6.313 6.313T5 9.5t1.313 3.188T9.5 14" />
-                                        </svg>
-                                    </button>
-                                </div>
-                            </form>
-                            <div class="user">
-                                <a href="#">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"
-                                        fill="currentColor">
-                                        <path fill="currentColor"
-                                            d="M12 5.9a2.1 2.1 0 1 1 0 4.2a2.1 2.1 0 0 1 0-4.2m0 9c2.97 0 6.1 1.46 6.1 2.1v1.1H5.9V17c0-.64 3.13-2.1 6.1-2.1M12 4C9.79 4 8 5.79 8 8s1.79 4 4 4s4-1.79 4-4s-1.79-4-4-4m0 9c-2.67 0-8 1.34-8 4v3h16v-3c0-2.66-5.33-4-8-4" />
-                                    </svg>
-                                </a>
-                            </div>
-                            <div class="white-list mx-3">
-                                <a href="#">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"
+                    </div>
+                    <div class="mobile-menu py-2">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="mobile-menu-icon">
+                                <button class="d-flex align-items-center p-0 btn" type="button"
+                                    data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample"
+                                    aria-controls="offcanvasExample">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
                                         fill="currentColor">
                                         <path
-                                            d="m12 21l-1.45-1.3q-2.525-2.275-4.175-3.925T3.75 12.812T2.388 10.4T2 8.15Q2 5.8 3.575 4.225T7.5 2.65q1.3 0 2.475.55T12 4.75q.85-1 2.025-1.55t2.475-.55q2.35 0 3.925 1.575T22 8.15q0 1.15-.387 2.25t-1.363 2.412t-2.625 2.963T13.45 19.7zm0-2.7q2.4-2.15 3.95-3.687t2.45-2.675t1.25-2.026T20 8.15q0-1.5-1-2.5t-2.5-1q-1.175 0-2.175.662T12.95 7h-1.9q-.375-1.025-1.375-1.687T7.5 4.65q-1.5 0-2.5 1t-1 2.5q0 .875.35 1.763t1.25 2.025t2.45 2.675T12 18.3m0-6.825" />
+                                            d="M4 18q-.425 0-.712-.288T3 17t.288-.712T4 16h16q.425 0 .713.288T21 17t-.288.713T20 18zm0-5q-.425 0-.712-.288T3 12t.288-.712T4 11h16q.425 0 .713.288T21 12t-.288.713T20 13zm0-5q-.425 0-.712-.288T3 7t.288-.712T4 6h16q.425 0 .713.288T21 7t-.288.713T20 8z" />
                                     </svg>
+                                    <span class="text-uppercase ms-2">menu</span>
+                                </button>
+                            </div>
+                            <div class="main-logo">
+                                <a href="/index.html">
+                                    <img src="./assets/media/logo.png" alt="Main Logo" loading="lazy" decoding="async"
+                                        class="fixed-img">
                                 </a>
                             </div>
                             <div class="cart">
-                                <a href="#" class="position-relative">
+                                <a href="#" class="position-relative btn" type="button" data-bs-toggle="offcanvas"
+                                    data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"
                                         fill="currentColor">
                                         <g fill="none" stroke="currentColor" stroke-linecap="round"
@@ -139,152 +181,570 @@
                                 </a>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="mobile-menu py-2">
-                    <div class="d-flex justify-content-between align-items-center">
-                        <div class="mobile-menu-icon">
-                            <button class="d-flex align-items-center p-0 btn" type="button" data-bs-toggle="offcanvas"
-                                data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
-                                    fill="currentColor">
-                                    <path
-                                        d="M4 18q-.425 0-.712-.288T3 17t.288-.712T4 16h16q.425 0 .713.288T21 17t-.288.713T20 18zm0-5q-.425 0-.712-.288T3 12t.288-.712T4 11h16q.425 0 .713.288T21 12t-.288.713T20 13zm0-5q-.425 0-.712-.288T3 7t.288-.712T4 6h16q.425 0 .713.288T21 7t-.288.713T20 8z" />
-                                </svg>
-                                <span class="text-uppercase ms-2">menu</span>
-                            </button>
-                        </div>
-                        <div class="main-logo">
-                            <a href="/index.html">
-                                <img src="./assets/media/logo.png" alt="Main Logo" loading="lazy" decoding="async"
-                                    class="fixed-img">
-                            </a>
-                        </div>
-                        <div class="cart">
-                            <a href="#" class="position-relative btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
-                            aria-controls="offcanvasRight">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"
-                                    fill="currentColor">
-                                    <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                        stroke-width="2">
-                                        <path d="M3 3h2l.5 3m0 0L7 15h11l3-9z" />
-                                        <circle cx="8" cy="20" r="1" />
-                                        <circle cx="17" cy="20" r="1" />
-                                    </g>
-                                </svg>
-                                <span
-                                    class="position-absolute top-0 start-100 translate-middle badge rounded-pill text-bg-secondary">0
-                                    <span class="visually-hidden">unread messages</span>
-                                </span>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- Mobile Menu -->
-                    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
-                        aria-labelledby="offcanvasExampleLabel">
-                        <div class="offcanvas-header d-flex justify-content-end">
-                            <button type="button" class="btn p-0 d-flex align-items-center" data-bs-dismiss="offcanvas"
-                                aria-label="Close">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
-                                    <path fill="currentColor"
-                                        d="M6.4 19L5 17.6l5.6-5.6L5 6.4L6.4 5l5.6 5.6L17.6 5L19 6.4L13.4 12l5.6 5.6l-1.4 1.4l-5.6-5.6z" />
-                                </svg>
-                                Close</button>
-                        </div>
-                        <div class="offcanvas-body">
-                            <div class="container-fluid p-0">
-                           
-                                <div class="p-3-bottom">
-                                  <div class="search-container">
-                                    <input type="search" class="form-control" id="searchInput" placeholder="Search for products">
-                                  </div>
-                                </div>
-              
-                            
-                                <ul class="nav nav-tabs" id="menuTabs" role="tablist">
-                                  <li class="nav-item" role="presentation">
-                                    <button class="nav-link active" id="menu-tab" data-bs-toggle="tab" data-bs-target="#menu"
-                                      type="button" role="tab">MENU</button>
-                                  </li>
-                                  <li class="nav-item" role="presentation">
-                                    <button class="nav-link" id="categories-tab" data-bs-toggle="tab" data-bs-target="#categories"
-                                      type="button" role="tab">CATEGORIES</button>
-                                  </li>
-                                </ul>
-              
+                        <!-- Mobile Menu -->
+                        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
+                            aria-labelledby="offcanvasExampleLabel">
+                            <div class="offcanvas-header d-flex justify-content-end">
+                                <button type="button" class="btn p-0 d-flex align-items-center"
+                                    data-bs-dismiss="offcanvas" aria-label="Close">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                        <path fill="currentColor"
+                                            d="M6.4 19L5 17.6l5.6-5.6L5 6.4L6.4 5l5.6 5.6L17.6 5L19 6.4L13.4 12l5.6 5.6l-1.4 1.4l-5.6-5.6z" />
+                                    </svg>
+                                    Close</button>
+                            </div>
+                            <div class="offcanvas-body">
+                                <div class="container-fluid p-0">
 
-                                <div class="tab-content" id="menuTabsContent">
-                                  <div class="tab-pane fade show active" id="menu" role="tabpanel">
-                                    <ul class="menu-list">
-                                      <li><a href="#">HOME</a></li>
-                                      <li><a href="#">STORE</a></li>
-                                      <li>
-                                        <a href="#" class="d-flex justify-content-between align-items-center">
-                                          NEW ARRIVALS
-                                          <span class="new-badge">NEW</span>
-                                        </a>
-                                      </li>
-                                      <li><a href="#">OFFERS</a></li>
-                                      <li><a href="#">CONTACT US</a></li>
-                                    </ul>
-                                  </div>
-                                  <div class="tab-pane fade" id="categories" role="tabpanel">
-                                    <div class="">
-                                      <ul class="menu-list">
-                                        <li><a href="#">NATURAL SWEETENERS</a></li>
-                                        <li><a href="#">PICKLES</a></li>
-                                        <li><a href="#">KITCHEN ESSENTIALS</a></li>
-                                        <li><a href="#">SPECIAL PRODUCTS</a></li>
-                                        <li><a href="#">NUTS&SEEDS</a></li>
-                                      </ul>
+                                    <div class="p-3-bottom">
+                                        <div class="search-container">
+                                            <input type="search" class="form-control" id="searchInput"
+                                                placeholder="Search for products">
+                                        </div>
                                     </div>
-                                  </div>
-                                </div>
-                              </div>
-                        </div>
-                    </div>
 
-                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
-                    aria-labelledby="offcanvasRightLabel">
-                    <div class="offcanvas-header d-flex justify-content-between align-content-center">
-                        <h5 class="fw-bold">Shoping Cart</h5>
-                        <button type="button" class="btn p-0 d-flex align-items-center" data-bs-dismiss="offcanvas"
-                        aria-label="Close">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
-                            <path fill="currentColor"
-                                d="M6.4 19L5 17.6l5.6-5.6L5 6.4L6.4 5l5.6 5.6L17.6 5L19 6.4L13.4 12l5.6 5.6l-1.4 1.4l-5.6-5.6z" />
-                        </svg>
-                        Close</button>
-                    </div>
-                    <div class="offcanvas-body">
-                      <div class="empty-cart-content">
-                        <div class="cart-icon">
-                          <i class="bi bi-cart-x"></i>
+
+                                    <ul class="nav nav-tabs" id="menuTabs" role="tablist">
+                                        <li class="nav-item" role="presentation">
+                                            <button class="nav-link active" id="menu-tab" data-bs-toggle="tab"
+                                                data-bs-target="#menu" type="button" role="tab">MENU</button>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <button class="nav-link" id="categories-tab" data-bs-toggle="tab"
+                                                data-bs-target="#categories" type="button"
+                                                role="tab">CATEGORIES</button>
+                                        </li>
+                                    </ul>
+
+
+                                    <div class="tab-content" id="menuTabsContent">
+                                        <div class="tab-pane fade show active" id="menu" role="tabpanel">
+                                            <ul class="menu-list">
+                                                <li><a href="#">HOME</a></li>
+                                                <li><a href="#">STORE</a></li>
+                                                <li>
+                                                    <a href="#"
+                                                        class="d-flex justify-content-between align-items-center">
+                                                        NEW ARRIVALS
+                                                        <span class="new-badge">NEW</span>
+                                                    </a>
+                                                </li>
+                                                <li><a href="#">OFFERS</a></li>
+                                                <li><a href="#">CONTACT US</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="tab-pane fade" id="categories" role="tabpanel">
+                                            <div class="">
+                                                <ul class="menu-list">
+                                                    <li><a href="#">NATURAL SWEETENERS</a></li>
+                                                    <li><a href="#">PICKLES</a></li>
+                                                    <li><a href="#">KITCHEN ESSENTIALS</a></li>
+                                                    <li><a href="#">SPECIAL PRODUCTS</a></li>
+                                                    <li><a href="#">NUTS&SEEDS</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" fill="lightgray" class="bi bi-cart-x"
-                          viewBox="0 0 16 16">
-                          <path
-                            d="M7.354 5.646a.5.5 0 1 0-.708.708L7.793 7.5 6.646 8.646a.5.5 0 1 0 .708.708L8.5 8.207l1.146 1.147a.5.5 0 0 0 .708-.708L9.207 7.5l1.147-1.146a.5.5 0 0 0-.708-.708L8.5 6.793z" />
-                          <path
-                            d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0" />
-                        </svg>
-      
-                        <p class="empty-message my-3 fs-6 fw-bold">No products in the cart.</p>
-                        <button class="btn btn-success return-shop-btn">
-                          RETURN TO SHOP
-                        </button>
-                      </div>
+
+                        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
+                            aria-labelledby="offcanvasRightLabel">
+                            <div class="offcanvas-header d-flex justify-content-between align-content-center">
+                                <h5 class="fw-bold">Shoping Cart</h5>
+                                <button type="button" class="btn p-0 d-flex align-items-center"
+                                    data-bs-dismiss="offcanvas" aria-label="Close">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                        <path fill="currentColor"
+                                            d="M6.4 19L5 17.6l5.6-5.6L5 6.4L6.4 5l5.6 5.6L17.6 5L19 6.4L13.4 12l5.6 5.6l-1.4 1.4l-5.6-5.6z" />
+                                    </svg>
+                                    Close</button>
+                            </div>
+                            <div class="offcanvas-body">
+                                <div class="empty-cart-content">
+                                    <div class="cart-icon">
+                                        <i class="bi bi-cart-x"></i>
+                                    </div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" fill="lightgray"
+                                        class="bi bi-cart-x" viewBox="0 0 16 16">
+                                        <path
+                                            d="M7.354 5.646a.5.5 0 1 0-.708.708L7.793 7.5 6.646 8.646a.5.5 0 1 0 .708.708L8.5 8.207l1.146 1.147a.5.5 0 0 0 .708-.708L9.207 7.5l1.147-1.146a.5.5 0 0 0-.708-.708L8.5 6.793z" />
+                                        <path
+                                            d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0" />
+                                    </svg>
+
+                                    <p class="empty-message my-3 fs-6 fw-bold">No products in the cart.</p>
+                                    <button class="btn btn-success return-shop-btn">
+                                        RETURN TO SHOP
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                  </div>
                 </div>
             </div>
         </section>
         <!-- Navigarion End -->
     </header>
     <!-- Header End -->
-     <!-- main start  -->
+    <!-- main start  -->
     <main>
-        
+        <!-- hero section start  -->
+        <section class="slider-section">
+            <div class="swiper mySwipe">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="assets/media/Home/slider2-1-1-6609b964df574 1 (1).png" alt="BannerImage"
+                            loading="lazy" decoding="async">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/media/Home/slider2-1-1-6609b964df574 1 (1).png" alt="BannerImage"
+                            loading="lazy" decoding="async">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/media/Home/slider2-1-1-6609b964df574 1 (1).png" alt="BannerImage"
+                            loading="lazy" decoding="async">
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+        <!-- hero section end  -->
+        <!-- swiper with big device start  -->
+        <section class="d-none">
+            <div class="product-section">
+                <div class="container">
+                    <div class="loved-product text-center">
+                        <img src="assets/media/Home/Most-Legends 1.png" class="img-fluid" alt="lovedProduct"
+                            loading="lazy" decoding="async">
+                    </div>
+                    <!-- card container  -->
+                    <div class="card-container ">
+                        <!-- card 1  -->
+                        <div class="card text-center position-relative">
+                            <div class="card-img">
+                                <img src="assets/media/Home/Chocolate-Peanut-Butter-DSC00554-1024x1024 1.png"
+                                    alt="cardimage" decoding="async" loading="lazy">
+                            </div>
+                            <p class="chocolate-p my-1 p-0">Chocolate Peanut Butter-
+                                চকলেট পিনাট বাটার</p>
+                            <p class="price text-center mb-2 p-0">৳ 520 - ৳ 960 </p>
+                            <div>
+                                <button class="card-btn card-btn-completed"></button>
+                            </div>
+                            <div class="hover-icon position-absolute d-flex flex-column">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                                    class="bi bi-search" viewBox="0 0 16 16">
+                                    <path
+                                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                                </svg>
+
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                                    class="bi bi-heart my-3" viewBox="0 0 16 16">
+                                    <path
+                                        d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+                                </svg>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="see-btn-container">
+                        <button class="see-all d-flex align-items-center">SEE ALL
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <rect width="28" height="28" fill="url(#pattern0_187_1229)" />
+                                <defs>
+                                    <pattern id="pattern0_187_1229" patternContentUnits="objectBoundingBox" width="1"
+                                        height="1">
+                                        <use xlink:href="#image0_187_1229" transform="scale(0.01)" />
+                                    </pattern>
+                                    <image id="image0_187_1229" width="100" height="100"
+                                        xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAAAXNSR0IArs4c6QAAAidJREFUeAHt3FFKw0AUheHqMtyGProIXYsbcBOi+/StDx4JZKCWkDtevCcj8xckaDIz8ftbtY30dOKGAAIIIIAAAggggAACCCCAAAIIIIAAAggggAACCCCAAAIIIIAAAtMKSLqV9DAtwEjfuKQbSR+SzpKeRzq36c7lIobWG1GOuhdsxCDKgDGI4o6y88hoMdqWH1+OOJLemnjHdony5DivadeQ9CjpsyNGO4RHSvW9hSjVwon5iZJAqx5ClGrhxPxESaBVDyFKtXBifqIk0KqHEKVaODE/URJo1UOIUi2cmJ8oCbTqIUSpFk7MT5QEWvUQolQLJ+YnSgKteghRqoUT8xMlgVY95F9FkXQn6X6CjxdJX+2yYsf2mMvBkl47Tm7WQ/yXgwkS3te8UQgSBlkO8EUhSFcQXxSC/CpI/f98EaQriO8vLoKEQXwxlidkBNkN4o2xBuGJ4XYTf4zqlyxGmT/50kn9L/BRgJznQQyndrAWMQIg525iOLWDtYgRADl3E8OpHaxFjADIuZsYTu1gLWIEQM7dxHBqB2sRIwBy7iaGUztYixgBkHM3MZzawVrECICcu4nh1A7WIkYA5NxNDKd2x1q8PVMHkvOQ9Q3M3rcve//4KtfAXWE6ohDDFaOtsxOFGA3Jvd2IQgx3hOv1LqIQ4xrnqM95q/Gj5FkXAQQQQAABBBBAAAEEEEAAAQQQQAABBBBAAAEEEEAAAQQQQACBvxP4BtSmWi1cR+S8AAAAAElFTkSuQmCC" />
+                                </defs>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- swiper with small device start  -->
+        <section class="d-none">
+            <div class="medium-product-section">
+                <div class="medium-product-container">
+                    <!-- card 1  -->
+                    <div class="card text-center position-relative">
+                        <div class="card-img border-success">
+                            <img src="assets/media/Home/Chocolate-Peanut-Butter-DSC00554-1024x1024 1.png"
+                                alt="cardimage" decoding="async" loading="lazy">
+                        </div>
+                        <p class="chocolate-p my-1 p-0">Chocolate Peanut Butter-
+                            চকলেট পিনাট বাটার</p>
+                        <p class="price text-center mb-2 p-0">৳ 520 - ৳ 960 </p>
+                        <div>
+                            <button class="card-btn card-btn-completed"></button>
+                        </div>
+                        <div class="hover-icon position-absolute d-flex flex-column">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                                class="bi bi-search" viewBox="0 0 16 16">
+                                <path
+                                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                            </svg>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                                class="bi bi-heart my-3" viewBox="0 0 16 16">
+                                <path
+                                    d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+                            </svg>
+                        </div>
+                    </div>
+                    <!-- card 2  -->
+                    <div class="card text-center position-relative">
+                        <div class="card-img">
+                            <img src="assets/media/Home/Chocolate-Peanut-Butter-DSC00554-1024x1024 1.png"
+                                alt="cardimage" decoding="async" loading="lazy">
+                        </div>
+                        <p class="chocolate-p my-1 p-0">Chocolate Peanut Butter-
+                            চকলেট পিনাট বাটার</p>
+                        <p class="price text-center mb-2 p-0">৳ 520 - ৳ 960 </p>
+                        <div>
+                            <button class="card-btn card-btn-completed"></button>
+                        </div>
+                        <div class="hover-icon position-absolute d-flex flex-column">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                                class="bi bi-search" viewBox="0 0 16 16">
+                                <path
+                                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                            </svg>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                                class="bi bi-heart my-3" viewBox="0 0 16 16">
+                                <path
+                                    d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+                            </svg>
+                        </div>
+                    </div>
+                    <!-- card 3 -->
+                    <div class="card text-center position-relative">
+                        <div class="card-img">
+                            <img src="assets/media/Home/Chocolate-Peanut-Butter-DSC00554-1024x1024 1.png"
+                                alt="cardimage" decoding="async" loading="lazy">
+                        </div>
+                        <p class="chocolate-p my-1 p-0">Chocolate Peanut Butter-
+                            চকলেট পিনাট বাটার</p>
+                        <p class="price text-center mb-2 p-0">৳ 520 - ৳ 960 </p>
+                        <div>
+                            <button class="card-btn card-btn-completed"></button>
+                        </div>
+                        <div class="hover-icon position-absolute d-flex flex-column">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                                class="bi bi-search" viewBox="0 0 16 16">
+                                <path
+                                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                            </svg>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                                class="bi bi-heart my-3" viewBox="0 0 16 16">
+                                <path
+                                    d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+                            </svg>
+                        </div>
+                    </div>
+                    <!-- card 4 -->
+                    <div class="card text-center position-relative">
+                        <div class="card-img">
+                            <img src="assets/media/Home/Chocolate-Peanut-Butter-DSC00554-1024x1024 1.png"
+                                alt="cardimage" decoding="async" loading="lazy">
+                        </div>
+                        <p class="chocolate-p my-1 p-0">Chocolate Peanut Butter-
+                            চকলেট পিনাট বাটার</p>
+                        <p class="price text-center mb-2 p-0">৳ 520 - ৳ 960 </p>
+                        <div>
+                            <button class="card-btn card-btn-completed"></button>
+                        </div>
+                        <div class="hover-icon position-absolute d-flex flex-column">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                                class="bi bi-search" viewBox="0 0 16 16">
+                                <path
+                                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                            </svg>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                                class="bi bi-heart my-3" viewBox="0 0 16 16">
+                                <path
+                                    d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+                            </svg>
+                        </div>
+                    </div>
+                    <!-- card 5  -->
+                    <div class="card text-center position-relative">
+                        <div class="card-img">
+                            <img src="assets/media/Home/Chocolate-Peanut-Butter-DSC00554-1024x1024 1.png"
+                                alt="cardimage" decoding="async" loading="lazy">
+                        </div>
+                        <p class="chocolate-p my-1 p-0">Chocolate Peanut Butter-
+                            চকলেট পিনাট বাটার</p>
+                        <p class="price text-center mb-2 p-0">৳ 520 - ৳ 960 </p>
+                        <div>
+                            <button class="card-btn card-btn-completed"></button>
+                        </div>
+                        <div class="hover-icon position-absolute d-flex flex-column">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                                class="bi bi-search" viewBox="0 0 16 16">
+                                <path
+                                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                            </svg>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                                class="bi bi-heart my-3" viewBox="0 0 16 16">
+                                <path
+                                    d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+                            </svg>
+                        </div>
+                    </div>
+                    <!-- card 6  -->
+                    <div class="card text-center position-relative">
+                        <div class="card-img">
+                            <img src="assets/media/Home/Chocolate-Peanut-Butter-DSC00554-1024x1024 1.png"
+                                alt="cardimage" decoding="async" loading="lazy">
+                        </div>
+                        <p class="chocolate-p my-1 p-0">Chocolate Peanut Butter-
+                            চকলেট পিনাট বাটার</p>
+                        <p class="price text-center mb-2 p-0">৳ 520 - ৳ 960 </p>
+                        <div>
+                            <button class="card-btn card-btn-completed"></button>
+                        </div>
+                        <div class="hover-icon position-absolute d-flex flex-column">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                                class="bi bi-search" viewBox="0 0 16 16">
+                                <path
+                                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                            </svg>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                                class="bi bi-heart my-3" viewBox="0 0 16 16">
+                                <path
+                                    d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+                            </svg>
+                        </div>
+                    </div>
+                    <!-- card 7 -->
+                    <div class="card text-center position-relative">
+                        <div class="card-img">
+                            <img src="assets/media/Home/Chocolate-Peanut-Butter-DSC00554-1024x1024 1.png"
+                                alt="cardimage" decoding="async" loading="lazy">
+                        </div>
+                        <p class="chocolate-p my-1 p-0">Chocolate Peanut Butter-
+                            চকলেট পিনাট বাটার</p>
+                        <p class="price text-center mb-2 p-0">৳ 520 - ৳ 960 </p>
+                        <div>
+                            <button class="card-btn card-btn-completed"></button>
+                        </div>
+                        <div class="hover-icon position-absolute d-flex flex-column">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                                class="bi bi-search" viewBox="0 0 16 16">
+                                <path
+                                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                            </svg>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                                class="bi bi-heart my-3" viewBox="0 0 16 16">
+                                <path
+                                    d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+                            </svg>
+                        </div>
+                    </div>
+                    <!-- card 8  -->
+                    <div class="card text-center position-relative">
+                        <div class="card-img">
+                            <img src="assets/media/Home/Chocolate-Peanut-Butter-DSC00554-1024x1024 1.png"
+                                alt="cardimage" decoding="async" loading="lazy">
+                        </div>
+                        <p class="chocolate-p my-1 p-0">Chocolate Peanut Butter-
+                            চকলেট পিনাট বাটার</p>
+                        <p class="price text-center mb-2 p-0">৳ 520 - ৳ 960 </p>
+                        <div>
+                            <button class="card-btn card-btn-completed"></button>
+                        </div>
+                        <div class="hover-icon position-absolute d-flex flex-column">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                                class="bi bi-search" viewBox="0 0 16 16">
+                                <path
+                                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                            </svg>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                                class="bi bi-heart my-3" viewBox="0 0 16 16">
+                                <path
+                                    d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+                            </svg>
+                        </div>
+                    </div>
+                    <!-- card 9  -->
+                    <div class="card text-center position-relative">
+                        <div class="card-img">
+                            <img src="assets/media/Home/Chocolate-Peanut-Butter-DSC00554-1024x1024 1.png"
+                                alt="cardimage" decoding="async" loading="lazy">
+                        </div>
+                        <p class="chocolate-p my-1 p-0">Chocolate Peanut Butter-
+                            চকলেট পিনাট বাটার</p>
+                        <p class="price text-center mb-2 p-0">৳ 520 - ৳ 960 </p>
+                        <div>
+                            <button class="card-btn card-btn-completed"></button>
+                        </div>
+                        <div class="hover-icon position-absolute d-flex flex-column">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                                class="bi bi-search" viewBox="0 0 16 16">
+                                <path
+                                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                            </svg>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                                class="bi bi-heart my-3" viewBox="0 0 16 16">
+                                <path
+                                    d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+                            </svg>
+                        </div>
+                    </div>
+                    <!-- card 10  -->
+                    <div class="card text-center position-relative">
+                        <div class="card-img">
+                            <img src="assets/media/Home/Chocolate-Peanut-Butter-DSC00554-1024x1024 1.png"
+                                alt="cardimage" decoding="async" loading="lazy">
+                        </div>
+                        <p class="chocolate-p my-1 p-0">Chocolate Peanut Butter-
+                            চকলেট পিনাট বাটার</p>
+                        <p class="price text-center mb-2 p-0">৳ 520 - ৳ 960 </p>
+                        <div>
+                            <button class="card-btn card-btn-completed"></button>
+                        </div>
+                        <div class="hover-icon position-absolute d-flex flex-column">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                                class="bi bi-search" viewBox="0 0 16 16">
+                                <path
+                                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                            </svg>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                                class="bi bi-heart my-3" viewBox="0 0 16 16">
+                                <path
+                                    d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+                            </svg>
+                        </div>
+                    </div>
+                    <!-- card 11  -->
+                    <div class="card text-center position-relative">
+                        <div class="card-img">
+                            <img src="assets/media/Home/Chocolate-Peanut-Butter-DSC00554-1024x1024 1.png"
+                                alt="cardimage" decoding="async" loading="lazy">
+                        </div>
+                        <p class="chocolate-p my-1 p-0">Chocolate Peanut Butter-
+                            চকলেট পিনাট বাটার</p>
+                        <p class="price text-center mb-2 p-0">৳ 520 - ৳ 960 </p>
+                        <div>
+                            <button class="card-btn card-btn-completed"></button>
+                        </div>
+                        <div class="hover-icon position-absolute d-flex flex-column">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                                class="bi bi-search" viewBox="0 0 16 16">
+                                <path
+                                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                            </svg>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                                class="bi bi-heart my-3" viewBox="0 0 16 16">
+                                <path
+                                    d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+                            </svg>
+                        </div>
+                    </div>
+                    <!-- card 12  -->
+                    <div class="card text-center position-relative">
+                        <div class="card-img">
+                            <img src="assets/media/Home/Chocolate-Peanut-Butter-DSC00554-1024x1024 1.png"
+                                alt="cardimage" decoding="async" loading="lazy">
+                        </div>
+                        <p class="chocolate-p my-1 p-0">Chocolate Peanut Butter-
+                            চকলেট পিনাট বাটার</p>
+                        <p class="price text-center mb-2 p-0">৳ 520 - ৳ 960 </p>
+                        <div>
+                            <button class="card-btn card-btn-completed"></button>
+                        </div>
+                        <div class="hover-icon position-absolute d-flex flex-column">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                                class="bi bi-search" viewBox="0 0 16 16">
+                                <path
+                                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                            </svg>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                                class="bi bi-heart my-3" viewBox="0 0 16 16">
+                                <path
+                                    d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+                            </svg>
+                        </div>
+                    </div>
+                    <!-- card 13 -->
+                    <div class="card text-center position-relative">
+                        <div class="card-img">
+                            <img src="assets/media/Home/Chocolate-Peanut-Butter-DSC00554-1024x1024 1.png"
+                                alt="cardimage" decoding="async" loading="lazy">
+                        </div>
+                        <p class="chocolate-p my-1 p-0">Chocolate Peanut Butter-
+                            চকলেট পিনাট বাটার</p>
+                        <p class="price text-center mb-2 p-0">৳ 520 - ৳ 960 </p>
+                        <div>
+                            <button class="card-btn card-btn-completed"></button>
+                        </div>
+                        <div class="hover-icon position-absolute d-flex flex-column">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                                class="bi bi-search" viewBox="0 0 16 16">
+                                <path
+                                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                            </svg>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                                class="bi bi-heart my-3" viewBox="0 0 16 16">
+                                <path
+                                    d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+                            </svg>
+                        </div>
+                    </div>
+                    <!-- card 14  -->
+                    <div class="card text-center position-relative">
+                        <div class="card-img">
+                            <img src="assets/media/Home/Chocolate-Peanut-Butter-DSC00554-1024x1024 1.png"
+                                alt="cardimage" decoding="async" loading="lazy">
+                        </div>
+                        <p class="chocolate-p my-1 p-0">Chocolate Peanut Butter-
+                            চকলেট পিনাট বাটার</p>
+                        <p class="price text-center mb-2 p-0">৳ 520 - ৳ 960 </p>
+                        <div>
+                            <button class="card-btn card-btn-completed"></button>
+                        </div>
+                        <div class="hover-icon position-absolute d-flex flex-column">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                                class="bi bi-search" viewBox="0 0 16 16">
+                                <path
+                                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                            </svg>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                                class="bi bi-heart my-3" viewBox="0 0 16 16">
+                                <path
+                                    d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- swiper with small device end -->
+
     </main>
     <!-- main end  -->
     <!-- Footer Section  -->

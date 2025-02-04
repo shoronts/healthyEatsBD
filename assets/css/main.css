@@ -16,6 +16,21 @@ header .top-bar-text {
 
 /* Desktop Menu */
 
+.scrolled {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: all 0.3s ease;
+    background: #FFF;
+}
+
+header .main-navbar {
+    width: 100%;
+    background: #FFF;
+}
+
 header .main-navbar .main-logo {
     width: 118px;
     height: 70px;
@@ -157,6 +172,7 @@ header .main-navbar .mobile-menu {
 header .main-navbar .mobile-menu .nav-tabs {
     border-bottom: 1px solid #dee2e6;
 }
+
 .nav-tabs .nav-link {
     color: #6c757d;
     border: none;
@@ -227,4 +243,68 @@ header .main-navbar .mobile-menu .nav-tabs {
     background: #186429;
     border-color: #186429;
 }
+
 /* mobile menu css end  */
+
+/* hero section start  */
+main .slider-section {
+    padding: 13px 0;
+    margin: 0;
+    background: #fff;
+    text-align: center;
+}
+
+main .slider-section .swiper {
+    width: 100%;
+    height: 660px;
+    margin: auto;
+    overflow: hidden;
+}
+
+main .slider-section .swiper .swiper-wrapper .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+    background: #f8f9fa;
+}
+
+main .slider-section .swiper .swiper-wrapper .swiper-slide img {
+    width: 100%;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: #FFFEFE;
+}
+
+.swiper-pagination-bullet-active {
+    background: #007bff;
+}
+
+/* hero section end  */
+/* large card section  start */
+main .product-section {
+    display: block;
+}
+
+/* large card section  end */
+/* small card section  start */
+main .medium-product-section {
+    display: none;
+}
+
+/* card section  */
+/* main .product-section {
+    background: #FCFAF8;
+}
+
+
+main .product-section .loved-product {
+    padding: 40px 0;
+} */
+
+/* main .product-section .card-container {
+    padding: 0 40px;
+} */

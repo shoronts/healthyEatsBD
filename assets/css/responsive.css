@@ -28,8 +28,17 @@
     header .main-navbar .mobile-menu {
         display: block;
     }
-
-
+    main .product-section {
+        display: none;
+    }
+    main .medium-product-section {
+        display: block;
+    }
+    main .medium-product-section .medium-product-container {
+        display: grid;
+        grid-template-columns: repeat(5,1fr);
+        gap: 10px;
+    }
 
     main .card-small-container {
         display: block;
@@ -41,6 +50,8 @@
         grid-template-columns: repeat(5, 1fr);
         gap: 10px;
     }
+
+    
 }
 
 @media screen and (max-width:991px) {
