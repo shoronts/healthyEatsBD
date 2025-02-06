@@ -21,4 +21,14 @@ document.addEventListener("DOMContentLoaded", () => {
         },
         keyboard: true,
       });
+      // card slider 
+      var Cardswiper = new Swiper(".myCardSwiper", {
+        slidesPerView: 5,
+        spaceBetween: 5,
+        loop: true,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
 });
