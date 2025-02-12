@@ -1,0 +1,56 @@
+/* hero css start  */
+main .hero-container {
+    height: 250px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+main .hero-container .hero-content .banner-header {
+    font-size: 78px;
+    font-weight: 600;
+    line-height: 93px;
+    font-family: "signika";
+}
+
+main .hero-container .hero-content .banner-home {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    font-family: 'lato';
+}
+
+main .hero-container .hero-content .banner-store {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 22px;
+    font-family: 'lato';
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+/* hero section end  */
+/* text section start  */
+main .text-container {
+    max-width: 1220px; 
+    margin: 0 auto;
+    padding: 60px 0px;
+}
+.normal-text {
+    font-size:14px;
+    font-weight: 400;
+    font-family: "roboto";
+    line-height: 22.4px;
+    color: rgb(122, 122, 122);
+}
+.bold-text {
+    font-size:14px;
+    font-weight: 600;
+    font-family: "roboto";
+    line-height: 22.4px;
+    color: rgb(122, 122, 122);
+}

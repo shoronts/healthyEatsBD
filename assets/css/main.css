@@ -247,41 +247,45 @@ header .main-navbar .mobile-menu .nav-tabs {
 /* mobile menu css end  */
 
 /* hero section start  */
-main .slider-section {
-    padding: 13px 0;
-    margin: 0;
-    background: #fff;
-    text-align: center;
-}
-
-main .slider-section .swiper {
+main .hero-container .swiper-container {
     width: 100%;
-    height: 660px;
-    margin: auto;
-    overflow: hidden;
-}
-
-main .slider-section .swiper .swiper-wrapper .swiper-slide {
+    height: 660px; /* Define the height explicitly */
+    background: #eee;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 20px;
-    font-weight: bold;
-    background: #f8f9fa;
-}
+  }
 
-main .slider-section .swiper .swiper-wrapper .swiper-slide img {
+main .hero-container .swiper-container .swiper {
     width: 100%;
-}
+    height:660px;
+  }
 
+  main .hero-container .swiper-container .swiper .swiper-wrapper .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 .swiper-button-next,
 .swiper-button-prev {
     color: #FFFEFE;
 }
+
 .swiper-pagination-bullet {
     padding: 6px;
     border: 2px solid whitesmoke;
 }
+
 .swiper-pagination-bullet-active {
     background: rgb(36, 36, 36);
 }
@@ -291,6 +295,7 @@ main .slider-section .swiper .swiper-wrapper .swiper-slide img {
 main .loved-product {
     padding: 40px 0px;
 }
+
 main .product-section {
     display: block;
 }
@@ -300,14 +305,15 @@ main .swiper-card {
     width: 70%;
     margin: 0 auto;
     height: auto;
-    background: #fff;
-  }
+    background: #FCFAF8;
+}
 
-  /* Keep swiper styles */
-  main .swiper-card .swiper-container .swiper {
+/* Keep swiper styles */
+main .swiper-card .swiper-container .swiper {
     width: 100%;
     height: auto;
-  }
+}
+
 main .swiper-card .swiper-container .swiper .swiper-slide {
     text-align: center;
     font-size: 18px;
@@ -315,33 +321,37 @@ main .swiper-card .swiper-container .swiper .swiper-slide {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+}
 
-  main .swiper-card .swiper-container .swiper .swiper-slide img {
+main .swiper-card .swiper-container .swiper .swiper-slide img {
     display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
-  }
+}
 
-  main .swiper-card .swiper-container .swiper .swiper-button-next,
-  main .swiper-card .swiper-container .swiper .swiper-button-prev {
+main .swiper-card .swiper-container .swiper .swiper-button-next,
+main .swiper-card .swiper-container .swiper .swiper-button-prev {
     color: rgb(88, 87, 87);
     visibility: hidden;
     opacity: 0;
-    pointer-events: none; /* Ensure buttons are not clickable */
-    transition: opacity 1s ease; /* Only transition opacity */
-  }
-  
-  main .swiper-card:hover .swiper-button-prev,
-  main .swiper-card:hover .swiper-button-next {
+    pointer-events: none;
+    /* Ensure buttons are not clickable */
+    transition: opacity 1s ease;
+    /* Only transition opacity */
+}
+
+main .swiper-card:hover .swiper-button-prev,
+main .swiper-card:hover .swiper-button-next {
     visibility: visible;
     opacity: 1;
-    pointer-events: auto; /* Make buttons interactive */
-    transition: opacity 1s ease; /* Make them appear with fade effect */
-  }
+    pointer-events: auto;
+    /* Make buttons interactive */
+    transition: opacity 1s ease;
+    /* Make them appear with fade effect */
+}
 
-main .swiper-card .see-btn {
+.see-btn {
     padding: 10px 39px;
     border-radius: 8px;
     background: #276B41;
@@ -353,8 +363,9 @@ main .swiper-card .see-btn {
     margin: 0 auto;
     border: none;
 }
-main .swiper-card .btn-box {
-    margin: 40px 0px;
+
+.btn-box {
+    padding: 40px 0px;
 }
 
 /* large card section  end */
@@ -362,6 +373,7 @@ main .swiper-card .btn-box {
 main .product-card-section {
     background: #FCFAF8;
 }
+
 .card-container {
     padding: 0 40px;
 }
@@ -379,14 +391,14 @@ main .product-card-section {
 
 .chocolate-p {
     color: #000;
-    font-family: Signika;
+    font-family: "Signika";
     font-size: 14px;
     line-height: 24px;
 }
 
 .price {
     color: #2E7046;
-    font-family: Lato;
+    font-family: "Lato";
     font-size: 16px;
     font-weight: 500;
     letter-spacing: -0.4px;
@@ -394,7 +406,7 @@ main .product-card-section {
 
 
 .card-btn {
-    padding:20px 120px;
+    padding: 20px 80px;
     color: #FFF;
     font-size: 13px;
     text-align: center;
@@ -454,10 +466,6 @@ main .product-card-section {
     transform: translateX(-10px);
 }
 
-.see-btn-container {
-    padding: 40px 0;
-}
-
 .see-all {
     padding: 23px 59px;
     border-radius: 8px;
@@ -469,9 +477,347 @@ main .product-card-section {
     margin: 0 auto;
     border: none;
 }
+
 /* card css for all device end*/
 /* small card section  start */
 main .medium-card-container {
     display: none;
 }
 
+/* small card section end  */
+/* pinat butter section start  */
+main .pinat-batter-section .pinat-container {
+    width: 70%;
+    margin: 0 auto;
+}
+
+main .pinat-batter-section .pinat-text .pinat-head {
+    color: #2E7046;
+    font-family: "Hind Siliguri";
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 70px;
+}
+
+main .pinat-batter-section .pinat-text .rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+}
+
+main .pinat-batter-section .pinat-text .rating input {
+    display: none;
+}
+
+main .pinat-batter-section .pinat-text .rating label {
+    font-size: 14px;
+    color: gold;
+    cursor: pointer;
+}
+
+main .pinat-batter-section .pinat-text .rating-review {
+    color: #000;
+    text-align: center;
+    font-family: "Montserrat";
+    font-size: 22px;
+    font-weight: 500;
+}
+
+main .pinat-batter-section .pinat-text .upokarita {
+    color: #818181;
+    font-family: "Hind Siliguri";
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: -0.56px;
+}
+
+main .pinat-batter-section .pinat-text .pinat-batter-text {
+    color: #000;
+    font-family: "Hind Siliguri";
+    font-size: 22px;
+    font-weight: 400;
+}
+
+main .pinat-batter-section .pinat-text .order-btn {
+    display: inline-flex;
+    padding: 23px 59px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    background: #276B41;
+    color: #FFF;
+    font-family: "Hind Siliguri";
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 34px;
+    border: none;
+}
+
+/* pinat batter section end  */
+/*  benner section start  */
+main .healthry-banner {
+    height: 332px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 0px;
+}
+
+main .healthry-banner .banner-text {
+    width: 70%;
+    margin: 0 auto;
+}
+
+main .healthry-banner .banner-text .text-one {
+    color: #2B491D;
+    font-family: "Inter";
+    font-size: 50px;
+    font-weight: 600;
+    line-height: 50px;
+}
+
+main .healthry-banner .banner-text .text-two {
+    color: #244316;
+    font-family: "Inter";
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 35px;
+}
+
+/* banner section css end  */
+/* ghee section start  */
+main .ghee-section {
+    background: #E4F1DF;
+}
+
+main .ghee-section .ghee-container {
+    width: 70%;
+    margin: 0 auto;
+}
+
+
+main .ghee-section .ghee-container .ghee-text-content h2 {
+    color: #000;
+    font-family: "Inter";
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 32px;
+}
+
+main .ghee-section .ghee-container .ghee-text-content .order-btn {
+    padding: 14px 34px;
+    justify-content: flex-end;
+    color: #FFF;
+    font-family: "Inter";
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 15px;
+    border: none;
+    align-items: center;
+    border-radius: 4px;
+    background: rgba(0, 0, 0);
+}
+
+main .ghee-section .ghee-container .ghee-text-content .ghee-text h2 {
+    color: #000;
+    font-family: "Inter";
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 25.2px;
+}
+
+main .ghee-section .ghee-container .ghee-text-content .ghee-text p {
+    color: #333;
+    font-family: "Inter";
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 22.2px;
+}
+
+/* ghee section end  */
+/* review section start  */
+main .review-swiper-container {
+    position: relative;
+    width: 100%;
+    height: 35vh;
+    background: #E4F1DF;
+}
+
+/* Keep swiper styles */
+main .review-swiper-container .swiper {
+    width: 50%;
+    height: 35vh;
+    border-radius: 10px;
+}
+
+main .review-swiper-container .swiper .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .review-swiper-container .swiper .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+main .review-swiper-container .swiper .swiper-button-next,
+main .review-swiper-container .swiper .swiper-button-prev {
+    color: #286D43;
+}
+
+main .client-review-section {
+    padding: 60px 41px 60px 41px;
+    background: #E4F1DF;
+}
+
+main .client-review-section .client-header {
+    color: #29421B;
+    font-family: "Signika";
+    font-size: 33px;
+    font-weight: 700;
+    line-height: 55px;
+    margin-bottom: 40px;
+}
+
+.review-card {
+    border-radius: 12px;
+    background: #FFF;
+    display: flex;
+    width: 600px;
+    padding: 20px 20px;
+    height: 283px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 22px;
+    flex-shrink: 0;
+}
+
+.review-text {
+    color: #838383;
+    text-align: center;
+    font-family: "Inter";
+    font-size: 15px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.review-name {
+    color: #3A3A3A;
+    font-family: "Inter";
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+.review-intro {
+    color: #276B41;
+    font-family: "Inter";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+/* review section end  */
+
+main .blog-section {
+    padding: 80px 0px;
+    width: 70%;
+    margin: 0 auto;
+}
+main .blog-section .blog-header {
+    color: #27441B;
+    font-family: "Signika";
+    font-size: 27px;
+    font-weight: 700;
+    line-height: 27px;
+}
+main .blog-section .blog-card-container .card-box {
+    display: flex;
+    width: auto;
+    height: auto;
+    padding-bottom: 30px;
+    flex-direction: column;
+    align-items: center;
+    gap: 44.199px;
+    flex-shrink: 0;
+    border-radius: 12px;
+    background: #FFF;
+    box-shadow: 4px 4px 6px 3px rgba(0, 0, 0, 0.25);
+}
+/* main .blog-section .blog-card-container .card-box img {
+    width:100%;
+} */
+main .blog-section .blog-card-container .card-box .card-text .card-date {
+    font-size: 13px;
+    font-family: "lato";
+    line-height: 22px;
+    color: rgb(165, 165, 165);
+}
+main .blog-section .blog-card-container .card-box .card-text h3 {
+    font-size: 22px;
+    font-family: "signika,arial";
+    font-weight: 500;
+    line-height: 30px;
+    color: rgb(51, 51, 51);
+}
+main .blog-section .blog-card-container .card-box .card-text .card-text {
+    font-size: 14px;
+    font-family: "lato";
+    line-height: 22px;
+    color: rgb(119, 119, 119);
+}
+main .blog-section .blog-card-container .card-box .card-text h4 {
+    font-size: 13px;
+    font-family: "lato";
+    font-weight: 800;
+    line-height: 22px;
+    color: rgb(46, 112, 70);
+    cursor: pointer;
+}
+/* blog section end  */
+/* service section start  */
+main .service-container {
+    padding: 40px 100px;
+    margin: 0 auto;
+    background:rgb(228,240,222);
+}
+main .service-container .service-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+.service-first {
+    font-family: "inter";
+    font-size:16px;
+    font-weight: 600;
+    line-height: 22.4px;
+    color: rgb(49,49,49);
+}
+.service-second {
+    font-family: "inter";
+    font-size:14px;
+    font-weight: 400;
+    line-height: 22.4px;
+    color: rgb(0,0,0);
+}
+.service-banner {
+    height: 200px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+/* service section end  */

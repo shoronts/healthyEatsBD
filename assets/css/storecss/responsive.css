@@ -1,0 +1,31 @@
+@media screen and (max-width:1024px) {
+    main .hero-container .hero-content .banner-header {
+        font-size: 36px;
+        line-height: 43px;
+    }
+    main .image-container {
+        max-width:auto;
+    }
+    main .image-container .image-content .banner-img img {
+        max-width:108px;
+        height: auto;
+     }
+     main .option-section {
+        padding: 0px 20px;
+    }
+     .filter-btn {
+        width: 100%;
+    }
+}
+@media screen and (max-width:768px) {
+    main .image-container .image-content {
+        grid-template-columns: repeat(2,1fr);
+    }
+    main .image-container .image-content .banner-img img {
+        max-width:100%;
+        height: auto;
+     }
+     .medium-card-container {
+        grid-template-columns: repeat(2,1fr);
+    }
+}

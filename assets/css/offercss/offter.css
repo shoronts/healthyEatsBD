@@ -1,0 +1,24 @@
+/* banner container start  */
+main .banner-container {
+    width: 100%;
+    max-height: 878px;
+}
+main .banner-container .banner-content {
+    padding: 100px 10px;
+}
+main .banner-container .banner-content .Join-img {
+    max-width: 770px;
+    max-height: 340px;
+}
+main .banner-container .banner-content .join-header {
+    padding: 20px 0px;
+    font-size: 30px;
+    font-weight: 600;
+    font-family: "roboto";
+    line-height: 36px;
+    color: rgb(255, 255, 255);
+}
+main .banner-container .banner-content .Facebook-img {
+    max-width: 730px;
+    max-height: 90px;
+}

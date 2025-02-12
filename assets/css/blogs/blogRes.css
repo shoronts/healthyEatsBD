@@ -1,0 +1,14 @@
+@media screen and (max-width:1024px) {
+    main .hero-container .hero-content .banner-header {
+        font-size: 36px;
+        line-height: 43px;
+}
+.category-tag {
+    left: 20%;
+}
+}
+@media screen and (max-width:768px) {
+    .category-tag {
+        left: 35%;
+    }
+}

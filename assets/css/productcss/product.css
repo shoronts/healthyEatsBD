@@ -1,0 +1,144 @@
+:root {
+    --primary-green: #2B7F6C;
+}
+
+/* Breadcrumb */
+.breadcrumb a {
+    text-decoration: none;
+    color: #666;
+}
+
+.breadcrumb a:hover {
+    color: var(--primary-green);
+}
+
+/* Product Gallery */
+.product-gallery {
+    position: relative;
+    width: 100%;
+    display: flex;
+}
+
+.thumbnail-container {
+    width: 80px;
+    padding-right: 15px;
+}
+
+.thumbnail-container img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    transition: all 0.3s ease;
+}
+
+.thumbnail-container img:hover {
+    border-color: var(--primary-green);
+}
+
+.main-image-container {
+    flex-grow: 1;
+}
+
+.main-image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Weight Selection */
+.weight-select {
+    display: inline-block;
+    padding: 5px 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.weight-select.active {
+    border-color: var(--primary-green);
+    background-color: var(--primary-green);
+    color: white;
+}
+
+.weight-select:hover {
+    border-color: var(--primary-green);
+}
+
+/* Quantity Selector */
+.quantity-selector {
+    width: 120px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.quantity-selector input {
+    border: none;
+    width: 40px;
+    text-align: center;
+    padding: 5px;
+}
+
+.quantity-selector button {
+    border: none;
+    background: #f8f9fa;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.quantity-selector button:hover {
+    background: #e2e6ea;
+}
+
+/* Buttons */
+.btn-cart, .btn-buy {
+    background-color: var(--primary-green);
+    color: white;
+    padding: 8px 25px;
+    border: none;
+    transition: background 0.3s ease;
+}
+
+.btn-cart:hover, .btn-buy:hover {
+    background-color: #236b5b;
+}
+
+/* Wishlist */
+.wishlist-link {
+    color: #666;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease;
+}
+
+.wishlist-link:hover {
+    color: var(--primary-green);
+}
+
+/* Product Tabs */
+.product-tabs {
+    margin-top: 30px;
+}
+
+.nav-tabs .nav-link {
+    color: #666;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.nav-tabs .nav-link.active {
+    border-color: var(--primary-green);
+    color: var(--primary-green);
+}
+
+.nav-tabs .nav-link:hover {
+    color: var(--primary-green);
+}
