@@ -1,0 +1,288 @@
+/* hero css start  */
+main .hero-container {
+    height: 180px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+main .hero-container .hero-content .banner-header {
+    font-size: 78px;
+    font-weight: 600;
+    line-height: 93px;
+    font-family: "signika";
+}
+
+main .hero-container .hero-content .banner-home {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    font-family: 'lato';
+}
+
+main .hero-container .hero-content .banner-store {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 22px;
+    font-family: 'lato';
+}
+
+.continue-reading {
+    font-size: 13px;
+    font-weight: 800;
+    line-height: 13px;
+    color: rgb(46, 112, 70);
+    font-family: 'lato';
+    text-decoration: none;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+/* hero section end  */
+/* details section start  */
+main .details-container {
+    max-width: 1220px;
+    margin: 0 auto;
+}
+
+main .details-container .details-content .left-side .ghee-kitchen {
+    display: inline-block;
+    padding: 0px 10px;
+    background: #2E7046;
+    color: #FFF;
+    font-family: "Lato";
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 25px;
+}
+
+main .details-container .details-content .left-side .ghee-head {
+    font-family: "Signika";
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 44px;
+    color: rgb(51, 51, 51);
+}
+
+main .details-container .details-content .left-side .icons {
+    margin-top: 15px;
+    font-size: 14px;
+    line-height: 22px;
+    font-family: "lato";
+    color: rgb(165, 165, 165);
+}
+
+.main .details-container .details-content .left-side .ghee-img img {
+
+    width: 100%;
+    /* Ensures it fills the container width */
+    height: 100%;
+    /* Makes it take full height of the container */
+    object-fit: cover;
+    /* Prevents distortion and ensures it fits inside */
+
+}
+
+.text-large {
+    font-size: 16px;
+    line-height: 24px;
+    font-family: "lato";
+    font-weight: 400;
+    color: rgb(119, 119, 119);
+}
+
+.text-bold {
+    font-size: 14px;
+    line-height: 22px;
+    font-family: "lato";
+    font-weight: 600;
+    color: rgb(119, 119, 119);
+}
+
+.text-normal {
+    font-size: 14px;
+    line-height: 22px;
+    font-family: "lato";
+    font-weight: 400;
+    color: rgb(119, 119, 119);
+}
+
+/* form css  */
+/* Comment Form CSS */
+.main .details-container .details-content .left-side .comment-section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.form-title {
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 30px;
+    color: rgb(36, 36, 36);
+    font-family: "Signika";
+}
+
+.main .details-container .details-content .left-side .comment-section .comment-form .required {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.main .details-container .details-content .left-side .comment-section .comment-form .required::after {
+    content: " *";
+    color: #666;
+}
+
+.form-label,
+.privacy-notice {
+    font-size: 14px;
+    line-height: 22px;
+    color: rgb(36, 36, 36);
+    font-weight: 400;
+    font-family: "lato";
+}
+
+.colors {
+    color: rgb(119, 119, 119) !important;
+}
+
+.main .details-container .details-content .left-side .comment-section .comment-form .form-control {
+    border: 1px solid #ddd;
+    border-radius: 0;
+    padding: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.main .details-container .details-content .left-side .comment-section .comment-form .form-control:focus {
+    border-color: #0B6B3D;
+    box-shadow: none;
+}
+
+.main .details-container .details-content .left-side .comment-section .comment-form textarea.form-control {
+    min-height: 150px;
+}
+
+.main .details-container .details-content .left-side .comment-section .comment-form .form-check {
+    margin-top: 1rem;
+}
+
+.main .details-container .details-content .left-side .comment-section .comment-form .form-check-label {
+    font-size: 0.9rem;
+    color: #333;
+}
+
+.btn-comment {
+    background-color: #0B6B3D;
+    color: white;
+    border: none;
+    font-family: "lato";
+    padding: 0.5rem 1.3rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+.btn-comment:hover {
+    background-color: #095032;
+    color: white;
+}
+
+main .details-container .details-content .left-side .ghee-text .icon-conainer .icon-content .tags-container .tag {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 12px;
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 4px;
+    font-size: 12px;
+    color: #495057;
+    font-weight: 600;
+    line-height: 20px;
+    font-family: "lato";
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+main .details-container .details-content .left-side .ghee-text .icon-conainer .icon-content .tags-container .tag:hover {
+    background-color: #e9ecef;
+    border-color: #dee2e6;
+}
+
+hr {
+    color: rgb(51, 51, 51);
+}
+
+.end-justice {
+    width: 300px;
+}
+
+.order {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+    color: rgb(187, 187, 187);
+    font-family: "lato";
+}
+
+.achar {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 17px;
+    color: rgb(36, 36, 36);
+    font-family: "Signika";
+}
+
+.horizental-line {
+    border: 2px solid #E5E5E4;
+    border-left: none;
+    border-right: none;
+}
+
+main .right-side .right-side-container .search-container {
+    padding: 0px 20px;
+}
+
+.btn-search {
+    padding: 12px 27px;
+    background: #F3F3F3;
+    border: none;
+    color: rgb(62, 62, 62);
+    font-family: "lato";
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 17px;
+    text-transform: uppercase;
+}
+.right-bold {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 31px;
+    color: rgb(36, 36, 36);
+    font-family: "Signika";
+}
+.right-normal {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    color: rgb(118, 118, 118);
+    font-family: "lato";
+    text-decoration: none;
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.form-control:focus {
+    outline: none !important;
+    box-shadow: none !important;
+    border-color: gray !important;
+}
+img{
+     height: auto;
+     width: 100%;
+}

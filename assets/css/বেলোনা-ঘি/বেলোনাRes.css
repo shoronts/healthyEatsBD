@@ -1,0 +1,39 @@
+@media screen and (max-width:1024px) {
+    main .hero-container .hero-content .banner-header {
+        font-size: 36px;
+        line-height: 43px;
+}
+}
+@media screen and (max-width:567px) {
+    .icon-content {
+        display: flex;
+        flex-direction: column;
+    }
+    main .details-container .details-content .left-side .ghee-kitchen {
+        display: inline-block;
+        padding: 0px 10px;
+        background: #2E7046;
+        color: #FFF;
+        font-family: "Lato";
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 25px;
+    }
+    
+    main .details-container .details-content .left-side .ghee-head {
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 28px;
+    }
+    
+    main .details-container .details-content .left-side .icons {
+        margin-top: 15px;
+        font-size: 12px;
+        line-height: 22px;
+        font-family: "lato";
+        color: rgb(165, 165, 165);
+    }
+    .tags-container {
+        text-align: start !important;
+    }
+}
