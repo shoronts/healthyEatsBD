@@ -105,12 +105,12 @@
                                     </div>
                                 </form>
                                 <div class="user">
-                                    <a href="#">
+                                    <a class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRights" aria-controls="offcanvasRights">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28"
-                                            viewBox="0 0 24 24" fill="currentColor">
-                                            <path fill="currentColor"
-                                                d="M12 5.9a2.1 2.1 0 1 1 0 4.2a2.1 2.1 0 0 1 0-4.2m0 9c2.97 0 6.1 1.46 6.1 2.1v1.1H5.9V17c0-.64 3.13-2.1 6.1-2.1M12 4C9.79 4 8 5.79 8 8s1.79 4 4 4s4-1.79 4-4s-1.79-4-4-4m0 9c-2.67 0-8 1.34-8 4v3h16v-3c0-2.66-5.33-4-8-4" />
-                                        </svg>
+                                        viewBox="0 0 24 24" fill="currentColor">
+                                        <path fill="currentColor"
+                                            d="M12 5.9a2.1 2.1 0 1 1 0 4.2a2.1 2.1 0 0 1 0-4.2m0 9c2.97 0 6.1 1.46 6.1 2.1v1.1H5.9V17c0-.64 3.13-2.1 6.1-2.1M12 4C9.79 4 8 5.79 8 8s1.79 4 4 4s4-1.79 4-4s-1.79-4-4-4m0 9c-2.67 0-8 1.34-8 4v3h16v-3c0-2.66-5.33-4-8-4" />
+                                    </svg>
                                     </a>
                                 </div>
                                 <div class="white-list mx-3">
@@ -123,7 +123,8 @@
                                     </a>
                                 </div>
                                 <div class="cart">
-                                    <a href="#" class="position-relative">
+                                    <a href="#" class="position-relative btn" type="button" data-bs-toggle="offcanvas"
+                                        data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
                                             viewBox="0 0 24 24" fill="currentColor">
                                             <g fill="none" stroke="currentColor" stroke-linecap="round"
@@ -181,108 +182,159 @@
                                 </a>
                             </div>
                         </div>
-                        <!-- Mobile Menu -->
-                        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
-                            aria-labelledby="offcanvasExampleLabel">
-                            <div class="offcanvas-header d-flex justify-content-end">
-                                <button type="button" class="btn p-0 d-flex align-items-center"
-                                    data-bs-dismiss="offcanvas" aria-label="Close">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                                        <path fill="currentColor"
-                                            d="M6.4 19L5 17.6l5.6-5.6L5 6.4L6.4 5l5.6 5.6L17.6 5L19 6.4L13.4 12l5.6 5.6l-1.4 1.4l-5.6-5.6z" />
-                                    </svg>
-                                    Close</button>
-                            </div>
-                            <div class="offcanvas-body">
-                                <div class="container-fluid p-0">
+                    </div>
+                </div>
+                <!-- Mobile Menu -->
+                <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
+                    aria-labelledby="offcanvasExampleLabel">
+                    <div class="offcanvas-header d-flex justify-content-end">
+                        <button type="button" class="btn p-0 d-flex align-items-center" data-bs-dismiss="offcanvas"
+                            aria-label="Close">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <path fill="currentColor"
+                                    d="M6.4 19L5 17.6l5.6-5.6L5 6.4L6.4 5l5.6 5.6L17.6 5L19 6.4L13.4 12l5.6 5.6l-1.4 1.4l-5.6-5.6z" />
+                            </svg>
+                            Close</button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <div class="container-fluid p-0">
 
-                                    <div class="p-3-bottom">
-                                        <div class="search-container">
-                                            <input type="search" class="form-control" id="searchInput"
-                                                placeholder="Search for products">
-                                        </div>
-                                    </div>
-
-
-                                    <ul class="nav nav-tabs" id="menuTabs" role="tablist">
-                                        <li class="nav-item" role="presentation">
-                                            <button class="nav-link active" id="menu-tab" data-bs-toggle="tab"
-                                                data-bs-target="#menu" type="button" role="tab">MENU</button>
-                                        </li>
-                                        <li class="nav-item" role="presentation">
-                                            <button class="nav-link" id="categories-tab" data-bs-toggle="tab"
-                                                data-bs-target="#categories" type="button"
-                                                role="tab">CATEGORIES</button>
-                                        </li>
-                                    </ul>
-
-
-                                    <div class="tab-content" id="menuTabsContent">
-                                        <div class="tab-pane fade show active" id="menu" role="tabpanel">
-                                            <ul class="menu-list">
-                                                <li><a href="#">HOME</a></li>
-                                                <li><a href="#">STORE</a></li>
-                                                <li>
-                                                    <a href="#"
-                                                        class="d-flex justify-content-between align-items-center">
-                                                        NEW ARRIVALS
-                                                        <span class="new-badge">NEW</span>
-                                                    </a>
-                                                </li>
-                                                <li><a href="#">OFFERS</a></li>
-                                                <li><a href="#">CONTACT US</a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="tab-pane fade" id="categories" role="tabpanel">
-                                            <div class="">
-                                                <ul class="menu-list">
-                                                    <li><a href="#">NATURAL SWEETENERS</a></li>
-                                                    <li><a href="#">PICKLES</a></li>
-                                                    <li><a href="#">KITCHEN ESSENTIALS</a></li>
-                                                    <li><a href="#">SPECIAL PRODUCTS</a></li>
-                                                    <li><a href="#">NUTS&SEEDS</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
+                            <div class="p-3-bottom">
+                                <div class="search-container">
+                                    <input type="search" class="form-control" id="searchInput"
+                                        placeholder="Search for products">
                                 </div>
                             </div>
-                        </div>
 
-                        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
-                            aria-labelledby="offcanvasRightLabel">
-                            <div class="offcanvas-header d-flex justify-content-between align-content-center">
-                                <h5 class="fw-bold">Shoping Cart</h5>
-                                <button type="button" class="btn p-0 d-flex align-items-center"
-                                    data-bs-dismiss="offcanvas" aria-label="Close">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                                        <path fill="currentColor"
-                                            d="M6.4 19L5 17.6l5.6-5.6L5 6.4L6.4 5l5.6 5.6L17.6 5L19 6.4L13.4 12l5.6 5.6l-1.4 1.4l-5.6-5.6z" />
-                                    </svg>
-                                    Close</button>
-                            </div>
-                            <div class="offcanvas-body">
-                                <div class="empty-cart-content">
-                                    <div class="cart-icon">
-                                        <i class="bi bi-cart-x"></i>
+
+                            <ul class="nav nav-tabs" id="menuTabs" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="menu-tab" data-bs-toggle="tab"
+                                        data-bs-target="#menu" type="button" role="tab">MENU</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="categories-tab" data-bs-toggle="tab"
+                                        data-bs-target="#categories" type="button" role="tab">CATEGORIES</button>
+                                </li>
+                            </ul>
+
+
+                            <div class="tab-content" id="menuTabsContent">
+                                <div class="tab-pane fade show active" id="menu" role="tabpanel">
+                                    <ul class="menu-list">
+                                        <li><a href="#">HOME</a></li>
+                                        <li><a href="#">STORE</a></li>
+                                        <li>
+                                            <a href="#" class="d-flex justify-content-between align-items-center">
+                                                NEW ARRIVALS
+                                                <span class="new-badge">NEW</span>
+                                            </a>
+                                        </li>
+                                        <li><a href="#">OFFERS</a></li>
+                                        <li><a href="#">CONTACT US</a></li>
+                                    </ul>
+                                </div>
+                                <div class="tab-pane fade" id="categories" role="tabpanel">
+                                    <div class="">
+                                        <ul class="menu-list">
+                                            <li><a href="#">NATURAL SWEETENERS</a></li>
+                                            <li><a href="#">PICKLES</a></li>
+                                            <li><a href="#">KITCHEN ESSENTIALS</a></li>
+                                            <li><a href="#">SPECIAL PRODUCTS</a></li>
+                                            <li><a href="#">NUTS&SEEDS</a></li>
+                                        </ul>
                                     </div>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" fill="lightgray"
-                                        class="bi bi-cart-x" viewBox="0 0 16 16">
-                                        <path
-                                            d="M7.354 5.646a.5.5 0 1 0-.708.708L7.793 7.5 6.646 8.646a.5.5 0 1 0 .708.708L8.5 8.207l1.146 1.147a.5.5 0 0 0 .708-.708L9.207 7.5l1.147-1.146a.5.5 0 0 0-.708-.708L8.5 6.793z" />
-                                        <path
-                                            d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0" />
-                                    </svg>
-
-                                    <p class="empty-message my-3 fs-6 fw-bold">No products in the cart.</p>
-                                    <button class="btn btn-success return-shop-btn">
-                                        RETURN TO SHOP
-                                    </button>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
+                    aria-labelledby="offcanvasRightLabel">
+                    <div class="offcanvas-header d-flex justify-content-between align-content-center">
+                        <h5 class="fw-bold">Shoping Cart</h5>
+                        <button type="button" class="btn p-0 d-flex align-items-center" data-bs-dismiss="offcanvas"
+                            aria-label="Close">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <path fill="currentColor"
+                                    d="M6.4 19L5 17.6l5.6-5.6L5 6.4L6.4 5l5.6 5.6L17.6 5L19 6.4L13.4 12l5.6 5.6l-1.4 1.4l-5.6-5.6z" />
+                            </svg>
+                            Close</button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <div class="empty-cart-content">
+                            <div class="cart-icon">
+                                <i class="bi bi-cart-x"></i>
+                            </div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" fill="lightgray"
+                                class="bi bi-cart-x" viewBox="0 0 16 16">
+                                <path
+                                    d="M7.354 5.646a.5.5 0 1 0-.708.708L7.793 7.5 6.646 8.646a.5.5 0 1 0 .708.708L8.5 8.207l1.146 1.147a.5.5 0 0 0 .708-.708L9.207 7.5l1.147-1.146a.5.5 0 0 0-.708-.708L8.5 6.793z" />
+                                <path
+                                    d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0" />
+                            </svg>
+
+                            <p class="empty-message my-3 fs-6 fw-bold">No products in the cart.</p>
+                            <button class="btn btn-success return-shop-btn">
+                                RETURN TO SHOP
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRights" aria-labelledby="offcanvasRightLabel">
+                    <div class="offcanvas-header d-flex justify-content-between align-content-center">
+                        <h5 class="fw-bold">Sign In</h5>
+                        <button type="button" class="btn p-0 d-flex align-items-center" data-bs-dismiss="offcanvas"
+                            aria-label="Close">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <path fill="currentColor"
+                                    d="M6.4 19L5 17.6l5.6-5.6L5 6.4L6.4 5l5.6 5.6L17.6 5L19 6.4L13.4 12l5.6 5.6l-1.4 1.4l-5.6-5.6z" />
+                            </svg>
+                            Close</button>
+                    </div>
+                    <hr>
+                    <div class="offcanvas-body">
+                        <div class="login-container">
+                            <form>
+                                <div class="mb-3">
+                                    <label for="username" class="form-label required">Username or email address</label>
+                                    <input type="text" class="form-control" id="username" required>
+                                </div>
+                        
+                                <div class="mb-3">
+                                    <label for="password" class="form-label required">Password</label>
+                                    <div class="password-field">
+                                        <input type="password" class="form-control" id="password" required>
+                                        <button type="button" class="password-toggle">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16">
+                                                <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z"/>
+                                                <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0"/>
+                                              </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                        
+                                <button type="submit" class="btn btn-login text-white">LOG IN</button>
+                        
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" id="remember">
+                                        <label class="form-check-label" for="remember">Remember me</label>
+                                    </div>
+                                    <a href="#" class="forgot-password">Lost your password?</a>
+                                </div>
+                        
+                                <div class="avatar-section">
+                                    <div class="avatar-icon">
+                                        <i class="far fa-user"></i>
+                                    </div>
+                                    <p class="no-account">No account yet?</p>
+                                    <a href="#" class="create-account">CREATE AN ACCOUNT</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                  </div>
             </div>
         </section>
         <!-- Navigarion End -->
@@ -296,25 +348,25 @@
                 <div class="swiper-container">
                     <!-- Swiper -->
                     <div class="swiper mySwiper">
-                      <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <img src="assets/media/Home/banner-section/slider2-1-1-6609b964df574 1 (1).png"
-                                alt="SliderImage" loading="lazy" decoding="async">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="assets/media/Home/banner-section/slider2-1-1-6609b964df574 1 (1).png"
+                                    alt="SliderImage" loading="lazy" decoding="async">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="assets/media/Home/banner-section/slider2-1-1-6609b964df574 1 (1).png"
+                                    alt="SliderImage" loading="lazy" decoding="async">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="assets/media/Home/banner-section/slider2-1-1-6609b964df574 1 (1).png"
+                                    alt="SliderImage" loading="lazy" decoding="async">
+                            </div>
                         </div>
-                        <div class="swiper-slide">
-                            <img src="assets/media/Home/banner-section/slider2-1-1-6609b964df574 1 (1).png"
-                                alt="SliderImage" loading="lazy" decoding="async">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="assets/media/Home/banner-section/slider2-1-1-6609b964df574 1 (1).png"
-                                alt="SliderImage" loading="lazy" decoding="async">
-                        </div>
-                      </div>
-                      <div class="swiper-button-next"></div>
-                      <div class="swiper-button-prev"></div>
-                      <div class="swiper-pagination"></div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-pagination"></div>
                     </div>
-                  </div>
+                </div>
             </div>
             <!-- <div class="slider-section">
                 <div class="swiper mySwiper">
@@ -934,48 +986,55 @@
                                 </div>
                                 <p class="rating-review m-0 p-0">208 reviews</p>
                             </div>
-                            <p class="upokarita">চিনাবাদাম ও বাছাইকৃত সেরা লিচু ফুলের মধুর সংমিশ্রণে তৈরি একটু বেশিই
+                            <p class="upokarita text-start text-ld-center">চিনাবাদাম ও বাছাইকৃত সেরা লিচু ফুলের মধুর
+                                সংমিশ্রণে তৈরি একটু বেশিই
                                 হেলদি এই পিনাটবাটার থাকুক আপনার নাস্তার টেবিলে।</p>
                             <div class="pinat-batter-text d-flex align-items-center gap-3">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28"
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"
                                     fill="none">
-                                    <rect width="28" height="28" rx="4" fill="#276B41" />
-                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                        d="M10.0998 21.5075L3.5 14.9077L5.14967 13.258L10.9247 19.033L24.1243 5.83334L25.774 7.48301L11.7507 21.5075C11.6423 21.616 11.5136 21.702 11.372 21.7607C11.2304 21.8195 11.0786 21.8497 10.9253 21.8497C10.7719 21.8497 10.6201 21.8195 10.4785 21.7607C10.3369 21.702 10.2082 21.616 10.0998 21.5075Z"
-                                        fill="#FFFCFC" />
+                                    <rect width="22" height="22" rx="4" fill="#276B41" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.5 11.5L10.5 14.5L16.5 8.5"
+                                        stroke="white" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
                                 </svg>
-                                <p class="m-0 p-0">রোগ প্রতিরোধ ক্ষমতা বৃদ্ধি করে</p>
+
+                                <p class="m-0 p-0 improve-text">রোগ প্রতিরোধ ক্ষমতা বৃদ্ধি করে</p>
                             </div>
                             <div class="pinat-batter-text d-flex align-items-center gap-3 my-1">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28"
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"
                                     fill="none">
-                                    <rect width="28" height="28" rx="4" fill="#276B41" />
-                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                        d="M10.0998 21.5075L3.5 14.9077L5.14967 13.258L10.9247 19.033L24.1243 5.83334L25.774 7.48301L11.7507 21.5075C11.6423 21.616 11.5136 21.702 11.372 21.7607C11.2304 21.8195 11.0786 21.8497 10.9253 21.8497C10.7719 21.8497 10.6201 21.8195 10.4785 21.7607C10.3369 21.702 10.2082 21.616 10.0998 21.5075Z"
-                                        fill="#FFFCFC" />
+                                    <rect width="22" height="22" rx="4" fill="#276B41" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.5 11.5L10.5 14.5L16.5 8.5"
+                                        stroke="white" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
                                 </svg>
-                                <p class="m-0 p-0">ব্রেইনকে করবে আরো বেশি শার্পার</p>
+
+                                <p class="m-0 p-0 improve-text">ব্রেইনকে করবে আরো বেশি শার্পার</p>
                             </div>
                             <div class="pinat-batter-text d-flex align-items-center gap-3 my-1">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28"
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"
                                     fill="none">
-                                    <rect width="28" height="28" rx="4" fill="#276B41" />
-                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                        d="M10.0998 21.5075L3.5 14.9077L5.14967 13.258L10.9247 19.033L24.1243 5.83334L25.774 7.48301L11.7507 21.5075C11.6423 21.616 11.5136 21.702 11.372 21.7607C11.2304 21.8195 11.0786 21.8497 10.9253 21.8497C10.7719 21.8497 10.6201 21.8195 10.4785 21.7607C10.3369 21.702 10.2082 21.616 10.0998 21.5075Z"
-                                        fill="#FFFCFC" />
+                                    <rect width="22" height="22" rx="4" fill="#276B41" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.5 11.5L10.5 14.5L16.5 8.5"
+                                        stroke="white" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
                                 </svg>
-                                <p class="m-0 p-0">পিনাট বাটারে থাকা স্বাস্থ্যকর চর্বি ও প্রোটিন দীর্ঘক্ষণ শক্তি জোগায়
+
+                                <p class="m-0 p-0 improve-text">পিনাট বাটারে থাকা স্বাস্থ্যকর চর্বি ও প্রোটিন দীর্ঘক্ষণ
+                                    শক্তি জোগায়
                                 </p>
                             </div>
                             <div class="pinat-batter-text d-flex align-items-center gap-3">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28"
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"
                                     fill="none">
-                                    <rect width="28" height="28" rx="4" fill="#276B41" />
-                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                        d="M10.0998 21.5075L3.5 14.9077L5.14967 13.258L10.9247 19.033L24.1243 5.83334L25.774 7.48301L11.7507 21.5075C11.6423 21.616 11.5136 21.702 11.372 21.7607C11.2304 21.8195 11.0786 21.8497 10.9253 21.8497C10.7719 21.8497 10.6201 21.8195 10.4785 21.7607C10.3369 21.702 10.2082 21.616 10.0998 21.5075Z"
-                                        fill="#FFFCFC" />
+                                    <rect width="22" height="22" rx="4" fill="#276B41" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.5 11.5L10.5 14.5L16.5 8.5"
+                                        stroke="white" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
                                 </svg>
-                                <p class="m-0 p-0">রয়েছে প্রচুর পরিমাণে প্রোটিন যা পেশী গঠনে ভূমিকা রাখে</p>
+
+                                <p class="m-0 p-0 improve-text">রয়েছে প্রচুর পরিমাণে প্রোটিন যা পেশী গঠনে ভূমিকা রাখে
+                                </p>
                             </div>
                             <button class="order-btn my-3">অর্ডার করুন</button>
                         </div>
@@ -989,7 +1048,7 @@
         <section>
             <div class="healthry-banner"
                 style="background-image: url('/assets/media/Home/banner-section/Home-Image-1-scaled-1\ \(1\)\ 1.png');">
-                <div class="banner-text d-flex flex-column flex-md-row justify-content-around text-center">
+                <div class="banner-text d-flex flex-column flex-md-row text-center">
                     <p class="text-one">WE ARE <br>HEALTHY <br>EATS</p>
                     <p class="text-two">We collect pure and fresh <br>groceries directly from <br>core farmers and serve
                         <br>you
@@ -1008,12 +1067,12 @@
         <section>
             <div class="ghee-section">
                 <div class="ghee-container">
-                    <div class="row g-5">
-                        <div class="ghee-img col-12 col-md-5 p-md-5">
+                    <div class="row align-content-center">
+                        <div class="ghee-img col-12 col-md-5">
                             <img src="assets/media/Home/ghee-section/ghee-1 1.png" class="img-fluid" alt="gheeImage"
                                 loading="lazy" decoding="async">
                         </div>
-                        <div class="ghee-text-content col-12 col-md-7 p-md-5">
+                        <div class="ghee-text-content col-12 col-md-7">
                             <h2 class="ghee-head">বিলোনা ঘি এর উপকারিতা:</h2>
 
                             <div class="ghee-upokarita d-flex align-items-center gap-3">
@@ -1061,7 +1120,7 @@
         <!-- ghee banner section start  -->
         <section>
             <div class="banner-section"
-                style="background-image: url('/assets/media/Home/banner-section/web1-1-1-scaled-1\ 1.png'); height: 255px; width: 100%; background-position: center; background-size: cover; background-repeat: no-repeat;">
+                style="background-image: url('/assets/media/Home/banner-section/web1-1-1-scaled-1\ 1.png');">
             </div>
         </section>
         <!-- ghee banner section end  -->
@@ -1257,49 +1316,43 @@
                     </div>
                 </div>
             </div>
-
         </section>
         <!-- review section end  -->
         <!-- blog section start  -->
-        <section class=" d-none">
+        <section>
             <div class="blog-section">
                 <h2 class="blog-header text-center">BLOGS</h2>
-                <div class="blog-card-container row">
-                    <!-- card-1  -->
-                    <div class="card-box col-12 col-md-4">
+                <div class="blog-container my-5">
+                    <div class="card-box">
                         <img src="assets/media/Home/blog-section/blogcard1.png" alt="cardImage" loading="lazy"
                             decoding="async">
                         <div class="card-text p-3">
                             <p class="card-date">04 Sep 2024</p>
-                            <h3>বেলোনা ঘি এর বৈশিষ্ট্য</h3>
-                            <p class="card-text">আপনি কি জানেন যে আপনি যে ঘি গ্রহণ করেন তার
-                                গুণমান তার পুষ্টিগুণ এবং স্বাস্থ্য উপকারিতাকে
-                                ব্যাপকভাবে সংজ্ঞায়িত করে? গুণমান নিশ্চিত করতে...</p>
+                            <h3 class="mousumi-achar">বেলোনা ঘি এর বৈশিষ্ট্য</h3>
+                            <p class="card-text">আপনি কি জানেন যে আপনি যে ঘি গ্রহণ করেন তার গুণমান তার পুষ্টিগুণ এবং
+                                স্বাস্থ্য উপকারিতাকে ব্যাপকভাবে সংজ্ঞায়িত করে? গুণমান নিশ্চিত করতে...</p>
                             <h4>CONTINUE READING</h4>
                         </div>
                     </div>
-                    <!-- card 2  -->
-                    <div class="card-box col-12 col-md-4">
+                    <div class="card-box">
                         <img src="assets/media/Home/blog-section/blogcard2.png" alt="cardImage" loading="lazy"
                             decoding="async">
                         <div class="card-text p-3">
                             <p class="card-date">29 Dec 2023</p>
-                            <h3>মৌসুমি আচার</h3>
+                            <h3 class="mousumi-achar">মৌসুমি আচার</h3>
                             <p class="card-text">আচার হলো বাংলাদেশীদের ঐতিহ্য যাতে ফল, শাকসবজি এবং অন্যান্য খাদ্য
                                 সামগ্রীকে মশলা, লবণ…</p>
                             <h4>CONTINUE READING</h4>
                         </div>
                     </div>
-
-                    <!-- card 3  -->
-                    <div class="card-box col-12 col-md-4">
+                    <div class="card-box">
                         <img src="assets/media/Home/blog-section/blogcard3.png" alt="cardImage" loading="lazy"
                             decoding="async">
                         <div class="card-text p-3">
                             <p class="card-date">29 Dec 2023</p>
-                            <h3>প্রাকৃতিক মিষ্টান্ন এর কার্যকারিতা</h3>
-                            <p class="card-text">গুড় হলো আখ বা খেজুর গাছ বা খেজুরের ঘন
-                                রস থেকে প্রাপ্ত একটি প্রাকৃতিক মিষ্টান্ন। একটি ঐতিহ্যগত প্রক্রিয়ার মাধ্যমে…</p>
+                            <h3 class="mousumi-achar">প্রাকৃতিক মিষ্টান্ন এর কার্যকারিতা</h3>
+                            <p class="card-text">গুড় হলো আখ বা খেজুর গাছ বা খেজুরের ঘন রস থেকে প্রাপ্ত একটি প্রাকৃতিক
+                                মিষ্টান্ন। একটি ঐতিহ্যগত প্রক্রিয়ার মাধ্যমে…</p>
                             <h4>CONTINUE READING</h4>
                         </div>
                     </div>
@@ -1338,10 +1391,13 @@
                         </div>
                     </div>
                     <div class="col-6 col-md-3 service-card">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="43" height="55" fill="green" class="bi bi-house-check" viewBox="0 0 16 16">
-                            <path d="M7.293 1.5a1 1 0 0 1 1.414 0L11 3.793V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v3.293l2.354 2.353a.5.5 0 0 1-.708.708L8 2.207l-5 5V13.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 1 0 1h-4A1.5 1.5 0 0 1 2 13.5V8.207l-.646.647a.5.5 0 1 1-.708-.708z"/>
-                            <path d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7m1.679-4.493-1.335 2.226a.75.75 0 0 1-1.174.144l-.774-.773a.5.5 0 0 1 .708-.707l.547.547 1.17-1.951a.5.5 0 1 1 .858.514"/>
-                          </svg>    
+                        <svg xmlns="http://www.w3.org/2000/svg" width="43" height="55" fill="green"
+                            class="bi bi-house-check" viewBox="0 0 16 16">
+                            <path
+                                d="M7.293 1.5a1 1 0 0 1 1.414 0L11 3.793V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v3.293l2.354 2.353a.5.5 0 0 1-.708.708L8 2.207l-5 5V13.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 1 0 1h-4A1.5 1.5 0 0 1 2 13.5V8.207l-.646.647a.5.5 0 1 1-.708-.708z" />
+                            <path
+                                d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7m1.679-4.493-1.335 2.226a.75.75 0 0 1-1.174.144l-.774-.773a.5.5 0 0 1 .708-.707l.547.547 1.17-1.951a.5.5 0 1 1 .858.514" />
+                        </svg>
                         <div class="service">
                             <p class="service-first m-0 p-0">Pickop At Any Store</p>
                             <p class="service-second m-0 p-0">Order anywhere</p>
@@ -1349,11 +1405,14 @@
 
                     </div>
                     <div class="col-6 col-md-3 service-card">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="43" height="55" fill="green" class="bi bi-chat-right-text" viewBox="0 0 16 16">
-                            <path d="M2 1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h9.586a2 2 0 0 1 1.414.586l2 2V2a1 1 0 0 0-1-1zm12-1a2 2 0 0 1 2 2v12.793a.5.5 0 0 1-.854.353l-2.853-2.853a1 1 0 0 0-.707-.293H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2z"/>
-                            <path d="M3 3.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5M3 6a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 6m0 2.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5"/>
-                          </svg>
-                          
+                        <svg xmlns="http://www.w3.org/2000/svg" width="43" height="55" fill="green"
+                            class="bi bi-chat-right-text" viewBox="0 0 16 16">
+                            <path
+                                d="M2 1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h9.586a2 2 0 0 1 1.414.586l2 2V2a1 1 0 0 0-1-1zm12-1a2 2 0 0 1 2 2v12.793a.5.5 0 0 1-.854.353l-2.853-2.853a1 1 0 0 0-.707-.293H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2z" />
+                            <path
+                                d="M3 3.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5M3 6a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 6m0 2.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5" />
+                        </svg>
+
                         <div class="service">
                             <p class="service-first m-0 p-0">Secured Payment</p>
                             <p class="service-second m-0 p-0">All major credit cards.</p>
@@ -1361,11 +1420,14 @@
 
                     </div>
                     <div class="col-6 col-md-3 service-card">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="43" height="55" fill="green" class="bi bi-shield-lock" viewBox="0 0 16 16">
-                            <path d="M5.338 1.59a61 61 0 0 0-2.837.856.48.48 0 0 0-.328.39c-.554 4.157.726 7.19 2.253 9.188a10.7 10.7 0 0 0 2.287 2.233c.346.244.652.42.893.533q.18.085.293.118a1 1 0 0 0 .101.025 1 1 0 0 0 .1-.025q.114-.034.294-.118c.24-.113.547-.29.893-.533a10.7 10.7 0 0 0 2.287-2.233c1.527-1.997 2.807-5.031 2.253-9.188a.48.48 0 0 0-.328-.39c-.651-.213-1.75-.56-2.837-.855C9.552 1.29 8.531 1.067 8 1.067c-.53 0-1.552.223-2.662.524zM5.072.56C6.157.265 7.31 0 8 0s1.843.265 2.928.56c1.11.3 2.229.655 2.887.87a1.54 1.54 0 0 1 1.044 1.262c.596 4.477-.787 7.795-2.465 9.99a11.8 11.8 0 0 1-2.517 2.453 7 7 0 0 1-1.048.625c-.28.132-.581.24-.829.24s-.548-.108-.829-.24a7 7 0 0 1-1.048-.625 11.8 11.8 0 0 1-2.517-2.453C1.928 10.487.545 7.169 1.141 2.692A1.54 1.54 0 0 1 2.185 1.43 63 63 0 0 1 5.072.56"/>
-                            <path d="M9.5 6.5a1.5 1.5 0 0 1-1 1.415l.385 1.99a.5.5 0 0 1-.491.595h-.788a.5.5 0 0 1-.49-.595l.384-1.99a1.5 1.5 0 1 1 2-1.415"/>
-                          </svg>
-                          
+                        <svg xmlns="http://www.w3.org/2000/svg" width="43" height="55" fill="green"
+                            class="bi bi-shield-lock" viewBox="0 0 16 16">
+                            <path
+                                d="M5.338 1.59a61 61 0 0 0-2.837.856.48.48 0 0 0-.328.39c-.554 4.157.726 7.19 2.253 9.188a10.7 10.7 0 0 0 2.287 2.233c.346.244.652.42.893.533q.18.085.293.118a1 1 0 0 0 .101.025 1 1 0 0 0 .1-.025q.114-.034.294-.118c.24-.113.547-.29.893-.533a10.7 10.7 0 0 0 2.287-2.233c1.527-1.997 2.807-5.031 2.253-9.188a.48.48 0 0 0-.328-.39c-.651-.213-1.75-.56-2.837-.855C9.552 1.29 8.531 1.067 8 1.067c-.53 0-1.552.223-2.662.524zM5.072.56C6.157.265 7.31 0 8 0s1.843.265 2.928.56c1.11.3 2.229.655 2.887.87a1.54 1.54 0 0 1 1.044 1.262c.596 4.477-.787 7.795-2.465 9.99a11.8 11.8 0 0 1-2.517 2.453 7 7 0 0 1-1.048.625c-.28.132-.581.24-.829.24s-.548-.108-.829-.24a7 7 0 0 1-1.048-.625 11.8 11.8 0 0 1-2.517-2.453C1.928 10.487.545 7.169 1.141 2.692A1.54 1.54 0 0 1 2.185 1.43 63 63 0 0 1 5.072.56" />
+                            <path
+                                d="M9.5 6.5a1.5 1.5 0 0 1-1 1.415l.385 1.99a.5.5 0 0 1-.491.595h-.788a.5.5 0 0 1-.49-.595l.384-1.99a1.5 1.5 0 1 1 2-1.415" />
+                        </svg>
+
                         <div class="service">
                             <p class="service-first m-0 p-0">Free Return</p>
                             <p class="service-second m-0 p-0">7 days return Policy</p>
@@ -1374,121 +1436,131 @@
                     </div>
                 </div>
             </div>
-            <div class="service-banner" style="background-image: url('assets/media/Home/banner-section/footer-sede.png')">
+            <div class="service-banner"
+                style="background-image: url('assets/media/Home/banner-section/footer-sede.png')">
 
             </div>
         </section>
         <!-- service section end  -->
+        <div class="d-none">
+            <div class="card-box col-12 col-md-4">
+                <img src="assets/media/Home/blog-section/blogcard2.png" alt="cardImage" loading="lazy" decoding="async">
+                <div class="card-text p-3">
+                    <p class="card-date">29 Dec 2023</p>
+                    <h3>মৌসুমি আচার</h3>
+                    <p class="card-text">আচার হলো বাংলাদেশীদের ঐতিহ্য যাতে ফল, শাকসবজি এবং অন্যান্য খাদ্য
+                        সামগ্রীকে মশলা, লবণ…</p>
+                    <h4>CONTINUE READING</h4>
+                </div>
+            </div>
+        </div>
     </main>
     <!-- main end  -->
     <!-- Footer Section  -->
     <footer>
-        <div class="footer-section border">
-            <div class="footer-container row align-items-center">
-                <div class="col-12 col-md-4 ">
-                    <div class="text-center">
-                        <img src="assets/media/logo.png" class="img-fluid" alt="FooterLogo" decoding="async"
-                            loading="lazy">
-                        <p class="img-text my-4">Healthy Eats collects pure and fresh groceries
-                            directly from core farmers and serve you to your
-                            doorstep.</p>
+        <section>
+            <div class="footer-container" style="background-image: url(assets/media/Footer-Image-scaled-1\ 2.png);">
+                <div class="footer-content row g-3">
+                    <div class="col-12 col-md-4 text-center p-3">
+                        <img src="assets/media/logo.png" class="img-fluid" alt="FooterLogo" loading="lazy"
+                            decoding="async">
+                        <p class="footer-text p-md-5">Healthy Eats collects pure and fresh groceries directly from core
+                            farmers and serve you to your doorstep.</p>
+                    </div>
+                    <div class="col-12 col-md-4 p-3 d-flex align-content-center justify-content-around">
+                        <div class="half-of-middle">
+                            <div class="d-flex align-items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="27" viewBox="0 0 37 33"
+                                    fill="none">
+                                    <path d="M13.876 8.17017L23.126 16.3393L13.876 24.5084" stroke="white"
+                                        stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                <p class="my-2 footer-text">Contact Us</p>
+                            </div>
+
+                            <div class="d-flex align-items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="27" viewBox="0 0 37 33"
+                                    fill="none">
+                                    <path d="M13.875 8.22168L23.125 16.3908L13.875 24.5599" stroke="white"
+                                        stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                <p class="my-2 footer-text">Privacy Policy</p>
+                            </div>
+
+                            <div class="d-flex align-items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="27" viewBox="0 0 37 33"
+                                    fill="none">
+                                    <path d="M13.876 8.17017L23.126 16.3393L13.876 24.5084" stroke="white"
+                                        stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                <p class="my-2 footer-text">Terms of Services</p>
+                            </div>
+
+                            <div class="d-flex align-items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="27" viewBox="0 0 37 33"
+                                    fill="none">
+                                    <path d="M13.876 8.17017L23.126 16.3393L13.876 24.5084" stroke="white"
+                                        stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                <p class="my-2 footer-text">Refund Policy</p>
+                            </div>
+                        </div>
+                        <div class="half-of-middle">
+                            <div class="d-flex align-items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="27" viewBox="0 0 37 33"
+                                    fill="none">
+                                    <path d="M13.876 8.17017L23.126 16.3393L13.876 24.5084" stroke="white"
+                                        stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                <p class="my-2 footer-text">Contact Us</p>
+                            </div>
+
+                            <div class="d-flex align-items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="27" viewBox="0 0 37 33"
+                                    fill="none">
+                                    <path d="M13.875 8.22168L23.125 16.3908L13.875 24.5599" stroke="white"
+                                        stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                <p class="my-2 footer-text">Privacy Policy</p>
+                            </div>
+
+                            <div class="d-flex align-items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="27" viewBox="0 0 37 33"
+                                    fill="none">
+                                    <path d="M13.876 8.17017L23.126 16.3393L13.876 24.5084" stroke="white"
+                                        stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                <p class="my-2 footer-text">Terms of Services</p>
+                            </div>
+
+                            <div class="d-flex align-items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="27" viewBox="0 0 37 33"
+                                    fill="none">
+                                    <path d="M13.876 8.17017L23.126 16.3393L13.876 24.5084" stroke="white"
+                                        stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                <p class="my-2 footer-text">Refund Policy</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4 p-3">
+                        <div class="footer-contact">
+                            <p class="my-2 fw-bolder bold-text">Contact </p>
+                            <p class="m-0 p-0 footer-text">moazzem@healthyeatsbd.com </p>
+                            <p class="m-0 p-0 footer-text">+8801581 044 495</p>
+                            <p class="m-0 p-0 footer-text">Timing: 10am to 7pm (Sunday to Saturday)</p>
+                            <p class="my-4 p-0 bold-text">Address</p>
+                            <p class="my-4 p-0 footer-text">Tejgaon,Dhaka- 1215, Bangladesh</p>
+                        </div>
                     </div>
                 </div>
-
-                <hr class="horizental">
-                <div class=" contact-us col-12 col-md-4 d-flex align-items-center justify-content-around">
-                    <div class="half-of-middle">
-                        <div class="d-flex align-items-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="27" viewBox="0 0 37 33"
-                                fill="none">
-                                <path d="M13.876 8.17017L23.126 16.3393L13.876 24.5084" stroke="white" stroke-width="3"
-                                    stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                            <p class="my-2">Contact Us</p>
-                        </div>
-
-                        <div class="d-flex align-items-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="27" viewBox="0 0 37 33"
-                                fill="none">
-                                <path d="M13.875 8.22168L23.125 16.3908L13.875 24.5599" stroke="white" stroke-width="3"
-                                    stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                            <p class="my-2">Privacy Policy</p>
-                        </div>
-
-                        <div class="d-flex align-items-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="27" viewBox="0 0 37 33"
-                                fill="none">
-                                <path d="M13.876 8.17017L23.126 16.3393L13.876 24.5084" stroke="white" stroke-width="3"
-                                    stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                            <p class="my-2">Terms of Services</p>
-                        </div>
-
-                        <div class="d-flex align-items-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="27" viewBox="0 0 37 33"
-                                fill="none">
-                                <path d="M13.876 8.17017L23.126 16.3393L13.876 24.5084" stroke="white" stroke-width="3"
-                                    stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                            <p class="my-2">Refund Policy</p>
-                        </div>
-                    </div>
-                    <div class="half-of-middle">
-                        <div class="d-flex align-items-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="27" viewBox="0 0 37 33"
-                                fill="none">
-                                <path d="M13.876 8.17017L23.126 16.3393L13.876 24.5084" stroke="white" stroke-width="3"
-                                    stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                            <p class="my-2">Contact Us</p>
-                        </div>
-
-                        <div class="d-flex align-items-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="27" viewBox="0 0 37 33"
-                                fill="none">
-                                <path d="M13.875 8.22168L23.125 16.3908L13.875 24.5599" stroke="white" stroke-width="3"
-                                    stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                            <p class="my-2">Privacy Policy</p>
-                        </div>
-
-                        <div class="d-flex align-items-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="27" viewBox="0 0 37 33"
-                                fill="none">
-                                <path d="M13.876 8.17017L23.126 16.3393L13.876 24.5084" stroke="white" stroke-width="3"
-                                    stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                            <p class="my-2">Terms of Services</p>
-                        </div>
-
-                        <div class="d-flex align-items-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="27" viewBox="0 0 37 33"
-                                fill="none">
-                                <path d="M13.876 8.17017L23.126 16.3393L13.876 24.5084" stroke="white" stroke-width="3"
-                                    stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                            <p class="my-2">Refund Policy</p>
-                        </div>
-                    </div>
-                </div>
-                <hr class="horizental">
-                <div class="contact col-12 col-md-4 ">
-                    <div class="footer-contact">
-                        <p class="my-4 p-0 fw-bolder fs-6">Contact </p>
-                        <p class="m-0 p-0">moazzem@healthyeatsbd.com </p>
-                        <p class="m-0 p-0">+8801581 044 495</p>
-                        <p class="m-0 p-0">Timing: 10am to 7pm (Sunday to Saturday)</p>
-                        <p class="my-4 p-0">Address</p>
-                        <p class="my-4 p-0">Tejgaon,Dhaka- 1215, Bangladesh</p>
-                    </div>
+                <hr class="text-white">
+                <div class="p-2">
+                    <p class="footer-copyright text-center footer-text">© Copyright Healthy Eats BD - 2024 | All rights
+                        reserved.</p>
                 </div>
             </div>
-            <hr>
-            <div class="p-5">
-            <p class="footer-copyright text-center">© Copyright Healthy Eats BD - 2024 | All rights reserved.</p>
-            </div>
-        </div> 
+        </section>
     </footer>
     <!-- Footer Section End  -->
 

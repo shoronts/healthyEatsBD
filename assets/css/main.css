@@ -166,6 +166,135 @@ header .main-navbar .desktop-menu .nav-right .search-bar .form-floating label::a
 header .main-navbar .mobile-menu {
     display: none;
 }
+.login-container {
+    max-width:auto;
+    margin: 10px auto;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+.form-label {
+    font-size:14px;
+    font-weight: 400;
+    line-height: 22px;
+    color: rgb(36, 36, 36);
+    margin-bottom: 0.5rem;
+}
+
+.required::after {
+    content: " *";
+    color: #dc3545;
+}
+
+.form-control {
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    padding: 0.75rem;
+    font-size: 0.9rem;
+}
+
+.form-control:focus {
+    border-color: #0B6B3D;
+    box-shadow: none;
+}
+
+.password-field {
+    position: relative;
+}
+
+.password-toggle {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background: none;
+    color: #6c757d;
+    cursor: pointer;
+    padding: 0.25rem;
+}
+
+.btn-login {
+    background-color: #0B6B3D;
+    border: none;
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 0.9rem;
+    margin: 1rem 0;
+    transition: background-color 0.3s ease;
+}
+
+.btn-login:hover {
+    background-color: #095032;
+}
+
+.form-check {
+    margin: 1rem 0;
+}
+
+.form-check-label {
+    font-size: 0.9rem;
+    color: #333;
+}
+
+.form-check-input {
+    margin-top: 0.25rem;
+}
+
+.forgot-password {
+    color: #0B6B3D;
+    text-decoration: none;
+    font-size: 0.9rem;
+    float: right;
+}
+
+.forgot-password:hover {
+    color: #095032;
+    text-decoration: underline;
+}
+
+.avatar-section {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.avatar-icon {
+    width: 60px;
+    height: 60px;
+    background-color: #f8f9fa;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+}
+
+.avatar-icon i {
+    font-size: 2rem;
+    color: #dee2e6;
+}
+
+.no-account {
+    text-align: center;
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.create-account {
+    color: rgb(36, 36, 36);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    display: block;
+    text-align: center;
+}
+
+.create-account:hover {
+    color: #0B6B3D;
+}
+
 
 /* Mobile Menu css*/
 
@@ -249,33 +378,35 @@ header .main-navbar .mobile-menu .nav-tabs {
 /* hero section start  */
 main .hero-container .swiper-container {
     width: 100%;
-    height: 660px; /* Define the height explicitly */
+    height: 660px;
+    /* Define the height explicitly */
     background: #eee;
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+}
 
 main .hero-container .swiper-container .swiper {
     width: 100%;
-    height:660px;
-  }
+    height: 660px;
+}
 
-  main .hero-container .swiper-container .swiper .swiper-wrapper .swiper-slide {
+main .hero-container .swiper-container .swiper .swiper-wrapper .swiper-slide {
     text-align: center;
     font-size: 18px;
     background: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+}
 
-  .swiper-slide img {
+.swiper-slide img {
     display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
-  }
+}
+
 .swiper-button-next,
 .swiper-button-prev {
     color: #FFFEFE;
@@ -302,7 +433,7 @@ main .product-section {
 
 main .swiper-card {
     position: relative;
-    width: 70%;
+    max-width: 1220px;
     margin: 0 auto;
     height: auto;
     background: #FCFAF8;
@@ -487,7 +618,7 @@ main .medium-card-container {
 /* small card section end  */
 /* pinat butter section start  */
 main .pinat-batter-section .pinat-container {
-    width: 70%;
+    max-width: 1220px;
     margin: 0 auto;
 }
 
@@ -496,7 +627,7 @@ main .pinat-batter-section .pinat-text .pinat-head {
     font-family: "Hind Siliguri";
     font-size: 34px;
     font-weight: 700;
-    line-height: 70px;
+    line-height: 49px;
 }
 
 main .pinat-batter-section .pinat-text .rating {
@@ -510,7 +641,7 @@ main .pinat-batter-section .pinat-text .rating input {
 }
 
 main .pinat-batter-section .pinat-text .rating label {
-    font-size: 14px;
+    font-size: 18px;
     color: gold;
     cursor: pointer;
 }
@@ -519,8 +650,9 @@ main .pinat-batter-section .pinat-text .rating-review {
     color: #000;
     text-align: center;
     font-family: "Montserrat";
-    font-size: 22px;
-    font-weight: 500;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 14px;
 }
 
 main .pinat-batter-section .pinat-text .upokarita {
@@ -536,6 +668,7 @@ main .pinat-batter-section .pinat-text .pinat-batter-text {
     font-family: "Hind Siliguri";
     font-size: 22px;
     font-weight: 400;
+    font-weight: 39px !important;
 }
 
 main .pinat-batter-section .pinat-text .order-btn {
@@ -564,24 +697,24 @@ main .healthry-banner {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 40px 0px;
+    padding: 20px 0px;
 }
 
-main .healthry-banner .banner-text {
-    width: 70%;
-    margin: 0 auto;
+.banner-text {
+    gap: 200px !important;
 }
 
 main .healthry-banner .banner-text .text-one {
-    color: #2B491D;
+    color: rgb(36, 67, 22);
     font-family: "Inter";
     font-size: 50px;
     font-weight: 600;
     line-height: 50px;
+    text-align: start;
 }
 
 main .healthry-banner .banner-text .text-two {
-    color: #244316;
+    color: rgb(36, 67, 22);
     font-family: "Inter";
     font-size: 22px;
     font-weight: 400;
@@ -595,8 +728,9 @@ main .ghee-section {
 }
 
 main .ghee-section .ghee-container {
-    width: 70%;
+    max-width: 1220px;
     margin: 0 auto;
+    padding: 60px 0px;
 }
 
 
@@ -639,6 +773,18 @@ main .ghee-section .ghee-container .ghee-text-content .ghee-text p {
 }
 
 /* ghee section end  */
+/* banner css  */
+.banner-section {
+    height: 255px;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 /* review section start  */
 main .review-swiper-container {
     position: relative;
@@ -673,6 +819,13 @@ main .review-swiper-container .swiper .swiper-slide img {
 main .review-swiper-container .swiper .swiper-button-next,
 main .review-swiper-container .swiper .swiper-button-prev {
     color: #286D43;
+    width: 10px !important;
+    height: 10px !important; 
+}
+main .review-swiper-container .swiper .swiper-button-next::after,
+main .review-swiper-container .swiper .swiper-button-prev::after {
+    font-size: 22px !important;
+    font-weight: 900;
 }
 
 main .client-review-section {
@@ -731,10 +884,16 @@ main .client-review-section .client-header {
 
 /* review section end  */
 
+/* blog section start  */
 main .blog-section {
-    padding: 80px 0px;
-    width: 70%;
+    padding: 40px 0px;
+    max-width: 1220px;
     margin: 0 auto;
+}
+.blog-container {
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
 }
 main .blog-section .blog-header {
     color: #27441B;
@@ -743,7 +902,8 @@ main .blog-section .blog-header {
     font-weight: 700;
     line-height: 27px;
 }
-main .blog-section .blog-card-container .card-box {
+
+ .card-box {
     display: flex;
     width: auto;
     height: auto;
@@ -756,29 +916,30 @@ main .blog-section .blog-card-container .card-box {
     background: #FFF;
     box-shadow: 4px 4px 6px 3px rgba(0, 0, 0, 0.25);
 }
-/* main .blog-section .blog-card-container .card-box img {
-    width:100%;
-} */
-main .blog-section .blog-card-container .card-box .card-text .card-date {
+
+.card-date {
     font-size: 13px;
     font-family: "lato";
     line-height: 22px;
     color: rgb(165, 165, 165);
 }
-main .blog-section .blog-card-container .card-box .card-text h3 {
+
+.mousumi-achar {
     font-size: 22px;
     font-family: "signika,arial";
     font-weight: 500;
     line-height: 30px;
     color: rgb(51, 51, 51);
 }
-main .blog-section .blog-card-container .card-box .card-text .card-text {
+
+.card-text {
     font-size: 14px;
     font-family: "lato";
     line-height: 22px;
     color: rgb(119, 119, 119);
 }
-main .blog-section .blog-card-container .card-box .card-text h4 {
+
+.card-text h4 {
     font-size: 13px;
     font-family: "lato";
     font-weight: 800;
@@ -786,33 +947,38 @@ main .blog-section .blog-card-container .card-box .card-text h4 {
     color: rgb(46, 112, 70);
     cursor: pointer;
 }
+
 /* blog section end  */
 /* service section start  */
 main .service-container {
     padding: 40px 100px;
     margin: 0 auto;
-    background:rgb(228,240,222);
+    background: rgb(228, 240, 222);
 }
+
 main .service-container .service-card {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 5px;
 }
+
 .service-first {
     font-family: "inter";
-    font-size:16px;
+    font-size: 16px;
     font-weight: 600;
     line-height: 22.4px;
-    color: rgb(49,49,49);
+    color: rgb(49, 49, 49);
 }
+
 .service-second {
     font-family: "inter";
-    font-size:14px;
+    font-size: 14px;
     font-weight: 400;
     line-height: 22.4px;
-    color: rgb(0,0,0);
+    color: rgb(0, 0, 0);
 }
+
 .service-banner {
     height: 200px;
     width: 100%;
@@ -820,4 +986,31 @@ main .service-container .service-card {
     background-position: center;
     background-repeat: no-repeat;
 }
+
 /* service section end  */
+/* footer css start  */
+
+footer .footer-container .footer-content {
+    padding: 40px 60px 0px 60px;
+}
+
+.footer-text {
+    color: rgb(255, 255, 255);
+    font-family: "Roboto";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+}
+
+.bold-text {
+    color: rgb(255, 255, 255);
+    font-family: "Roboto";
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 16px;
+}
+
+footer .footer-container .footer-content img {
+    width: 70%;
+    height: auto;
+}

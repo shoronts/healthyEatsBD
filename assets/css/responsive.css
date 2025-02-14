@@ -114,18 +114,26 @@
     main .healthry-banner .banner-text {
         width: 100%;
         padding: 1px 0px;
+        justify-content: center !important;
     }
 
     main .healthry-banner .banner-text .text-one {
         font-size: 34px;
         line-height: 34px;
+        text-align: center !important;
     }
 
     main .healthry-banner .banner-text .text-two {
         font-size: 15px;
         line-height: 24px;
     }
-
+    .improve-text {
+        color: #333;
+        font-family: "Hind Siliguri";
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 28px;
+    }
     /* healthry-banner css end  */
     /* service start  */
     main .service-container {
@@ -155,6 +163,25 @@
 
     main .review-swiper-container .swiper {
         width: 100%;
+    }
+    /* ghee section  */
+    main .ghee-section .ghee-container .ghee-text-content h2 {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 14px;
+    }
+    main .ghee-section .ghee-container .ghee-text-content .ghee-text h2 {
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 16px;
+    }
+    
+    main .ghee-section .ghee-container .ghee-text-content .ghee-text p {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 16px;
     }
 
 }
@@ -190,7 +217,6 @@
     }
 
     /* pinat section css start  */
-
     main .pinat-batter-section .pinat-text .pinat-head {
         font-size: 24px;
         line-height: 30px;
@@ -209,11 +235,11 @@
 
     main .pinat-batter-section .pinat-text .pinat-batter-text {
         font-size: 18px;
-        text-align: center;
+        text-align: start;
     }
 
     main .pinat-batter-section .pinat-text .order-btn {
-        padding: 23px 59px;
+        padding: 18px 49px;
         font-size: 24px;
         font-weight: 600;
         text-align: center;
@@ -233,13 +259,21 @@
     main .healthry-banner .banner-text {
         width: 100%;
         padding: 1px 0px;
+        gap: 40px !important;
     }
 
     /* ghee css start  */
-    main .ghee-section .ghee-container .ghee-text-content h2 {
-        font-size: 28px;
+    main .ghee-section .ghee-container {
+        padding: 60px 20px 10px 20px;
     }
-
+    main .ghee-section .ghee-container .ghee-text-content h2 {
+        font-size: 20px;
+        line-height: 16px;
+        font-weight: 600;
+    }
+    main .ghee-section .ghee-container .ghee-text-content .order-btn {
+        width: 100%;
+    }
     main .ghee-section .ghee-container .ghee-img {
         text-align: center;
     }
@@ -250,6 +284,22 @@
     }
 
     /* ghee css end  */
+    /* baner css  */
+    .banner-section {
+        height: 100px;
+        width: 100%;
+    }
+    /* review section css start */
+    main .client-review-section {
+        padding:20px 10px;
+        background: #E4F1DF;
+    }
+    main .client-review-section .client-header {
+        font-size: 25px;
+        font-weight: 600;
+        line-height: 25px;
+        margin-bottom: 20px;
+    }
     main .review-swiper-container .swiper {
         width: 100%;
         height: 40vh;
@@ -286,72 +336,33 @@
         height: 283px;
         gap: 12px;
     }
+    /* blog section start  */
+    main .blog-section {
+        padding: 40px 20px;
+        max-width: 1220px;
+        margin: 0 auto;
+    }
+    .blog-container {
+        display:grid;
+        grid-template-columns: repeat(1,1fr);
+        gap: 20px;
+    }
+    .card-box {
+        border-radius: 10px !important;
+    }
+    .card-box img{
+        width: 100%;
+        height: auto;
+    }
     /* survice start  */
     main .service-container .service-card {
         flex-direction: column;
         gap: 2px;
     }
     /* footer css start  */
-    footer {
-        height: 100%;
+    footer .footer-container .footer-content {
+        padding: 20px 20px;
     }
-
-    footer .footer-section {
-        padding: 20px 10px;
-    }
-
-    footer .footer-section .footer-container {
-        padding: 0px;
-    }
-
-    footer .footer-section .footer-container .contact-us {
-        padding: 20px 5px;
-    }
-
-    .horizental {
-        width: 90%;
-        margin: 0 auto;
-        border: 1px solid #ffda61;
-    }
-
-    footer .footer-section .footer-container .img-text {
-        width: auto;
-        font-size: 16px;
-        margin-bottom: 20px;
-        line-height: 25px;
-        padding: 0px !important;
-        font-weight: 400;
-    }
-
-    footer .footer-section .footer-container .half-of-middle p {
-        font-size: 14px;
-        line-height: 25px;
-        font-weight: 400;
-
-    }
-
-    .contact {
-        display: flex;
-        justify-content: start;
-    }
-
-    footer .footer-section .footer-container .footer-contact {
-        font-size: 16px;
-        line-height: 21px;
-        margin: 30px 0;
-        font-weight: 400;
-        justify-content: start !important;
-    }
-
-    footer .footer-section hr {
-        color: #fff;
-    }
-
-    footer .footer-section .footer-copyright {
-        font-size: 12px;
-        line-height: 21px;
-    }
-
     /* footer css end  */
 
 }
