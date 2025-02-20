@@ -166,7 +166,7 @@ header .main-navbar .desktop-menu .nav-right .search-bar .form-floating label::a
 header .main-navbar .mobile-menu {
     display: none;
 }
-.login-container {
+#userAuthOffcanvas .login-container {
     max-width:auto;
     margin: 10px auto;
     padding: 10px;
@@ -174,7 +174,7 @@ header .main-navbar .mobile-menu {
     border-radius: 8px;
 }
 
-.form-label {
+#userAuthOffcanvas .form-label {
     font-size:14px;
     font-weight: 400;
     line-height: 22px;
@@ -182,28 +182,28 @@ header .main-navbar .mobile-menu {
     margin-bottom: 0.5rem;
 }
 
-.required::after {
+#userAuthOffcanvas .required::after {
     content: " *";
     color: #dc3545;
 }
 
-.form-control {
+#userAuthOffcanvas .form-control {
     border: 1px solid #dee2e6;
     border-radius: 4px;
     padding: 0.75rem;
     font-size: 0.9rem;
 }
 
-.form-control:focus {
+#userAuthOffcanvas .form-control:focus {
     border-color: #0B6B3D;
     box-shadow: none;
 }
 
-.password-field {
+#userAuthOffcanvas .password-field {
     position: relative;
 }
 
-.password-toggle {
+#userAuthOffcanvas .password-toggle {
     position: absolute;
     right: 10px;
     top: 50%;
@@ -215,7 +215,7 @@ header .main-navbar .mobile-menu {
     padding: 0.25rem;
 }
 
-.btn-login {
+#userAuthOffcanvas .btn-login {
     background-color: #0B6B3D;
     border: none;
     width: 100%;
@@ -225,41 +225,41 @@ header .main-navbar .mobile-menu {
     transition: background-color 0.3s ease;
 }
 
-.btn-login:hover {
+#userAuthOffcanvas .btn-login:hover {
     background-color: #095032;
 }
 
-.form-check {
+#userAuthOffcanvas .form-check {
     margin: 1rem 0;
 }
 
-.form-check-label {
+#userAuthOffcanvas .form-check-label {
     font-size: 0.9rem;
     color: #333;
 }
 
-.form-check-input {
+#userAuthOffcanvas .form-check-input {
     margin-top: 0.25rem;
 }
 
-.forgot-password {
+#userAuthOffcanvas .forgot-password {
     color: #0B6B3D;
     text-decoration: none;
     font-size: 0.9rem;
     float: right;
 }
 
-.forgot-password:hover {
+#userAuthOffcanvas .forgot-password:hover {
     color: #095032;
     text-decoration: underline;
 }
 
-.avatar-section {
+#userAuthOffcanvas .avatar-section {
     text-align: center;
     margin: 2rem 0;
 }
 
-.avatar-icon {
+#userAuthOffcanvas .avatar-icon {
     width: 60px;
     height: 60px;
     background-color: #f8f9fa;
@@ -270,19 +270,19 @@ header .main-navbar .mobile-menu {
     margin: 0 auto 1rem;
 }
 
-.avatar-icon i {
+#userAuthOffcanvas .avatar-icon i {
     font-size: 2rem;
     color: #dee2e6;
 }
 
-.no-account {
+#userAuthOffcanvas .no-account {
     text-align: center;
     color: #666;
     font-size: 0.9rem;
     margin-bottom: 0.5rem;
 }
 
-.create-account {
+#userAuthOffcanvas .create-account {
     color: rgb(36, 36, 36);
     text-decoration: none;
     font-weight: 600;
@@ -291,18 +291,18 @@ header .main-navbar .mobile-menu {
     text-align: center;
 }
 
-.create-account:hover {
+#userAuthOffcanvas .create-account:hover {
     color: #0B6B3D;
 }
 
 
 /* Mobile Menu css*/
 
-header .main-navbar .mobile-menu .nav-tabs {
+#mobileMenuOffcanvas .nav-tabs {
     border-bottom: 1px solid #dee2e6;
 }
 
-.nav-tabs .nav-link {
+#mobileMenuOffcanvas .nav-tabs .nav-link {
     color: #6c757d;
     border: none;
     padding: 1rem;
@@ -310,29 +310,29 @@ header .main-navbar .mobile-menu .nav-tabs {
     text-align: center;
 }
 
-.nav-tabs .nav-link.active {
+#mobileMenuOffcanvas .nav-tabs .nav-link.active {
     color: #059669;
     border-bottom: 2px solid #059669;
 }
 
-.menu-list {
+#mobileMenuOffcanvas .menu-list {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-.menu-list li {
+#mobileMenuOffcanvas .menu-list li {
     border-bottom: 1px solid #dee2e6;
 }
 
-.menu-list a {
+#mobileMenuOffcanvas .menu-list a {
     display: block;
     padding: 1rem;
     color: #212529;
     text-decoration: none;
 }
 
-.new-badge {
+#mobileMenuOffcanvas .new-badge {
     background: #fff3e6;
     color: #ff6b00;
     padding: 2px 6px;
@@ -341,7 +341,7 @@ header .main-navbar .mobile-menu .nav-tabs {
     font-weight: 500;
 }
 
-#searchInput {
+#mobileMenuOffcanvas #searchInput {
     padding-right: 40px;
 }
 
@@ -350,25 +350,25 @@ header .main-navbar .mobile-menu .nav-tabs {
     padding: 3rem 1rem;
 }
 
-.cart-icon {
+#cartOffCanvas .cart-icon {
     font-size: 3rem;
     color: #dee2e6;
     margin-bottom: 1rem;
 }
 
-.empty-message {
+#cartOffCanvas .empty-message {
     color: #666;
     margin-bottom: 2rem;
 }
 
-.return-shop-btn {
+#cartOffCanvas .return-shop-btn {
     background: #1e7e34;
     border-color: #1e7e34;
     padding: 0.75rem 2rem;
     font-size: 0.875rem;
 }
 
-.return-shop-btn:hover {
+#cartOffCanvas .return-shop-btn:hover {
     background: #186429;
     border-color: #186429;
 }
@@ -505,12 +505,13 @@ main .product-card-section {
     background: #FCFAF8;
 }
 
-.card-container {
+main .product-card-section .card-container {
     padding: 0 40px;
 }
 
-.card {
+main .product-card-section .card {
     width: 240px;
+    height: 400px;
     padding: 10px;
     border-radius: 12px;
     border: 1px solid #D3D3D3;
@@ -519,12 +520,13 @@ main .product-card-section {
     text-align: center;
 }
 
-
+/* this is card css.as this css use 2 time there that why it's not maintain sequence  */
 .chocolate-p {
     color: #000;
     font-family: "Signika";
     font-size: 14px;
     line-height: 24px;
+    height: 70px;
 }
 
 .price {
@@ -741,7 +743,14 @@ main .ghee-section .ghee-container .ghee-text-content h2 {
     font-weight: 600;
     line-height: 32px;
 }
-
+main .ghee-section .ghee-container .ghee-text-content .ghee-upokarita .ghee-icon {
+    height: 120px;
+    width: 120px;
+}
+main .ghee-section .ghee-container .ghee-text-content .ghee-upokarita .ghee-large-icon {
+    height: 100px;
+    width: 100px;
+}
 main .ghee-section .ghee-container .ghee-text-content .order-btn {
     padding: 14px 34px;
     justify-content: flex-end;
@@ -774,7 +783,7 @@ main .ghee-section .ghee-container .ghee-text-content .ghee-text p {
 
 /* ghee section end  */
 /* banner css  */
-.banner-section {
+main .banner-section {
     height: 255px;
     width: 100%;
     background-position: center;
@@ -841,8 +850,8 @@ main .client-review-section .client-header {
     line-height: 55px;
     margin-bottom: 40px;
 }
-
-.review-card {
+/* this also use in swiper slider for many time that why it's not maintain sequence  */
+main .client-review-section .review-swiper-container .swiper .swiper-wrapper .swiper-slide .review-card {
     border-radius: 12px;
     background: #FFF;
     display: flex;
@@ -856,7 +865,7 @@ main .client-review-section .client-header {
     flex-shrink: 0;
 }
 
-.review-text {
+main .client-review-section .review-swiper-container .swiper .swiper-wrapper .swiper-slide .review-card  .review-text {
     color: #838383;
     text-align: center;
     font-family: "Inter";
@@ -866,7 +875,7 @@ main .client-review-section .client-header {
     line-height: 20px;
 }
 
-.review-name {
+main .client-review-section .review-swiper-container .swiper .swiper-wrapper .swiper-slide .review-card .review-name {
     color: #3A3A3A;
     font-family: "Inter";
     font-size: 14px;
@@ -874,7 +883,7 @@ main .client-review-section .client-header {
     line-height: 20px;
 }
 
-.review-intro {
+main .client-review-section .review-swiper-container .swiper .swiper-wrapper .swiper-slide .review-card .review-intro {
     color: #276B41;
     font-family: "Inter";
     font-size: 14px;
@@ -890,7 +899,7 @@ main .blog-section {
     max-width: 1220px;
     margin: 0 auto;
 }
-.blog-container {
+main .blog-section .blog-container {
     display:grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
@@ -903,9 +912,9 @@ main .blog-section .blog-header {
     line-height: 27px;
 }
 
- .card-box {
+main .blog-section .card-box {
     display: flex;
-    width: auto;
+    max-width: auto;
     height: auto;
     padding-bottom: 30px;
     flex-direction: column;
@@ -917,14 +926,14 @@ main .blog-section .blog-header {
     box-shadow: 4px 4px 6px 3px rgba(0, 0, 0, 0.25);
 }
 
-.card-date {
+main .blog-section .card-box .card-date {
     font-size: 13px;
     font-family: "lato";
     line-height: 22px;
     color: rgb(165, 165, 165);
 }
 
-.mousumi-achar {
+main .blog-section .card-box .card-text .mousumi-achar {
     font-size: 22px;
     font-family: "signika,arial";
     font-weight: 500;
@@ -932,14 +941,14 @@ main .blog-section .blog-header {
     color: rgb(51, 51, 51);
 }
 
-.card-text {
+main .blog-section .card-box .card-text .card-texts {
     font-size: 14px;
     font-family: "lato";
     line-height: 22px;
     color: rgb(119, 119, 119);
 }
 
-.card-text h4 {
+main .blog-section .card-box .card-text h4 {
     font-size: 13px;
     font-family: "lato";
     font-weight: 800;
@@ -960,10 +969,9 @@ main .service-container .service-card {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 5px;
+    gap: 10px;
 }
-
-.service-first {
+main .service-container .service-card .service .service-first {
     font-family: "inter";
     font-size: 16px;
     font-weight: 600;
@@ -971,7 +979,7 @@ main .service-container .service-card {
     color: rgb(49, 49, 49);
 }
 
-.service-second {
+main .service-container .service-card .service .service-second {
     font-family: "inter";
     font-size: 14px;
     font-weight: 400;
@@ -979,7 +987,7 @@ main .service-container .service-card {
     color: rgb(0, 0, 0);
 }
 
-.service-banner {
+main .service-banner {
     height: 200px;
     width: 100%;
     background-size: cover;

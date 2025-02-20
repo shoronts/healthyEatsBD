@@ -1,3 +1,382 @@
+/* Header CSS */
+/* Topbar CSS */
+header .top-bar {
+    background-color: var(--primary-color);
+    padding: 10px 0;
+}
+
+header .top-bar-text {
+    color: #FFF;
+    font-family: "Inter", serif;
+    font-size: 12px;
+    font-weight: 300;
+}
+
+/* Navigation CSS */
+
+/* Desktop Menu */
+
+.scrolled {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: all 0.3s ease;
+    background: #FFF;
+}
+
+header .main-navbar {
+    width: 100%;
+    background: #FFF;
+}
+
+header .main-navbar .main-logo {
+    width: 118px;
+    height: 70px;
+}
+
+header .main-navbar a svg {
+    color: #333;
+}
+
+header .main-navbar .desktop-menu {
+    padding: 12px 50px;
+}
+
+header.sticky .main-navbar .nav-left .main-logo {
+    width: 118px !important;
+    height: 50px !important;
+}
+.main-logo a img {
+    width: 118px !important;
+    height: 70px !important;
+}
+header .main-navbar .desktop-menu .nav-left .main-menu>ul {
+    height: 100%;
+    width: 100%;
+    list-style: none;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .main-navbar .desktop-menu .nav-left .main-menu ul li {
+    position: relative;
+    margin-right: 20px;
+}
+
+header .main-navbar .desktop-menu .nav-left .main-menu ul li a {
+    text-decoration: none;
+    color: #333;
+    font-family: "Lato", serif;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-style: normal;
+    font-variant-caps: normal;
+    font-variant-east-asian: normal;
+    font-variant-ligatures: normal;
+    font-variant-numeric: normal;
+    padding: 40px 0;
+}
+
+header .main-navbar .desktop-menu .nav-left .main-menu ul li:hover>a,
+header .main-navbar .desktop-menu .nav-left .main-menu ul li.current-menu-item a {
+    color: rgba(51, 51, 51, 0.7) !important;
+}
+
+header .main-navbar .desktop-menu .nav-left .main-menu ul li:hover>a::before,
+header .main-navbar .desktop-menu .nav-left .main-menu ul li.current-menu-item a::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--primary-color);
+    animation: menuanimation 0.4s ease-in-out;
+}
+
+@keyframes menuanimation {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+header .main-navbar .desktop-menu .nav-left .main-menu ul li.have-sub-menu {
+    position: relative;
+}
+
+header .main-navbar .desktop-menu .nav-left .main-menu ul li.have-sub-menu a::after {
+    border-bottom: 0;
+    border-left: 0.3em solid transparent;
+    border-right: 0.3em solid transparent;
+    border-top: 0.3em solid;
+    content: "";
+    display: inline-block;
+    margin-left: 0.255em;
+    vertical-align: 0.255em;
+}
+
+header .main-navbar .desktop-menu .nav-left .main-menu ul li.have-sub-menu ul.sub-menu {
+    display: none;
+    padding-left: 0;
+    list-style: none;
+    position: absolute;
+    top: 59px;
+    left: 0;
+    width: 200px;
+    background-color: #fff;
+}
+
+header .main-navbar .desktop-menu .nav-left .main-menu ul li.have-sub-menu:hover ul.sub-menu {
+    display: block;
+}
+
+header .main-navbar .desktop-menu .nav-left .main-menu ul li.have-sub-menu ul.sub-menu li {
+    margin-right: 0;
+    padding: 10px;
+}
+
+header .main-navbar .desktop-menu .nav-left .main-menu ul li.have-sub-menu ul.sub-menu li a {
+    padding: 10px;
+}
+
+header .main-navbar .desktop-menu .nav-left .main-menu ul li.have-sub-menu ul.sub-menu li a::after {
+    display: none;
+}
+
+header .main-navbar .desktop-menu .nav-right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .main-navbar .desktop-menu .nav-right .search-bar {
+    width: 500px;
+}
+
+header .main-navbar .desktop-menu .nav-right .search-bar .form-floating label::after {
+    background: transparent;
+}
+
+header .main-navbar .mobile-menu {
+    display: none;
+}
+#userAuthOffcanvas .login-container {
+    max-width:auto;
+    margin: 10px auto;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+#userAuthOffcanvas .form-label {
+    font-size:14px;
+    font-weight: 400;
+    line-height: 22px;
+    color: rgb(36, 36, 36);
+    margin-bottom: 0.5rem;
+}
+
+#userAuthOffcanvas .required::after {
+    content: " *";
+    color: #dc3545;
+}
+
+#userAuthOffcanvas .form-control {
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    padding: 0.75rem;
+    font-size: 0.9rem;
+}
+
+#userAuthOffcanvas .form-control:focus {
+    border-color: #0B6B3D;
+    box-shadow: none;
+}
+
+#userAuthOffcanvas .password-field {
+    position: relative;
+}
+
+#userAuthOffcanvas .password-toggle {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background: none;
+    color: #6c757d;
+    cursor: pointer;
+    padding: 0.25rem;
+}
+
+#userAuthOffcanvas .btn-login {
+    background-color: #0B6B3D;
+    border: none;
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 0.9rem;
+    margin: 1rem 0;
+    transition: background-color 0.3s ease;
+}
+
+#userAuthOffcanvas .btn-login:hover {
+    background-color: #095032;
+}
+
+#userAuthOffcanvas .form-check {
+    margin: 1rem 0;
+}
+
+#userAuthOffcanvas .form-check-label {
+    font-size: 0.9rem;
+    color: #333;
+}
+
+#userAuthOffcanvas .form-check-input {
+    margin-top: 0.25rem;
+}
+
+#userAuthOffcanvas .forgot-password {
+    color: #0B6B3D;
+    text-decoration: none;
+    font-size: 0.9rem;
+    float: right;
+}
+
+#userAuthOffcanvas .forgot-password:hover {
+    color: #095032;
+    text-decoration: underline;
+}
+
+#userAuthOffcanvas .avatar-section {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+#userAuthOffcanvas .avatar-icon {
+    width: 60px;
+    height: 60px;
+    background-color: #f8f9fa;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+}
+
+#userAuthOffcanvas .avatar-icon i {
+    font-size: 2rem;
+    color: #dee2e6;
+}
+
+#userAuthOffcanvas .no-account {
+    text-align: center;
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+#userAuthOffcanvas .create-account {
+    color: rgb(36, 36, 36);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    display: block;
+    text-align: center;
+}
+
+#userAuthOffcanvas .create-account:hover {
+    color: #0B6B3D;
+}
+
+
+/* Mobile Menu css*/
+
+#mobileMenuOffcanvas .nav-tabs {
+    border-bottom: 1px solid #dee2e6;
+}
+
+#mobileMenuOffcanvas .nav-tabs .nav-link {
+    color: #6c757d;
+    border: none;
+    padding: 1rem;
+    flex: 1;
+    text-align: center;
+}
+
+#mobileMenuOffcanvas .nav-tabs .nav-link.active {
+    color: #059669;
+    border-bottom: 2px solid #059669;
+}
+
+#mobileMenuOffcanvas .menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#mobileMenuOffcanvas .menu-list li {
+    border-bottom: 1px solid #dee2e6;
+}
+
+#mobileMenuOffcanvas .menu-list a {
+    display: block;
+    padding: 1rem;
+    color: #212529;
+    text-decoration: none;
+}
+
+#mobileMenuOffcanvas .new-badge {
+    background: #fff3e6;
+    color: #ff6b00;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: 500;
+}
+
+#mobileMenuOffcanvas #searchInput {
+    padding-right: 40px;
+}
+
+.empty-cart-content {
+    text-align: center;
+    padding: 3rem 1rem;
+}
+
+#cartOffCanvas .cart-icon {
+    font-size: 3rem;
+    color: #dee2e6;
+    margin-bottom: 1rem;
+}
+
+#cartOffCanvas .empty-message {
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+#cartOffCanvas .return-shop-btn {
+    background: #1e7e34;
+    border-color: #1e7e34;
+    padding: 0.75rem 2rem;
+    font-size: 0.875rem;
+}
+
+#cartOffCanvas .return-shop-btn:hover {
+    background: #186429;
+    border-color: #186429;
+}
+
+/* mobile menu css end  */
 /* hero css start  */
 main .hero-container {
     height: 180px;
@@ -285,4 +664,31 @@ main .right-side .right-side-container .search-container {
 img{
      height: auto;
      width: 100%;
+}
+
+/* footer css start  */
+
+footer .footer-container .footer-content {
+    padding: 40px 20px 0px 20px;
+}
+
+.footer-text {
+    color: rgb(255, 255, 255);
+    font-family: "Roboto";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+}
+
+.bold-text {
+    color: rgb(255, 255, 255);
+    font-family: "Roboto";
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 16px;
+}
+
+footer .footer-container .footer-content img {
+    width: 70%;
+    height: auto;
 }

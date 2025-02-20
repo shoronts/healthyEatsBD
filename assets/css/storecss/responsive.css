@@ -1,4 +1,27 @@
+@media all and (max-width: 1440px) {
+    header .main-navbar .desktop-menu .nav-right .search-bar {
+        width: 300px;
+    }
+}
+
+@media all and (max-width: 1220px) {
+    header .main-navbar .desktop-menu {
+        padding: 12px 0;
+    }
+
+    header .main-navbar .desktop-menu .nav-right .search-bar {
+        width: 200px;
+    }
+}
+
 @media screen and (max-width:1024px) {
+    header .main-navbar .desktop-menu {
+        display: none;
+    }
+
+    header .main-navbar .mobile-menu {
+        display: block;
+    }
     main .hero-container .hero-content .banner-header {
         font-size: 36px;
         line-height: 43px;
@@ -7,7 +30,7 @@
         max-width:auto;
     }
     main .image-container .image-content .banner-img img {
-        max-width:108px;
+        max-width:148px !important;
         height: auto;
      }
      main .option-section {
@@ -17,9 +40,19 @@
         width: 100%;
     }
 }
+@media screen and (max-width:991px) {
+    header .navigation .midium-small-navbar {
+        padding: 5px 0;
+    }
+}
+@media screen and (max-width: 776px) {
+    footer .footer-container .footer-content {
+        padding: 20px 0px;
+    }
+}
 @media screen and (max-width:768px) {
     main .image-container .image-content {
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns: repeat(2,1fr) !important;
     }
     main .image-container .image-content .banner-img img {
         max-width:100%;
@@ -28,4 +61,18 @@
      .medium-card-container {
         grid-template-columns: repeat(2,1fr);
     }
+    .links-content {
+        display: flex;
+        justify-content: space-between !important;
+        align-items: center !important;
+    }
 }
+
+
+@media screen and (max-width:400px) {
+    .card-btn {
+        padding: 20px 60px;
+    }
+}
+
+

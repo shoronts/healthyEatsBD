@@ -58,12 +58,14 @@
     }
 
     main .hero-container .swiper-container {
-        height: 260px; /* Define the height explicitly */
-      }
-    
+        height: 260px;
+        /* Define the height explicitly */
+    }
+
     main .hero-container .swiper-container .swiper {
-        height:260px;
-      }
+        height: 260px;
+    }
+
     main .swiper-card {
         display: none;
     }
@@ -78,33 +80,35 @@
         gap: 10px;
     }
 
-    main .card-small-container {
-        display: block;
-    }
-
     /* small device  card start  */
     main .medium-card-container {
         display: grid;
         grid-template-columns: repeat(5, 1fr);
-        gap: 15px;
-    }
-
-    .card {
-        width: 100%;
+        gap: 10px;
     }
 
     main .medium-card-container .card .card-img img {
         width: 100%;
         height: auto;
     }
+    main .medium-card-container .card {
+        width: 100% !important;
+        height: 100% !important;
+        padding: 10px;
+        border-radius: 12px;
+        border: 1px solid #D3D3D3;
+        background: #FFF;
+        position: relative;
+        text-align: center;
+    }
 
-    .card-btn {
-        padding: 20px 60px;
+    main .medium-card-container .card-btn {
+        padding: 20px 80px;
         font-size: 12px;
         line-height: 15px;
-        white-space: wrap;
+        flex-wrap: nowrap;
 
-    }
+    } 
 
     main .pinat-batter-section .pinat-text .pinat-head {
         line-height: 40px;
@@ -127,6 +131,7 @@
         font-size: 15px;
         line-height: 24px;
     }
+
     .improve-text {
         color: #333;
         font-family: "Hind Siliguri";
@@ -134,23 +139,26 @@
         font-weight: 400;
         line-height: 28px;
     }
+
     /* healthry-banner css end  */
     /* service start  */
     main .service-container {
         padding: 40px 30px;
         margin: 0 auto;
     }
+
     .service-first {
         font-family: "inter";
-        font-size:12px;
+        font-size: 12px;
         font-weight: 600;
-        line-height:16px;
+        line-height: 16px;
     }
+
     .service-second {
         font-family: "inter";
-        font-size:10px;
+        font-size: 10px;
         font-weight: 400;
-        line-height:16px;
+        line-height: 16px;
     }
 }
 
@@ -164,6 +172,10 @@
     main .review-swiper-container .swiper {
         width: 100%;
     }
+    /* card section  */
+    main .medium-card-container .card-btn {
+        padding: 20px 60px;
+    } 
     /* ghee section  */
     main .ghee-section .ghee-container .ghee-text-content h2 {
         margin-top: 10px;
@@ -172,12 +184,13 @@
         font-weight: 600;
         line-height: 14px;
     }
+
     main .ghee-section .ghee-container .ghee-text-content .ghee-text h2 {
         font-size: 14px;
         font-weight: 600;
         line-height: 16px;
     }
-    
+
     main .ghee-section .ghee-container .ghee-text-content .ghee-text p {
         font-size: 12px;
         font-weight: 400;
@@ -201,21 +214,21 @@
 
     main .medium-card-container .card .card-img img {
         width: 100%;
-        height: auto;
+        height: 100%;
     }
 
-    .card {
+    main .medium-card-container .card {
+        width: 100% !important;
         padding: 10px;
 
     }
 
-    .card-btn {
+    main .medium-card-container .card .card-btn {
         padding: 20px 60px;
         font-size: 13px;
         white-space: nowrap;
 
     }
-
     /* pinat section css start  */
     main .pinat-batter-section .pinat-text .pinat-head {
         font-size: 24px;
@@ -266,14 +279,17 @@
     main .ghee-section .ghee-container {
         padding: 60px 20px 10px 20px;
     }
+
     main .ghee-section .ghee-container .ghee-text-content h2 {
         font-size: 20px;
         line-height: 16px;
         font-weight: 600;
     }
+
     main .ghee-section .ghee-container .ghee-text-content .order-btn {
         width: 100%;
     }
+
     main .ghee-section .ghee-container .ghee-img {
         text-align: center;
     }
@@ -289,39 +305,42 @@
         height: 100px;
         width: 100%;
     }
+
     /* review section css start */
     main .client-review-section {
-        padding:20px 10px;
+        padding: 20px 10px;
         background: #E4F1DF;
     }
+
     main .client-review-section .client-header {
         font-size: 25px;
         font-weight: 600;
         line-height: 25px;
         margin-bottom: 20px;
     }
+
     main .review-swiper-container .swiper {
         width: 100%;
         height: 40vh;
     }
 
-    .review-text {
+    main .client-review-section .review-swiper-container .swiper .swiper-wrapper .swiper-slide .review-card .review-text {
         font-size: 10px;
         line-height: 15px;
     }
 
-    .review-name {
+    main .client-review-section .review-swiper-container .swiper .swiper-wrapper .swiper-slide .review-card .review-name {
         font-size: 12px;
         line-height: 15px;
         text-align: start;
     }
 
-    .review-intro {
+    main .client-review-section .review-swiper-container .swiper .swiper-wrapper .swiper-slide .review-card .review-intro {
         font-size: 12px;
         font-weight: 400;
         line-height: 15px;
         text-align: start;
-        margin-top:10px;
+        margin-top: 10px;
 
     }
 
@@ -330,38 +349,49 @@
         background: #E4F1DF;
     }
 
-    .review-card {
+    main .client-review-section .review-swiper-container .swiper .swiper-wrapper .swiper-slide .review-card {
         width: 100%;
         padding: 20px 30px;
         height: 283px;
         gap: 12px;
     }
+
     /* blog section start  */
     main .blog-section {
         padding: 40px 20px;
         max-width: 1220px;
         margin: 0 auto;
     }
-    .blog-container {
-        display:grid;
-        grid-template-columns: repeat(1,1fr);
+
+    main .blog-section .blog-container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
         gap: 20px;
     }
-    .card-box {
+
+    main .blog-section  .card-box {
         border-radius: 10px !important;
     }
-    .card-box img{
+
+    main .blog-section  .card-box img {
         width: 100%;
         height: auto;
     }
+
     /* survice start  */
     main .service-container .service-card {
         flex-direction: column;
         gap: 2px;
     }
+
     /* footer css start  */
     footer .footer-container .footer-content {
-        padding: 20px 20px;
+        padding: 20px 0px;
+    }
+    .links-content {
+        display: flex;
+        justify-content: space-between !important;
+        align-items: center !important;
     }
     /* footer css end  */
 

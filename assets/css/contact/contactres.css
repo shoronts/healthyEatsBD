@@ -1,6 +1,43 @@
+@media all and (max-width: 1440px) {
+    header .main-navbar .desktop-menu .nav-right .search-bar {
+        width: 300px;
+    }
+}
+
+@media all and (max-width: 1220px) {
+    header .main-navbar .desktop-menu {
+        padding: 12px 0;
+    }
+
+    header .main-navbar .desktop-menu .nav-right .search-bar {
+        width: 200px;
+    }
+}
+
 @media screen and (max-width:1024px) {
     main .hero-container .hero-content .banner-header {
         font-size: 36px;
         line-height: 43px;
 }
+header .main-navbar .desktop-menu {
+    display: none;
+}
+
+header .main-navbar .mobile-menu {
+    display: block;
+}
+}
+
+
+@media screen and (max-width:991px) {
+    header .navigation .midium-small-navbar {
+        padding: 5px 0;
+    }
+}
+
+/* Footer CSS */
+@media screen and (max-width: 776px) {
+    footer .footer-container .footer-content {
+        padding: 20px 20px;
+    }
 }

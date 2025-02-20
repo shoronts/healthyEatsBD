@@ -14,6 +14,7 @@
   --white-text-color: #FFFFFF;
   --footer-green: #2d5a27;
   --footer-yellow: #f4b840;
+  --primary-green: #2B7F6C;
 }
 
 * {
@@ -29,4 +30,11 @@
 
 input:focus {
   box-shadow: none !important;
+}
+.section-text {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  font-family: "lato";
+  color: rgb(119, 119, 119);
 }
