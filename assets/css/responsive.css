@@ -107,7 +107,6 @@
         font-size: 12px;
         line-height: 15px;
         flex-wrap: nowrap;
-
     } 
 
     main .pinat-batter-section .pinat-text .pinat-head {
@@ -160,6 +159,11 @@
         font-weight: 400;
         line-height: 16px;
     }
+    /* footer css  */
+    footer .footer-container .footer-content {
+        padding: 40px 10px 0px 10px !important;
+    }
+    
 }
 
 @media screen and (max-width:991px) {
@@ -321,7 +325,7 @@
 
     main .review-swiper-container .swiper {
         width: 100%;
-        height: 40vh;
+        height: 25vh;
     }
 
     main .client-review-section .review-swiper-container .swiper .swiper-wrapper .swiper-slide .review-card .review-text {
@@ -388,11 +392,23 @@
     footer .footer-container .footer-content {
         padding: 20px 0px;
     }
-    .links-content {
+    footer .footer-container .footer-content .links-content {
         display: flex;
         justify-content: space-between !important;
         align-items: center !important;
+        padding: 0px 20px !important;
+    }
+    footer .footer-container .footer-content .footer-contact {
+        padding: 0px 20px;
     }
     /* footer css end  */
 
+}
+@media screen and (max-width:360px) {
+    footer .footer-container .footer-content .links-content {
+        padding: 0px 10px !important;
+    }
+    footer .footer-container .footer-content .footer-contact {
+        padding: 0px 10px !important;
+    }
 }

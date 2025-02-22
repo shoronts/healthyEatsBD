@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
     header.classList.toggle("scrolled", window.scrollY > 30);
   });
   // hero section 
-  const swiper = new Swiper(".mySwiper", {
+  const swiper = new Swiper(".hero-Swiper", {
     loop: true,
     slidesPerView: 1,
     spaceBetween: 2,
@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
   });
   // card slider 
-  var Cardswiper = new Swiper(".myCardSwiper", {
+  const Cardswiper = new Swiper(".myCardSwiper", {
     slidesPerView: 5,
     spaceBetween: 5,
     loop: true,

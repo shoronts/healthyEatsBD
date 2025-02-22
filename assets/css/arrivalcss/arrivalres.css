@@ -54,8 +54,8 @@
         padding: 40px 10px;
     }
      .medium-card-container {
-        grid-template-columns: repeat(2,1fr);
-        gap: 10px;
+        grid-template-columns: repeat(2,1fr) !important;
+        gap: 2px !important;
     }
     .links-content {
         display: flex;
@@ -65,7 +65,7 @@
 }
 @media screen and (max-width:424px) {
     .card-btn {
-        padding: 20px 60px; 
+        padding: 20px 60px !important; 
     }
 }
 

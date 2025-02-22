@@ -59,7 +59,7 @@
         height: auto;
      }
      .medium-card-container {
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns: repeat(2,1fr) !important;
     }
     .links-content {
         display: flex;
@@ -70,8 +70,8 @@
 
 
 @media screen and (max-width:400px) {
-    .card-btn {
-        padding: 20px 60px;
+    main .card-container .medium-card-container .card .card-btn {
+        padding: 20px 60px !important;
     }
 }
 
