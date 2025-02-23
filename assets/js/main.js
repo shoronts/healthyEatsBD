@@ -4,6 +4,16 @@ document.addEventListener("DOMContentLoaded", () => {
     const header = document.getElementById("header");
     header.classList.toggle("scrolled", window.scrollY > 30);
   });
+  // fixed bottom navbar 
+  document.querySelectorAll('.nav-item').forEach(item => {
+    item.addEventListener('click', (e) => {
+        e.preventDefault();
+        document.querySelectorAll('.nav-item').forEach(i => {
+            i.classList.remove('active');
+        });
+        e.currentTarget.classList.add('active');
+    });
+});
   // hero section 
   const swiper = new Swiper(".hero-Swiper", {
     loop: true,

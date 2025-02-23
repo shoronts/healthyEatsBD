@@ -56,7 +56,9 @@
     header .main-navbar .mobile-menu {
         display: block;
     }
-
+    .bottom-nav {
+        display: block;
+    }
     main .hero-container .swiper-container {
         height: 260px;
         /* Define the height explicitly */
@@ -172,7 +174,9 @@
     header .navigation .midium-small-navbar {
         padding: 5px 0;
     }
-
+    .cart-badge {
+        right: 35% !important;
+    }
     main .review-swiper-container .swiper {
         width: 100%;
     }
@@ -404,7 +408,15 @@
     /* footer css end  */
 
 }
+@media (max-width:512px) {
+    .cart-badge {
+    right: 28% !important;
+}
+}
 @media screen and (max-width:360px) {
+    .cart-badge {
+        right: 20% !important;
+    }
     footer .footer-container .footer-content .links-content {
         padding: 0px 10px !important;
     }
@@ -412,3 +424,5 @@
         padding: 0px 10px !important;
     }
 }
+
+

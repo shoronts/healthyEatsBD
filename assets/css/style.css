@@ -10,20 +10,50 @@
   --primary-color: #2A431C;
   --black-text-color: #000;
   --green-text-color: #2E7046;
+  --green-text:#276B41;
+  --green-deep:#0B6B3D;
+  --besic-green:#095032;
+  --deeper-green:#1e7e34;
+  --light-green:#186429;
+  --sky-green:#29421B;
+  --deep-sky-green:#27441B;
   --grey-text-color: #818181;
+  --deep-grey-text:#838383;
+  --deeper-grey:#3A3A3A;
+  --deepest-grey:#212529;
+  --besic-grey:#666;
+  --light-grey:#6c757d;
   --white-text-color: #FFFFFF;
   --footer-green: #2d5a27;
   --footer-yellow: #f4b840;
   --primary-green: #2B7F6C;
+  --deep-green:#286D43;
+  --nav-height: 60px;
+  --primary-zero-color: #1B874B;
+  --besic-white:#fff;
+  --grey-white:#dee2e6;
+  --besics-white:#f8f9fa;
+  --red:#dc3545;
+  --light-red:#ff6b00;
+  --deep-grey:#333;
 }
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+.scrolled {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: all 0.3s ease;
+  background: #FFF;
+}
+
 .chocolate-p {
-  color: #000;
+  color: var(--black-text-color);
   font-family: "Signika";
   font-size: 14px;
   line-height: 24px;
@@ -125,4 +155,65 @@ input:focus {
   line-height: 22px;
   font-family: "lato";
   color: rgb(119, 119, 119);
+}
+
+/* botton nav bar css  */
+.bottom-nav {
+  display: none;
+}
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: var(--nav-height);
+  background: #ffffff;
+  border-top: 1px solid #EAEAEA;
+  z-index: 1000;
+  padding: 8px 0;
+}
+
+.bottom-nav .nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #333333;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.2;
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+.nav-item:hover,
+.nav-item.active {
+  color: var(--primary-zero-color);
+}
+
+.bottom-nav .nav-item svg {
+  width: 24px;
+  height: 24px;
+  margin-bottom: 4px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.cart-badge {
+  position: absolute;
+  top: -4px;
+  right: 40%;
+  background: var(--primary-zero-color);
+  color: white;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
