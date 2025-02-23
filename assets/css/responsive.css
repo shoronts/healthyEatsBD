@@ -40,7 +40,11 @@
     header .main-navbar .desktop-menu .nav-right .search-bar {
         width: 200px;
     }
-
+    main .blog-section {
+        padding: 40px 40px;
+        max-width: 1220px;
+        margin: 0 auto;
+    }
     main .review-swiper-container .swiper {
         width: 80%;
     }
@@ -55,6 +59,15 @@
 
     header .main-navbar .mobile-menu {
         display: block;
+    }
+    main .service-container .service-card .service .service-first {
+        font-size: 14px;
+        line-height: 19.4px;
+    }
+    
+    main .service-container .service-card .service .service-second {
+        font-size: 10px;
+        line-height: 26px;
     }
     .bottom-nav {
         display: block;

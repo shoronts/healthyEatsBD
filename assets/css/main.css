@@ -177,9 +177,9 @@ header .main-navbar .mobile-menu {
 }
 
 #userAuthOffcanvas .form-control {
-    border: 1px solid var(--grey-white);
-    border-radius: 4px;
-    padding: 0.75rem;
+    border: 2px solid #E4E4E5;
+    border-radius: 6px;
+    padding: 0.55rem;
     font-size: 0.9rem;
 }
 
@@ -889,16 +889,21 @@ main .service-container .service-card .service .service-second {
 }
 
 main .service-banner {
-    height: 200px;
+    height:130px;
     width: 100%;
-    background-size: cover;
+    background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
 }
 
 /* service section end  */
 /* footer css start  */
-
+footer .footer-container {
+        background-position: center;
+        background-size: cover; 
+        background-repeat: no-repeat; 
+        width: 100%; 
+}
 footer .footer-container .footer-content {
     padding: 80px 100px;
 }

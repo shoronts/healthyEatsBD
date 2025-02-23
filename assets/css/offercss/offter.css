@@ -389,6 +389,16 @@ main .banner-container .banner-content .Join-img {
     max-width: 770px;
     max-height: 340px;
 }
+@keyframes floating {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+main .banner-container .banner-content .Join-img:hover {
+    animation: floating 2s infinite ease-in-out;
+}
+
 main .banner-container .banner-content .join-header {
     padding: 20px 0px;
     font-size: 30px;
@@ -400,7 +410,13 @@ main .banner-container .banner-content .join-header {
 main .banner-container .banner-content .Facebook-img {
     max-width: 730px;
     max-height: 90px;
+    transition: transform 0.3s ease-in-out; /* Smooth transition */
 }
+
+main .banner-container .banner-content .Facebook-img:hover {
+    transform: scale(1.1); /* Makes the image bigger on hover */
+}
+
 
 /* footer css start  */
 

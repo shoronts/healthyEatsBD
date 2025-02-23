@@ -52,19 +52,19 @@
                                     <div class="main-menu">
                                         <ul>
                                             <li class="current-menu-item">
-                                                <a href="#">Home</a>
+                                                <a href="/index.html">Home</a>
                                             </li>
                                             <li>
-                                                <a href="/healthyEatsBD/store.html">Store</a>
+                                                <a href="/store.html">Store</a>
                                             </li>
                                             <li>
-                                                <a href="/healthyEatsBD/arrivals.html">New Arrivals</a>
+                                                <a href="/arrivals.html">New Arrivals</a>
                                             </li>
                                             <li>
-                                                <a href="/healthyEatsBD/offer.html">Offers</a>
+                                                <a href="/offer.html">Offers</a>
                                             </li>
                                             <li>
-                                                <a href="/healthyEatsBD/contact.html">Contact us</a>
+                                                <a href="/contact.html">Contact us</a>
                                             </li>
                                             <li class="have-sub-menu">
                                                 <a href="#">Dropdown</a>
@@ -223,7 +223,7 @@
                             <div class="tab-content" id="menuTabsContent">
                                 <div class="tab-pane fade show active" id="menu" role="tabpanel">
                                     <ul class="menu-list">
-                                        <li><a href="#">HOME</a></li>
+                                        <li><a href="index.html">HOME</a></li>
                                         <li><a href="store.html">STORE</a></li>
                                         <li>
                                             <a href="arrivals.html"
@@ -283,11 +283,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="offcanvas offcanvas-end" tabindex="-1" id="userAuthOffcanvas"
+                <div class="offcanvas offcanvas-end p-10" tabindex="-1" id="userAuthOffcanvas"
                     aria-labelledby="userAuthOffcanvasLabel">
-                    <div class="offcanvas-header d-flex justify-content-between align-content-center">
+                    <div class="offcanvas-header d-flex justify-content-between align-content-center border border-bottom-success">
                         <h5 class="fw-bold">Sign In</h5>
-                        <button type="button" class="btn p-0 d-flex align-items-center" data-bs-dismiss="offcanvas"
+                        <button type="button" class="btn d-flex align-items-center" data-bs-dismiss="offcanvas"
                             aria-label="Close">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                                 <path fill="currentColor"
@@ -295,16 +295,15 @@
                             </svg>
                             Close</button>
                     </div>
-                    <hr>
-                    <div class="offcanvas-body">
-                        <div class="login-container">
+                    <div class="offcanvas-body p-0 m-0">
+                        <div class="login-container p-3">
                             <form>
                                 <div class="mb-3">
                                     <label for="username" class="form-label required">Username or email address</label>
                                     <input type="text" class="form-control" id="username" required>
                                 </div>
 
-                                <div class="mb-3">
+                                <div class="mb-1">
                                     <label for="password" class="form-label required">Password</label>
                                     <div class="password-field">
                                         <input type="password" class="form-control" id="password" required>
@@ -322,7 +321,7 @@
 
                                 <button type="submit" class="btn btn-login text-white">LOG IN</button>
 
-                                <div class="d-flex justify-content-between align-items-center">
+                                <div class="d-flex justify-content-between align-items-center border-bottom">
                                     <div class="form-check">
                                         <input type="checkbox" class="form-check-input" id="remember">
                                         <label class="form-check-label" for="remember">Remember me</label>
@@ -330,12 +329,14 @@
                                     <a href="#" class="forgot-password">Lost your password?</a>
                                 </div>
 
-                                <div class="avatar-section">
+                                <div class="avatar-section my-3">
                                     <div class="avatar-icon">
-                                        <i class="far fa-user"></i>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="66" height="66" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                                            <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"/>
+                                          </svg>
                                     </div>
                                     <p class="no-account">No account yet?</p>
-                                    <a href="#" class="create-account">CREATE AN ACCOUNT</a>
+                                    <a href="#" class="create-account border-bottom border-success d-inline-block">CREATE AN ACCOUNT</a>
                                 </div>
                             </form>
                         </div>
@@ -1424,11 +1425,11 @@
         <!-- review section end  -->
         <!-- blog section start  -->
         <section>
-            <div class="blog-section d-none">
+            <div class="blog-section">
                 <h2 class="blog-header text-center">BLOGS</h2>
                 <div class="blog-container my-5">
                     <div class="card-box">
-                        <img src="assets/media/Home/blog-section/blogcard1.png" alt="cardImage" loading="lazy"
+                        <img src="assets/media/Home/blog-section/blogcard1.png" alt="cardImage" class="img-fluid" loading="lazy"
                             decoding="async">
                         <div class="card-text p-3">
                             <p class="card-date">04 Sep 2024</p>
@@ -1439,18 +1440,18 @@
                         </div>
                     </div>
                     <div class="card-box">
-                        <img src="assets/media/Home/blog-section/blogcard2.png" alt="cardImage" loading="lazy"
+                        <img src="assets/media/Home/blog-section/blogcard2.png" alt="cardImage" class="img-fluid" loading="lazy"
                             decoding="async">
                         <div class="card-text p-3">
-                            <p class="card-date">29 Dec 2023</p>
+                            <p class="card-date">04 Sep 2024</p>
                             <h3 class="mousumi-achar">মৌসুমি আচার</h3>
-                            <p class="card-texts">আচার হলো বাংলাদেশীদের ঐতিহ্য যাতে ফল, শাকসবজি এবং অন্যান্য খাদ্য
-                                সামগ্রীকে মশলা, লবণ…</p>
+                            <p class="card-texts">আপনি কি জানেন যে আপনি যে ঘি গ্রহণ করেন তার গুণমান তার পুষ্টিগুণ এবং
+                                স্বাস্থ্য উপকারিতাকে ব্যাপকভাবে সংজ্ঞায়িত করে? গুণমান নিশ্চিত করতে...</p>
                             <h4>CONTINUE READING</h4>
                         </div>
                     </div>
                     <div class="card-box">
-                        <img src="assets/media/Home/blog-section/blogcard3.png" alt="cardImage" loading="lazy"
+                        <img src="assets/media/Home/blog-section/blogcard3.png" alt="cardImage" class="img-fluid" loading="lazy"
                             decoding="async">
                         <div class="card-text p-3">
                             <p class="card-date">29 Dec 2023</p>
