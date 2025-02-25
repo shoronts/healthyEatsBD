@@ -365,57 +365,61 @@ header .main-navbar .mobile-menu {
 /* mobile menu css end  */
 
 /* hero section start  */
-main .hero-container .swiper-container {
+main .slider-section {
     width: 100%;
-    height: 660px;
-    /* Define the height explicitly */
+    height: 500px;
     background: #eee;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-main .hero-container .swiper-container .swiper {
+main .slider-section .custom-swiper {
     width: 100%;
-    height: 660px;
+    height: 100%;
 }
 
-main .hero-container .swiper-container .swiper .swiper-wrapper .swiper-slide {
+main .slider-section .custom-swiper .swiper-wrapper {
+    display: flex;
+}
+
+main .slider-section .custom-swiper .swiper-slide {
     text-align: center;
     font-size: 18px;
-    background: var(--besic-white);
+    background: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.swiper-slide img {
+main .slider-section .custom-swiper .swiper-slide img {
     display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.swiper-button-next,
-.swiper-button-prev {
+main .slider-section .custom-swiper .swiper-button-next,
+main .slider-section .custom-swiper .swiper-button-prev {
     color: var(--white-text-color);
 }
 
-.swiper-pagination-bullet {
+main .slider-section .swiper-pagination-bullet {
     padding: 6px;
     border: 2px solid whitesmoke;
 }
 
-.swiper-pagination-bullet-active {
+main .slider-section .swiper-pagination-bullet-active {
     background: rgb(36, 36, 36);
 }
-
 /* hero section end  */
 /* large card section  start */
 main .loved-product {
     padding: 40px 0px;
 }
-
+main .loved-product img {
+    max-width: 317px;
+}
 main .product-section {
     display: block;
 }
@@ -490,15 +494,15 @@ main .swiper-card:hover .swiper-button-next {
 
 /* large card section  end */
 /* card css for all device start */
-main .product-card-section {
+main .home-product-card-section {
     background: #FCFAF8;
 }
 
-main .product-card-section .card-container {
+main .home-product-card-section .card-container {
     padding: 0 40px;
 }
 
-main .product-card-section .card {
+main .home-product-card-section .card {
     width: 240px;
     height: 400px;
     padding: 10px;
@@ -576,7 +580,7 @@ main .pinat-batter-section .pinat-text .pinat-batter-text {
 
 main .pinat-batter-section .pinat-text .order-btn {
     display: inline-flex;
-    padding: 23px 59px;
+    padding: 15px 49px;
     justify-content: center;
     align-items: center;
     border-radius: 8px;
@@ -633,7 +637,7 @@ main .ghee-section {
 main .ghee-section .ghee-container {
     max-width: 1220px;
     margin: 0 auto;
-    padding: 60px 0px;
+    padding: 60px 0px 0px 0px;
 }
 
 
@@ -694,7 +698,6 @@ main .banner-section {
     align-items: center;
     justify-content: center;
 }
-
 /* review section start  */
 main .review-swiper-container {
     position: relative;
@@ -705,7 +708,7 @@ main .review-swiper-container {
 
 /* Keep swiper styles */
 main .review-swiper-container .swiper {
-    width: 50%;
+    width: 40%;
     height: 30vh;
     border-radius: 10px;
 }
@@ -861,7 +864,7 @@ main .blog-section .card-box .card-text h4 {
 /* blog section end  */
 /* service section start  */
 main .service-container {
-    padding: 40px 100px;
+    padding: 100px 20px 10px 20px;
     margin: 0 auto;
     background: rgb(228, 240, 222);
 }
@@ -871,6 +874,10 @@ main .service-container .service-card {
     align-items: center;
     justify-content: center;
     gap: 10px;
+}
+main .service-container .service-card .service-icon {
+    height: 55px;
+    width: 55px;
 }
 main .service-container .service-card .service .service-first {
     font-family: "inter";
@@ -887,14 +894,15 @@ main .service-container .service-card .service .service-second {
     line-height: 22.4px;
     color: rgb(0, 0, 0);
 }
-
-main .service-banner {
-    height:130px;
+/* main .service-banner {
+    height: 130px !important;
     width: 100%;
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
+    overflow: hidden; 
 }
+main .service-banner img {
+    height: 130px;
+    width: 100%;
+} */
 
 /* service section end  */
 /* footer css start  */
@@ -931,3 +939,1645 @@ footer .footer-container .footer-content img {
 footer .footer-container .footer-content hr {
     border: 1px solid #FFD700;
 }
+
+/* store css file  */
+/* hero css start  */
+main .hero-container {
+    height: 250px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+main .hero-container .hero-content .banner-header {
+    font-size: 78px;
+    font-weight: 600;
+    line-height: 93px;
+    font-family: "signika";
+}
+
+main .hero-container .hero-content .banner-home {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    font-family: 'lato';
+}
+
+main .hero-container .hero-content .banner-store {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 22px;
+    font-family: 'lato';
+}
+
+/* hero section end  */
+/* image section start  */
+main .image-section {
+    padding: 60px 0px;
+}
+
+main .image-section .image-container {
+    max-width: 1220px;
+    margin: 0 auto;
+    padding: 0px 5px;
+}
+
+main .image-section .image-container .image-content {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+}
+
+main .image-section .image-container .image-content .banner-img img {
+    max-width: 185px;
+    height: auto;
+}
+@keyframes floating {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+main .image-section .image-container .image-content .banner-img img:hover {
+    animation: floating 2s infinite ease-in-out;
+}
+
+
+/* image  css end  */
+/* filter css start  */
+main .option-section {
+    max-width: 1220px;
+    margin: 0 auto;
+    padding: 0px 5px;
+}
+
+main .option-section .option-container .option-content .dropdown .main-dropdown {
+    width: 100%;
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #ABABAB;
+    border-radius: 5px;
+    font-family: "lato";
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 12px;
+    padding: 16px 15px;
+    color: rgb(51, 51, 51);
+}
+
+main .option-section .option-container .option-content .dropdown .dropdown-menu li a {
+    font-size: 14px;
+    line-height: 18px;
+    font-family: "lato";
+    color: rgb(118, 118, 118) !important;
+}
+
+main .option-section .option-container .option-content .price-range-container {
+    width: 100%;
+    /* Adjust as needed */
+    margin: 0px auto;
+    padding: 10px 20px;
+}
+
+main .option-section .option-container .option-content .price-range-container .slider-container {
+    position: relative;
+    height: 14px;
+}
+
+main .option-section .option-container .option-content .price-range-container .slider-container  .slider {
+    /* -webkit-appearance: none; */
+    position: absolute;
+    width: 100%;
+    pointer-events: none;
+    background: none;
+    z-index: 2;
+}
+
+main .option-section .option-container .option-content .price-range-container .slider-container .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 16px;
+    width: 4px;
+    background: #046c4e;
+    pointer-events: all;
+    cursor: pointer;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+}
+
+main .option-section .option-container .option-content .price-range-container .slider-container .slider-track {
+    position: absolute;
+    background-color: #046c4e;
+    height: 4px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    left: 0;
+    right: 0;
+}
+
+main .option-section .option-container .option-content .filter-btn {
+    padding: 10px 70px;
+    justify-content: flex-end;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 5px;
+    background: #136532;
+    color: #FFF;
+    font-family: "lato";
+    font-weight: 500;
+    border: none;
+}
+/* filter css end  */
+/* card css start  */
+main .card-container {
+    max-width: 1220px;
+    margin: 0 auto;
+    padding: 30px 5px;
+}
+main .card-container .medium-card-container {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+}
+main .card-container .medium-card-container .card {
+    width: 100%;
+    padding: 10px;
+    border-radius: 12px;
+    border: 1px solid #D3D3D3;
+    background: #FFF;
+    position: relative;
+    text-align: center;
+}
+main .card-container .medium-card-container .card .card-img img {
+    width: 100%;
+}
+
+main .card-container .medium-card-container .card .chocolate-p {
+    color: #000;
+    font-family: "Signika";
+    font-size: 14px;
+    line-height: 24px;
+}
+
+main .card-container .medium-card-container .card  .price {
+    color: #2E7046;
+    font-family: "Lato";
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: -0.4px;
+}
+
+
+main .card-container .medium-card-container .card .card-btn {
+    padding: 20px 80px;
+    color: #FFF;
+    font-size: 13px;
+    text-align: center;
+    border: none;
+    border-radius: 4px;
+    background: #2E7046;
+    font-weight: 600;
+    text-transform: uppercase;
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+
+}
+
+
+main .card-container .card-btn::before,
+main .card-container .card-btn::after {
+    content: "SELECT OPTION";
+    position: absolute;
+    transition: opacity 0.4s, transform 0.2s;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+main .card-container .card-btn::after {
+    content: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23ffffff' class='bi bi-eye-fill' viewBox='0 0 16 16'%3E%3Cpath d='M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0'/%3E%3Cpath d='M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8m8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7'/%3E%3C/svg%3E");
+    opacity: 0;
+    transform: translate(-50%, -50%) translateY(10px);
+}
+
+main .card-container .card-btn:hover::before {
+    opacity: 0;
+    transform: translate(-50%, -50%) translateY(-10px);
+}
+
+main .card-container .card-btn:hover::after {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+}
+
+
+main .card-container.hover-icon {
+    padding: 5px 15px;
+    border-radius: 5px;
+    background: #FFF;
+    opacity: 0;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    transition: opacity 0.2s, transform 0.5s;
+    cursor: pointer;
+}
+
+main .card-container .medium-card-container .card .card:hover .hover-icon {
+    opacity: 1;
+    transform: translateX(-10px);
+}
+/* card css end  */
+/* store css end  */
+
+
+
+/* arrival css start  */
+/* hero css start  */
+main .hero-container {
+    height: 250px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+main .hero-container .hero-content .banner-header {
+    font-size: 78px;
+    font-weight: 600;
+    line-height: 93px;
+    font-family: "signika";
+}
+
+main .hero-container .hero-content .banner-home {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    font-family: 'lato';
+}
+
+main .hero-container .hero-content .banner-store {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 22px;
+    font-family: 'lato';
+}
+
+/* hero section end  */
+/* filter css start  */
+main .option-section {
+    max-width: 1220px;
+    margin: 0 auto;
+    padding: 80px 5px 0px 5px;
+}
+
+main .option-section .option-container .option-content .dropdown .main-dropdown {
+    width: 100%;
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #ABABAB;
+    border-radius: 5px;
+    font-family: "lato";
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 12px;
+    padding: 16px 15px;
+    color: rgb(51, 51, 51);
+}
+
+main .option-section .option-container .option-content .dropdown .dropdown-menu li a {
+    font-size: 14px;
+    line-height: 18px;
+    font-family: "lato";
+    color: rgb(118, 118, 118) !important;
+}
+
+
+main .option-section .option-container .option-content .filter-btn {
+    padding: 10px 120px;
+    justify-content: flex-end;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 5px;
+    background: #136532;
+    color: #FFF;
+    font-family: "lato";
+    font-weight: 500;
+    border: none;
+}
+/* filter css end  */
+/* card css start  */
+main .card-container {
+    max-width: 1220px;
+    margin: 0 auto;
+    padding: 30px 5px;
+}
+main .card-container .medium-card-container {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+}
+main .card-container .medium-card-container .card {
+    width: 100%;
+    padding: 10px;
+    border-radius: 12px;
+    border:none !important;
+    background: #FFF;
+    position: relative;
+    text-align: center;
+}
+main .card-container .medium-card-container .card .card-img img {
+    width: 100%;
+}
+
+main .card-container .medium-card-container .card .chocolate-p {
+    color: #000;
+    font-family: "Signika";
+    font-size: 14px;
+    line-height: 24px;
+}
+
+main .card-container .medium-card-container .card .price {
+    color: #2E7046;
+    font-family: "Lato";
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: -0.4px;
+}
+
+
+main .card-container .medium-card-container .card .card-btn {
+    padding: 20px 80px;
+    color: #FFF;
+    font-size: 13px;
+    text-align: center;
+    border: none;
+    border-radius: 4px;
+    background: #2E7046;
+    font-weight: 600;
+    text-transform: uppercase;
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+
+}
+
+
+main .card-container .card-btn::before,
+main .card-container .card-btn::after {
+    content: "SELECT OPTION";
+    position: absolute;
+    transition: opacity 0.4s, transform 0.2s;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+main .card-container .card-btn::after {
+    content: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23ffffff' class='bi bi-eye-fill' viewBox='0 0 16 16'%3E%3Cpath d='M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0'/%3E%3Cpath d='M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8m8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7'/%3E%3C/svg%3E");
+    opacity: 0;
+    transform: translate(-50%, -50%) translateY(10px);
+}
+
+main .card-container .card-btn:hover::before {
+    opacity: 0;
+    transform: translate(-50%, -50%) translateY(-10px);
+}
+
+main .card-container .card-btn:hover::after {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+}
+
+
+main .card-container .hover-icon {
+    padding: 5px 15px;
+    border-radius: 5px;
+    background: #FFF;
+    opacity: 0;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    transition: opacity 0.2s, transform 0.5s;
+    cursor: pointer;
+}
+
+main .card-container .card:hover .hover-icon {
+    opacity: 1;
+    transform: translateX(-10px);
+}
+/* arrival css end  */
+
+
+/* offer css start  */
+/* banner container start  */
+main .banner-container {
+    width: 100%;
+    max-height: 878px;
+}
+main .banner-container .banner-content {
+    padding: 100px 10px;
+}
+main .banner-container .banner-content .Join-img {
+    max-width: 770px;
+    max-height: 340px;
+}
+@keyframes floating {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+main .banner-container .banner-content .Join-img:hover {
+    animation: floating 2s infinite ease-in-out;
+}
+
+main .banner-container .banner-content .join-header {
+    padding: 20px 0px;
+    font-size: 30px;
+    font-weight: 600;
+    font-family: "roboto";
+    line-height: 36px;
+    color: rgb(255, 255, 255);
+}
+main .banner-container .banner-content .Facebook-img {
+    max-width: 730px;
+    max-height: 90px;
+    transition: transform 0.3s ease-in-out; /* Smooth transition */
+}
+
+main .banner-container .banner-content .Facebook-img:hover {
+    transform: scale(1.1); /* Makes the image bigger on hover */
+}
+/* offer css end  */
+
+
+/* contact css start  */
+/* hero css start  */
+main .hero-container {
+    height: 200px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+main .hero-container .hero-content .banner-header {
+    font-size: 44px;
+    font-weight: 600;
+    line-height:52px;
+    font-family: "signika";
+}
+
+main .hero-container .hero-content .banner-home {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    font-family: 'lato';
+}
+
+main .hero-container .hero-content .banner-store {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 22px;
+    font-family: 'lato';
+}
+
+/* hero section end  */
+/* form section start  */
+main .contact-container {
+    max-width:1220px;
+    margin: 0 auto;
+    padding: 40px 0px 80px 0px;
+    overflow: hidden;
+}
+main .contact-container .contact-content .info-container .company-info-content .info-label{
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 22px;
+    font-family: "lato";
+    color: rgb(51, 51, 51);
+}
+main .contact-container .contact-content .form-container .section-text {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    font-family: "signika";
+    color: rgb(36, 36, 36);
+}
+main .contact-container .contact-content .form-container .form-control {
+    border: 2px solid #E4E4E5;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+main .contact-container .contact-content .form-container .form-control:focus {
+    border-color:rgb(199, 199, 199);
+    box-shadow: 0 0 0 0.2rem rgba(247, 248, 248, 0.15);
+}
+
+main .contact-container .contact-content .form-container textarea.form-control {
+    min-height: 200px;
+    resize: vertical;
+}
+/* contact css end  */
+/* ghee css start  */
+/* hero css start  */
+main .hero-container {
+    height: 180px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+main .hero-container .hero-content .banner-header {
+    font-size: 78px;
+    font-weight: 600;
+    line-height: 93px;
+    font-family: "signika";
+}
+
+main .hero-container .hero-content .banner-home {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    font-family: 'lato';
+}
+
+main .hero-container .hero-content .banner-store {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 22px;
+    font-family: 'lato';
+}
+
+main .hero-container .hero-content a {
+    color: #000;
+    text-decoration: none;
+}
+
+/* hero section end  */
+/* details section start  */
+main .details-container {
+    max-width: 1220px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+main .details-container .details-content .left-side .ghee-kitchen {
+    display: inline-block;
+    padding: 0px 10px;
+    background: #2E7046;
+    color: #FFF;
+    font-family: "Lato";
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 25px;
+}
+
+main .details-container .details-content .left-side .ghee-head {
+    font-family: "Signika";
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 44px;
+    color: rgb(51, 51, 51);
+}
+
+main .details-container .details-content .left-side .icons {
+    margin-top: 15px;
+    font-size: 14px;
+    line-height: 22px;
+    font-family: "lato";
+    color: rgb(165, 165, 165);
+}
+
+main .details-container .details-content .left-side .ghee-img img {
+
+    width: 100%;
+    /* Ensures it fills the container width */
+    height: 100%;
+    /* Makes it take full height of the container */
+    object-fit: cover;
+    /* Prevents distortion and ensures it fits inside */
+
+}
+
+main .details-container .details-content .text-large {
+    font-size: 16px;
+    line-height: 24px;
+    font-family: "lato";
+    font-weight: 400;
+    color: rgb(119, 119, 119);
+}
+
+main .details-container .details-content .text-bold {
+    font-size: 14px;
+    line-height: 22px;
+    font-family: "lato";
+    font-weight: 600;
+    color: rgb(119, 119, 119);
+}
+
+main .details-container .details-content .text-normal {
+    font-size: 14px;
+    line-height: 22px;
+    font-family: "lato";
+    font-weight: 400;
+    color: rgb(119, 119, 119);
+}
+
+/* form css  */
+/* Comment Form CSS */
+.main .details-container .details-content .left-side .comment-section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+main .comment-section .form-title {
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 30px;
+    color: rgb(36, 36, 36);
+    font-family: "Signika";
+}
+
+main .details-container .details-content .left-side .comment-section .comment-form .required {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+main .details-container .details-content .left-side .comment-section .comment-form .required::after {
+    content: " *";
+    color: #666;
+}
+
+main .details-container .details-content .form-label,
+main .details-container .details-content .privacy-notice {
+    font-size: 14px;
+    line-height: 22px;
+    color: rgb(36, 36, 36);
+    font-weight: 400;
+    font-family: "lato";
+}
+
+main .details-container .comment-section .colors {
+    color: rgb(119, 119, 119) !important;
+}
+
+main .details-container .details-content .left-side .comment-section .comment-form .form-control {
+    border: 2px solid #E4E4E5;
+    border-radius: 6px;
+    padding: 0.5rem;
+    font-size: 0.9rem;
+}
+
+main .details-container .details-content .left-side .comment-section .comment-form .form-control:focus {
+    border-color: #0B6B3D;
+    box-shadow: none;
+}
+
+main .details-container .details-content .left-side .comment-section .comment-form textarea.form-control {
+    min-height: 150px;
+}
+
+main .details-container .details-content .left-side .comment-section .comment-form .form-check {
+    margin-top: 1rem;
+}
+
+main .details-container .details-content .left-side .comment-section .comment-form .form-check-label {
+    font-size: 0.9rem;
+    color: #333;
+}
+
+main .details-container .details-content .btn-comment {
+    background-color: #0B6B3D;
+    color: white;
+    border: none;
+    font-family: "lato";
+    padding: 0.5rem 1.3rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+main .details-container .details-content .btn-comment:hover {
+    background-color: #39ad7d;
+    color: white;
+}
+
+main .details-container .details-content .left-side .ghee-text .icon-conainer .icon-content .tags-container .tag {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 12px;
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 4px;
+    font-size: 12px;
+    color: #495057;
+    font-weight: 600;
+    line-height: 20px;
+    font-family: "lato";
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+main .details-container .details-content .left-side .ghee-text .icon-conainer .icon-content .tags-container .tag:hover {
+    background-color: #e9ecef;
+    border-color: #dee2e6;
+}
+
+main .details-container .details-content hr {
+    color: rgb(51, 51, 51);
+}
+
+main .details-container .details-content .end-justice {
+    width: 300px;
+}
+
+main .details-container .details-content .order {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+    color: rgb(187, 187, 187);
+    font-family: "lato";
+}
+
+main .details-container .details-content .achar {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 17px;
+    color: rgb(36, 36, 36);
+    font-family: "Signika";
+}
+
+main .details-container .details-content .horizental-line {
+    border: 2px solid #E5E5E4;
+    border-left: none;
+    border-right: none;
+}
+
+main .right-side .right-side-container .search-container {
+    padding: 0px 20px;
+}
+
+main .details-container .details-content .btn-search {
+    padding: 12px 27px;
+    background: #F3F3F3;
+    border: none;
+    color: rgb(62, 62, 62);
+    font-family: "lato";
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 17px;
+    text-transform: uppercase;
+}
+main .details-container .details-content .right-bold {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 31px;
+    color: rgb(36, 36, 36);
+    font-family: "Signika";
+}
+main .details-container .details-content  .right-normal {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    color: rgb(118, 118, 118);
+    font-family: "lato";
+    text-decoration: none;
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+main .details-container .details-content  .form-control:focus {
+    outline: none !important;
+    box-shadow: none !important;
+    border-color: gray !important;
+}
+main .details-container .details-content img{
+     height: auto;
+     width: 100%;
+}
+/* ghee css end  */
+/* blog css start  */
+/* hero css start  */
+main .hero-container {
+    height: 140px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+main .hero-container .hero-content .banner-header {
+    font-size: 44px;
+    font-weight: 600;
+    line-height: 52px;
+    font-family: "signika";
+}
+
+main .hero-container .hero-content .banner-home {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    font-family: 'lato';
+}
+
+main .hero-container .hero-content .banner-store {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 22px;
+    font-family: 'lato';
+}
+
+main .blog-container .blog-content .blog-card .card-body .continue-reading {
+    font-size: 13px;
+    font-weight: 800;
+    line-height: 13px;
+    color: rgb(46, 112, 70);
+    font-family: 'lato';
+    text-decoration: none;
+}
+a {
+    color: #000;
+    text-decoration: none;
+}
+/* hero section end  */
+/* blog card section start  */
+main .blog-container {
+    margin:  40px 0px;
+}
+ main .blog-container .blog-content {
+    max-width: 1220px;
+    margin: 0 auto;
+ }
+ main .blog-container .blog-content .blog-card {
+    background: white;
+    border: none;
+    border-radius: 0;
+    margin-bottom: 30px;
+}
+
+main .blog-container .blog-content .blog-card .card-img-wrapper {
+    overflow: hidden;
+    position: relative;
+}
+
+/* Image inside the card */
+main .blog-container .blog-content .blog-card .card-img-wrapper .card-img-top {
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+/* Hover Effects */
+main .blog-container .blog-content .blog-card:hover .image-overlay {
+    opacity: 1;
+}
+
+main .blog-container .blog-content .blog-card:hover .dots {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+main .blog-container .blog-content .blog-card:hover .card-img-top {
+    transform: scale(1.05);
+}
+
+main .blog-container .blog-content .blog-card .card-img-wrapper .date-stamp {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: white;
+    padding: 8px 15px;
+    text-align: center;
+    line-height: 1.2;
+    z-index: 1;
+}
+
+main .blog-container .blog-content .blog-card .card-img-wrapper .date-stamp .date-day {
+    font-size: 24px;
+    font-family: "lato";
+    font-weight:400;
+    line-height: 24px;
+    margin-bottom: -5px;
+}
+
+main .blog-container .blog-content .blog-card .card-img-wrapper .date-stamp .date-month {
+    font-size: 12px;
+    font-family: "lato";
+    line-height: 24px;
+    font-weight:400;
+    text-transform: uppercase;
+}
+
+main .blog-container .card-img-box {
+    position: relative;
+}
+
+main .blog-container .category-tag {
+    background: #0B6B3D;
+    color: white;
+    padding: 2px 12px;
+    font-size: 12px;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-right: 5px;
+    position: absolute;
+    bottom: -4%;
+    left: 30%;
+    padding: 8px;
+}
+
+main .blog-container .blog-content .blog-card .card-body {
+    padding: 20px;
+}
+
+main .blog-container .blog-content .blog-card .card-body .card-title {
+    font-size: 24px;
+    font-weight: 500;
+    font-family: "signika";
+    line-height: 33px;
+    color: rgb(51, 51, 51);
+}
+
+main .blog-container .blog-content .blog-card .card-body .icons {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19px;
+    font-family: "lato";
+    color: rgb(187, 187, 187);
+    width: 220px;
+    margin: 0 auto;
+}
+
+main .blog-container .blog-content .blog-card .card-body .card-text {
+    color: rgb(119, 119, 119);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+}
+/* blog css end  */
+/* login css start  */
+/* hero css start  */
+main .hero-container {
+    height: 120px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+main .hero-container .hero-content .banner-header {
+    font-size: 44px;
+    font-weight: 600;
+    line-height: 52px;
+    color: rgb(36, 36, 36);
+    font-family: "signika";
+}
+
+main .hero-container .hero-content .banner-home {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    font-family: 'lato';
+}
+
+main .hero-container .hero-content .banner-store {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 22px;
+    font-family: 'lato';
+}
+
+main .hero-container .hero-content a {
+    color: #000;
+    text-decoration: none;
+}
+
+/* hero section end  */
+/* form section  */
+main .login-container {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+main .login-container > h2 {
+    font-size: 22px;
+    font-family: "Signika";
+    color: rgb(36, 36, 36);
+    font-weight: 600;
+    line-height: 30px;
+}
+
+main .login-container .form-label {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    font-family: "lato";
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+main .login-container .form-label.required::after {
+    content: " *";
+    color: #dc3545;
+}
+
+main .login-container .form-control {
+    border: 2px solid #E7E6E7;
+    border-radius: 4px;
+    padding: 0.65rem;
+    font-size: 0.9rem;
+}
+
+
+main .login-container .password-field {
+    position: relative;
+}
+
+main .login-container .password-field .password-toggle {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background: none;
+    color: #6c757d;
+    cursor: pointer;
+    padding: 0.25rem;
+}
+
+main .login-container .btn-login {
+    background-color:var(--green-text-color);
+    border: none;
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 0.9rem;
+    margin: 1rem 0;
+    transition: background-color 0.3s ease;
+}
+
+main .login-container .btn-login:hover {
+    background-color: rgb(46, 112, 70);
+}
+
+main .login-container .form-check {
+    margin: 1rem 0;
+}
+
+main .login-container .form-check-label {
+    font-size: 0.9rem;
+    color: #333;
+}
+
+main .login-container .form-check-input {
+    margin-top: 0.25rem;
+}
+
+main .login-container .forgot-password {
+    color: #0B6B3D;
+    text-decoration: none;
+    font-size: 0.9rem;
+    float: right;
+}
+
+main .login-container .forgot-password:hover {
+    color: #095032;
+    text-decoration: underline;
+}
+
+main .login-container .avatar-section {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+main .login-container .avatar-section .avatar-icon {
+    width: 60px;
+    height: 60px;
+    background-color: #f8f9fa;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+}
+
+main .login-container .avatar-section .avatar-icon i {
+    font-size: 2rem;
+    color: #dee2e6;
+}
+
+main .login-container .no-account {
+    text-align: center;
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+main .login-container .create-account {
+    color: #333;
+    text-decoration: none;
+    font-weight: 600;
+    display: block;
+    text-align: center;
+}
+
+main .login-container .create-account:hover {
+    color: #0B6B3D;
+}
+/* login css end  */
+/* privacy css start  */
+/* hero css start  */
+main .hero-container {
+    height: 200px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+main .hero-container .hero-content .banner-header {
+    font-size: 78px;
+    font-weight: 600;
+    line-height: 93px;
+    font-family: "signika";
+}
+
+main .hero-container .hero-content .banner-home {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    font-family: 'lato';
+}
+
+main .hero-container .hero-content .banner-store {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 22px;
+    font-family: 'lato';
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+/* hero section end  */
+/* text section start  */
+main .text-container {
+    max-width: 1220px; 
+    margin: 0 auto;
+    padding: 60px 0px;
+}
+/* privacy css end  */
+
+/* product css start  */
+main .product-container {
+    overflow: hidden;
+}
+main .product-container .breadcrumb a {
+    text-decoration: none;
+    color: #666;
+}
+main .product-container .breadcrumb .breadcrumb-item {
+    font-size: 14px;
+    font-family: "lato";
+    color:rgb(36, 36, 36) ;
+    line-height: 22px;
+}
+main .product-container .chocolate-head {
+    font-size: 34px;
+    font-family: "Signika";
+    font-weight: 500;
+    color:rgb(51, 51, 51) ;
+    line-height: 40px;
+}
+main .product-container .breadcrumb a:hover {
+    color: var(--primary-green);
+}
+.product-container {
+    max-width: 1220px;
+    margin: 0 auto;
+}
+main .product-container .h3 {
+    font-size: 21px;
+    font-family:"lato";
+    font-weight: 600;
+    color:rgb(46, 112, 70) ;
+    line-height: 26px;
+}
+main .product-container .price {
+    font-size: 21px;
+    font-family: "lato";
+    font-weight: 600;
+    color:rgb(187, 187, 187) ;
+    line-height: 30px;
+}
+main .product-container .product-description {
+    font-size: 14px;
+    font-weight: 400;
+    font-family: "lato";
+    color:rgb(119, 119, 119) ;
+    line-height: 22px;
+}
+/* Product Gallery */
+main .product-container .product-gallery {
+    position: relative;
+    width: 100%;
+    display: flex;
+    gap: 10px;
+}
+
+main .product-container .product-gallery .side-img img {
+    width: 130px;
+    height: 120px;
+    opacity: 0.6;
+}
+main .product-container .product-gallery .side-img img:hover {
+    opacity:1;
+
+}
+
+main .product-container .product-gallery .main-image-container {
+    flex-grow: 1;
+}
+
+main .product-container .product-gallery .main-image-container img {
+    width: 100%;
+    height:80%;
+    border-radius: 5px;
+}
+
+main .product-container .weight-select {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 400;
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+main .product-container  .weight-select.active {
+    border-color: var(--primary-green);
+    background-color: var(--primary-green);
+    color: white;
+}
+
+main .product-container  .weight-select:hover {
+    border-color: var(--primary-green);
+}
+
+
+main .product-container .quantity-selector {
+    width: 90px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+main .product-container  .quantity-selector input {
+    border: none;
+    width: 40px;
+    text-align: center;
+    padding: 5px;
+}
+
+main .product-container  .quantity-selector button {
+    border: none;
+    background: #f8f9fa;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+main .product-container  .quantity-selector button:hover {
+    background: #e2e6ea;
+}
+
+
+main .product-container .btn-cart, .btn-buy {
+    background-color:#2E7046;
+    font-weight: 600;
+    font-family: "lato";
+    color:rgb(255, 255, 255);
+    padding: 8px 25px;
+    border: none;
+    transition: background 0.3s ease;
+}
+
+main .product-container .btn-cart:hover,main .product-container .btn-buy:hover {
+    background-color: #86ff8e;
+    color:rgb(255, 255, 255);
+}
+
+
+main .product-container .wishlist-link {
+    color: rgb(51, 51, 51);
+    text-decoration: none;
+    font-weight: "lato";
+    font-size: 14px;
+    line-height: 14px;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease;
+    font-weight: 600;
+}
+main .product-container .product-info {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    font-family: "lato";
+    color: rgb(51, 51, 51);
+}
+.wishlist-link:hover {
+    color: var(--primary-green);
+}
+.borderless-accordion .accordion,
+.borderless-accordion .accordion-item,
+.borderless-accordion .accordion-button,
+.borderless-accordion .accordion-button:focus,
+.borderless-accordion .accordion-button:not(.collapsed),
+.borderless-accordion .accordion-collapse {
+    border: none !important;
+    box-shadow: none !important;
+}
+main .product-container .accordion-button {
+    background-color: transparent !important;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 25px;
+    font-family: "lato";
+    color: rgb(46, 112, 70);
+}
+
+main .product-container .accordion-button:focus {
+    box-shadow: none !important;
+}
+
+main .product-container .accordion-icon {
+    background-color: transparent !important;
+}
+main .product-container .description .borderless-accordion .accordion .accordion-item .accordion-collapse .accordion-body .chocolate-accordion {
+    height: 300px;
+    width: 100%;
+    overflow: auto; 
+}
+main .product-container .description .borderless-accordion .accordion .accordion-item .accordion-collapse .accordion-body .chocolate-accordion .Chocolate-bold {
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 30px;
+    font-family: "Signika";
+    color: rgb(36, 36, 36);
+}
+main .product-container .description .borderless-accordion .accordion .accordion-item .accordion-collapse .accordion-body .chocolate-accordion .Chocolate-normal {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    font-family: "Signika";
+    color: rgb(119, 119, 119);
+    margin-top: 15px;
+}
+main .product-container .accordion-collapse .accordion-body .Chocolate-weight {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 19px;
+    font-family: "Signika";
+    color: rgb(36, 36, 36);
+}
+/*  card section  start */
+
+main .other-container {
+    max-width: 1220px;
+    margin: 0 auto;
+}
+main .swiper-card {
+    position: relative;
+    max-width: 1220px;
+    margin: 0 auto;
+    height: auto;
+    background: #FCFAF8;
+}
+
+/* Keep swiper styles */
+main .swiper-card .swiper-container .swiper {
+    width: 100%;
+    height: auto;
+}
+
+main .swiper-card .swiper-container .swiper .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .swiper-card .swiper-container .swiper .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Hide Swiper buttons initially */
+main .other-container .swiper-button-next,
+main .other-container .swiper-button-prev {
+    color: rgb(18, 14, 14);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Make them visible when hovering on .swiper-container */
+main .swiper-container:hover .swiper-button-next,
+main .swiper-container:hover .swiper-button-prev {
+    opacity: 1;
+    pointer-events: auto;
+}
+main .other-container .product-head {
+    font-size: 22px;
+    font-family: "Signika";
+    font-weight: 600;
+    color: rgb(36, 36, 36);
+    line-height: 30px;
+}
+
+
+
+/* large card section  end */
+/* card css start */
+main .product-card-section {
+    background: #FCFAF8;
+}
+
+main .other-container .swiper-card .swiper-container .swiper .swiper-wrapper .swiper-slide .card {
+    width: 240px;
+    padding: 10px;
+    border-radius: 12px;
+    border: 1px solid #D3D3D3;
+    background: #FFF;
+    position: relative;
+    text-align: center;
+}
+
+
+main .other-container .swiper-card .swiper-container .swiper .swiper-wrapper .swiper-slide .card .chocolate-p {
+    color: #000;
+    font-family: "Signika";
+    font-size: 14px;
+    line-height: 24px;
+}
+
+main .other-container .swiper-card .swiper-container .swiper .swiper-wrapper .swiper-slide .card .price {
+    color: #2E7046;
+    font-family: "Lato";
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: -0.4px;
+}
+
+
+main .other-container .swiper-card .swiper-container .swiper .swiper-wrapper .swiper-slide .card .card-btn {
+    padding: 20px 80px;
+    color: #FFF;
+    font-size: 13px;
+    text-align: center;
+    border: none;
+    border-radius: 4px;
+    background: #2E7046;
+    font-weight: 600;
+    text-transform: uppercase;
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+
+}
+
+
+main .other-container .swiper-card .swiper-container .swiper .swiper-wrapper .swiper-slide .card .card-btn::before,
+main .other-container .swiper-card .swiper-container .swiper .swiper-wrapper .swiper-slide .card .card-btn::after {
+    content: "SELECT OPTION";
+    position: absolute;
+    transition: opacity 0.4s, transform 0.2s;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+main .other-container .swiper-card .swiper-container .swiper .swiper-wrapper .swiper-slide .card .card-btn::after {
+    content: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23ffffff' class='bi bi-eye-fill' viewBox='0 0 16 16'%3E%3Cpath d='M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0'/%3E%3Cpath d='M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8m8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7'/%3E%3C/svg%3E");
+    opacity: 0;
+    transform: translate(-50%, -50%) translateY(10px);
+}
+
+main .other-container .swiper-card .swiper-container .swiper .swiper-wrapper .swiper-slide .card .card-btn:hover::before {
+    opacity: 0;
+    transform: translate(-50%, -50%) translateY(-10px);
+}
+
+main .other-container .swiper-card .swiper-container .swiper .swiper-wrapper .swiper-slide .card .card-btn:hover::after {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+}
+
+
+main .other-container .swiper-card .swiper-container .swiper .swiper-wrapper .swiper-slide .card .hover-icon {
+    padding: 5px 15px;
+    border-radius: 5px;
+    background: #FFF;
+    opacity: 0;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    transition: opacity 0.2s, transform 0.5s;
+    cursor: pointer;
+}
+
+main .other-container .swiper-card .swiper-container .swiper .swiper-wrapper .swiper-slide .card:hover .hover-icon {
+    opacity: 1;
+    transform: translateX(-10px);
+}
+/* product css end  */
+/* wishlist css start  */
+/* hero css start  */
+main .hero-container {
+    height: 200px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+main .hero-container .hero-content .banner-header {
+    font-size: 78px;
+    font-weight: 600;
+    line-height: 93px;
+    font-family: "signika";
+}
+
+main .hero-container .hero-content .banner-home {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    font-family: 'lato';
+}
+
+main .hero-container .hero-content .banner-store {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 22px;
+    font-family: 'lato';
+}
+
+/* hero section end  */
+/* wish section start  */
+main .wish-container {
+    padding:150px 0px;
+}
+main .wish-container .wish-content {
+    max-width: 550px;
+    margin: 0 auto; 
+}
+main .wish-container .wish-content .wish-error {
+    font-family: "signika";
+    font-size: 57px;
+    font-weight: 600;
+    line-height: 57px;
+    color: rgb(36, 36, 36);
+}
+main .wish-container .wish-content .wish-text {
+    font-family: "lato";
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+    color: rgb(119, 119, 119);
+}
+main .wish-container .wish-content .wish-btn {
+    padding: 15px 40px;
+    background-color: var(--besic-green);
+    border: none;
+    color: var(--grey-white);
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 16px;
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+}
+/* wish css end  */

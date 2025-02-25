@@ -21,7 +21,6 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/main.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
-
 </head>
 
 <body>
@@ -136,7 +135,7 @@
                                             </g>
                                         </svg>
                                         <span
-                                            class="position-absolute top-0 start-70 translate-middle badge rounded-pill text-bg-success">0
+                                            class="position-absolute top-0 start-70 translate-middle badge rounded-pill bg-unread">0
                                             <span class="visually-hidden">unread messages</span>
                                         </span>
                                     </a>
@@ -177,7 +176,7 @@
                                         </g>
                                     </svg>
                                     <span
-                                        class="position-absolute top-0 start-70 translate-middle badge rounded-pill text-bg-success">0
+                                        class="position-absolute top-0 start-70 translate-middle badge rounded-pill bg-unread">0
                                         <span class="visually-hidden">unread messages</span>
                                     </span>
                                 </a>
@@ -285,7 +284,8 @@
                 </div>
                 <div class="offcanvas offcanvas-end p-10" tabindex="-1" id="userAuthOffcanvas"
                     aria-labelledby="userAuthOffcanvasLabel">
-                    <div class="offcanvas-header d-flex justify-content-between align-content-center border border-bottom-success">
+                    <div
+                        class="offcanvas-header d-flex justify-content-between align-content-center border border-bottom-success">
                         <h5 class="fw-bold">Sign In</h5>
                         <button type="button" class="btn d-flex align-items-center" data-bs-dismiss="offcanvas"
                             aria-label="Close">
@@ -331,12 +331,16 @@
 
                                 <div class="avatar-section my-3">
                                     <div class="avatar-icon">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="66" height="66" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
-                                            <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"/>
-                                          </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="66" height="66"
+                                            fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                                            <path
+                                                d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z" />
+                                        </svg>
                                     </div>
                                     <p class="no-account">No account yet?</p>
-                                    <a href="#" class="create-account border-bottom border-success d-inline-block">CREATE AN ACCOUNT</a>
+                                    <a href="#"
+                                        class="create-account border-bottom border-success d-inline-block">CREATE AN
+                                        ACCOUNT</a>
                                 </div>
                             </form>
                         </div>
@@ -345,39 +349,40 @@
             </div>
         </section>
         <!-- Navigarion End -->
-         <!-- down bar start  -->
-         <section>
+        <!-- down bar start  -->
+        <section>
             <div class="botton-nav-container">
                 <div class="bottom-nav">
                     <div class="container h-100">
                         <div class="row h-100 align-items-center justify-content-around g-0">
                             <a href="#" class="col nav-item active">
                                 <svg viewBox="0 0 24 24">
-                                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
-                                    <polyline points="9 22 9 12 15 12 15 22"/>
+                                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                                    <polyline points="9 22 9 12 15 12 15 22" />
                                 </svg>
                                 Store
                             </a>
-                            <a href="/store.html" class="col nav-item"  type="button" data-bs-toggle="offcanvas"
-                            data-bs-target="#cartOffCanvas" aria-controls="cartOffCanvas">
+                            <a href="/store.html" class="col nav-item" type="button" data-bs-toggle="offcanvas"
+                                data-bs-target="#cartOffCanvas" aria-controls="cartOffCanvas">
                                 <svg viewBox="0 0 24 24">
-                                    <circle cx="9" cy="21" r="1"/>
-                                    <circle cx="20" cy="21" r="1"/>
-                                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+                                    <circle cx="9" cy="21" r="1" />
+                                    <circle cx="20" cy="21" r="1" />
+                                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
                                 </svg>
                                 <span class="cart-badge">0</span>
                                 Cart
                             </a>
                             <a href="#" class="col nav-item">
                                 <svg viewBox="0 0 24 24">
-                                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                                    <path
+                                        d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
                                 </svg>
                                 Wishlist
                             </a>
                             <a href="/login.html" class="col nav-item">
                                 <svg viewBox="0 0 24 24">
-                                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
-                                    <circle cx="12" cy="7" r="4"/>
+                                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                                    <circle cx="12" cy="7" r="4" />
                                 </svg>
                                 My account
                             </a>
@@ -386,46 +391,39 @@
                 </div>
             </div>
         </section>
-         <!-- down bar end  -->
+        <!-- down bar end  -->
     </header>
     <!-- Header End -->
     <!-- main start  -->
     <main>
         <!-- hero section start  -->
         <section>
-            <div class="hero-container">
-                <div class="swiper-container">
-                    <!-- Swiper -->
-                    <div class="swiper hero-Swiper">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <img src="assets/media/Home/banner-section/slider2-1-1-6609b964df574 1 (1).png"
-                                    alt="SliderImage" loading="lazy" decoding="async">
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="assets/media/Home/banner-section/slider2-1-1-6609b964df574 1 (1).png"
-                                    alt="SliderImage" loading="lazy" decoding="async">
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="assets/media/Home/banner-section/slider2-1-1-6609b964df574 1 (1).png"
-                                    alt="SliderImage" loading="lazy" decoding="async">
-                            </div>
+            <div class="slider-section">
+                <div class="swiper custom-swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="assets/media/home/banner-section/slider2.png" alt="SliderImage" loading="lazy" decoding="async">
                         </div>
-                        <div class="swiper-button-next"></div>
-                        <div class="swiper-button-prev"></div>
-                        <div class="swiper-pagination"></div>
+                        <div class="swiper-slide">
+                            <img src="assets/media/home/banner-section/slider2.png" alt="SliderImage" loading="lazy" decoding="async">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/media/home/banner-section/slider2.png" alt="SliderImage" loading="lazy" decoding="async">
+                        </div>
                     </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
                 </div>
             </div>
         </section>
-
         <!-- hero section end  -->
 
         <!-- card section start  -->
         <section>
-            <div class="product-card-section">
+            <div class="home-product-card-section">
                 <div class="loved-product text-center">
-                    <img src="assets/media/Home/banner-section/Most-Legends 1.png" class="img-fluid" alt="lovedImage"
+                    <img src="assets/media/home/banner-section/loved-product.png" class="img-fluid" alt="lovedImage"
                         decoding="async" loading="lazy">
                 </div>
                 <!-- swiper with big device start  -->
@@ -437,8 +435,8 @@
                                 <div class="swiper-slide">
                                     <div class="card text-center position-relative">
                                         <div class="card-img">
-                                            <img src="assets/media/Home/card-section/Chocolate-Peanut-Butter-DSC00554-1024x1024 1.png"
-                                                alt="cardimage" decoding="async" loading="lazy">
+                                            <img src="assets/media/home/card-section/card1.png" alt="cardimage"
+                                                decoding="async" loading="lazy">
                                         </div>
                                         <h4 class="chocolate-p my-1 p-0">Chocolate Peanut Butter-
                                             চকলেট পিনাট বাটার</h4>
@@ -465,7 +463,7 @@
                                 <div class="swiper-slide">
                                     <div class="card text-center position-relative">
                                         <div class="card-img">
-                                            <img src="assets/media/Home/card-section/card2.png" alt="cardimage"
+                                            <img src="assets/media/home/card-section/card2.png" alt="cardimage"
                                                 decoding="async" loading="lazy">
                                         </div>
                                         <h4 class="chocolate-p my-1 p-0">Bilona Ghee – বিলোনা ঘি</h4>
@@ -493,7 +491,7 @@
                                 <div class="swiper-slide">
                                     <div class="card text-center position-relative">
                                         <div class="card-img">
-                                            <img src="assets/media/Home/card-section/card3.png" alt="cardimage"
+                                            <img src="assets/media/home/card-section/card3.png" alt="cardimage"
                                                 decoding="async" loading="lazy">
                                         </div>
                                         <h4 class="chocolate-p my-1 p-0">Sugarcane Jaggery Powder –
@@ -521,7 +519,7 @@
                                 <div class="swiper-slide">
                                     <div class="card text-center position-relative">
                                         <div class="card-img">
-                                            <img src="assets/media/Home/card-section/card4.png" alt="cardimage"
+                                            <img src="assets/media/home/card-section/card4.png" alt="cardimage"
                                                 decoding="async" loading="lazy">
                                         </div>
                                         <h4 class="chocolate-p my-1 p-0">Patali Khejur Gur – পাটালি
@@ -549,7 +547,7 @@
                                 <div class="swiper-slide">
                                     <div class="card text-center position-relative">
                                         <div class="card-img">
-                                            <img src="assets/media/Home/card-section/card5.png" alt="cardimage"
+                                            <img src="assets/media/home/card-section/card5.png" alt="cardimage"
                                                 decoding="async" loading="lazy">
                                         </div>
                                         <h4 class="chocolate-p my-1 p-0">Moringa Powder – মারিঙ্গা
@@ -577,8 +575,8 @@
                                 <div class="swiper-slide">
                                     <div class="card text-center position-relative">
                                         <div class="card-img">
-                                            <img src="assets/media/Home/card-section/Untitled-design-1-1024x1024 1.png"
-                                                alt="cardimage" decoding="async" loading="lazy">
+                                            <img src="assets/media/home/card-section/card6.png" alt="cardimage"
+                                                decoding="async" loading="lazy">
                                         </div>
                                         <h4 class="chocolate-p my-1 p-0">Premium Tea – প্রিমিয়াম চা</h4>
                                         <p class="price text-center mb-2 p-0">৳ 400 - ৳ 800 </p>
@@ -604,7 +602,7 @@
                                 <div class="swiper-slide">
                                     <div class="card text-center position-relative">
                                         <div class="card-img">
-                                            <img src="assets/media/Home/card-section/image.png" alt="cardimage"
+                                            <img src="assets/media/home/card-section/card7.png" alt="cardimage"
                                                 decoding="async" loading="lazy">
                                         </div>
                                         <h4 class="chocolate-p my-1 p-0">Mustard Oil – ঘানি ভাঁঙ্গা সরিষার তেল</h4>
@@ -631,7 +629,7 @@
                                 <div class="swiper-slide">
                                     <div class="card text-center position-relative">
                                         <div class="card-img">
-                                            <img src="assets/media/Home/card-section/black-rice-1 2.png" alt="cardimage"
+                                            <img src="assets/media/home/card-section/card8.png" alt="cardimage"
                                                 decoding="async" loading="lazy">
                                         </div>
                                         <h4 class="chocolate-p my-1 p-0">Black Rice – কালো চাল</h4>
@@ -658,8 +656,8 @@
                                 <div class="swiper-slide">
                                     <div class="card text-center position-relative">
                                         <div class="card-img">
-                                            <img src="assets/media/Home/card-section/ResizedImage_2024-01-21_18-42-49_1-1-1 1 (1).png"
-                                                alt="cardimage" decoding="async" loading="lazy">
+                                            <img src="assets/media/home/card-section/card9.png" alt="cardimage"
+                                                decoding="async" loading="lazy">
                                         </div>
                                         <h4 class="chocolate-p my-1 p-0">Rice Powder – চালের গুঁড়া</h4>
                                         <p class="price text-center mb-2 p-0">৳ 100</p>
@@ -685,7 +683,7 @@
                                 <div class="swiper-slide">
                                     <div class="card text-center position-relative">
                                         <div class="card-img">
-                                            <img src="assets/media/Home/card-section/brown-atta-1 1.png" alt="cardimage"
+                                            <img src="assets/media/home/card-section/black-rice.png" alt="cardimage"
                                                 decoding="async" loading="lazy">
                                         </div>
                                         <h4 class="chocolate-p my-1 p-0">Brown Atta – লাল আটা</h4>
@@ -731,8 +729,8 @@
                     <!-- card 1  -->
                     <div class="card text-center position-relative">
                         <div class="card-img">
-                            <img src="assets/media/Home/card-section/Chocolate-Peanut-Butter-DSC00554-1024x1024 1.png"
-                                alt="cardimage" decoding="async" loading="lazy">
+                            <img src="assets/media/home/card-section/card1.png" alt="cardimage" decoding="async"
+                                loading="lazy">
                         </div>
                         <h4 class="chocolate-p my-1 p-0">Chocolate Peanut Butter-
                             চকলেট পিনাট বাটার</h4>
@@ -757,7 +755,7 @@
                     <!-- card 2 -->
                     <div class="card text-center position-relative">
                         <div class="card-img">
-                            <img src="assets/media/Home/card-section/card2.png" alt="cardimage" decoding="async"
+                            <img src="assets/media/home/card-section/card2.png" alt="cardimage" decoding="async"
                                 loading="lazy">
                         </div>
                         <h4 class="chocolate-p my-1 p-0">Bilona Ghee – বিলোনা ঘি</h4>
@@ -782,7 +780,7 @@
                     <!-- card 3 -->
                     <div class="card text-center position-relative">
                         <div class="card-img">
-                            <img src="assets/media/Home/card-section/card3.png" alt="cardimage" decoding="async"
+                            <img src="assets/media/home/card-section/card3.png" alt="cardimage" decoding="async"
                                 loading="lazy">
                         </div>
                         <h4 class="chocolate-p my-1 p-0">Sugarcane Jaggery Powder –
@@ -808,7 +806,7 @@
                     <!-- card 4 -->
                     <div class="card text-center position-relative">
                         <div class="card-img">
-                            <img src="assets/media/Home/card-section/card4.png" alt="cardimage" decoding="async"
+                            <img src="assets/media/home/card-section/card4.png" alt="cardimage" decoding="async"
                                 loading="lazy">
                         </div>
                         <h4 class="chocolate-p my-1 p-0">Patali Khejur Gur – পাটালি
@@ -834,7 +832,7 @@
                     <!-- card 5 -->
                     <div class="card text-center position-relative">
                         <div class="card-img">
-                            <img src="assets/media/Home/card-section/card5.png" alt="cardimage" decoding="async"
+                            <img src="assets/media/home/card-section/card5.png" alt="cardimage" decoding="async"
                                 loading="lazy">
                         </div>
                         <h4 class="chocolate-p my-1 p-0">Moringa Powder – মারিঙ্গা
@@ -860,8 +858,8 @@
                     <!-- card 6 -->
                     <div class="card text-center position-relative">
                         <div class="card-img">
-                            <img src="assets/media/Home/card-section/Untitled-design-1-1024x1024 1.png" alt="cardimage"
-                                decoding="async" loading="lazy">
+                            <img src="assets/media/home/card-section/card6.png" alt="cardimage" decoding="async"
+                                loading="lazy">
                         </div>
                         <h4 class="chocolate-p my-1 p-0">Premium Tea – প্রিমিয়াম চা</h4>
                         <p class="price text-center mb-2 p-0">৳ 400 - ৳ 800 </p>
@@ -885,7 +883,7 @@
                     <!-- card 7 -->
                     <div class="card text-center position-relative">
                         <div class="card-img">
-                            <img src="assets/media/Home/card-section/image.png" alt="cardimage" decoding="async"
+                            <img src="assets/media/home/card-section/card7.png" alt="cardimage" decoding="async"
                                 loading="lazy">
                         </div>
                         <h4 class="chocolate-p my-1 p-0">Mustard Oil – ঘানি ভাঁঙ্গা সরিষার তেল</h4>
@@ -910,8 +908,8 @@
                     <!-- card 8 -->
                     <div class="card text-center position-relative">
                         <div class="card-img">
-                            <img src="assets/media/Home/card-section/black-rice-1 2.png" alt="cardimage"
-                                decoding="async" loading="lazy">
+                            <img src="assets/media/home/card-section/card8.png" alt="cardimage" decoding="async"
+                                loading="lazy">
                         </div>
                         <h4 class="chocolate-p my-1 p-0">Black Rice – কালো চাল</h4>
                         <p class="price text-center mb-2 p-0">৳ 200 - ৳ 520 </p>
@@ -935,8 +933,8 @@
                     <!-- card 9 -->
                     <div class="card text-center position-relative">
                         <div class="card-img">
-                            <img src="assets/media/Home/card-section/ResizedImage_2024-01-21_18-42-49_1-1-1 1 (1).png"
-                                alt="cardimage" decoding="async" loading="lazy">
+                            <img src="assets/media/home/card-section/card9.png" alt="cardimage" decoding="async"
+                                loading="lazy">
                         </div>
                         <h4 class="chocolate-p my-1 p-0">Rice Powder – চালের গুঁড়া</h4>
                         <p class="price text-center mb-2 p-0">৳ 100</p>
@@ -960,8 +958,8 @@
                     <!-- card 10 -->
                     <div class="card text-center position-relative">
                         <div class="card-img">
-                            <img src="assets/media/Home/card-section/brown-atta-1 1.png" alt="cardimage"
-                                decoding="async" loading="lazy">
+                            <img src="assets/media/home/card-section/black-rice.png" alt="cardimage" decoding="async"
+                                loading="lazy">
                         </div>
                         <h4 class="chocolate-p my-1 p-0">Brown Atta – লাল আটা</h4>
                         <p class="price text-center mb-2 p-0">৳ 90</p>
@@ -994,7 +992,7 @@
                 <div class="pinat-container">
                     <div class="row align-items-center g-md-5">
                         <div class="pinat-img col-12 col-md-5 p-md-5">
-                            <img src="assets/media/Home/butter-section/pinatbannar-banner.png" class="img-fluid"
+                            <img src="assets/media/home/butter-section/pinatbannar-banner.png" class="img-fluid"
                                 alt="pinatImage" loading="lazy" decoding="async">
                         </div>
                         <div class="pinat-text col-12 col-md-7 p-md-5">
@@ -1075,7 +1073,7 @@
         <!-- healthy eats banner section start  -->
         <section>
             <div class="healthry-banner"
-                style="background-image: url('assets/media/Home/banner-section/Home-Image-1-scaled-1\ \(1\)\ 1.png');">
+                style="background-image: url('assets/media/home/banner-section/home-banner-image.png');">
                 <div class="banner-text d-flex flex-column flex-md-row text-center">
                     <p class="text-one">WE ARE <br>HEALTHY <br>EATS</p>
                     <p class="text-two">We collect pure and fresh <br>groceries directly from <br>core farmers and serve
@@ -1083,7 +1081,7 @@
                         to your doorstep.
                     </p>
                     <div class="small-chachi d-block d-md-none ">
-                        <img src="assets/media/Home/banner-section/Mask-group1-1.png" style="width:100%;"
+                        <img src="assets/media/home/banner-section/small-banner.png" style="width:100%;"
                             alt="ChachiImage" loading="lazy" decoding="async">
                     </div>
                 </div>
@@ -1097,7 +1095,7 @@
                 <div class="ghee-container">
                     <div class="row align-content-center">
                         <div class="ghee-img col-12 col-md-5">
-                            <img src="assets/media/Home/ghee-section/ghee-1 1.png" class="img-fluid" alt="gheeImage"
+                            <img src="assets/media/home/ghee-section/ghee.png" class="img-fluid" alt="gheeImage"
                                 loading="lazy" decoding="async">
                         </div>
                         <div class="ghee-text-content col-12 col-md-7">
@@ -1214,7 +1212,7 @@
                                         জন্য অপরিহার্য।</p>
                                 </div>
                             </div>
-                            <button class="order-btn my-4">SHOP NOW</button>
+                            <button class="order-btn my-3">SHOP NOW</button>
                         </div>
                     </div>
                 </div>
@@ -1225,7 +1223,7 @@
         <!-- ghee banner section start  -->
         <section>
             <div class="banner-section"
-                style="background-image: url('assets/media/Home/banner-section/web1-1-1-scaled-1\ 1.png');">
+                style="background-image: url('assets/media/home/banner-section/home-ghee-banner.jpg');">
             </div>
         </section>
         <!-- ghee banner section end  -->
@@ -1429,8 +1427,8 @@
                 <h2 class="blog-header text-center">BLOGS</h2>
                 <div class="blog-container my-5">
                     <div class="card-box">
-                        <img src="assets/media/Home/blog-section/blogcard1.png" alt="cardImage" class="img-fluid" loading="lazy"
-                            decoding="async">
+                        <img src="assets/media/home/blog-section/blogcard1.png" alt="cardImage" class="img-fluid"
+                            loading="lazy" decoding="async">
                         <div class="card-text p-3">
                             <p class="card-date">04 Sep 2024</p>
                             <h3 class="mousumi-achar">বেলোনা ঘি এর বৈশিষ্ট্য</h3>
@@ -1440,8 +1438,8 @@
                         </div>
                     </div>
                     <div class="card-box">
-                        <img src="assets/media/Home/blog-section/blogcard2.png" alt="cardImage" class="img-fluid" loading="lazy"
-                            decoding="async">
+                        <img src="assets/media/home/blog-section/blogcard2.png" alt="cardImage" class="img-fluid"
+                            loading="lazy" decoding="async">
                         <div class="card-text p-3">
                             <p class="card-date">04 Sep 2024</p>
                             <h3 class="mousumi-achar">মৌসুমি আচার</h3>
@@ -1451,8 +1449,8 @@
                         </div>
                     </div>
                     <div class="card-box">
-                        <img src="assets/media/Home/blog-section/blogcard3.png" alt="cardImage" class="img-fluid" loading="lazy"
-                            decoding="async">
+                        <img src="assets/media/home/blog-section/blogcard3.png" alt="cardImage" class="img-fluid"
+                            loading="lazy" decoding="async">
                         <div class="card-text p-3">
                             <p class="card-date">29 Dec 2023</p>
                             <h3 class="mousumi-achar">প্রাকৃতিক মিষ্টান্ন এর কার্যকারিতা</h3>
@@ -1469,8 +1467,8 @@
         <section>
             <div class="service-container">
                 <div class="row">
-                    <div class="col-6 col-md-3 service-card">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 55 55" fill="none">
+                    <div class="col-6 col-md-3 service-card mb-4 mb-md-0">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="service-icon" viewBox="0 0 55 55" fill="none">
                             <g clip-path="url(#clip0_201_4468)">
                                 <g clip-path="url(#clip1_201_4468)">
                                     <path
@@ -1492,58 +1490,109 @@
                         </svg>
                         <div class="service">
                             <p class="service-first m-0 p-0">Customer Service</p>
-                            <p class="service-second m-0 p-0">Top notch customer service.</p>
+                            <p class="service-second m-0 p-0 text-center text-md-start">Top notch customer service.</p>
                         </div>
                     </div>
-                    <div class="col-6 col-md-3 service-card">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="43" height="55" fill="green"
-                            class="bi bi-house-check" viewBox="0 0 16 16">
-                            <path
-                                d="M7.293 1.5a1 1 0 0 1 1.414 0L11 3.793V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v3.293l2.354 2.353a.5.5 0 0 1-.708.708L8 2.207l-5 5V13.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 1 0 1h-4A1.5 1.5 0 0 1 2 13.5V8.207l-.646.647a.5.5 0 1 1-.708-.708z" />
-                            <path
-                                d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7m1.679-4.493-1.335 2.226a.75.75 0 0 1-1.174.144l-.774-.773a.5.5 0 0 1 .708-.707l.547.547 1.17-1.951a.5.5 0 1 1 .858.514" />
+                    <div class="col-6 col-md-3 service-card mb-4 mb-md-0">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="service-icon" viewBox="0 0 55 55" fill="none">
+                            <g clip-path="url(#clip0_201_4482)">
+                                <g clip-path="url(#clip1_201_4482)">
+                                    <path
+                                        d="M39.0756 29.6406H31.6022C29.5568 29.6406 27.8936 31.3039 27.8936 33.3492V39.0808C27.8936 41.1261 29.5568 42.7894 31.6022 42.7894H39.0756C41.121 42.7894 42.7842 41.1261 42.7842 39.0808V33.3492C42.7842 31.3039 41.121 29.6406 39.0756 29.6406ZM40.0871 39.0808C40.0871 39.6427 39.6263 40.0922 39.0756 40.0922H31.6022C31.0403 40.0922 30.5907 39.6314 30.5907 39.0808V33.3492C30.5907 32.7873 31.0515 32.3378 31.6022 32.3378H39.0756C39.6375 32.3378 40.0871 32.7986 40.0871 33.3492V39.0808Z"
+                                        fill="#51983C" stroke="#51983C" stroke-width="0.112383"></path>
+                                    <path
+                                        d="M55 19.2228C55 18.9868 54.9438 18.762 54.8202 18.5598L46.6387 4.17479C46.4027 3.75898 45.9532 3.48926 45.47 3.48926H9.5188C9.03555 3.48926 8.58602 3.74774 8.35002 4.17479L0.179812 18.5598C0.0674295 18.762 0 18.9868 0 19.2228C0 22.4482 1.94422 25.2128 4.72007 26.4378V50.1617C4.72007 50.9034 5.32693 51.5103 6.06866 51.5103H13.5196C13.5309 51.5103 13.5421 51.5103 13.5533 51.5103H24.0049C24.0161 51.5103 24.0274 51.5103 24.0386 51.5103H48.9201C49.6618 51.5103 50.2687 50.9034 50.2687 50.1617V26.6063C50.2687 26.5501 50.2687 26.5052 50.2575 26.4602C53.0445 25.2353 55 22.4594 55 19.2228ZM10.3055 6.19768H44.6833L51.0779 17.4472H3.92215L10.3055 6.19768ZM39.1428 20.1331C38.7158 22.5606 36.5917 24.4036 34.0407 24.4036C31.4896 24.4036 29.3655 22.5606 28.9385 20.1331H39.1428ZM26.0727 20.1331C25.6457 22.5606 23.5217 24.4036 20.9706 24.4036C18.4195 24.4036 16.2955 22.5606 15.8572 20.1331H26.0727ZM2.78709 20.1331H13.0027C12.5756 22.5606 10.4403 24.4036 7.88925 24.4036C5.33817 24.4149 3.21414 22.5606 2.78709 20.1331ZM22.6563 48.8131H14.9019V34.2596C14.9019 33.2032 15.756 32.3378 16.8237 32.3378H20.7458C21.8022 32.3378 22.6676 33.192 22.6676 34.2596V48.8131H22.6563ZM47.5715 48.8131H25.3535V34.2596C25.3535 31.7197 23.2857 29.6407 20.7346 29.6407H16.8124C14.2726 29.6407 12.1935 31.7085 12.1935 34.2596V48.8244H7.41725V27.1008C7.57458 27.1121 7.73192 27.1121 7.88925 27.1121C10.6089 27.1121 13.0139 25.7298 14.4299 23.6282C15.8459 25.7298 18.2509 27.1121 20.9706 27.1121C23.6902 27.1121 26.084 25.7298 27.5112 23.6282C28.9273 25.7298 31.3322 27.1121 34.0407 27.1121C36.7603 27.1121 39.1541 25.7298 40.5701 23.6282C41.9861 25.7298 44.3911 27.1121 47.1107 27.1121C47.2681 27.1121 47.4142 27.1008 47.5715 27.1008V48.8131ZM47.1107 24.4149C44.5597 24.4149 42.4356 22.5718 42.0086 20.1443H52.2242C51.7859 22.5606 49.6618 24.4149 47.1107 24.4149Z"
+                                        fill="#51983C" stroke="#51983C" stroke-width="0.112383"></path>
+                                </g>
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_201_4482">
+                                    <rect width="55" height="55" fill="white"></rect>
+                                </clipPath>
+                                <clipPath id="clip1_201_4482">
+                                    <rect width="55" height="55" fill="white"></rect>
+                                </clipPath>
+                            </defs>
                         </svg>
                         <div class="service">
                             <p class="service-first m-0 p-0">Pickop At Any Store</p>
-                            <p class="service-second m-0 p-0">Order anywhere</p>
+                            <p class="service-second m-0 p-0 text-center text-md-start">Order anywhere</p>
                         </div>
 
                     </div>
                     <div class="col-6 col-md-3 service-card">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="43" height="55" fill="green"
-                            class="bi bi-chat-right-text" viewBox="0 0 16 16">
-                            <path
-                                d="M2 1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h9.586a2 2 0 0 1 1.414.586l2 2V2a1 1 0 0 0-1-1zm12-1a2 2 0 0 1 2 2v12.793a.5.5 0 0 1-.854.353l-2.853-2.853a1 1 0 0 0-.707-.293H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2z" />
-                            <path
-                                d="M3 3.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5M3 6a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 6m0 2.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5" />
+                        <svg xmlns="http://www.w3.org/2000/svg" class="service-icon" viewBox="0 0 55 55" fill="none">
+                            <rect width="55" height="55" fill="#F5F5F5"></rect>
+                            <rect x="-968" y="-368" width="1920" height="427" fill="#E3F1DF"></rect>
+                            <g clip-path="url(#clip0_0_1)">
+                                <g clip-path="url(#clip1_0_1)">
+                                    <path
+                                        d="M53.2812 34.375C52.3325 34.375 51.5625 35.145 51.5625 36.0938V48.125H3.4375V27.5H22.3438C23.2925 27.5 24.0625 26.73 24.0625 25.7812C24.0625 24.8325 23.2925 24.0625 22.3438 24.0625H3.4375V17.1875H22.3438C23.2925 17.1875 24.0625 16.4175 24.0625 15.4688C24.0625 14.52 23.2925 13.75 22.3438 13.75H3.4375C1.54 13.75 0 15.29 0 17.1875V48.125C0 50.0225 1.54 51.5625 3.4375 51.5625H51.5625C53.46 51.5625 55 50.0225 55 48.125V36.0938C55 35.145 54.23 34.375 53.2812 34.375Z"
+                                        fill="#51983C" stroke="#51983C" stroke-width="0.107422"></path>
+                                    <path
+                                        d="M15.4688 34.375H8.59375C7.645 34.375 6.875 35.145 6.875 36.0938C6.875 37.0425 7.645 37.8125 8.59375 37.8125H15.4688C16.4175 37.8125 17.1875 37.0425 17.1875 36.0938C17.1875 35.145 16.4175 34.375 15.4688 34.375Z"
+                                        fill="#51983C" stroke="#51983C" stroke-width="0.107422"></path>
+                                    <path
+                                        d="M53.9584 8.73039L41.9272 3.57414C41.4906 3.39195 41.0059 3.39195 40.5694 3.57414L28.5381 8.73039C27.9091 9.00195 27.5 9.62414 27.5 10.3116V17.1866C27.5 26.6432 30.9959 32.1707 40.3941 37.5848C40.6588 37.736 40.9544 37.8116 41.25 37.8116C41.5456 37.8116 41.8412 37.736 42.1059 37.5848C51.5041 32.1845 55 26.657 55 17.1866V10.3116C55 9.62414 54.5909 9.00195 53.9584 8.73039ZM51.5625 17.1866C51.5625 25.1238 48.9363 29.4929 41.25 34.0991C33.5637 29.4826 30.9375 25.1135 30.9375 17.1866V11.446L41.25 7.02539L51.5625 11.446V17.1866Z"
+                                        fill="#51983C" stroke="#51983C" stroke-width="0.107422"></path>
+                                    <path
+                                        d="M47.482 14.1245C46.7429 13.5401 45.6635 13.6535 45.0654 14.3926L39.6617 21.1507L37.5235 17.9538C36.9907 17.1632 35.9217 16.9535 35.1413 17.476C34.3542 18.002 34.1376 19.071 34.6635 19.8582L38.101 25.0145C38.407 25.4717 38.9088 25.7535 39.4588 25.781C39.4829 25.781 39.5104 25.781 39.531 25.781C40.0501 25.781 40.5451 25.5473 40.8751 25.1348L47.7501 16.541C48.3413 15.7985 48.2245 14.7192 47.482 14.1245Z"
+                                        fill="#51983C" stroke="#51983C" stroke-width="0.107422"></path>
+                                </g>
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_0_1">
+                                    <rect width="55" height="55" fill="white"></rect>
+                                </clipPath>
+                                <clipPath id="clip1_0_1">
+                                    <rect width="55" height="55" fill="white"></rect>
+                                </clipPath>
+                            </defs>
                         </svg>
 
                         <div class="service">
                             <p class="service-first m-0 p-0">Secured Payment</p>
-                            <p class="service-second m-0 p-0">All major credit cards.</p>
+                            <p class="service-second m-0 p-0 text-center text-md-start">All major credit cards.</p>
                         </div>
 
                     </div>
                     <div class="col-6 col-md-3 service-card">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="43" height="55" fill="green"
-                            class="bi bi-shield-lock" viewBox="0 0 16 16">
-                            <path
-                                d="M5.338 1.59a61 61 0 0 0-2.837.856.48.48 0 0 0-.328.39c-.554 4.157.726 7.19 2.253 9.188a10.7 10.7 0 0 0 2.287 2.233c.346.244.652.42.893.533q.18.085.293.118a1 1 0 0 0 .101.025 1 1 0 0 0 .1-.025q.114-.034.294-.118c.24-.113.547-.29.893-.533a10.7 10.7 0 0 0 2.287-2.233c1.527-1.997 2.807-5.031 2.253-9.188a.48.48 0 0 0-.328-.39c-.651-.213-1.75-.56-2.837-.855C9.552 1.29 8.531 1.067 8 1.067c-.53 0-1.552.223-2.662.524zM5.072.56C6.157.265 7.31 0 8 0s1.843.265 2.928.56c1.11.3 2.229.655 2.887.87a1.54 1.54 0 0 1 1.044 1.262c.596 4.477-.787 7.795-2.465 9.99a11.8 11.8 0 0 1-2.517 2.453 7 7 0 0 1-1.048.625c-.28.132-.581.24-.829.24s-.548-.108-.829-.24a7 7 0 0 1-1.048-.625 11.8 11.8 0 0 1-2.517-2.453C1.928 10.487.545 7.169 1.141 2.692A1.54 1.54 0 0 1 2.185 1.43 63 63 0 0 1 5.072.56" />
-                            <path
-                                d="M9.5 6.5a1.5 1.5 0 0 1-1 1.415l.385 1.99a.5.5 0 0 1-.491.595h-.788a.5.5 0 0 1-.49-.595l.384-1.99a1.5 1.5 0 1 1 2-1.415" />
+                        <svg xmlns="http://www.w3.org/2000/svg" class="service-icon" viewBox="0 0 55 55" fill="none">
+                            <rect width="55" height="55" fill="#F5F5F5"></rect>
+                            <rect x="-1316" y="-368" width="1920" height="427" fill="#E3F1DF"></rect>
+                            <g clip-path="url(#clip0_0_1)">
+                                <g clip-path="url(#clip1_0_1)">
+                                    <path
+                                        d="M27.5004 8.70117C24.2085 8.70117 21.5301 11.3794 21.5301 14.6714V17.6371H16.1017L14.7715 42.0833H40.2291L38.899 17.6371H33.4705V14.6714C33.4707 11.3794 30.7925 8.70117 27.5004 8.70117ZM36.8266 38.8607H18.1744L19.1539 20.8598H35.8471L36.8266 38.8607ZM27.5004 11.9238C29.0155 11.9238 30.248 13.1564 30.248 14.6714V17.6371H24.7528V14.6714C24.7529 13.1564 25.9855 11.9238 27.5004 11.9238Z"
+                                        fill="#51983C" stroke="#51983C" stroke-width="0.107422"></path>
+                                    <path
+                                        d="M50.7345 12.791L54.4264 13.4384L54.9828 10.2642L45.7098 8.63844L44.0841 17.9115L47.2583 18.4681L47.9646 14.4396C50.437 18.3188 51.7773 22.8665 51.7773 27.5C51.7773 33.9847 49.2521 40.0812 44.6667 44.6667C40.0814 49.2521 33.9848 51.7773 27.5 51.7773C21.0152 51.7773 14.9187 49.2521 10.3333 44.6667C5.74793 40.0814 3.22266 33.9847 3.22266 27.5C3.22266 21.0153 5.74793 14.9187 10.3333 10.3333C14.9187 5.74804 21.0153 3.22266 27.5 3.22266C32.182 3.22266 36.7261 4.55759 40.6413 7.08318L42.3882 4.37508C37.9513 1.51293 32.803 0 27.5 0C20.1545 0 13.2487 2.86043 8.0546 8.05449C2.86054 13.2487 0 20.1545 0 27.5C0 34.8455 2.86054 41.7514 8.0546 46.9455C13.2487 52.1396 20.1545 55 27.5 55C34.8455 55 41.7513 52.1395 46.9455 46.9455C52.1396 41.7514 55 34.8455 55 27.5C55 22.2857 53.5009 17.167 50.7345 12.791Z"
+                                        fill="#51983C" stroke="#51983C" stroke-width="0.107422"></path>
+                                    <path d="M22.5225 28.249H32.4768V31.4717H22.5225V28.249Z" fill="#51983C"
+                                        stroke="#51983C" stroke-width="0.107422"></path>
+                                </g>
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_0_1">
+                                    <rect width="55" height="55" fill="white"></rect>
+                                </clipPath>
+                                <clipPath id="clip1_0_1">
+                                    <rect width="55" height="55" fill="white"></rect>
+                                </clipPath>
+                            </defs>
                         </svg>
 
                         <div class="service">
                             <p class="service-first m-0 p-0">Free Return</p>
-                            <p class="service-second m-0 p-0">7 days return Policy</p>
+                            <p class="service-second m-0 p-0 text-center text-md-start">7 days return Policy</p>
                         </div>
 
                     </div>
                 </div>
             </div>
-            <div class="service-banner"
-                style="background-image: url('assets/media/Home/banner-section/footer-sede.png')">
-
+            <div class="service-banner">
+                <img src="assets/media/home/banner-section/Home-bottom-banner.jpg" alt="homebanner" decoding="async"
+                    loading="lazy" class="img-fluid">
             </div>
         </section>
         <!-- service section end  -->

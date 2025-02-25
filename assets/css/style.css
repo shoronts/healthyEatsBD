@@ -42,6 +42,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+.bg-unread {
+  background-color:var(--green-text-color);
+}
 .scrolled {
   position: fixed;
   top: 0;
@@ -216,4 +219,33 @@ input:focus {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.info-text {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  font-family: "lato";
+  color: rgb(51, 51, 51);
+}
+.section-title {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 30px;
+  font-family: "signika";
+  line-height: 30px;
+  color: rgb(36, 36, 36);
+}
+.normal-text {
+  font-size:14px;
+  font-weight: 400;
+  font-family: "roboto";
+  line-height: 22.4px;
+  color: rgb(122, 122, 122);
+}
+.bold-text {
+  font-size:14px;
+  font-weight: 600;
+  font-family: "roboto";
+  line-height: 22.4px;
+  color: rgb(122, 122, 122);
 }

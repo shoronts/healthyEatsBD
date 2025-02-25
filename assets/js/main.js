@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
   // hero section 
-  const swiper = new Swiper(".hero-Swiper", {
+  const swiper = new Swiper(".custom-swiper", {
     loop: true,
     slidesPerView: 1,
     spaceBetween: 2,
