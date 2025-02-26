@@ -37,7 +37,6 @@ header.sticky .main-navbar .nav-left .main-logo {
     width: 84px;
     height: 50px;
 }
-
 header .main-navbar .desktop-menu .nav-left .main-menu>ul {
     height: 100%;
     width: 100%;
@@ -402,6 +401,16 @@ main .slider-section .custom-swiper .swiper-slide img {
 main .slider-section .custom-swiper .swiper-button-next,
 main .slider-section .custom-swiper .swiper-button-prev {
     color: var(--white-text-color);
+    font-size: 24px; 
+    width: 20px;      
+    height: 50px;      
+}
+
+/* Optional: Customize button background */
+main .slider-section .custom-swiper .swiper-button-next::after,
+main .slider-section .custom-swiper .swiper-button-prev::after {
+    font-size: 24px;
+    font-weight: 800;
 }
 
 main .slider-section .swiper-pagination-bullet {
@@ -431,7 +440,6 @@ main .swiper-card {
     height: auto;
     background: #FCFAF8;
 }
-
 /* Keep swiper styles */
 main .swiper-card .swiper-container .swiper {
     width: 100%;
@@ -475,18 +483,6 @@ main .swiper-card:hover .swiper-button-next {
     /* Make them appear with fade effect */
 }
 
-.see-btn {
-    padding: 10px 39px;
-    border-radius: 8px;
-    background: var(--green-text);
-    color: var(--besic-white);
-    font-family: "Hind Siliguri";
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 34px;
-    margin: 0 auto;
-    border: none;
-}
 
 .btn-box {
     padding: 40px 0px;
@@ -511,6 +507,18 @@ main .home-product-card-section .card {
     background: var(--besic-white);
     position: relative;
     text-align: center;
+}
+main .home-product-card-section .see-btn {
+    padding: 10px 39px;
+    border-radius: 8px;
+    background: var(--green-text);
+    color: var(--besic-white);
+    font-family: "Hind Siliguri";
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 34px;
+    margin: 0 auto;
+    border: none;
 }
 
 /* this is card css.as this css use 2 time there that why it's not maintain sequence  */
@@ -607,7 +615,7 @@ main .healthry-banner {
     padding: 20px 0px;
 }
 
-.banner-text {
+main .healthry-banner .banner-text {
     gap: 200px !important;
 }
 
@@ -702,15 +710,15 @@ main .banner-section {
 main .review-swiper-container {
     position: relative;
     width: 100%;
-    height: 30vh;
+    height: 25vh;
     background: #E4F1DF;
 }
 
 /* Keep swiper styles */
 main .review-swiper-container .swiper {
-    width: 40%;
-    height: 30vh;
-    border-radius: 10px;
+    max-width: 664px;
+    height: 25vh;
+    border-radius: 15px;
 }
 
 main .review-swiper-container .swiper .swiper-slide {
@@ -776,7 +784,7 @@ main .client-review-section .review-swiper-container .swiper .swiper-wrapper .sw
     font-size: 15px;
     font-style: italic;
     font-weight: 400;
-    line-height: 20px;
+    line-height: 26px;
 }
 
 main .client-review-section .review-swiper-container .swiper .swiper-wrapper .swiper-slide .review-card .review-name {
@@ -894,52 +902,20 @@ main .service-container .service-card .service .service-second {
     line-height: 22.4px;
     color: rgb(0, 0, 0);
 }
-/* main .service-banner {
+main .service-banner {
+    width: 100%;
     height: 130px !important;
-    width: 100%;
-    overflow: hidden; 
+    overflow: hidden;
 }
+
 main .service-banner img {
-    height: 130px;
     width: 100%;
-} */
+    height: 100%;
+    object-fit: cover;
+}
+
 
 /* service section end  */
-/* footer css start  */
-footer .footer-container {
-        background-position: center;
-        background-size: cover; 
-        background-repeat: no-repeat; 
-        width: 100%; 
-}
-footer .footer-container .footer-content {
-    padding: 80px 100px;
-}
-
-.footer-text {
-    color: rgb(255, 255, 255);
-    font-family: "Roboto";
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 22px;
-}
-
-.bold-text {
-    color: rgb(255, 255, 255);
-    font-family: "Roboto";
-    font-size: 14px;
-    font-weight: 600;
-    line-height: 16px;
-}
-
-footer .footer-container .footer-content img {
-    width: 70%;
-    height: auto;
-}
-footer .footer-container .footer-content hr {
-    border: 1px solid #FFD700;
-}
-
 /* store css file  */
 /* hero css start  */
 main .hero-container {
@@ -1035,7 +1011,6 @@ main .option-section .option-container .option-content .dropdown .dropdown-menu 
 
 main .option-section .option-container .option-content .price-range-container {
     width: 100%;
-    /* Adjust as needed */
     margin: 0px auto;
     padding: 10px 20px;
 }
@@ -1046,7 +1021,6 @@ main .option-section .option-container .option-content .price-range-container .s
 }
 
 main .option-section .option-container .option-content .price-range-container .slider-container  .slider {
-    /* -webkit-appearance: none; */
     position: absolute;
     width: 100%;
     pointer-events: none;
@@ -1557,11 +1531,8 @@ main .details-container .details-content .left-side .icons {
 main .details-container .details-content .left-side .ghee-img img {
 
     width: 100%;
-    /* Ensures it fills the container width */
     height: 100%;
-    /* Makes it take full height of the container */
     object-fit: cover;
-    /* Prevents distortion and ensures it fits inside */
 
 }
 
@@ -2581,3 +2552,37 @@ main .wish-container .wish-content .wish-btn {
     border-radius: 5px;
 }
 /* wish css end  */
+/* footer css start  */
+footer .footer-container {
+    background-position: center;
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    width: 100%; 
+}
+footer .footer-container .footer-content {
+padding: 80px 100px;
+}
+
+.footer-text {
+color: rgb(255, 255, 255);
+font-family: "Roboto";
+font-size: 14px;
+font-weight: 400;
+line-height: 22px;
+}
+
+.bold-text {
+color: rgb(255, 255, 255);
+font-family: "Roboto";
+font-size: 14px;
+font-weight: 600;
+line-height: 16px;
+}
+
+footer .footer-container .footer-content img {
+width: 70%;
+height: auto;
+}
+footer .footer-container .footer-content hr {
+border: 1px solid #F2BD22;
+}

@@ -1,12 +1,19 @@
+@media screen and (max-width:1880px) {
+    /* review section start  */
+main .review-swiper-container {
+    height: 38vh;
+}
+
+/* Keep swiper styles */
+main .review-swiper-container .swiper {
+    height: 35vh;
+}
+}
 @media all and (max-width: 1440px) {
 
     /* desktop Menu */
     header .main-navbar .desktop-menu .nav-right .search-bar {
         width: 300px;
-    }
-
-    main .review-swiper-container .swiper {
-        width: 70%;
     }
 }
 
@@ -45,10 +52,6 @@
         padding: 40px 40px;
         max-width: 1220px;
         margin: 0 auto;
-    }
-
-    main .review-swiper-container .swiper {
-        width: 80%;
     }
 }
 
@@ -295,9 +298,6 @@
         right: 35% !important;
     }
 
-    main .review-swiper-container .swiper {
-        width: 100%;
-    }
 
     /* card section  */
     main .medium-card-container .card-btn {
@@ -461,7 +461,14 @@
 
     main .review-swiper-container .swiper {
         width: 100%;
-        height: 25vh;
+    }
+    main .review-swiper-container .swiper .swiper-slide {
+        text-align: center;
+        font-size: 18px !important;
+        background: var(--besic-white);
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     main .client-review-section .review-swiper-container .swiper .swiper-wrapper .swiper-slide .review-card .review-text {
@@ -563,7 +570,10 @@
         justify-content: space-between !important;
         align-items: center !important;
     }
-
+    main .service-container .service-card .service-icon {
+        height: 35px;
+        width: 35px;
+    }
     /* arrival css  */
     main .image-container .image-content {
         grid-template-columns: repeat(2, 1fr);
@@ -627,6 +637,9 @@
     }
 }
 @media screen and (max-width:567px) {
+    main .loved-product img {
+        max-width: 220px;
+    }
     .icon-content {
         display: flex;
         flex-direction: column;
@@ -669,6 +682,19 @@
     main .image-container .image-content .banner-img img {
         max-width:200px !important;
         height: auto;
+    }
+    main .review-swiper-container {
+        position: relative;
+        width: 100%;
+        height: 35vh;
+    }
+    
+    /* Keep swiper styles */
+    main .review-swiper-container .swiper {
+        width: 100%;
+    }
+    main .service-container {
+        padding:40px 10px;
     }
 }
 
@@ -713,6 +739,11 @@
 }
 
 @media screen and (max-width:360px) {
+/* Keep swiper styles */
+main .review-swiper-container .swiper {
+    height: 40vh;
+    border-radius: 10px;
+}
     .cart-badge {
         right: 20% !important;
     }
