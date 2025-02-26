@@ -225,7 +225,7 @@ main .review-swiper-container .swiper {
     }
 
     main .option-section {
-        padding: 40px 10px;
+        padding: 40px 20px;
     }
 
     .filter-btn {
@@ -342,7 +342,7 @@ main .review-swiper-container .swiper {
     }
     /* small device  card start  */
     main .medium-card-container {
-        padding: 0px 20px;
+        padding: 0px 10px;
     }
 
     main .medium-card-container {

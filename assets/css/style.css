@@ -45,6 +45,134 @@
 main {
   overflow: hidden;
 }
+/* hero section css  */
+/* hero css start  */
+main .hero-container {
+  height: 200px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+main .hero-container .hero-content .banner-header {
+  font-size: 78px;
+  font-weight: 600;
+  line-height: 93px;
+  font-family: "signika";
+}
+
+main .hero-container .hero-content .banner-home {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  font-family: 'lato';
+}
+
+main .hero-container .hero-content .banner-store {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 22px;
+  font-family: 'lato';
+}
+/* card style for store and arrival  */
+main .card-container .medium-card-container {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 20px;
+}
+main .card-container .medium-card-container .card {
+  width: 100%;
+  padding: 10px;
+  border-radius: 12px;
+  border:none ;
+  background: #FFF;
+  position: relative;
+  text-align: center;
+}
+main .card-container .medium-card-container .store-card {
+  border: 1px solid #E4E5E5;
+}
+
+main .card-container .medium-card-container .card .card-img img {
+  width: 100%;
+}
+
+main .card-container .medium-card-container .card .chocolate-p {
+  color: #000;
+  font-family: "Signika";
+  font-size: 14px;
+  line-height: 24px;
+}
+
+main .card-container .medium-card-container .card .price {
+  color: #2E7046;
+  font-family: "Lato";
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: -0.4px;
+}
+
+
+main .card-container .medium-card-container .card .card-btn {
+  padding: 20px 80px;
+  color: #FFF;
+  font-size: 13px;
+  text-align: center;
+  border: none;
+  border-radius: 4px;
+  background: #2E7046;
+  font-weight: 600;
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+
+}
+main .card-container .card-btn::before,
+main .card-container .card-btn::after {
+    content: "SELECT OPTION";
+    position: absolute;
+    transition: opacity 0.4s, transform 0.2s;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+main .card-container .card-btn::after {
+    content: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23ffffff' class='bi bi-eye-fill' viewBox='0 0 16 16'%3E%3Cpath d='M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0'/%3E%3Cpath d='M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8m8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7'/%3E%3C/svg%3E");
+    opacity: 0;
+    transform: translate(-50%, -50%) translateY(10px);
+}
+
+main .card-container .card-btn:hover::before {
+    opacity: 0;
+    transform: translate(-50%, -50%) translateY(-10px);
+}
+
+main .card-container .card-btn:hover::after {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+}
+
+
+main .card-container .hover-icon {
+    padding: 5px 15px;
+    border-radius: 5px;
+    background: #FFF;
+    opacity: 0;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    transition: opacity 0.2s, transform 0.5s;
+    cursor: pointer;
+}
+
+main .card-container .card:hover .hover-icon {
+    opacity: 1;
+    transform: translateX(-10px);
+}
+/* card css end  */
 .bg-unread {
   background-color:var(--green-text-color);
 }
@@ -57,7 +185,9 @@ main {
   transition: all 0.3s ease;
   background: #FFF;
 }
-
+.pading {
+  padding: 0px 0px;
+}
 .chocolate-p {
   color: var(--black-text-color);
   font-family: "Signika";
