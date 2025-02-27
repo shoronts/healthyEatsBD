@@ -126,7 +126,6 @@ header .main-navbar .desktop-menu .nav-left .main-menu ul li.have-sub-menu ul.su
     width: 200px;
     background-color: var(--besic-white);
 }
-
 header .main-navbar .desktop-menu .nav-left .main-menu ul li.have-sub-menu:hover ul.sub-menu {
     display: block;
 }
