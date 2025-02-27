@@ -515,6 +515,28 @@ main .home-product-card-section .card {
     position: relative;
     text-align: center;
 }
+main .home-product-card-section .card .persent-badge{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: #428F44;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 3px 10px;
+    border-radius: 20px;
+}
+main .home-product-card-section .card .new-badge{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: #2E8B57;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 3px 10px;
+    border-radius: 20px;
+}
 main .home-product-card-section .see-btn {
     padding: 10px 39px;
     border-radius: 8px;
@@ -717,14 +739,14 @@ main .banner-section {
 main .review-swiper-container {
     position: relative;
     width: 100%;
-    height: 25vh;
+    max-height:230px;
     background: #E4F1DF;
 }
 
 /* Keep swiper styles */
 main .review-swiper-container .swiper {
     max-width: 664px;
-    height: 25vh;
+    max-height:230px;
     border-radius: 15px;
 }
 
@@ -1044,59 +1066,30 @@ main .store-option-section .option-container .option-content .filter-btn {
 main .card-container {
     max-width: 1220px;
     margin: 0 auto;
-    padding: 30px 5px;
+    padding: 30px 20px !important;
 }
-main .card-container .store-card-container {
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    gap: 20px;
+main .card-container .medium-card-container .card .new-badge{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: #2E8B57;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 3px 10px;
+    border-radius: 20px;
 }
-main .card-container .store-card-container .card {
-    width: 100%;
-    padding: 10px;
-    border-radius: 12px;
-    border: 1px solid #D3D3D3;
-    background: #FFF;
-    position: relative;
-    text-align: center;
+main .card-container .medium-card-container .card .persent-badge{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: #428F44;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 3px 10px;
+    border-radius: 20px;
 }
-main .card-container .store-card-container .card .card-img img {
-    width: 100%;
-}
-
-main .card-container .store-card-container .card .chocolate-p {
-    color: #000;
-    font-family: "Signika";
-    font-size: 14px;
-    line-height: 24px;
-}
-
-main .card-container .store-card-container .card  .price {
-    color: #2E7046;
-    font-family: "Lato";
-    font-size: 16px;
-    font-weight: 500;
-    letter-spacing: -0.4px;
-}
-
-
-main .card-container .store-card-container .card .card-btn {
-    padding: 20px 80px;
-    color: #FFF;
-    font-size: 13px;
-    text-align: center;
-    border: none;
-    border-radius: 4px;
-    background: #2E7046;
-    font-weight: 600;
-    text-transform: uppercase;
-    position: relative;
-    overflow: hidden;
-    white-space: nowrap;
-
-}
-
-
 main .card-container .card-btn::before,
 main .card-container .card-btn::after {
     content: "SELECT OPTION";
@@ -2217,14 +2210,6 @@ font-family: "Roboto";
 font-size: 14px;
 font-weight: 400;
 line-height: 22px;
-}
-
-.bold-text {
-color: rgb(255, 255, 255);
-font-family: "Roboto";
-font-size: 14px;
-font-weight: 600;
-line-height: 16px;
 }
 
 footer .footer-container .footer-content img {

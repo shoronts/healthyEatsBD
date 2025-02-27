@@ -90,6 +90,7 @@ main .card-container .medium-card-container .card {
   position: relative;
   text-align: center;
 }
+
 main .card-container .medium-card-container .store-card {
   border: 1px solid #E4E5E5;
 }
@@ -115,7 +116,7 @@ main .card-container .medium-card-container .card .price {
 
 
 main .card-container .medium-card-container .card .card-btn {
-  padding: 20px 80px;
+  padding: 20px 70px;
   color: #FFF;
   font-size: 13px;
   text-align: center;
@@ -376,9 +377,9 @@ input:focus {
   color: rgb(122, 122, 122);
 }
 .bold-text {
-  font-size:14px;
+  color: rgb(255, 255, 255);
+  font-family: "Roboto";
+  font-size: 14px;
   font-weight: 600;
-  font-family: "roboto";
-  line-height: 22.4px;
-  color: rgb(122, 122, 122);
-}
+  line-height: 16px;
+  }
