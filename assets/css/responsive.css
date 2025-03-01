@@ -14,7 +14,7 @@
 @media all and (max-width: 1440px) {
 
     /* desktop Menu */
-    header .main-navbar .desktop-menu .nav-right .search-bar {
+    header .main-navbar .desktop-menu .nav-right .search-section {
         width: 300px;
     }
 }
@@ -56,7 +56,11 @@
         margin: 0 auto;
     }
 }
-
+/* @media screen and (max-width:1148px) {
+    header .main-navbar .desktop-menu .nav-right .search-section {
+        width: 200px;
+    }
+} */
 @media screen and (max-width:1024px) {
 
     /* desktop Menu */

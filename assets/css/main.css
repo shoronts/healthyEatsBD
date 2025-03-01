@@ -1,3 +1,4 @@
+
 /* Header CSS */
 /* Topbar CSS */
 header .top-bar {
@@ -37,7 +38,7 @@ header .main-navbar a svg {
 }
 
 header .main-navbar .desktop-menu {
-    padding: 12px 50px;
+    padding: 0px 50px;
 }
 
 header.sticky .main-navbar .nav-left .main-logo {
@@ -52,6 +53,7 @@ header .main-navbar .desktop-menu .nav-left .main-menu>ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 header .main-navbar .desktop-menu .nav-left .main-menu ul li {
@@ -149,9 +151,54 @@ header .main-navbar .desktop-menu .nav-right {
     align-items: center;
 }
 
-header .main-navbar .desktop-menu .nav-right .search-bar {
-    width: 500px;
+header .main-navbar .desktop-menu .nav-right .search-section {
+    width: 531px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 18px 20px;
 }
+
+header .main-navbar .desktop-menu .nav-right .search-section .search-bar {
+    width: 100%;
+    max-width: 531px;
+    position: relative;
+}
+
+header .main-navbar .desktop-menu .nav-right .search-section .search-bar .form-group {
+    position: relative;
+    width: 100%;
+}
+
+header .main-navbar .desktop-menu .nav-right .search-section .search-bar .form-group .search-input {
+    width: 100%;
+    padding: 10px 40px 10px 10px;
+    font-size: 16px;
+    border: 2px solid #296C43;
+    border-radius: 5px;
+    outline: none;
+    position: relative;
+    background-color: #fff;
+}
+header .main-navbar .desktop-menu .nav-right .search-section .search-bar .form-group .search-input:focus {
+    border: 2px solid gainsboro;
+}
+header .main-navbar .desktop-menu .nav-right .search-section .search-bar .form-group .search-input::placeholder {
+    font-family: "lato";
+    font-size: 16px;
+}
+header .main-navbar .desktop-menu .nav-right .search-section .search-bar .form-group .search-btn {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
 header .main-navbar .desktop-menu .nav-right .search-bar .form-floating label::after {
     background: transparent;
 }
