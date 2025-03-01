@@ -152,11 +152,9 @@ header .main-navbar .desktop-menu .nav-right {
 header .main-navbar .desktop-menu .nav-right .search-bar {
     width: 500px;
 }
-
 header .main-navbar .desktop-menu .nav-right .search-bar .form-floating label::after {
     background: transparent;
 }
-
 header .main-navbar .mobile-menu {
     display: none;
 }
@@ -506,10 +504,10 @@ main .home-product-card-section .card-container {
 
 main .home-product-card-section .card {
     width: 240px;
-    height: 400px;
+    height: 370px;
     padding: 10px;
     border-radius: 12px;
-    border: 1px solid #D3D3D3;
+    border: 1px solid #E5E5E4;
     background: var(--besic-white);
     position: relative;
     text-align: center;
@@ -676,7 +674,10 @@ main .ghee-section .ghee-container {
     padding: 60px 0px 0px 0px;
 }
 
-
+main .ghee-section .ghee-container .ghee-img img {
+    max-width: 350px;
+    height: auto;
+}
 main .ghee-section .ghee-container .ghee-text-content h2 {
     color: var(--black-text-color);
     font-family: "Inter";
@@ -693,7 +694,7 @@ main .ghee-section .ghee-container .ghee-text-content .ghee-upokarita .ghee-larg
     width: 100px;
 }
 main .ghee-section .ghee-container .ghee-text-content .order-btn {
-    padding: 14px 34px;
+    padding: 14px 25px;
     justify-content: flex-end;
     color: var(--besic-white);
     font-family: "Inter";
@@ -1245,12 +1246,12 @@ main .banner-container .banner-content .join-header .highlight .border-animation
     width: 100%;
     height: 100%;
     border-radius: 50% / 60%;
-    stroke: #7cde7c; /* Light green color */
+    stroke: #7cde7c; 
     stroke-width: 8;
     fill: transparent;
     stroke-dasharray: 1000;
     stroke-dashoffset: 1000;
-    animation: draw 4s infinite;
+    animation: draw 8s infinite;
   }
   
   @keyframes draw {

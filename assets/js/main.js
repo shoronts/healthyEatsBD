@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // card slider 
   const Cardswiper = new Swiper(".myCardSwiper", {
     slidesPerView: 5,
-    spaceBetween: 5,
+    spaceBetween: 10,
     loop: true,
     navigation: {
       nextEl: ".swiper-button-next",

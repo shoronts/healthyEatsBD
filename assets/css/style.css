@@ -249,7 +249,10 @@ main .card-container .card:hover .hover-icon {
   transform: translate(-50%, -50%);
 }
 
-
+.raf-tag{
+  text-decoration: none;
+  color: #000;
+}
 .hover-icon {
   padding: 5px 15px;
   border-radius: 5px;

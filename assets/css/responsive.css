@@ -249,6 +249,11 @@
         line-height: 43px;
     }
 
+    main .ghee-section .ghee-container .ghee-img img {
+        max-width: 90%;
+        height: auto;
+    }
+
     /* blog css  */
     main .blog-container .category-tag {
         left: 20%;
@@ -562,6 +567,11 @@
 
     main .image-container .image-content .banner-img img {
         max-width: 286px !important;
+        height: auto;
+    }
+
+    main .ghee-section .ghee-container .ghee-img img {
+        width: 100% !important;
         height: auto;
     }
 
