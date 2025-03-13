@@ -51,4 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
       prevEl: ".swiper-button-prev",
     },
   });
+
+  // checkout js 
+  
 });

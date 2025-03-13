@@ -55,6 +55,62 @@
         max-width: 1220px;
         margin: 0 auto;
     }
+    /* lending css start  */
+    .cards .card-container .text-section .bengali-text {
+        font-size: 60px !important;
+        font-weight: 600;
+        line-height: 60px;
+      }
+
+      .cards .card-container .text-section .secondary-text {
+        font-size: 36px !important;
+        font-weight: 500;
+        line-height: 40px;
+
+      }
+
+      .chamos-section .main-container .heading-container {
+        font-size: 60px;
+        font-weight: 600;
+        line-height: 60px;
+      }
+
+      .chamos-section .main-container .benefit {
+        font-size: 40px;
+        line-height: 40px;
+        font-weight: 500;
+        width: 100%;
+      }
+
+      .karon-section .pinat-batter-header {
+        font-size: 60px;
+        font-weight: 600;
+        line-height: 60px;
+      }
+      .last-section .main-container .payment-info {
+      padding: 10px;
+      max-width: 300px;
+    }
+      .last-section .main-container .products-container .product .product-descrpton {
+        font-size: 1.1rem;
+        font-weight: 500px;
+      }
+    
+      .karon-section .main-container .frame {
+      transform: rotate(0deg);
+      width:100%;
+    }
+    .cards .card-container .landing-logo img {
+      width: 250px !important;
+    }
+      .last-section .main-container .products-container .product .product-name {
+        color: var(--lending-primary-green);
+        font-size: 1.4rem;
+        font-weight: 600;
+        margin: 0;
+      }
+      /* landing css end  */
+
 }
 /* @media screen and (max-width:1148px) {
     header .main-navbar .desktop-menu .nav-right .search-section {
@@ -62,7 +118,9 @@
     }
 } */
 @media screen and (max-width:1024px) {
-
+    .bottom-nav {
+        display: block;
+    }
     /* desktop Menu */
     header .main-navbar .desktop-menu {
         display: none;
@@ -90,11 +148,6 @@
         font-size: 10px;
         line-height: 26px;
     }
-
-    .bottom-nav {
-        display: block;
-    }
-
     main .hero-container .swiper-container {
         height: 260px;
         /* Define the height explicitly */
@@ -348,6 +401,61 @@
         font-weight: 600;
         line-height: 42px;
     }
+    /* checkout css start  */
+    .checkout-section .checkout-container .order-details {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .checkout-section .checkout-container .order-detail-item {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .checkout-section .checkout-container .checkout-header {
+        display: none;
+    }
+}
+
+@media (max-width: 767px) {
+    .checkout-section .checkout-container .checkout-steps {
+        flex-direction: column;
+        border-bottom: none;
+    }
+
+    .checkout-section .checkout-container .step {
+        margin-bottom: 0.5rem;
+    }
+
+    .checkout-section .checkout-container .order-section {
+        background-color: #F7F6F6;
+        padding: 20px 10px;
+    }
+
+    .checkout-section .checkout-container .step-arrow {
+        transform: rotate(90deg);
+        margin: 0.5rem 0;
+    }
+
+    .checkout-section .checkout-container .cart-header,
+    .order-header {
+        display: none;
+    }
+
+    .checkout-section .checkout-container .cart-item,
+    .order-item {
+        padding: 1.5rem 0;
+    }
+
+    .checkout-section .checkout-container .product-name {
+        font-size: 0.9rem;
+    }
+
+    .checkout-section .checkout-container .decorative-images {
+        display: none;
+    }
+    /* checkout css end  */
 }
 
 @media screen and (max-width: 776px) {
@@ -649,6 +757,137 @@
     main .blog-container .category-tag {
         left: 35%;
     }
+    /* lending css  */
+    .cards .card-container .text-section .bengali-text {
+        font-size: 40px;
+        font-weight: 500;
+        line-height: 60px;
+      }
+
+      .cards .card-container .text-section .secondary-text {
+        font-size: 30px !important;
+        font-weight: 400;
+        line-height: 30px;
+
+      }
+
+      .chamos-section .main-container .heading-container {
+        font-size: 40px;
+        font-weight: 500;
+        line-height: 40px;
+      }
+
+      .order-btn {
+        padding: 15px 60px;
+        border: 4px solid white;
+        font-size: 1.3rem;
+      }
+
+      .chamos-section .main-container .benefit {
+        font-size: 30px;
+        line-height: 30px;
+        font-weight: 400;
+      }
+
+      .karon-section .pinat-batter-header {
+        font-size: 40px;
+        font-weight: 500;
+        line-height: 50px;
+      }
+
+      .product-section .product-title {
+        font-size: 1.1rem;
+        font-weight: 500;
+        line-height: 1;
+      }
+
+      .product-section .header-title h1 {
+        font-size: 2.5rem;
+        font-weight: 600;
+        margin-bottom: 0;
+        line-height: 1.1;
+      }
+
+      .last-section .main-container .check-icon {
+        width: 28px;
+        height: 28px;
+      }
+
+      .last-section .main-container .feature-text {
+        font-size: 1rem;
+        margin: 0;
+        font-weight: 400;
+      }
+
+      .karon-section .main-container {
+      padding: 5px;
+    }
+
+    .karon-section .main-container .text-content {
+      max-width: 100%;
+    }
+
+    .karon-section .main-container .image-container {
+      max-width: 100%;
+    }
+
+    .karon-section .main-container .frame {
+      transform: rotate(0deg);
+      max-width: 100%;
+    }
+
+    .karon-section .main-container .frame img {
+      padding: 10px;
+      width: 100%;
+      height: 350px;
+      object-fit: cover;
+      border-radius: 2px;
+    }
+
+    .karon-section .main-container .text-content {
+      flex-grow: 1;
+      padding-top: 15px;
+    }
+
+    .karon-section .heading {
+      color: var(--text-gold);
+    }
+
+    .karon-section .main-container .text-content .heading {
+      font-size: 2rem;
+      line-height: 1.1;
+      font-weight: 600;
+    }
+
+    .karon-section .main-container .text-content .description {
+      color: white;
+      font-size: 2rem;
+      line-height: 1.1;
+      font-weight: 600;
+      margin: 0;
+    }
+
+    .karon-section .main-container .info-section:nth-child(even) .frame {
+      transform: rotate(10deg);
+    }
+    .chamos-section .main-container .benefit {
+      font-size: 40px !important;
+      line-height: 40px;
+      width: 100%;
+    }
+    .karon-section .main-container .info-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .karon-section .main-container .image-container {
+        width: 180px;
+      }
+
+      .karon-section .main-container .text-content {
+        padding-top: 20px;
+      }
 }
 
 @media screen and (max-width:600px) {

@@ -36,6 +36,23 @@
   --red:#dc3545;
   --light-red:#ff6b00;
   --deep-grey:#333;
+  --lending-primary-green: #1e7e4c;
+  --dark-green: #166b3e;
+  --light-green: #2a9e64;
+  --yellow: #ffc107;
+  --lending-primary-orange: #FF9B50;
+  --background-mint: #F3FFEF;
+  --lending-primary-green: #0d5a2f;
+  --text-gold: #ffd700;
+  --lending-primary-green: #0D5A2F;
+  --background-cream: #f5f5e6;
+  --check-green: #28a745;
+  --cross-red: #dc3545;
+  --checkout-primary: #1e6e46;
+  --checkout-primary-hover: #155a38;
+  --border-color: #e5e5e5;
+  --text-color: #333;
+  --light-bg: #f8f9fa;
 }
 * {
   margin: 0;
@@ -313,7 +330,7 @@ input:focus {
   padding: 8px 0;
 }
 
-.bottom-nav .nav-item {
+.bottom-nav .nav-items {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -325,14 +342,15 @@ input:focus {
   line-height: 1.2;
   position: relative;
   transition: color 0.2s ease;
+  cursor: pointer;
 }
 
-.nav-item:hover,
-.nav-item.active {
+.nav-items:hover,
+.nav-items.active {
   color: var(--primary-zero-color);
 }
 
-.bottom-nav .nav-item svg {
+.bottom-nav .nav-items svg {
   width: 24px;
   height: 24px;
   margin-bottom: 4px;
@@ -386,3 +404,8 @@ input:focus {
   font-weight: 600;
   line-height: 16px;
   }
+  @media screen and (max-width:1024px) {
+    .bottom-nav {
+        display: block;
+    }
+}

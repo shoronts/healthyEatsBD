@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Healthy Eats BD | New Arrivals</title>
+    <title>Healthy Eats BD | Contact-Us</title>
 
     <link rel="shortcut icon" href="./assets/media/favicon.ico" type="image/x-icon">
     <!-- google fonts  -->
@@ -16,11 +16,12 @@
     <!-- Bootstrap CSS  -->
     <link rel="stylesheet" href="assets/css/bootstrap.css">
     <!-- Swiper Slider CSS -->
-    <link rel="stylesheet" href="assets/css/swiper.css">
+    <link rel="stylesheet" href="./assets/css/swiper.css">
     <!-- My CSS -->
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Custom CSS -->
 </head>
 
 <body>
@@ -29,8 +30,8 @@
         <!-- Topbar Start -->
         <section class="top-bar">
             <div class="container">
-                <h6 class="top-bar-text text-center text-white mb-0">Shipping All Over Bangladesh!! The Pure Taste Of
-                    Nature.</h6>
+                <h5 class="top-bar-text text-center text-white mb-0">Shipping All Over Bangladesh!! The Pure Taste Of
+                    Nature.</h5>
             </div>
         </section>
         <!-- Topbar End -->
@@ -56,7 +57,7 @@
                                             <li>
                                                 <a href="/store.html">Store</a>
                                             </li>
-                                            <li class="current-menu-item">
+                                            <li>
                                                 <a href="/arrivals.html">New Arrivals</a>
                                             </li>
                                             <li>
@@ -403,323 +404,454 @@
             <div class="hero-container d-flex align-items-center justify-content-center"
                 style="background-image: url(assets/media/store/banner/Home-Image-1-scaled-1.jpg);">
                 <div class="hero-content">
-                    <h1 class="banner-header">New Arrivals</h1>
+                    <h1 class="banner-header">CheckOut</h1>
                     <div class="d-flex gap-2 justify-content-center">
                         <p class="banner-home">Home</p>
                         <span>/</span>
-                        <p class="banner-store">New Arrivals</p>
+                        <p class="banner-store">CheckOut</p>
                     </div>
                 </div>
             </div>
         </section>
         <!-- hero section end  -->
-        <!-- filter section start  -->
-        <section>
-            <div class="option-section">
-                <div class="option-container text-center">
-                    <div class="option-content row g-3 align-content-center">
-                        <div class="col-12 col-md-6 col-lg">
-                            <div class="dropdown">
-                                <button
-                                    class="btn btn-secondary dropdown-toggle main-dropdown d-flex justify-content-between align-items-center"
-                                    type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    CATEGORIES
-                                </button>
-                                <ul class="dropdown-menu" style="width: 100%;">
-                                    <li><a class="dropdown-item" href="#">Breakfast & Snacks</a></li>
-                                    <li><a class="dropdown-item" href="#">Featured Product</a></li>
-                                    <li><a class="dropdown-item" href="#">KITCHEN ESSENTIALS</a></li>
-                                    <li><a class="dropdown-item" href="#">NATURAL SWEETENERS</a></li>
-                                    <li><a class="dropdown-item" href="#">New Arrivals</a></li>
-                                    <li><a class="dropdown-item" href="#">Nuts & Seeds</a></li>
-                                    <li><a class="dropdown-item" href="#">PICKLES</a></li>
-                                    <li><a class="dropdown-item" href="#">Special Products</a></li>
-                                    <li><a class="dropdown-item" href="#">Uncategorized</a></li>
+        <section class="checkout-section">
+            <div class="container-fluid p-0">
+                <div class="checkout-container">
+                    <!-- Checkout Progress -->
+                    <div class="checkout-header">
+                        <div class="checkout-steps">
+                            <span class="step" data-page="cart-page">SHOPPING CART</span>
+                            <span class="step-arrow">→</span>
+                            <span class="step" data-page="checkout-page">CHECKOUT</span>
+                            <span class="step-arrow">→</span>
+                            <span class="step" data-page="complete-page">ORDER COMPLETE</span>
+                        </div>
+                    </div>
 
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6 col-lg">
-                            <div class="dropdown">
-                                <button
-                                    class="btn btn-secondary dropdown-toggle main-dropdown d-flex justify-content-between align-items-center"
-                                    type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    STOCK STATUS
-                                </button>
-                                <ul class="dropdown-menu" style="width: 100%;">
-                                    <li><a class="dropdown-item" href="#">On sale</a></li>
-                                    <li><a class="dropdown-item" href="#">In stock</a></li>
-                                    <li><a class="dropdown-item" href="#">On backorder</a></li>
+                    <!-- Cart Page -->
+                    <div id="cart-page" class="page active my-5">
+                        <div class="row">
+                            <!-- Cart Items -->
+                            <div class="col-lg-8">
+                                <div class="cart-items">
+                                    <div class="cart-header">
+                                        <div class="row product-prices">
+                                            <div class="col-6">PRODUCT</div>
+                                            <div class="col-2 text-center">PRICE</div>
+                                            <div class="col-2 text-center">QUANTITY</div>
+                                            <div class="col-2 text-end">SUBTOTAL</div>
+                                        </div>
+                                    </div>
 
-                                </ul>
+                                    <div class="cart-item">
+                                        <div class="row align-items-center">
+                                            <div class="col-12 col-md-6 d-flex align-items-center">
+                                                <button class="remove-item" aria-label="Remove item">×</button>
+                                                <div class="product-image">
+                                                    <img src="/assets/media/home/card-section/card2.png"
+                                                        decoding="async" loading="lazy">
+                                                </div>
+                                                <div class="product-name">
+                                                    Patali Khejur Gur - পাটালি খেজুরের গুড় - 3 KG
+                                                </div>
+                                            </div>
+                                            <div class="col-4 col-md-2 text-center my-4 md-my-0">
+                                                <div class="price">৳ 1,800</div>
+                                            </div>
+                                            <div class="col-4 col-md-2 text-center">
+                                                <div class="quantity-selector">
+                                                    <button class="quantity-btn decrease">-</button>
+                                                    <input type="text" class="quantity-input" value="2" readonly>
+                                                    <button class="quantity-btn increase">+</button>
+                                                </div>
+                                            </div>
+                                            <div class="col-4 col-md-2 text-end">
+                                                <div class="subtotal">৳ 3,600</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cart-item">
+                                        <div class="row align-items-center">
+                                            <div class="col-12 col-md-6 d-flex align-items-center">
+                                                <button class="remove-item" aria-label="Remove item">×</button>
+                                                <div class="product-image">
+                                                    <img src="assets/media/home/card-section/card4.png" decoding="async"
+                                                        loading="lazy">
+                                                </div>
+                                                <div class="product-name">
+                                                    Sugarcane Jaggery Powder - আখের গুড় পাউডার - 1 KG
+                                                </div>
+                                            </div>
+                                            <div class="col-4 col-md-2 text-center my-4 md-my-0">
+                                                <div class="price">৳ 400</div>
+                                            </div>
+                                            <div class="col-4 col-md-2 text-center">
+                                                <div class="quantity-selector">
+                                                    <button class="quantity-btn decrease">-</button>
+                                                    <input type="text" class="quantity-input" value="2" readonly>
+                                                    <button class="quantity-btn increase">+</button>
+                                                </div>
+                                            </div>
+                                            <div class="col-4 col-md-2 text-end">
+                                                <div class="subtotal">৳ 400</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="coupon-section">
+                                        <div class="row">
+                                            <div class="col-md-8 col-lg-6 gap-3">
+                                                <div class="input-group">
+                                                    <input type="text" class="form-control" id="coupon-code"
+                                                        placeholder="Coupon code" aria-label="Coupon code">
+                                                    <button class="btn btn-apply-coupon" type="button"
+                                                        id="apply-coupon">
+                                                        APPLY COUPON
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Cart Totals -->
+                            <div class="col-lg-4 ">
+                                <div class="cart-totals border border-3">
+                                    <h3 class="totals-title">CART TOTALS</h3>
+                                    <div
+                                        class="totals-row cart-subtotals d-flex align-items-center justify-content-between">
+                                        <span class="cart-subtotals total">Subtotal</span>
+                                        <span class="subtotal" id="total-price">৳ 3,600</span>
+                                    </div>
+
+                                    <div class="shipping-section">
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <div class="cart-subtotals fw-semibold">Shipping</div>
+                                            <div class="shipping-content text-end">
+                                                <div class="shipping-options">
+                                                    <div class="shipping-option">
+                                                        <input type="radio" id="inside-dhaka" name="shipping"
+                                                            value="inside" checked>
+                                                        <label for="inside-dhaka">Inside Dhaka: ৳ 60</label>
+                                                    </div>
+                                                    <div class="shipping-option">
+                                                        <input type="radio" id="outside-dhaka" name="shipping"
+                                                            value="outside">
+                                                        <label for="outside-dhaka">Outside Dhaka: ৳ 120</label>
+                                                    </div>
+                                                </div>
+                                                <div class="shipping-address">
+                                                    Shipping to <strong>Dhaka</strong>. <br>
+                                                    <a href="#" class="change-address">Change address</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="totals-row total">
+                                        <span class="cart-subtotals">Total</span>
+                                        <span class="total-price" id="cart-total">৳ 3,660</span>
+                                    </div>
+
+                                    <button type="button" class="btn btn-checkout" id="proceed-to-checkout">
+                                        PROCEED TO CHECKOUT
+                                    </button>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-12 col-md-6 col-lg">
-                            <div class="dropdown">
-                                <button
-                                    class="btn btn-secondary dropdown-toggle main-dropdown d-flex justify-content-between align-items-center"
-                                    type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    SORT BY
-                                </button>
-                                <ul class="dropdown-menu" style="width: 100%;">
-                                    <li><a class="dropdown-item" href="#">Default sorting</a></li>
-                                    <li><a class="dropdown-item" href="#">Sort by popularity</a></li>
-                                    <li><a class="dropdown-item" href="#">Sort by average rating</a></li>
-                                    <li><a class="dropdown-item" href="#">Sort by latest</a></li>
-                                    <li><a class="dropdown-item" href="#">
-                                            Sort by price: low to high
-                                        </a></li>
-                                    <li><a class="dropdown-item" href="#">Sort by price: high to low</a></li>
-                                </ul>
+                    </div>
+
+                    <!-- Checkout Page -->
+                    <div id="checkout-page" class="page">
+                        <!-- Coupon Notice -->
+                        <div class="coupon-notice">
+                            Have a coupon? <a href="#" class="coupon-link" id="show-coupon">Click here to enter your
+                                code</a>
+                        </div>
+
+                        <!-- Coupon Field (Hidden by default) -->
+                        <div class="coupon-field mb-4" id="coupon-field" style="display: none;">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control focus:none" placeholder="Coupon code"
+                                            aria-label="Coupon code">
+                                        <button class="btn btn-apply-coupon" type="button">
+                                            APPLY COUPON
+                                        </button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-12 col-md-6 col-lg text-center">
-                            <button class="filter-btn">FILTER</button>
+
+                        <div class="row">
+                            <!-- Billing Details -->
+                            <div class="col-lg-6">
+                                <div class="billing-details">
+                                    <h3 class="section-title">BILLING DETAILS</h3>
+                                    <form class="billing-form" id="billing-form">
+                                        <div class="form-group">
+                                            <label class="label-text" for="fullName">Full name <span
+                                                    class="required">*</span></label>
+                                            <input type="text" class="form-control" id="fullName" name="fullName"
+                                                required>
+                                            <div class="invalid-feedback">Please enter your full name</div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label class="label-text" for="country">Country / Region <span
+                                                    class="required">*</span></label>
+                                            <select class="form-control" id="country" name="country" disabled>
+                                                <option value="Bangladesh">Bangladesh</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label class="label-text" for="streetAddress">Street address <span
+                                                    class="required">*</span></label>
+                                            <input type="text" class="form-control" id="streetAddress"
+                                                name="streetAddress" placeholder="House number and street name"
+                                                required>
+                                            <div class="invalid-feedback">Please enter your street address</div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label class="label-text" for="stateCounty">State / County <span
+                                                    class="required">*</span></label>
+                                            <select class="form-control" id="stateCounty" name="stateCounty" required>
+                                                <option value="Dhaka">Dhaka</option>
+                                                <option value="Chittagong">Chittagong</option>
+                                                <option value="Rajshahi">Rajshahi</option>
+                                                <option value="Khulna">Khulna</option>
+                                            </select>
+                                            <div class="invalid-feedback">Please select your state/county</div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label class="label-text" for="postcode">Postcode / ZIP (optional)</label>
+                                            <input type="text" class="form-control" id="postcode" name="postcode">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label class="label-text" for="phone">Phone <span
+                                                    class="required">*</span></label>
+                                            <div class="input-group border-1 border rounded">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text p-2">
+                                                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='16' viewBox='0 0 30 20' fill='none'%3E%3Crect width='30' height='20' fill='%23006A4E'/%3E%3Ccircle cx='13' cy='10' r='5' fill='%23F42A41'/%3E%3C/svg%3E"
+                                                            alt="Bangladesh flag" width="30" height="20">
+                                                    </span>
+                                                </div>
+                                                <input type="tel" class="form-control rounded" id="phone" name="phone"
+                                                    placeholder="01812-345678" required>
+                                                <div class="invalid-feedback">Please enter a valid phone number</div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-check ship-different">
+                                            <input type="checkbox" class="form-check-input" id="shipDifferent"
+                                                name="shipDifferent">
+                                            <label class="label-text" class="form-check-label" for="shipDifferent">
+                                                Ship to a different address?
+                                            </label>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label class="label-text" for="orderNotes">Order notes (optional)</label>
+                                            <textarea placeholder="Note about your user ,g, speacail node for delivery"
+                                                class="form-control" id="orderNotes" name="orderNotes"
+                                                rows="9"></textarea>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+
+                            <!-- Order Summary -->
+                            <div class="col-lg-6">
+                                <div class="order-section">
+                                    <h3 class="section-order-title text-center">YOUR ORDER</h3>
+                                    <div class="order-summary my-3">
+                                        <div class="order-summary-content">
+                                            <div class="order-header">
+                                                <div class="row">
+                                                    <div class="col-6 product-title">PRODUCT</div>
+                                                    <div class="col-6 text-end product-title">SUBTOTAL</div>
+                                                </div>
+                                            </div>
+
+                                            <div class="order-item">
+                                                <div class="row align-items-center">
+                                                    <div class="col-md-8 d-flex align-items-center">
+                                                        <button class="remove-item" aria-label="Remove item">×</button>
+                                                        <div class="product-image">
+                                                            <img src="assets/media/home/card-section/card8.png"
+                                                                alt="Patali Khejur Gur" width="60" height="60">
+                                                        </div>
+                                                        <div class="product-name">
+                                                            Patali Khejur Gur - পাটালি খেজুরের গুড় - 3 KG
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4 text-end">
+                                                        <div class="quantity-selector small">
+                                                            <button class="quantity-btn decrease">-</button>
+                                                            <input type="text" class="quantity-input" value="2"
+                                                                readonly>
+                                                            <button class="quantity-btn increase">+</button>
+                                                        </div>
+                                                        <div class="subtotal">৳ 3,600</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="order-subtotal">
+                                                <div class="row my-3">
+                                                    <div class="col-6">Subtotal</div>
+                                                    <div class="col-6 text-end" id="order-subtotal">৳ 3,600</div>
+                                                </div>
+                                                <hr>
+                                            </div>
+
+                                            <div class="order-shipping">
+                                                <div class="shipping-options">
+                                                    <div class="shipping-option">
+                                                        <input type="radio" id="inside-dhaka-checkout"
+                                                            name="shipping-checkout" value="inside" checked>
+                                                        <label for="inside-dhaka-checkout">Inside Dhaka: ৳ 60</label>
+                                                    </div>
+                                                    <hr>
+                                                    <div class="shipping-option">
+                                                        <input type="radio" id="outside-dhaka-checkout"
+                                                            name="shipping-checkout" value="outside">
+                                                        <label for="outside-dhaka-checkout">Outside Dhaka: ৳ 120</label>
+                                                    </div>
+                                                    <hr>
+                                                </div>
+                                            </div>
+
+                                            <div class="order-total">
+                                                <div class="row">
+                                                    <div class="col-6">Total</div>
+                                                    <div class="col-6 text-end" id="order-total">৳ 3,660</div>
+                                                </div>
+                                                <hr>
+                                            </div>
+                                            <div>
+                                                <h4 class="cash-text">Cash on delivery</h4>
+                                            </div>
+                                            <div class="payment-method ">
+                                                <p>Pay with cash upon delivery.</p>
+                                            </div>
+                                            <hr>
+                                            <button type="button" class="btn btn-place-order" id="place-order-btn">
+                                                PLACE ORDER
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Order Complete Page -->
+                    <div id="complete-page" class="page">
+                        <div class="order-complete-container">
+                            <div class="order-complete-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-check-circle">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                </svg>
+                            </div>
+
+                            <h2 class="order-complete-title">Thank you. Your order has been received.</h2>
+
+                            <div class="order-details">
+                                <div class="order-detail-item">
+                                    <span class="detail-label">Order number:</span>
+                                    <span class="detail-value" id="order-number">#12345</span>
+                                </div>
+                                <div class="order-detail-item">
+                                    <span class="detail-label">Date:</span>
+                                    <span class="detail-value" id="order-date">March 13, 2025</span>
+                                </div>
+                                <div class="order-detail-item">
+                                    <span class="detail-label">Total:</span>
+                                    <span class="detail-value" id="complete-total">৳ 3,660</span>
+                                </div>
+                                <div class="order-detail-item">
+                                    <span class="detail-label">Payment method:</span>
+                                    <span class="detail-value">Cash on delivery</span>
+                                </div>
+                            </div>
+
+                            <div class="order-summary-complete">
+                                <h3>Order details</h3>
+                                <div class="order-summary-table">
+                                    <div class="order-summary-header">
+                                        <div class="row">
+                                            <div class="col-8">Product</div>
+                                            <div class="col-4 text-end">Subtotal</div>
+                                        </div>
+                                    </div>
+                                    <div class="order-summary-item">
+                                        <div class="row">
+                                            <div class="col-8">
+                                                Patali Khejur Gur - পাটালি খেজুরের গুড় - 3 KG × <span
+                                                    id="complete-quantity">2</span>
+                                            </div>
+                                            <div class="col-4 text-end" id="complete-subtotal">৳ 3,600</div>
+                                        </div>
+                                    </div>
+                                    <div class="order-summary-subtotal">
+                                        <div class="row">
+                                            <div class="col-8">Subtotal</div>
+                                            <div class="col-4 text-end" id="summary-subtotal">৳ 3,600</div>
+                                        </div>
+                                    </div>
+                                    <div class="order-summary-shipping">
+                                        <div class="row">
+                                            <div class="col-8">Shipping</div>
+                                            <div class="col-4 text-end" id="shipping-cost">৳ 60</div>
+                                        </div>
+                                    </div>
+                                    <div class="order-summary-total">
+                                        <div class="row">
+                                            <div class="col-8">Total</div>
+                                            <div class="col-4 text-end" id="summary-total">৳ 3,660</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="customer-details">
+                                <h3>Customer details</h3>
+                                <div class="customer-detail-item">
+                                    <span class="detail-label">Email:</span>
+                                    <span class="detail-value" id="customer-email">customer@example.com</span>
+                                </div>
+                                <div class="customer-detail-item">
+                                    <span class="detail-label">Phone:</span>
+                                    <span class="detail-value" id="customer-phone">01812-345678</span>
+                                </div>
+                                <div class="customer-detail-item">
+                                    <span class="detail-label">Shipping address:</span>
+                                    <span class="detail-value" id="customer-address">123 Main Street, Dhaka,
+                                        Bangladesh</span>
+                                    id="customer-address">123 Main Street, Dhaka, Bangladesh</span>
+                                </div>
+                            </div>
+
+                            <button type="button" class="btn btn-continue-shopping" id="continue-shopping">
+                                CONTINUE SHOPPING
+                            </button>
                         </div>
                     </div>
                 </div>
+
+                <!-- Decorative Images -->
             </div>
         </section>
-        <!-- filter section end  -->
-        <!-- card section start  -->
-        <section>
-            <div class="card-container">
-                <div class="medium-card-container">
-                    <!-- card 1  -->
-                    <a href="/product.html" class="text-decoration-none">
-                        <div class="card text-center position-relative">
-                            <div class="card-img">
-                                <img src="assets/media/home/card-section/card1.png" alt="cardimage" decoding="async"
-                                    loading="lazy">
-                            </div>
-                            <div class="new-badge">-16%</div>
-                            <h6 class="chocolate-p my-1 p-0">Chocolate Peanut Butter-
-                                চকলেট পিনাট বাটার</h6>
-                            <p class="price text-center mb-2 p-0">৳ 520 - ৳ 960 </p>
-                            <div>
-                                <button class="card-btn card-btn-completed"></button>
-                            </div>
-                            <div class="hover-icon position-absolute d-flex flex-column">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
-                                    class="bi bi-search" viewBox="0 0 16 16">
-                                    <path
-                                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
-                                </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
-                                    class="bi bi-heart my-3" viewBox="0 0 16 16">
-                                    <path
-                                        d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
-                                </svg>
-                            </div>
-                        </div>
-                    </a>
-                    <!-- card 2 -->
-                    <a href="/product.html" class="text-decoration-none">
-                        <div class="card text-center position-relative">
-                            <div class="card-img">
-                                <img src="assets/media/home/card-section/card2.png" alt="cardimage" decoding="async"
-                                    loading="lazy">
-                            </div>
-                            <div class="new-badge">New</div>
-                            <h6 class="chocolate-p my-1 p-0">Bilona Ghee – বিলোনা ঘি</h6>
-                            <p class="price text-center mb-2 p-0">৳ 800 - ৳ 1,550 </p>
-                            <div>
-                                <button class="card-btn card-btn-completed"></button>
-                            </div>
-                            <div class="hover-icon position-absolute d-flex flex-column">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
-                                    class="bi bi-search" viewBox="0 0 16 16">
-                                    <path
-                                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
-                                </svg>
-
-                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
-                                    class="bi bi-heart my-3" viewBox="0 0 16 16">
-                                    <path
-                                        d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
-                                </svg>
-                            </div>
-                        </div>
-                    </a>
-                    <!-- card 3 -->
-                    <a href="/product.html" class="text-decoration-none">
-                        <div class="card text-center position-relative">
-                            <div class="card-img">
-                                <img src="assets/media/home/card-section/card3.png" alt="cardimage" decoding="async"
-                                    loading="lazy">
-                            </div>
-                            <div class="new-badge">-12%</div>
-                            <h6 class="chocolate-p my-1 p-0">Sugarcane Jaggery Powder –
-                                আখের গুড় পাউডার</h6>
-                            <p class="price text-center mb-2 p-0">৳ 400 - ৳ 1,000 </p>
-                            <div>
-                                <button class="card-btn card-btn-completed"></button>
-                            </div>
-                            <div class="hover-icon position-absolute d-flex flex-column">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
-                                    class="bi bi-search" viewBox="0 0 16 16">
-                                    <path
-                                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
-                                </svg>
-
-                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
-                                    class="bi bi-heart my-3" viewBox="0 0 16 16">
-                                    <path
-                                        d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
-                                </svg>
-                            </div>
-                        </div>
-                    </a>
-                    <!-- card 4 -->
-                    <a href="/product.html" class="text-decoration-none">
-                        <div class="card text-center position-relative">
-                            <div class="card-img">
-                                <img src="assets/media/home/card-section/card4.png" alt="cardimage" decoding="async"
-                                    loading="lazy">
-                            </div>
-                            <div class="new-badge">-7%</div>
-                            <h6 class="chocolate-p my-1 p-0">Patali Khejur Gur – পাটালি
-                                খেজুরের গুড়</h6>
-                            <p class="price text-center mb-2 p-0">৳ 700 - ৳ 1,800 </p>
-                            <div>
-                                <button class="card-btn card-btn-completed"></button>
-                            </div>
-                            <div class="hover-icon position-absolute d-flex flex-column">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
-                                    class="bi bi-search" viewBox="0 0 16 16">
-                                    <path
-                                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
-                                </svg>
-
-                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
-                                    class="bi bi-heart my-3" viewBox="0 0 16 16">
-                                    <path
-                                        d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
-                                </svg>
-                            </div>
-                        </div>
-                    </a>
-                    <!-- card 5 -->
-                    <a href="/product.html" class="text-decoration-none">
-                        <div class="card text-center position-relative">
-                            <div class="card-img">
-                                <img src="assets/media/home/card-section/card5.png" alt="cardimage" decoding="async"
-                                    loading="lazy">
-                            </div>
-                            <div class="persent-badge">New</div>
-                            <h6 class="chocolate-p my-1 p-0">Moringa Powder – মারিঙ্গা
-                                পাউডার</h6>
-                            <p class="price text-center mb-2 p-0">৳ 700 - ৳ 1,350 </p>
-                            <div>
-                                <button class="card-btn card-btn-completed"></button>
-                            </div>
-                            <div class="hover-icon position-absolute d-flex flex-column">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
-                                    class="bi bi-search" viewBox="0 0 16 16">
-                                    <path
-                                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
-                                </svg>
-
-                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
-                                    class="bi bi-heart my-3" viewBox="0 0 16 16">
-                                    <path
-                                        d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
-                                </svg>
-                            </div>
-                        </div>
-                    </a>
-                    <!-- card 6 -->
-                    <a href="/product.html" class="text-decoration-none">
-                        <div class="card text-center position-relative">
-                            <div class="card-img">
-                                <img src="assets/media/home/card-section/card6.png" alt="cardimage" decoding="async"
-                                    loading="lazy">
-                            </div>
-                            <div class="persent-badge">New</div>
-                            <h6 class="chocolate-p my-1 p-0">Patali Khejur Gur – পাটালি
-                                খেজুরের গুড়</h6>
-                            <p class="price text-center mb-2 p-0">৳ 700 - ৳ 1,800 </p>
-                            <div>
-                                <button class="card-btn card-btn-completed"></button>
-                            </div>
-                            <div class="hover-icon position-absolute d-flex flex-column">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
-                                    class="bi bi-search" viewBox="0 0 16 16">
-                                    <path
-                                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
-                                </svg>
-
-                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
-                                    class="bi bi-heart my-3" viewBox="0 0 16 16">
-                                    <path
-                                        d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
-                                </svg>
-                            </div>
-                        </div>
-                    </a>
-                    <!-- card 7 -->
-                    <a href="/product.html" class="text-decoration-none">
-                        <div class="card text-center position-relative">
-                            <div class="card-img">
-                                <img src="assets/media/home/card-section/card7.png" alt="cardimage" decoding="async"
-                                    loading="lazy">
-                            </div>
-                            <div class="new-badge">-11%</div>
-                            <h6 class="chocolate-p my-1 p-0">Patali Khejur Gur – পাটালি
-                                খেজুরের গুড়</h6>
-                            <p class="price text-center mb-2 p-0">৳ 700 - ৳ 1,800 </p>
-                            <div>
-                                <button class="card-btn card-btn-completed"></button>
-                            </div>
-                            <div class="hover-icon position-absolute d-flex flex-column">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
-                                    class="bi bi-search" viewBox="0 0 16 16">
-                                    <path
-                                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
-                                </svg>
-
-                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
-                                    class="bi bi-heart my-3" viewBox="0 0 16 16">
-                                    <path
-                                        d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
-                                </svg>
-                            </div>
-                        </div>
-                    </a>
-                    <!-- card 8 -->
-                    <a href="/product.html" class="text-decoration-none">
-                        <div class="card text-center position-relative">
-                            <div class="card-img">
-                                <img src="assets/media/home/card-section/card8.png" alt="cardimage" decoding="async"
-                                    loading="lazy">
-                            </div>
-                            <div class="persent-badge">New</div>
-                            <h6 class="chocolate-p my-1 p-0">Patali Khejur Gur – পাটালি
-                                খেজুরের গুড়</h6>
-                            <p class="price text-center mb-2 p-0">৳ 700 - ৳ 1,800 </p>
-                            <div>
-                                <button class="card-btn card-btn-completed"></button>
-                            </div>
-                            <div class="hover-icon position-absolute d-flex flex-column">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
-                                    class="bi bi-search" viewBox="0 0 16 16">
-                                    <path
-                                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
-                                </svg>
-
-                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
-                                    class="bi bi-heart my-3" viewBox="0 0 16 16">
-                                    <path
-                                        d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
-                                </svg>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-
-        </section>
-        <!-- card section end  -->
     </main>
     <!-- Footer Section  -->
     <footer>
@@ -843,14 +975,142 @@
         </section>
     </footer>
     <!-- Footer Section End  -->
-    <!-- Bootstrap JS -->
+    <!-- Bootstrap JS Bundle with Popper -->
     <script src="assets/js/bootstrap.js"></script>
+    <!-- Custom JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            setupNavigation();
+            setupCartFunctions();
+            updateActiveStep();
+        });
+        // Setup navigation
+        function setupNavigation() {
+            document.querySelectorAll('.step').forEach(step => {
+                step.addEventListener('click', () => {
+                    if (step.getAttribute('data-page') !== 'complete-page') {
+                        navigateToPage(step.getAttribute('data-page'));
+                    }
+                });
+            });
 
-    <!-- Swiper JS -->
-    <script src="assets/js/swiper.js"></script>
+            addClickEvent('proceed-to-checkout', () => navigateToPage('checkout-page'));
+            addClickEvent('place-order-btn', () => {
+                if (validateForm()) {
+                    saveCustomerData();
+                    navigateToPage('complete-page');
+                }
+            });
+            addClickEvent('continue-shopping', () => navigateToPage('cart-page'));
+        }
 
-    <!-- My JS -->
-    <script src="assets/js/main.js"></script>
+        // Navigate between pages
+        function navigateToPage(pageId) {
+            document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
+            const targetPage = document.getElementById(pageId);
+            if (targetPage) {
+                targetPage.classList.add('active');
+                updateActiveStep();
+                window.scrollTo(0, 0);
+            }
+        }
+
+        // Update active step indicator
+        function updateActiveStep() {
+            document.querySelectorAll('.step').forEach(step => step.classList.remove('active'));
+            const activePage = document.querySelector('.page.active');
+            if (activePage) {
+                const activeStep = document.querySelector(`.step[data-page="${activePage.id}"]`);
+                if (activeStep) activeStep.classList.add('active');
+            }
+        }
+
+        // Setup cart functionalities
+        function setupCartFunctions() {
+            setupQuantitySelectors();
+            setupShippingOptions();
+            setupCouponCode();
+            setupOrderForm();
+        }
+
+        // Quantity selectors
+        function setupQuantitySelectors() {
+            document.querySelectorAll('.quantity-selector').forEach(selector => {
+                const decreaseBtn = selector.querySelector('.decrease');
+                const increaseBtn = selector.querySelector('.increase');
+                const input = selector.querySelector('.quantity-input');
+                const productRow = selector.closest('.cart-item, .order-item');
+
+                if (decreaseBtn && increaseBtn && input) {
+                    decreaseBtn.addEventListener('click', () => updateQuantity(input, productRow, -1));
+                    increaseBtn.addEventListener('click', () => updateQuantity(input, productRow, 1));
+                }
+            });
+        }
+
+        // Update quantity and totals
+        function updateQuantity(input, productRow, change) {
+            let quantity = Math.max(1, parseInt(input.value) + change);
+            input.value = quantity;
+            updateProductSubtotal(productRow, quantity);
+            updateTotals();
+            syncQuantities(quantity);
+        }
+
+        // Sync quantity across pages
+        function syncQuantities(quantity) {
+            document.querySelectorAll('.quantity-input').forEach(input => input.value = quantity);
+            const completeQuantity = document.getElementById('complete-quantity');
+            if (completeQuantity) completeQuantity.textContent = quantity;
+        }
+
+        // Update product subtotal
+        function updateProductSubtotal(productRow, quantity) {
+            if (!productRow) return;
+            const subtotalElement = productRow.querySelector('.subtotal');
+            if (subtotalElement) subtotalElement.textContent = `৳ ${(1800 * quantity).toLocaleString()}`;
+        }
+
+        // Shipping options setup
+        function setupShippingOptions() {
+            document.querySelectorAll('input[name="shipping"], input[name="shipping-checkout"]').forEach(option => {
+                option.addEventListener('change', () => {
+                    syncShippingOptions(option);
+                    updateTotals();
+                });
+            });
+        }
+
+        // Sync shipping selection across pages
+        function syncShippingOptions(changedOption) {
+            const isOutsideDhaka = changedOption.value === 'outside';
+            syncCheckedState('outside-dhaka', isOutsideDhaka);
+            syncCheckedState('inside-dhaka', !isOutsideDhaka);
+            syncCheckedState('outside-dhaka-checkout', isOutsideDhaka);
+            syncCheckedState('inside-dhaka-checkout', !isOutsideDhaka);
+        }
+
+        // Update total price calculations
+        function updateTotals() {
+            let subtotal = [...document.querySelectorAll('.quantity-input')].reduce((sum, input) => {
+                return sum + (parseInt(input.value) * 1800);
+            }, 0);
+
+            document.getElementById('subtotal').textContent = `৳ ${subtotal.toLocaleString()}`;
+        }
+
+        // Utility functions
+        function addClickEvent(id, callback) {
+            const element = document.getElementById(id);
+            if (element) element.addEventListener('click', callback);
+        }
+
+        function syncCheckedState(id, isChecked) {
+            const element = document.getElementById(id);
+            if (element) element.checked = isChecked;
+        }
+
+    </script>
 </body>
 
 </html>

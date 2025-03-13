@@ -116,7 +116,7 @@
                                     </button>
                                 </div>
                                 <div class="white-list mx-3">
-                                    <a href="#">
+                                    <a href="/wishlist.html">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
                                             viewBox="0 0 24 24" fill="currentColor">
                                             <path
@@ -357,14 +357,14 @@
                 <div class="bottom-nav">
                     <div class="container h-100">
                         <div class="row h-100 align-items-center justify-content-around g-0">
-                            <a href="/index.html" class="col nav-item active">
+                            <a href="/store.html" class="col nav-items active">
                                 <svg viewBox="0 0 24 24">
                                     <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
                                     <polyline points="9 22 9 12 15 12 15 22" />
                                 </svg>
                                 Store
                             </a>
-                            <a href="/store.html" class="col nav-item"  data-bs-toggle="offcanvas"
+                            <a href="#" class="col nav-items"  data-bs-toggle="offcanvas"
                                 data-bs-target="#cartOffCanvas" aria-controls="cartOffCanvas">
                                 <svg viewBox="0 0 24 24">
                                     <circle cx="9" cy="21" r="1" />
@@ -374,20 +374,21 @@
                                 <span class="cart-badge">0</span>
                                 Cart
                             </a>
-                            <a href="/wishlist.html" class="col nav-item">
+                            <a href="wishlist.html" class="col nav-items">
                                 <svg viewBox="0 0 24 24">
                                     <path
                                         d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
                                 </svg>
                                 Wishlist
                             </a>
-                            <a href="/login.html" class="col nav-item">
-                                <svg viewBox="0 0 24 24">
-                                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
-                                    <circle cx="12" cy="7" r="4" />
+                            <a href="/login.html" class="col nav-items">
+                                <svg viewBox="0 0 24 24" style="pointer-events: none;">
+                                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                                  <circle cx="12" cy="7" r="4" />
                                 </svg>
                                 My account
-                            </a>
+                              </a>
+                              
                         </div>
                     </div>
                 </div>
@@ -438,6 +439,7 @@
                             <div class="swiper-wrapper ">
                                 <!-- slider 1 -->
                                 <div class="swiper-slide">
+                                   <a class="text-decoration-none" href="/product.html">
                                     <div class="card text-center position-relative">
                                         <div class="card-img">
                                             <img src="assets/media/home/card-section/card1.png" alt="cardimage"
@@ -464,38 +466,41 @@
                                             </svg>
                                         </div>
                                     </div>
+                                   </a>
                                 </div>
                                 <!-- slider 2  -->
                                 <div class="swiper-slide">
-                                    <div class="card text-center position-relative">
-                                        <div class="card-img">
-                                            <img src="assets/media/home/card-section/card2.png" alt="cardimage"
-                                                decoding="async" loading="lazy">
+                                    <a class="text-decoration-none" href="/product.html">
+                                        <div class="card text-center position-relative">
+                                            <div class="card-img">
+                                                <img src="assets/media/home/card-section/card2.png" alt="cardimage"
+                                                    decoding="async" loading="lazy">
+                                            </div>
+                                            <div class="new-badge">-11%</div>
+                                            <h4 class="chocolate-p my-1 p-0">Bilona Ghee - বিলোনা ঘি</h4>
+                                            <p class="price text-center mb-2 p-0">৳ 800 - ৳ 1,550 </p>
+                                            <div>
+                                                <button class="card-btn card-btn-completed"></button>
+                                            </div>
+                                            <div class="hover-icon position-absolute d-flex flex-column">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
+                                                    fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                                                </svg>
+    
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
+                                                    fill="currentColor" class="bi bi-heart my-3" viewBox="0 0 16 16">
+                                                    <path
+                                                        d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+                                                </svg>
+                                            </div>
                                         </div>
-                                        <div class="new-badge">-11%</div>
-                                        <h4 class="chocolate-p my-1 p-0">Bilona Ghee - বিলোনা ঘি</h4>
-                                        <p class="price text-center mb-2 p-0">৳ 800 - ৳ 1,550 </p>
-                                        <div>
-                                            <button class="card-btn card-btn-completed"></button>
-                                        </div>
-                                        <div class="hover-icon position-absolute d-flex flex-column">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
-                                                fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                                                <path
-                                                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
-                                            </svg>
-
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
-                                                fill="currentColor" class="bi bi-heart my-3" viewBox="0 0 16 16">
-                                                <path
-                                                    d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
-                                            </svg>
-                                        </div>
-                                    </div>
-
+                                    </a>
                                 </div>
                                 <!-- slider 3 -->
                                 <div class="swiper-slide">
+                                   <a class="text-decoration-none" href="/product.html">
                                     <div class="card text-center position-relative">
                                         <div class="card-img">
                                             <img src="assets/media/home/card-section/card3.png" alt="cardimage"
@@ -521,9 +526,11 @@
                                             </svg>
                                         </div>
                                     </div>
+                                   </a>
                                 </div>
                                 <!-- slider 4 -->
                                 <div class="swiper-slide">
+                                   <a class="text-decoration-none" href="/product.html">
                                     <div class="card text-center position-relative">
                                         <div class="card-img">
                                             <img src="assets/media/home/card-section/card4.png" alt="cardimage"
@@ -550,9 +557,11 @@
                                             </svg>
                                         </div>
                                     </div>
+                                   </a>
                                 </div>
                                 <!-- slider 5 -->
                                 <div class="swiper-slide">
+                                   <a class="text-decoration-none" href="/product.html">
                                     <div class="card text-center position-relative">
                                         <div class="card-img">
                                             <img src="assets/media/home/card-section/card5.png" alt="cardimage"
@@ -579,65 +588,71 @@
                                             </svg>
                                         </div>
                                     </div>
+                                   </a>
                                 </div>
                                 <!-- slider 6 -->
                                 <div class="swiper-slide">
-                                    <div class="card text-center position-relative">
-                                        <div class="card-img">
-                                            <img src="assets/media/home/card-section/card6.png" alt="cardimage"
-                                                decoding="async" loading="lazy">
+                                    <a class="text-decoration-none" href="/product.html">
+                                        <div class="card text-center position-relative">
+                                            <div class="card-img">
+                                                <img src="assets/media/home/card-section/card6.png" alt="cardimage"
+                                                    decoding="async" loading="lazy">
+                                            </div>
+                                            <div class="new-badge">-16%</div>
+                                            <h4 class="chocolate-p my-1 p-0">Premium Tea - প্রিমিয়াম চা </h4>
+                                            <p class="price text-center mb-2 p-0">৳ 400 - ৳ 800 </p>
+                                            <div>
+                                                <button class="card-btn card-btn-completed"></button>
+                                            </div>
+                                            <div class="hover-icon position-absolute d-flex flex-column">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
+                                                    fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                                                </svg>
+    
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
+                                                    fill="currentColor" class="bi bi-heart my-3" viewBox="0 0 16 16">
+                                                    <path
+                                                        d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+                                                </svg>
+                                            </div>
                                         </div>
-                                        <div class="new-badge">-16%</div>
-                                        <h4 class="chocolate-p my-1 p-0">Premium Tea - প্রিমিয়াম চা </h4>
-                                        <p class="price text-center mb-2 p-0">৳ 400 - ৳ 800 </p>
-                                        <div>
-                                            <button class="card-btn card-btn-completed"></button>
-                                        </div>
-                                        <div class="hover-icon position-absolute d-flex flex-column">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
-                                                fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                                                <path
-                                                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
-                                            </svg>
-
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
-                                                fill="currentColor" class="bi bi-heart my-3" viewBox="0 0 16 16">
-                                                <path
-                                                    d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
-                                            </svg>
-                                        </div>
-                                    </div>
+                                    </a>
                                 </div>
                                 <!-- slider 7 -->
                                 <div class="swiper-slide">
-                                    <div class="card text-center position-relative">
-                                        <div class="card-img">
-                                            <img src="assets/media/home/card-section/card7.png" alt="cardimage"
-                                                decoding="async" loading="lazy">
+                                    <a class="text-decoration-none" href="/product.html">
+                                        <div class="card text-center position-relative">
+                                            <div class="card-img">
+                                                <img src="assets/media/home/card-section/card7.png" alt="cardimage"
+                                                    decoding="async" loading="lazy">
+                                            </div>
+                                            <div class="new-badge">-16%</div>
+                                            <h4 class="chocolate-p my-1 p-0">Mustard Oil - ঘানি ভাঁঙ্গা সরিষার তেল</h4>
+                                            <p class="price text-center mb-2 p-0">৳ 290 - ৳ 1350 </p>
+                                            <div>
+                                                <button class="card-btn card-btn-completed"></button>
+                                            </div>
+                                            <div class="hover-icon position-absolute d-flex flex-column">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
+                                                    fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                                                </svg>
+    
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
+                                                    fill="currentColor" class="bi bi-heart my-3" viewBox="0 0 16 16">
+                                                    <path
+                                                        d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+                                                </svg>
+                                            </div>
                                         </div>
-                                        <div class="new-badge">-16%</div>
-                                        <h4 class="chocolate-p my-1 p-0">Mustard Oil - ঘানি ভাঁঙ্গা সরিষার তেল</h4>
-                                        <p class="price text-center mb-2 p-0">৳ 290 - ৳ 1350 </p>
-                                        <div>
-                                            <button class="card-btn card-btn-completed"></button>
-                                        </div>
-                                        <div class="hover-icon position-absolute d-flex flex-column">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
-                                                fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                                                <path
-                                                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
-                                            </svg>
-
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
-                                                fill="currentColor" class="bi bi-heart my-3" viewBox="0 0 16 16">
-                                                <path
-                                                    d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
-                                            </svg>
-                                        </div>
-                                    </div>
+                                    </a>
                                 </div>
                                 <!-- slider 8 -->
                                 <div class="swiper-slide">
+                                   <a class="text-decoration-none" href="/product.html">
                                     <div class="card text-center position-relative">
                                         <div class="card-img">
                                             <img src="assets/media/home/card-section/card8.png" alt="cardimage"
@@ -663,37 +678,41 @@
                                             </svg>
                                         </div>
                                     </div>
+                                   </a>
                                 </div>
                                 <!-- slider 9 -->
                                 <div class="swiper-slide">
-                                    <div class="card text-center position-relative">
-                                        <div class="card-img">
-                                            <img src="assets/media/home/card-section/card9.png" alt="cardimage"
-                                                decoding="async" loading="lazy">
+                                    <a class="text-decoration-none" href="/product.html">
+                                        <div class="card text-center position-relative">
+                                            <div class="card-img">
+                                                <img src="assets/media/home/card-section/card9.png" alt="cardimage"
+                                                    decoding="async" loading="lazy">
+                                            </div>
+                                            <div class="new-badge">-16%</div>
+                                            <h4 class="chocolate-p my-1 p-0">Rice Powder - চালের গুঁড়া </h4>
+                                            <p class="price text-center mb-2 p-0">৳ 100</p>
+                                            <div>
+                                                <button class="card-btn card-btn-completed"></button>
+                                            </div>
+                                            <div class="hover-icon position-absolute d-flex flex-column">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
+                                                    fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                                                </svg>
+    
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
+                                                    fill="currentColor" class="bi bi-heart my-3" viewBox="0 0 16 16">
+                                                    <path
+                                                        d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+                                                </svg>
+                                            </div>
                                         </div>
-                                        <div class="new-badge">-16%</div>
-                                        <h4 class="chocolate-p my-1 p-0">Rice Powder - চালের গুঁড়া </h4>
-                                        <p class="price text-center mb-2 p-0">৳ 100</p>
-                                        <div>
-                                            <button class="card-btn card-btn-completed"></button>
-                                        </div>
-                                        <div class="hover-icon position-absolute d-flex flex-column">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
-                                                fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                                                <path
-                                                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
-                                            </svg>
-
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
-                                                fill="currentColor" class="bi bi-heart my-3" viewBox="0 0 16 16">
-                                                <path
-                                                    d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
-                                            </svg>
-                                        </div>
-                                    </div>
+                                    </a>
                                 </div>
                                 <!-- slider 10  -->
                                 <div class="swiper-slide">
+                                   <a class="text-decoration-none" href="/product.html">
                                     <div class="card text-center position-relative">
                                         <div class="card-img">
                                             <img src="assets/media/home/card-section/black-rice.png" alt="cardimage"
@@ -719,6 +738,7 @@
                                             </svg>
                                         </div>
                                     </div>
+                                   </a>
                                 </div>
                             </div>
                             <!-- Scroll Buttons and Pagination -->
@@ -727,281 +747,301 @@
                         </div>
                     </div>
                     <div class="text-center btn-box d-flex align-content-center">
-                        <button class="see-btn">SEE ALL
+                        <a href="store.html" class="see-btn">SEE ALL
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="30" fill="currentColor"
                                 class="bi bi-arrow-right" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd"
                                     d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
                                     stroke="currentColor" stroke-width="1.5" />
                             </svg>
-                        </button>
+                        </a>
 
                     </div>
                 </div>
                 <!-- swiper with small device start  -->
                 <div class="medium-card-container">
                     <!-- card 1  -->
-                    <div class="card text-center position-relative">
-                        <div class="card-img">
-                            <img src="assets/media/home/card-section/card1.png" alt="cardimage" decoding="async"
-                                loading="lazy">
+                    <a class="text-decoration-none" href="/product.html">
+                        <div class="card text-center position-relative">
+                            <div class="card-img">
+                                <img src="assets/media/home/card-section/card1.png" alt="cardimage" decoding="async"
+                                    loading="lazy">
+                            </div>
+                            <div class="new-badge">-8%</div>
+                            <h4 class="chocolate-p my-1 p-0">Chocolate Peanut Butter-
+                                চকলেট পিনাট বাটার</h4>
+                            <p class="price text-center mb-2 p-0">৳ 520 - ৳ 960 </p>
+                            <div>
+                                <button class="card-btn card-btn-completed"></button>
+                            </div>
+                            <div class="hover-icon position-absolute d-flex flex-column">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                                    class="bi bi-search" viewBox="0 0 16 16">
+                                    <path
+                                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                                </svg>
+    
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                                    class="bi bi-heart my-3" viewBox="0 0 16 16">
+                                    <path
+                                        d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+                                </svg>
+                            </div>
                         </div>
-                        <div class="new-badge">-8%</div>
-                        <h4 class="chocolate-p my-1 p-0">Chocolate Peanut Butter-
-                            চকলেট পিনাট বাটার</h4>
-                        <p class="price text-center mb-2 p-0">৳ 520 - ৳ 960 </p>
-                        <div>
-                            <button class="card-btn card-btn-completed"></button>
-                        </div>
-                        <div class="hover-icon position-absolute d-flex flex-column">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
-                                class="bi bi-search" viewBox="0 0 16 16">
-                                <path
-                                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
-                            </svg>
-
-                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
-                                class="bi bi-heart my-3" viewBox="0 0 16 16">
-                                <path
-                                    d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
-                            </svg>
-                        </div>
-                    </div>
+                    </a>
                     <!-- card 2 -->
-                    <div class="card text-center position-relative">
-                        <div class="card-img">
-                            <img src="assets/media/home/card-section/card2.png" alt="cardimage" decoding="async"
-                                loading="lazy">
+                    <a class="text-decoration-none" href="/product.html">
+                        <div class="card text-center position-relative">
+                            <div class="card-img">
+                                <img src="assets/media/home/card-section/card2.png" alt="cardimage" decoding="async"
+                                    loading="lazy">
+                            </div>
+                            <div class="new-badge">-11%</div>
+                            <h4 class="chocolate-p my-1 p-0">Bilona Ghee - বিলোনা ঘি</h4>
+                            <p class="price text-center mb-2 p-0">৳ 800 - ৳ 1,550 </p>
+                            <div>
+                                <button class="card-btn card-btn-completed"></button>
+                            </div>
+                            <div class="hover-icon position-absolute d-flex flex-column">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                                    class="bi bi-search" viewBox="0 0 16 16">
+                                    <path
+                                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                                </svg>
+    
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                                    class="bi bi-heart my-3" viewBox="0 0 16 16">
+                                    <path
+                                        d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+                                </svg>
+                            </div>
                         </div>
-                        <div class="new-badge">-11%</div>
-                        <h4 class="chocolate-p my-1 p-0">Bilona Ghee - বিলোনা ঘি</h4>
-                        <p class="price text-center mb-2 p-0">৳ 800 - ৳ 1,550 </p>
-                        <div>
-                            <button class="card-btn card-btn-completed"></button>
-                        </div>
-                        <div class="hover-icon position-absolute d-flex flex-column">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
-                                class="bi bi-search" viewBox="0 0 16 16">
-                                <path
-                                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
-                            </svg>
-
-                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
-                                class="bi bi-heart my-3" viewBox="0 0 16 16">
-                                <path
-                                    d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
-                            </svg>
-                        </div>
-                    </div>
+                    </a>
                     <!-- card 3 -->
-                    <div class="card text-center position-relative">
-                        <div class="card-img">
-                            <img src="assets/media/home/card-section/card3.png" alt="cardimage" decoding="async"
-                                loading="lazy">
+                    <a href="/product.html" class="text-decoration-none">
+                        <div class="card text-center position-relative">
+                            <div class="card-img">
+                                <img src="assets/media/home/card-section/card3.png" alt="cardimage" decoding="async"
+                                    loading="lazy">
+                            </div>
+                            <div class="new-badge">-8%</div>
+                            <h4 class="chocolate-p my-1 p-0">Sugarcane Jaggery Powder - আখের গুড় পাউডার</h4>
+                            <p class="price text-center mb-2 p-0">৳ 400 - ৳ 1,000 </p>
+                            <div>
+                                <button class="card-btn card-btn-completed"></button>
+                            </div>
+                            <div class="hover-icon position-absolute d-flex flex-column">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                                    class="bi bi-search" viewBox="0 0 16 16">
+                                    <path
+                                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                                </svg>
+    
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                                    class="bi bi-heart my-3" viewBox="0 0 16 16">
+                                    <path
+                                        d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+                                </svg>
+                            </div>
                         </div>
-                        <div class="new-badge">-8%</div>
-                        <h4 class="chocolate-p my-1 p-0">Sugarcane Jaggery Powder - আখের গুড় পাউডার</h4>
-                        <p class="price text-center mb-2 p-0">৳ 400 - ৳ 1,000 </p>
-                        <div>
-                            <button class="card-btn card-btn-completed"></button>
-                        </div>
-                        <div class="hover-icon position-absolute d-flex flex-column">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
-                                class="bi bi-search" viewBox="0 0 16 16">
-                                <path
-                                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
-                            </svg>
-
-                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
-                                class="bi bi-heart my-3" viewBox="0 0 16 16">
-                                <path
-                                    d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
-                            </svg>
-                        </div>
-                    </div>
+                    </a>
                     <!-- card 4 -->
-                    <div class="card text-center position-relative">
-                        <div class="card-img">
-                            <img src="assets/media/home/card-section/card4.png" alt="cardimage" decoding="async"
-                                loading="lazy">
+                    <a href="/product.html" class="text-decoration-none">
+                        <div class="card text-center position-relative">
+                            <div class="card-img">
+                                <img src="assets/media/home/card-section/card4.png" alt="cardimage" decoding="async"
+                                    loading="lazy">
+                            </div>
+                            <div class="new-badge">-8%</div>
+                            <h4 class="chocolate-p my-1 p-0">Patali Khejur Gur - পাটালি খেজুরের গুড় </h4>
+                            <p class="price text-center mb-2 p-0">৳ 700 - ৳ 1,800 </p>
+                            <div>
+                                <button class="card-btn card-btn-completed"></button>
+                            </div>
+                            <div class="hover-icon position-absolute d-flex flex-column">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                                    class="bi bi-search" viewBox="0 0 16 16">
+                                    <path
+                                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                                </svg>
+    
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                                    class="bi bi-heart my-3" viewBox="0 0 16 16">
+                                    <path
+                                        d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+                                </svg>
+                            </div>
                         </div>
-                        <div class="new-badge">-8%</div>
-                        <h4 class="chocolate-p my-1 p-0">Patali Khejur Gur - পাটালি খেজুরের গুড় </h4>
-                        <p class="price text-center mb-2 p-0">৳ 700 - ৳ 1,800 </p>
-                        <div>
-                            <button class="card-btn card-btn-completed"></button>
-                        </div>
-                        <div class="hover-icon position-absolute d-flex flex-column">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
-                                class="bi bi-search" viewBox="0 0 16 16">
-                                <path
-                                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
-                            </svg>
-
-                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
-                                class="bi bi-heart my-3" viewBox="0 0 16 16">
-                                <path
-                                    d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
-                            </svg>
-                        </div>
-                    </div>
+                    </a>
                     <!-- card 5 -->
-                    <div class="card text-center position-relative">
-                        <div class="card-img">
-                            <img src="assets/media/home/card-section/card5.png" alt="cardimage" decoding="async"
-                                loading="lazy">
+                    <a href="/product.html" class="text-decoration-none">
+                        <div class="card text-center position-relative">
+                            <div class="card-img">
+                                <img src="assets/media/home/card-section/card5.png" alt="cardimage" decoding="async"
+                                    loading="lazy">
+                            </div>
+                            <div class="persent-badge">New</div>
+                            <h4 class="chocolate-p my-1 p-0">Moringa Powder - মারিঙ্গা
+                                পাউডার</h4>
+                            <p class="price text-center mb-2 p-0">৳ 700 - ৳ 1,350 </p>
+                            <div>
+                                <button class="card-btn card-btn-completed"></button>
+                            </div>
+                            <div class="hover-icon position-absolute d-flex flex-column">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                                    class="bi bi-search" viewBox="0 0 16 16">
+                                    <path
+                                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                                </svg>
+    
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                                    class="bi bi-heart my-3" viewBox="0 0 16 16">
+                                    <path
+                                        d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+                                </svg>
+                            </div>
                         </div>
-                        <div class="persent-badge">New</div>
-                        <h4 class="chocolate-p my-1 p-0">Moringa Powder - মারিঙ্গা
-                            পাউডার</h4>
-                        <p class="price text-center mb-2 p-0">৳ 700 - ৳ 1,350 </p>
-                        <div>
-                            <button class="card-btn card-btn-completed"></button>
-                        </div>
-                        <div class="hover-icon position-absolute d-flex flex-column">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
-                                class="bi bi-search" viewBox="0 0 16 16">
-                                <path
-                                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
-                            </svg>
-
-                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
-                                class="bi bi-heart my-3" viewBox="0 0 16 16">
-                                <path
-                                    d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
-                            </svg>
-                        </div>
-                    </div>
+                    </a>
                     <!-- card 6 -->
-                    <div class="card text-center position-relative">
-                        <div class="card-img">
-                            <img src="assets/media/home/card-section/card6.png" alt="cardimage" decoding="async"
-                                loading="lazy">
+                    <a href="/product.html" class="text-decoration-none">
+                        <div class="card text-center position-relative">
+                            <div class="card-img">
+                                <img src="assets/media/home/card-section/card6.png" alt="cardimage" decoding="async"
+                                    loading="lazy">
+                            </div>
+                            <div class="new-badge">-18%</div>
+                            <h4 class="chocolate-p my-1 p-0">Premium Tea - প্রিমিয়াম চা </h4>
+                            <p class="price text-center mb-2 p-0">৳ 400 - ৳ 800 </p>
+                            <div>
+                                <button class="card-btn card-btn-completed"></button>
+                            </div>
+                            <div class="hover-icon position-absolute d-flex flex-column">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                                    class="bi bi-search" viewBox="0 0 16 16">
+                                    <path
+                                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                                </svg>
+    
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                                    class="bi bi-heart my-3" viewBox="0 0 16 16">
+                                    <path
+                                        d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+                                </svg>
+                            </div>
                         </div>
-                        <div class="new-badge">-18%</div>
-                        <h4 class="chocolate-p my-1 p-0">Premium Tea - প্রিমিয়াম চা </h4>
-                        <p class="price text-center mb-2 p-0">৳ 400 - ৳ 800 </p>
-                        <div>
-                            <button class="card-btn card-btn-completed"></button>
-                        </div>
-                        <div class="hover-icon position-absolute d-flex flex-column">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
-                                class="bi bi-search" viewBox="0 0 16 16">
-                                <path
-                                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
-                            </svg>
-
-                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
-                                class="bi bi-heart my-3" viewBox="0 0 16 16">
-                                <path
-                                    d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
-                            </svg>
-                        </div>
-                    </div>
+                    </a>
                     <!-- card 7 -->
-                    <div class="card text-center position-relative">
-                        <div class="card-img">
-                            <img src="assets/media/home/card-section/card7.png" alt="cardimage" decoding="async"
-                                loading="lazy">
+                    <a href="/product.html" class="text-decoration-none">
+                        <div class="card text-center position-relative">
+                            <div class="card-img">
+                                <img src="assets/media/home/card-section/card7.png" alt="cardimage" decoding="async"
+                                    loading="lazy">
+                            </div>
+                            <div class="persent-badge">New</div>
+                            <h4 class="chocolate-p my-1 p-0">Mustard Oil - ঘানি ভাঁঙ্গা সরিষার তেল</h4>
+                            <p class="price text-center mb-2 p-0">৳ 290 - ৳ 1350 </p>
+                            <div>
+                                <button class="card-btn card-btn-completed"></button>
+                            </div>
+                            <div class="hover-icon position-absolute d-flex flex-column">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                                    class="bi bi-search" viewBox="0 0 16 16">
+                                    <path
+                                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                                </svg>
+    
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                                    class="bi bi-heart my-3" viewBox="0 0 16 16">
+                                    <path
+                                        d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+                                </svg>
+                            </div>
                         </div>
-                        <div class="persent-badge">New</div>
-                        <h4 class="chocolate-p my-1 p-0">Mustard Oil - ঘানি ভাঁঙ্গা সরিষার তেল</h4>
-                        <p class="price text-center mb-2 p-0">৳ 290 - ৳ 1350 </p>
-                        <div>
-                            <button class="card-btn card-btn-completed"></button>
-                        </div>
-                        <div class="hover-icon position-absolute d-flex flex-column">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
-                                class="bi bi-search" viewBox="0 0 16 16">
-                                <path
-                                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
-                            </svg>
-
-                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
-                                class="bi bi-heart my-3" viewBox="0 0 16 16">
-                                <path
-                                    d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
-                            </svg>
-                        </div>
-                    </div>
+                    </a>
                     <!-- card 8 -->
-                    <div class="card text-center position-relative">
-                        <div class="card-img">
-                            <img src="assets/media/home/card-section/card8.png" alt="cardimage" decoding="async"
-                                loading="lazy">
+                    <a href="/product.html" class="text-decoration-none">
+                        <div class="card text-center position-relative">
+                            <div class="card-img">
+                                <img src="assets/media/home/card-section/card8.png" alt="cardimage" decoding="async"
+                                    loading="lazy">
+                            </div>
+                            <div class="new-badge">-11%</div>
+                            <h4 class="chocolate-p my-1 p-0">Black Rice - কালো চাল</h4>
+                            <p class="price text-center mb-2 p-0">৳ 200 - ৳ 520 </p>
+                            <div>
+                                <button class="card-btn card-btn-completed"></button>
+                            </div>
+                            <div class="hover-icon position-absolute d-flex flex-column">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                                    class="bi bi-search" viewBox="0 0 16 16">
+                                    <path
+                                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                                </svg>
+    
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                                    class="bi bi-heart my-3" viewBox="0 0 16 16">
+                                    <path
+                                        d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+                                </svg>
+                            </div>
                         </div>
-                        <div class="new-badge">-11%</div>
-                        <h4 class="chocolate-p my-1 p-0">Black Rice - কালো চাল</h4>
-                        <p class="price text-center mb-2 p-0">৳ 200 - ৳ 520 </p>
-                        <div>
-                            <button class="card-btn card-btn-completed"></button>
-                        </div>
-                        <div class="hover-icon position-absolute d-flex flex-column">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
-                                class="bi bi-search" viewBox="0 0 16 16">
-                                <path
-                                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
-                            </svg>
-
-                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
-                                class="bi bi-heart my-3" viewBox="0 0 16 16">
-                                <path
-                                    d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
-                            </svg>
-                        </div>
-                    </div>
+                    </a>
                     <!-- card 9 -->
-                    <div class="card text-center position-relative">
-                        <div class="card-img">
-                            <img src="assets/media/home/card-section/card9.png" alt="cardimage" decoding="async"
-                                loading="lazy">
+                    <a href="/product.html" class="text-decoration-none">
+                        <div class="card text-center position-relative">
+                            <div class="card-img">
+                                <img src="assets/media/home/card-section/card9.png" alt="cardimage" decoding="async"
+                                    loading="lazy">
+                            </div>
+                            <div class="new-badge">-11%</div>
+                            <h4 class="chocolate-p my-1 p-0">Rice Powder - চালের গুঁড়া</h4>
+                            <p class="price text-center mb-2 p-0">৳ 100</p>
+                            <div>
+                                <button class="card-btn card-btn-completed"></button>
+                            </div>
+                            <div class="hover-icon position-absolute d-flex flex-column">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                                    class="bi bi-search" viewBox="0 0 16 16">
+                                    <path
+                                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                                </svg>
+    
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                                    class="bi bi-heart my-3" viewBox="0 0 16 16">
+                                    <path
+                                        d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+                                </svg>
+                            </div>
                         </div>
-                        <div class="new-badge">-11%</div>
-                        <h4 class="chocolate-p my-1 p-0">Rice Powder - চালের গুঁড়া</h4>
-                        <p class="price text-center mb-2 p-0">৳ 100</p>
-                        <div>
-                            <button class="card-btn card-btn-completed"></button>
-                        </div>
-                        <div class="hover-icon position-absolute d-flex flex-column">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
-                                class="bi bi-search" viewBox="0 0 16 16">
-                                <path
-                                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
-                            </svg>
-
-                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
-                                class="bi bi-heart my-3" viewBox="0 0 16 16">
-                                <path
-                                    d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
-                            </svg>
-                        </div>
-                    </div>
+                    </a>
                     <!-- card 10 -->
-                    <div class="card text-center position-relative">
-                        <div class="card-img">
-                            <img src="assets/media/home/card-section/black-rice.png" alt="cardimage" decoding="async"
-                                loading="lazy">
+                    <a href="/product.html" class="text-decoration-none">
+                        <div class="card text-center position-relative">
+                            <div class="card-img">
+                                <img src="assets/media/home/card-section/black-rice.png" alt="cardimage" decoding="async"
+                                    loading="lazy">
+                            </div>
+                            <div class="persent-badge">New</div>
+                            <h4 class="chocolate-p my-1 p-0">Brown Atta - লাল আটা</h4>
+                            <p class="price text-center mb-2 p-0">৳ 90</p>
+                            <div>
+                                <button class="card-btn card-btn-completed"></button>
+                            </div>
+                            <div class="hover-icon position-absolute d-flex flex-column">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                                    class="bi bi-search" viewBox="0 0 16 16">
+                                    <path
+                                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                                </svg>
+    
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                                    class="bi bi-heart my-3" viewBox="0 0 16 16">
+                                    <path
+                                        d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+                                </svg>
+                            </div>
                         </div>
-                        <div class="persent-badge">New</div>
-                        <h4 class="chocolate-p my-1 p-0">Brown Atta - লাল আটা</h4>
-                        <p class="price text-center mb-2 p-0">৳ 90</p>
-                        <div>
-                            <button class="card-btn card-btn-completed"></button>
-                        </div>
-                        <div class="hover-icon position-absolute d-flex flex-column">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
-                                class="bi bi-search" viewBox="0 0 16 16">
-                                <path
-                                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
-                            </svg>
-
-                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
-                                class="bi bi-heart my-3" viewBox="0 0 16 16">
-                                <path
-                                    d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
-                            </svg>
-                        </div>
-                    </div>
+                    </a>
                 </div>
                 <!-- swiper with small device end -->
             </div>
@@ -1083,7 +1123,7 @@
 
                                 <p class="m-0 p-0 improve-text">রয়েছে প্রচুর পরিমাণে প্রোটিন যা পেশী গঠনে ভূমিকা রাখে </p>
                             </div>
-                            <button class="order-btn my-3">অর্ডার করুন</button>
+                            <a href="/store.html" class="order-btn my-3 text-decoration-none">অর্ডার করুন</a>
                         </div>
                     </div>
                 </div>
@@ -1230,7 +1270,7 @@
                                         জন্য অপরিহার্য।</p>
                                 </div>
                             </div>
-                            <button class="order-btn my-3">SHOP NOW</button>
+                            <a href="/product.html" class="order-btn my-3 text-decoration-none">SHOP NOW</a>
                         </div>
                     </div>
                 </div>
@@ -1428,39 +1468,45 @@
             <div class="blog-section">
                 <h2 class="blog-header text-center">BLOGS</h2>
                 <div class="blog-container my-5">
-                    <div class="card-box">
-                        <img src="assets/media/home/blog-section/blogcard1.png" alt="cardImage" class="img-fluid"
-                            loading="lazy" decoding="async">
-                        <div class="card-text p-3">
-                            <p class="card-date">04 Sep 2024</p>
-                            <h3 class="mousumi-achar">বেলোনা ঘি এর বৈশিষ্ট্য</h3>
-                            <p class="card-texts">আপনি কি জানেন যে আপনি যে ঘি গ্রহণ করেন তার গুণমান তার পুষ্টিগুণ এবং
-                                স্বাস্থ্য উপকারিতাকে ব্যাপকভাবে সংজ্ঞায়িত করে? গুণমান নিশ্চিত করতে...</p>
-                            <h4>CONTINUE READING</h4>
+                    <a href="/single-ghee.html" class="text-decoration-none">
+                        <div class="card-box">
+                            <img src="assets/media/home/blog-section/blogcard1.png" alt="cardImage" class="img-fluid"
+                                loading="lazy" decoding="async">
+                            <div class="card-text p-3">
+                                <p class="card-date">04 Sep 2024</p>
+                                <h3 class="mousumi-achar">বেলোনা ঘি এর বৈশিষ্ট্য</h3>
+                                <p class="card-texts">আপনি কি জানেন যে আপনি যে ঘি গ্রহণ করেন তার গুণমান তার পুষ্টিগুণ এবং
+                                    স্বাস্থ্য উপকারিতাকে ব্যাপকভাবে সংজ্ঞায়িত করে? গুণমান নিশ্চিত করতে...</p>
+                                <h4>CONTINUE READING</h4>
+                            </div>
                         </div>
-                    </div>
-                    <div class="card-box">
-                        <img src="assets/media/home/blog-section/blogcard2.png" alt="cardImage" class="img-fluid"
-                            loading="lazy" decoding="async">
-                        <div class="card-text p-3">
-                            <p class="card-date">04 Sep 2024</p>
-                            <h3 class="mousumi-achar">মৌসুমি আচার</h3>
-                            <p class="card-texts">আপনি কি জানেন যে আপনি যে ঘি গ্রহণ করেন তার গুণমান তার পুষ্টিগুণ এবং
-                                স্বাস্থ্য উপকারিতাকে ব্যাপকভাবে সংজ্ঞায়িত করে? গুণমান নিশ্চিত করতে...</p>
-                            <h4>CONTINUE READING</h4>
+                    </a>
+                    <a href="/single-ghee.html" class="text-decoration-none">
+                        <div class="card-box">
+                            <img src="assets/media/home/blog-section/blogcard2.png" alt="cardImage" class="img-fluid"
+                                loading="lazy" decoding="async">
+                            <div class="card-text p-3">
+                                <p class="card-date">04 Sep 2024</p>
+                                <h3 class="mousumi-achar">মৌসুমি আচার</h3>
+                                <p class="card-texts">আপনি কি জানেন যে আপনি যে ঘি গ্রহণ করেন তার গুণমান তার পুষ্টিগুণ এবং
+                                    স্বাস্থ্য উপকারিতাকে ব্যাপকভাবে সংজ্ঞায়িত করে? গুণমান নিশ্চিত করতে...</p>
+                                <h4>CONTINUE READING</h4>
+                            </div>
                         </div>
-                    </div>
-                    <div class="card-box">
-                        <img src="assets/media/home/blog-section/blogcard3.png" alt="cardImage" class="img-fluid"
-                            loading="lazy" decoding="async">
-                        <div class="card-text p-3">
-                            <p class="card-date">29 Dec 2023</p>
-                            <h3 class="mousumi-achar">প্রাকৃতিক মিষ্টান্ন এর কার্যকারিতা</h3>
-                            <p class="card-texts">গুড় হলো আখ বা খেজুর গাছ বা খেজুরের ঘন রস থেকে প্রাপ্ত একটি প্রাকৃতিক
-                                মিষ্টান্ন। একটি ঐতিহ্যগত প্রক্রিয়ার মাধ্যমে…</p>
-                            <h4>CONTINUE READING</h4>
+                    </a>
+                    <a href="/single-ghee.html" class="text-decoration-none">
+                        <div class="card-box">
+                            <img src="assets/media/home/blog-section/blogcard3.png" alt="cardImage" class="img-fluid"
+                                loading="lazy" decoding="async">
+                            <div class="card-text p-3">
+                                <p class="card-date">29 Dec 2023</p>
+                                <h3 class="mousumi-achar">প্রাকৃতিক মিষ্টান্ন এর কার্যকারিতা</h3>
+                                <p class="card-texts">গুড় হলো আখ বা খেজুর গাছ বা খেজুরের ঘন রস থেকে প্রাপ্ত একটি প্রাকৃতিক
+                                    মিষ্টান্ন। একটি ঐতিহ্যগত প্রক্রিয়ার মাধ্যমে | গুণমান নিশ্চিত করতে…</p>
+                                <h4>CONTINUE READING</h4>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
             </div>
         </section>
@@ -1611,9 +1657,9 @@
                         <div class="col-12 col-md-3 text-center text-md-start text-center">
                             <img src="assets/media/logo.png" class="img-fluid d-block mx-auto" alt="FooterLogo"
                                 loading="lazy" decoding="async">
-                            <p class="footer-text mt-3 text-center">Healthy Eats collects pure and fresh groceries
+                            <h6 class="footer-text mt-3 text-center">Healthy Eats collects pure and fresh groceries
                                 directly from core
-                                farmers and serve you to your doorstep.</p>
+                                farmers and serve you to your doorstep.</h6>
                         </div>
 
                         <!-- Links Section -->
@@ -1627,7 +1673,7 @@
                                             <path d="M13.876 8.17017L23.126 16.3393L13.876 24.5084" stroke="white"
                                                 stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
                                         </svg>
-                                        <h6 class="my-2 footer-text">Contact Us</h6>
+                                        <a href="/contact.html" class="my-2 footer-text text-decoration-none">Contact Us</a>
                                     </div>
                                     <div class="d-flex align-items-center">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="27"
@@ -1635,7 +1681,7 @@
                                             <path d="M13.875 8.22168L23.125 16.3908L13.875 24.5599" stroke="white"
                                                 stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
                                         </svg>
-                                        <h6 class="my-2 footer-text">Privacy Policy</h6>
+                                        <a href="/privacy.html" class="my-2 footer-text text-decoration-none">Privacy Policy</a>
                                     </div>
                                     <div class="d-flex align-items-center">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="27"
@@ -1643,7 +1689,7 @@
                                             <path d="M13.876 8.17017L23.126 16.3393L13.876 24.5084" stroke="white"
                                                 stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
                                         </svg>
-                                        <h6 class="my-2 footer-text">Terms of Services</h6>
+                                        <a href="" class="my-2 footer-text text-decoration-none">Terms of Services</a>
                                     </div>
                                     <div class="d-flex align-items-center">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="27"
@@ -1651,7 +1697,7 @@
                                             <path d="M13.876 8.17017L23.126 16.3393L13.876 24.5084" stroke="white"
                                                 stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
                                         </svg>
-                                        <h6 class="my-2 footer-text">Refund Policy</h6>
+                                        <a href="/privacy.html" class="my-2 footer-text text-decoration-none">Refund Policy</a>
                                     </div>
                                 </div>
                                 <div>
@@ -1661,7 +1707,7 @@
                                             <path d="M13.876 8.17017L23.126 16.3393L13.876 24.5084" stroke="white"
                                                 stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
                                         </svg>
-                                        <h6 class="my-2 footer-text">Contact Us</h6>
+                                        <a href="/contact.html" class="my-2 footer-text text-decoration-none">Contact Us</a>
                                     </div>
                                     <div class="d-flex align-items-center">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="27"
@@ -1669,7 +1715,7 @@
                                             <path d="M13.875 8.22168L23.125 16.3908L13.875 24.5599" stroke="white"
                                                 stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
                                         </svg>
-                                        <h6 class="my-2 footer-text">Privacy Policy</h6>
+                                        <a href="/privacy.html" class="my-2 footer-text text-decoration-none">Privacy Policy</a>
                                     </div>
                                     <div class="d-flex align-items-center">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="27"
@@ -1677,7 +1723,7 @@
                                             <path d="M13.876 8.17017L23.126 16.3393L13.876 24.5084" stroke="white"
                                                 stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
                                         </svg>
-                                        <h6 class="my-2 footer-text">Terms of Services</h6>
+                                        <a href="/privacy.html" class="my-2 footer-text text-decoration-none">Terms of Services</a>
                                     </div>
                                     <div class="d-flex align-items-center">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="27"
@@ -1685,7 +1731,7 @@
                                             <path d="M13.876 8.17017L23.126 16.3393L13.876 24.5084" stroke="white"
                                                 stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
                                         </svg>
-                                        <h6 class="my-2 footer-text">Refund Policy</h6>
+                                        <a href="/privacy.html" class="my-2 footer-text text-decoration-none">Refund Policy</a>
                                     </div>
                                 </div>
                             </div>
