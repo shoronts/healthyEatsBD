@@ -888,6 +888,20 @@
       .karon-section .main-container .text-content {
         padding-top: 20px;
       }
+      .main-heading {
+        font-size: 2.5rem;
+      }
+
+
+      .benefits-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+      }
+
+      .benefit {
+        width: 80%;
+      }
 }
 
 @media screen and (max-width:600px) {
@@ -935,6 +949,27 @@
     .tags-container {
         text-align: start !important;
     }
+    .product-section .product-card .product-image {
+        max-width: 180px;
+        height: 180px;
+      }
+
+      .main-heading {
+        font-size: 1.6rem;
+      }
+
+      .product img {
+        max-width: 120px;
+      }
+
+      .comparison-item {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .feature {
+        width: 100%;
+      }
 }
 
 @media (max-width:512px) {

@@ -404,6 +404,31 @@ input:focus {
   font-weight: 600;
   line-height: 16px;
   }
+ /* lendig page css  */
+ .bengali-text {
+  font-family: 'Noto Sans Bengali', sans-serif;
+}
+
+.text-warning {
+  color: var(--yellow) !important;
+}
+
+.cards {
+  background-color: #278855;
+}
+.order-btn {
+  padding: 25px 90px;
+  border: 12px solid white;
+  font-size: 2rem;
+  background-color: #216F48;
+  border-color: #ffffff;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
   @media screen and (max-width:1024px) {
     .bottom-nav {
         display: block;
