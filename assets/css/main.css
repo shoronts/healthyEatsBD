@@ -480,7 +480,7 @@ main .loved-product {
 main .loved-product img {
     max-width: 317px;
 }
-main .product-section {
+main main .product-section {
     display: block;
 }
 
@@ -742,7 +742,7 @@ main .ghee-section .ghee-container .ghee-text-content .ghee-upokarita .ghee-larg
     width: 100px;
 }
 main .ghee-section .ghee-container .ghee-text-content .order-btn {
-    padding: 14px 25px;
+    padding: 12px 30px;
     justify-content: flex-end;
     color: var(--besic-white);
     font-family: "Inter";
@@ -846,7 +846,7 @@ main .client-review-section .review-swiper-container .swiper .swiper-wrapper .sw
     display: flex;
     width: 600px;
     padding: 20px 20px;
-    height: 283px;
+    height: 200px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -868,7 +868,7 @@ main .client-review-section .review-swiper-container .swiper .swiper-wrapper .sw
     color: var(--deep-grey-text);
     font-family: "Inter";
     font-size: 14px;
-    font-weight: 500;
+    font-weight: 600;
     line-height: 20px;
 }
 
@@ -891,6 +891,7 @@ main .blog-section {
 main .blog-section .blog-container {
     display:grid;
     grid-template-columns: repeat(3, 1fr);
+    align-items: stretch;
     gap: 20px;
 }
 main .blog-section .blog-header {
@@ -904,11 +905,9 @@ main .blog-section .blog-header {
 main .blog-section .card-box {
     display: flex;
     max-width: auto;
-    height: auto;
-    padding-bottom: 30px;
+    height: 100%;
     flex-direction: column;
     align-items: center;
-    gap: 44.199px;
     flex-shrink: 0;
     border-radius: 12px;
     background: var(--besic-white);
@@ -932,6 +931,7 @@ main .blog-section .card-box .card-text .mousumi-achar {
 
 main .blog-section .card-box .card-text .card-texts {
     font-size: 14px;
+    flex-grow: 1;
     font-family: "lato";
     line-height: 22px;
     color: rgb(119, 119, 119);
@@ -2293,7 +2293,11 @@ main .wish-container .wish-content .wish-btn {
 }
 /* wish css end  */
 /* lendig page css start  */
-.cards .card-container .product-container {
+.lending-page {
+    font-family: 'Noto Sans Bengali', sans-serif;
+    background-color: #f5f5f5;
+  }
+main .cards .card-container .product-container {
     border-radius: 1rem;
     padding: 1rem;
     margin-bottom: 1.5rem;
@@ -2301,13 +2305,13 @@ main .wish-container .wish-content .wish-btn {
     text-align: center;
   }
 
-  .cards .card-container .product-container .product-image {
+  main .cards .card-container .product-container .product-image {
     max-width: 100%;
     height: auto;
   }
 
 
-  .cards .card-container .text-section .bengali-text {
+  main .cards .card-container .text-section .bengali-text {
     font-size: 100px;
     font-weight: 700;
     margin-bottom: 0;
@@ -2315,7 +2319,7 @@ main .wish-container .wish-content .wish-btn {
     line-height: 100px;
   }
 
-  .cards .card-container .text-section .secondary-text {
+  main .cards .card-container .text-section .secondary-text {
     font-size: 60px;
     font-weight: 600;
     color: white;
@@ -2324,36 +2328,36 @@ main .wish-container .wish-content .wish-btn {
 
 
 
-  .cards .card-container .text-section {
+  main .cards .card-container .text-section {
     text-align: center;
     margin-bottom: 1.5rem;
   }
 
-  .cards .card-container .landing-logo img {
+  main .cards .card-container .landing-logo img {
     width: 400px;
     height: auto;
   }
 
 
   /* // Chamos Section */
-  .chamos-section {
+  main .chamos-section {
     background-color: var(--background-mint);
     min-height: 100vh;
     padding: 20px;
     overflow-x: hidden;
   }
 
-  .chamos-section .main-container {
+  main .chamos-section .main-container {
     max-width: 1280px;
     margin: 0 auto;
     padding: 20px;
   }
 
-  .chamos-section .main-container .two-size {
+  main .chamos-section .main-container .two-size {
     font-size: 160px !important;
   }
 
-  .chamos-section .main-container .heading-container {
+  main .chamos-section .main-container .heading-container {
     text-align: center;
     margin-bottom: 30px;
     font-size: 100px;
@@ -2363,7 +2367,7 @@ main .wish-container .wish-content .wish-btn {
     line-height: 100px;
   }
 
-  .chamos-section .main-container .benefit {
+  main .chamos-section .main-container .benefit {
     font-size: 60px;
     line-height: 60px;
     width: 40%;
@@ -2372,32 +2376,32 @@ main .wish-container .wish-content .wish-btn {
     font-weight: 500;
   }
 
-  .chamos-section .main-container .main-heading {
+  main .chamos-section .main-container .main-heading {
     color: var(--lending-primary-green);
     font-size: 3.5rem;
     font-weight: 700;
   }
 
 
-  .chamos-section .main-container .benefits-container {
+  main .chamos-section .main-container .benefits-container {
     display: flex;
     justify-content: space-between;
     margin-top: 50px;
   }
 
-  .chamos-section .main-container .spoons-container {
+  main .chamos-section .main-container .spoons-container {
     margin-top: 80px;
     text-align: center;
   }
 
-  .chamos-section .main-container .spoons-container .spoons-image {
+  main .chamos-section .main-container .spoons-container .spoons-image {
     max-width: 400px;
     width: 100%;
     height: auto;
   }
 
   /* image and banner css  */
-  .karon-section {
+  main .karon-section {
     font-family: 'Noto Sans Bengali', sans-serif;
     background-color: var(--lending-primary-green);
     margin: 0;
@@ -2405,21 +2409,21 @@ main .wish-container .wish-content .wish-btn {
     min-height: 100vh;
   }
 
-  .karon-section .main-container {
+  main .karon-section .main-container {
     max-width: 1068px;
     margin: 0 auto;
     padding: 20px;
   }
 
-  .karon-section .main-container .text-content {
+  main .karon-section .main-container .text-content {
     max-width: 534px;
   }
 
-  .karon-section .main-container .image-container {
+  main .karon-section .main-container .image-container {
     max-width: 534px;
   }
 
-  .karon-section .main-container .frame {
+  main .karon-section .main-container .frame {
     background: white;
     border-radius: 4px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -2429,7 +2433,7 @@ main .wish-container .wish-content .wish-btn {
     width: 400px;
   }
 
-  .karon-section .main-container .frame img {
+  main .karon-section .main-container .frame img {
     padding: 10px;
     width: 400px;
     height: 450px;
@@ -2437,7 +2441,7 @@ main .wish-container .wish-content .wish-btn {
     border-radius: 2px;
   }
 
-  .karon-section .main-container .frame .pin {
+  /* main .karon-section .main-container .frame .pin {
     width: 20px;
     height: 20px;
     background: #ff4444;
@@ -2450,7 +2454,7 @@ main .wish-container .wish-content .wish-btn {
     z-index: 1;
   }
 
-  .karon-section .main-container .frame .pin::after {
+  main .karon-section .main-container .frame .pin::after {
     content: '';
     position: absolute;
     top: 50%;
@@ -2460,14 +2464,14 @@ main .wish-container .wish-content .wish-btn {
     height: 8px;
     background: rgba(255, 255, 255, 0.6);
     border-radius: 50%;
-  }
+  } */
 
-  .karon-section .main-container .text-content {
+  main .karon-section .main-container .text-content {
     flex-grow: 1;
     padding-top: 15px;
   }
 
-  .karon-section .pinat-batter-header {
+  main .karon-section .pinat-batter-header {
     font-size: 100px;
     font-weight: 700;
     margin-bottom: 0;
@@ -2475,17 +2479,17 @@ main .wish-container .wish-content .wish-btn {
     line-height: 110px;
   }
 
-  .karon-section .heading {
+  main .karon-section .heading {
     color: var(--text-gold);
   }
 
-  .karon-section .main-container .text-content .heading {
+  main .karon-section .main-container .text-content .heading {
     font-size: 2rem;
     line-height: 1.1;
     font-weight: 600;
   }
 
-  .karon-section .main-container .text-content .description {
+  main .karon-section .main-container .text-content .description {
     color: white;
     font-size: 2rem;
     line-height: 1.1;
@@ -2493,23 +2497,23 @@ main .wish-container .wish-content .wish-btn {
     margin: 0;
   }
 
-  .karon-section .main-container .info-section:nth-child(even) .frame {
+  main .karon-section .main-container .info-section:nth-child(even) .frame {
     transform: rotate(10deg);
   }
 
 
   /* product css  */
-  .product-section {
+  main .product-section {
     background-color: #f5f5e6;
     font-family: Arial, sans-serif;
   }
 
-  .product-section .header-title {
+  main .product-section .header-title {
     text-align: center;
     margin-bottom: 40px;
   }
 
-  .product-section .header-title h1 {
+  main .product-section .header-title h1 {
     color: #0a7c3e;
     font-size: 3.5rem;
     font-weight: bold;
@@ -2518,12 +2522,12 @@ main .wish-container .wish-content .wish-btn {
   }
 
 
-  .product-section .product-card {
+  main .product-section .product-card {
     text-align: center;
     margin-bottom: 30px;
   }
 
-  .product-section .product-card .product-image {
+  main .product-section .product-card .product-image {
     max-width: 250px;
     height: 250px;
     border-radius: 50%;
@@ -2536,13 +2540,13 @@ main .wish-container .wish-content .wish-btn {
     justify-content: center;
   }
 
-  .product-section .product-card .product-image img {
+  main .product-section .product-card .product-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
 
-  .product-section .product-title {
+  main .product-section .product-title {
     font-size: 1.4rem;
     font-weight: 500;
     color: #222;
@@ -2552,12 +2556,12 @@ main .wish-container .wish-content .wish-btn {
     line-height: 1.3;
   }
 
-  .product-section .product-container {
+  main .product-section .product-container {
     max-width: 1068px;
     margin: 0 auto;
   }
 
-  .product-section .header-title .icon-layer {
+  main .product-section .header-title .icon-layer {
     color: #0a7c3e;
     font-size: 3.5rem;
     margin-bottom: 10px;
@@ -2565,18 +2569,18 @@ main .wish-container .wish-content .wish-btn {
 
   /* last css section  */
 
-  .last-section {
+  main .last-section {
     font-family: 'Noto Sans Bengali', sans-serif;
     background-color: var(--background-cream);
     min-height: 100vh;
   }
 
-  .last-section .main-container {
+  main .last-section .main-container {
     max-width: 1068px;
     margin: 0 auto;
   }
 
-  .last-section .main-container .main-heading {
+  main .last-section .main-container .main-heading {
     color: var(--lending-primary-green);
     font-size: 3.5rem;
     font-weight: 700;
@@ -2585,29 +2589,29 @@ main .wish-container .wish-content .wish-btn {
     line-height: 1;
   }
 
-  .last-section .main-container .products-container {
+  main .last-section .main-container .products-container {
     display: flex;
     justify-content: space-between;
     margin-bottom: 30px;
   }
 
-  .last-section .main-container .products-container .product {
+  main .last-section .main-container .products-container .product {
     text-align: center;
     width: 45%;
   }
 
-  .last-section .main-container .products-container .product img {
+  main .last-section .main-container .products-container .product img {
     max-width: 150px;
     height: auto;
     margin-bottom: 15px;
   }
 
-  .last-section .main-container .products-container .product .product-descrpton {
+  main .last-section .main-container .products-container .product .product-descrpton {
     font-size: 1.9rem;
     font-weight: 600px;
   }
 
-  .last-section .main-container .products-container .product .product-name {
+  main .last-section .main-container .products-container .product .product-name {
     color: var(--lending-primary-green);
     font-size: 2.2rem;
     font-weight: 700;
@@ -2619,7 +2623,7 @@ main .wish-container .wish-content .wish-btn {
     margin: 0 auto;
   }
 
-  .last-section .main-container .feature {
+  main .last-section .main-container .feature {
     padding: 15px;
     border-radius: 8px;
     display: flex;
@@ -2629,7 +2633,7 @@ main .wish-container .wish-content .wish-btn {
     margin-top: 15px;
   }
 
-  .last-section .main-container .check-icon {
+  main .last-section .main-container .check-icon {
     width: 38px;
     height: 38px;
     border-radius: 50%;
@@ -2640,21 +2644,21 @@ main .wish-container .wish-content .wish-btn {
     flex-shrink: 0;
   }
 
-  .last-section .main-container .check-icon.positive {
+  main .last-section .main-container .check-icon.positive {
     background-color: var(--check-green);
   }
 
-  .last-section .main-container .check-icon.negative {
+  main .last-section .main-container .check-icon.negative {
     background-color: var(--cross-red);
   }
 
-  .last-section .main-container .feature-text {
+  main .last-section .main-container .feature-text {
     font-size: 1.7rem;
     margin: 0;
     font-weight: 500;
   }
 
-  .last-section .main-container .payment-info {
+  main .last-section .main-container .payment-info {
     border: 2px solid var(--lending-primary-green);
     border-radius: 10px;
     padding: 15px;
@@ -2665,20 +2669,20 @@ main .wish-container .wish-content .wish-btn {
     gap: 15px;
   }
 
-  .last-section .main-container .payment-icon {
+  main .last-section .main-container .payment-icon {
     width: 40px;
     height: 40px;
     flex-shrink: 0;
   }
 
-  .last-section .main-container .payment-text {
+  main .last-section .main-container .payment-text {
     color: var(--lending-primary-green);
     font-size: 1.1rem;
     margin: 0;
     line-height: 1.3;
   }
 
-  .last-section .main-container .order-button {
+  main .last-section .main-container .order-button {
     display: block;
     width: 200px;
     margin: 30px auto;
@@ -2694,16 +2698,16 @@ main .wish-container .wish-content .wish-btn {
     text-decoration: none;
   }
 
-  .last-section .main-container .order-button:hover {
+  main .last-section .main-container .order-button:hover {
     background-color: #0a4a27;
     color: white;
   }
 /* landing css end  */
 /* checkout css start  */
-.checkout-section {
+main .checkout-section {
     background-color: #fff;
 }
-.checkout-section .checkout-container {
+main .checkout-section .checkout-container {
     max-width: 1280px;
     margin: 0 auto;
     padding: 2rem 1rem;
@@ -2716,13 +2720,13 @@ main .wish-container .wish-content .wish-btn {
     display: block;
 }
 
-.checkout-section .checkout-container .checkout-steps {
+main .checkout-section .checkout-container .checkout-steps {
     display: inline-flex;
     align-items: center;
     padding-bottom: 0.5rem;
 }
 
-.checkout-section .checkout-container .step {
+main .checkout-section .checkout-container .step {
     font-weight: 600;
     color: #777;
     text-decoration: none;
@@ -2730,18 +2734,18 @@ main .wish-container .wish-content .wish-btn {
     cursor: pointer;
 }
 
-.checkout-section .checkout-container .step.active {
+main .checkout-section .checkout-container .step.active {
     color: var(--text-color);
     border-bottom: 2px solid var(--checkout-primary);
     margin-bottom: -0.5rem;
 }
 
-.checkout-section .checkout-container .step-arrow {
+main .checkout-section .checkout-container .step-arrow {
     margin: 0 0.5rem;
     color: #777;
 }
 
-.checkout-section .checkout-container .cart-header,
+main .checkout-section .checkout-container .cart-header,
 .order-header {
     border-bottom: 2px solid var(--border-color);
     padding-bottom: 0.75rem;
@@ -2749,13 +2753,13 @@ main .wish-container .wish-content .wish-btn {
     font-weight: 600;
 }
 
-.checkout-section .checkout-container .cart-item,
+main .checkout-section .checkout-container .cart-item,
 .order-item {
     padding: 1rem 0;
     border-bottom: 1px solid var(--border-color);
 }
 
-.checkout-section .checkout-container .remove-item {
+main .checkout-section .checkout-container .remove-item {
     background: none;
     border: none;
     font-size: 1.5rem;
@@ -2764,7 +2768,7 @@ main .wish-container .wish-content .wish-btn {
     padding: 0 0.5rem;
 }
 
-.checkout-section .checkout-container .product-prices {
+main .checkout-section .checkout-container .product-prices {
 
     font-family: "Signika";
     font-size: 16px;
@@ -2773,42 +2777,42 @@ main .wish-container .wish-content .wish-btn {
     color: rgb(36, 36, 36);
 }
 
-.checkout-section .checkout-container .product-image {
+main .checkout-section .checkout-container .product-image {
     margin: 0 1rem;
 }
 
-.checkout-section .checkout-container .cart-subtotals {
+main .checkout-section .checkout-container .cart-subtotals {
     font-size: 14px !important;
     font-family: "lato";
     line-height: 19px;
     color: rgb(36, 36, 36);
 }
 
-.checkout-section .checkout-container .product-image img {
+main .checkout-section .checkout-container .product-image img {
     height: 80px;
     width: 80px;
 }
 
-.checkout-section .checkout-container .product-name {
+main .checkout-section .checkout-container .product-name {
     font-weight: 500;
     font-size: 14px;
     line-height: 19px;
     color: rgb(51, 51, 51);
 }
 
-.checkout-section .checkout-container .quantity-selector {
+main .checkout-section .checkout-container .quantity-selector {
     display: inline-flex;
     align-items: center;
     border: 1px solid var(--border-color);
     border-radius: 4px;
 }
 
-.checkout-section .checkout-container .quantity-selector.small {
+main .checkout-section .checkout-container .quantity-selector.small {
     transform: scale(0.85);
     margin-bottom: 0.5rem;
 }
 
-.checkout-section .checkout-container .quantity-btn {
+main .checkout-section .checkout-container .quantity-btn {
     background: none;
     border: none;
     width: 30px;
@@ -2817,12 +2821,12 @@ main .wish-container .wish-content .wish-btn {
     cursor: pointer;
 }
 
-.checkout-section .checkout-container .form-control:focus {
+main .checkout-section .checkout-container .form-control:focus {
     outline: none;
     box-shadow: none;
 }
 
-.checkout-section .checkout-container .quantity-input {
+main .checkout-section .checkout-container .quantity-input {
     width: 40px;
     text-align: center;
     border: none;
@@ -2830,11 +2834,11 @@ main .wish-container .wish-content .wish-btn {
     border-right: 1px solid var(--border-color);
 }
 
-.checkout-section .checkout-container .coupon-section {
+main .checkout-section .checkout-container .coupon-section {
     margin: 2rem 0;
 }
 
-.checkout-section .checkout-container .btn-apply-coupon {
+main .checkout-section .checkout-container .btn-apply-coupon {
     background-color: var(--checkout-primary);
     color: white;
     border: none;
@@ -2844,12 +2848,12 @@ main .wish-container .wish-content .wish-btn {
     font-weight: 500;
 }
 
-.checkout-section .checkout-container .btn-apply-coupon:hover {
+main .checkout-section .checkout-container .btn-apply-coupon:hover {
     background-color: var(--checkout-primary-hover);
     color: white;
 }
 
-.checkout-section .checkout-container .cart-totals,
+main .checkout-section .checkout-container .cart-totals,
 .order-summary {
     background-color: var(--light-bg);
     border-radius: 8px;
@@ -2857,7 +2861,7 @@ main .wish-container .wish-content .wish-btn {
     margin-bottom: 2rem;
 }
 
-.checkout-section .checkout-container .totals-title,
+main .checkout-section .checkout-container .totals-title,
 .section-title {
     font-weight: 600;
     font-family: "Signika";
@@ -2865,7 +2869,7 @@ main .wish-container .wish-content .wish-btn {
     line-height: 22px;
 }
 
-.checkout-section .checkout-container .totals-title,
+main .checkout-section .checkout-container .totals-title,
 .section-order-title {
     font-weight: 600;
     font-family: "Signika";
@@ -2882,48 +2886,48 @@ main .wish-container .wish-content .wish-btn {
     color: rgb(36, 36, 36);
 }
 
-.checkout-section .checkout-container .totals-row {
+main .checkout-section .checkout-container .totals-row {
     display: flex;
     justify-content: space-between;
     padding: 0.75rem 0;
     border-bottom: 1px solid var(--border-color);
 }
 
-.checkout-section .checkout-container .totals-row.total {
+main .checkout-section .checkout-container .totals-row.total {
     font-weight: 600;
     font-size: 1.1rem;
     border-bottom: none;
 }
 
-.checkout-section .checkout-container .shipping-section {
+main .checkout-section .checkout-container .shipping-section {
     padding: 0.75rem 0;
     border-bottom: 1px solid var(--border-color);
 }
 
-.checkout-section .checkout-container .shipping-title {
+main .checkout-section .checkout-container .shipping-title {
     margin-bottom: 0.5rem;
 }
 
-.checkout-section .checkout-container .shipping-options {
+main .checkout-section .checkout-container .shipping-options {
     margin-bottom: 0.75rem;
 }
 
-.checkout-section .checkout-container .shipping-option {
+main .checkout-section .checkout-container .shipping-option {
     margin-bottom: 0.5rem;
 }
 
-.checkout-section .checkout-container .shipping-address {
+main .checkout-section .checkout-container .shipping-address {
     font-size: 0.9rem;
     margin-top: 0.5rem;
 }
 
-.checkout-section .checkout-container .change-address {
+main .checkout-section .checkout-container .change-address {
     color: var(--checkout-primary);
     margin-left: 0.5rem;
     text-decoration: none;
 }
 
-.checkout-section .checkout-container .btn-checkout,
+main .checkout-section .checkout-container .btn-checkout,
 .btn-place-order {
     background-color: var(--checkout-primary);
     color: white;
@@ -2934,13 +2938,13 @@ main .wish-container .wish-content .wish-btn {
     margin-top: 1rem;
 }
 
-.checkout-section .checkout-container .btn-checkout:hover,
+main .checkout-section .checkout-container .btn-checkout:hover,
 .btn-place-order:hover {
     background-color: var(--checkout-primary-hover);
     color: white;
 }
 
-.checkout-section .checkout-container .decorative-images {
+main .checkout-section .checkout-container .decorative-images {
     position: absolute;
     top: 0;
     left: 0;
@@ -2950,67 +2954,67 @@ main .wish-container .wish-content .wish-btn {
     z-index: -1;
 }
 
-.checkout-section .checkout-container .left-image {
+main .checkout-section .checkout-container .left-image {
     position: absolute;
     left: 0;
     top: 20px;
 }
 
-.checkout-section .checkout-container .right-image {
+main .checkout-section .checkout-container .right-image {
     position: absolute;
     right: 0;
     top: 20px;
 }
 
-.checkout-section .checkout-container .coupon-notice {
+main .checkout-section .checkout-container .coupon-notice {
     margin-bottom: 2rem;
 }
 
-.checkout-section .checkout-container .coupon-link {
+main .checkout-section .checkout-container .coupon-link {
     color: var(--checkout-primary);
     text-decoration: none;
 }
 
-.checkout-section .checkout-container .billing-details {
+main .checkout-section .checkout-container .billing-details {
     margin-bottom: 2rem;
 }
 
-.checkout-section .checkout-container .form-group {
+main .checkout-section .checkout-container .form-group {
     margin-bottom: 1.5rem;
 }
 
-.checkout-section .checkout-container .required {
+main .checkout-section .checkout-container .required {
     color: #dc3545;
 }
 
-.checkout-section .checkout-container .ship-different {
+main .checkout-section .checkout-container .ship-different {
     margin-bottom: 1.5rem;
 }
 
-.checkout-section .checkout-container .payment-method {
+main .checkout-section .checkout-container .payment-method {
     background-color: #F7F6F6;
     border: 1px solid var(--border-color);
     padding: 10px;
     margin: 1rem 0;
 }
 
-.checkout-section .checkout-container .payment-method h4 {
+main .checkout-section .checkout-container .payment-method h4 {
     margin-bottom: 0.5rem;
     font-weight: 600;
 }
 
-.checkout-section .checkout-container .payment-method p {
+main .checkout-section .checkout-container .payment-method p {
     margin-bottom: 0;
     color: #666;
 }
 
-.checkout-section .checkout-container .order-complete-container {
+main .checkout-section .checkout-container .order-complete-container {
     max-width: 800px;
     margin: 0 auto;
     text-align: center;
 }
 
-.checkout-section .checkout-container .order-subtotal,
+main .checkout-section .checkout-container .order-subtotal,
 .order-shipping,
 .order-total {
     font-size: 14px;
@@ -3020,12 +3024,12 @@ main .wish-container .wish-content .wish-btn {
     color: rgb(119, 119, 119);
 }
 
-.checkout-section .checkout-container .order-complete-icon {
+main .checkout-section .checkout-container .order-complete-icon {
     color: var(--checkout-primary);
     margin-bottom: 1rem;
 }
 
-.checkout-section .checkout-container .product-title {
+main .checkout-section .checkout-container .product-title {
     font-size: 16px;
     font-weight: 600;
     font-family: "Signika";
@@ -3033,11 +3037,11 @@ main .wish-container .wish-content .wish-btn {
     color: rgb(36, 36, 36);
 }
 
-.checkout-section .checkout-container .order-complete-title {
+main .checkout-section .checkout-container .order-complete-title {
     margin-bottom: 2rem;
 }
 
-.checkout-section .checkout-container .order-details {
+main .checkout-section .checkout-container .order-details {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -3048,55 +3052,55 @@ main .wish-container .wish-content .wish-btn {
     border-radius: 8px;
 }
 
-.checkout-section .checkout-container .order-detail-item {
+main .checkout-section .checkout-container .order-detail-item {
     display: flex;
     flex-direction: column;
 }
 
-.checkout-section .checkout-container .detail-label {
+main .checkout-section .checkout-container .detail-label {
     font-size: 0.9rem;
     color: #666;
 }
 
-.checkout-section .checkout-container .detail-value {
+main .checkout-section .checkout-container .detail-value {
     font-weight: 600;
 }
 
-.checkout-section .checkout-container .order-summary-complete,
+main .checkout-section .checkout-container .order-summary-complete,
 .customer-details {
     text-align: left;
     margin-bottom: 2rem;
 }
 
-.checkout-section .checkout-container .order-section {
+main .checkout-section .checkout-container .order-section {
     background-color: #F7F6F6;
     padding: 40px 30px;
 }
 
-.checkout-section .checkout-container .order-summary-complete h3,
+main .checkout-section .checkout-container .order-summary-complete h3,
 .customer-details h3 {
     margin-bottom: 1rem;
     font-weight: 600;
 }
 
-.checkout-section .checkout-container .order-summary {
+main .checkout-section .checkout-container .order-summary {
     background-color: #FEFEFF;
 }
 
-.checkout-section .checkout-container .order-summary-table {
+main .checkout-section .checkout-container .order-summary-table {
     border: 1px solid var(--border-color);
     border-radius: 4px;
     overflow: hidden;
 }
 
-.checkout-section .checkout-container .cash-text {
+main .checkout-section .checkout-container .cash-text {
     font-size: 14px;
     font-family: "lato";
     font-weight: 600;
     line-height: 22px;
 }
 
-.checkout-section .checkout-container .order-summary-header {
+main .checkout-section .checkout-container .order-summary-header {
     background-color: var(--light-bg);
     padding: 0.75rem;
     font-weight: 600;
@@ -3109,16 +3113,16 @@ main .wish-container .wish-content .wish-btn {
     border-bottom: 1px solid var(--border-color);
 }
 
-.checkout-section .checkout-container .order-summary-total {
+main .checkout-section .checkout-container .order-summary-total {
     padding: 0.75rem;
     font-weight: 600;
 }
 
-.checkout-section .checkout-container .customer-detail-item {
+main .checkout-section .checkout-container .customer-detail-item {
     margin-bottom: 0.5rem;
 }
 
-.checkout-section .checkout-container .btn-continue-shopping {
+main .checkout-section .checkout-container .btn-continue-shopping {
     background-color: var(--checkout-primary);
     color: white;
     border: none;
@@ -3128,17 +3132,17 @@ main .wish-container .wish-content .wish-btn {
     margin-top: 1rem;
 }
 
-.checkout-section .checkout-container .btn-continue-shopping:hover {
+main .checkout-section .checkout-container .btn-continue-shopping:hover {
     background-color: var(--checkout-primary-hover);
     color: white;
 }
 
 /* Page visibility */
-.checkout-section .checkout-container .page {
+main .checkout-section .checkout-container .page {
     display: none;
 }
 
-.checkout-section .checkout-container .page.active {
+main .checkout-section .checkout-container .page.active {
     display: block;
 }
 /* checkout css end  */

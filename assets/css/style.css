@@ -416,7 +416,8 @@ input:focus {
 .cards {
   background-color: #278855;
 }
-.order-btn {
+.lending-order-btn {
+  color: white;
   padding: 25px 90px;
   border: 12px solid white;
   font-size: 2rem;

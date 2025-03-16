@@ -55,63 +55,69 @@
         max-width: 1220px;
         margin: 0 auto;
     }
+
     /* lending css start  */
-    .cards .card-container .text-section .bengali-text {
+    main .cards .card-container .text-section .bengali-text {
         font-size: 60px !important;
         font-weight: 600;
         line-height: 60px;
-      }
+    }
 
-      .cards .card-container .text-section .secondary-text {
+    main .cards .card-container .text-section .secondary-text {
         font-size: 36px !important;
         font-weight: 500;
         line-height: 40px;
 
-      }
+    }
 
-      .chamos-section .main-container .heading-container {
+    main .chamos-section .main-container .heading-container {
         font-size: 60px;
         font-weight: 600;
         line-height: 60px;
-      }
+    }
 
-      .chamos-section .main-container .benefit {
+    main .chamos-section .main-container .benefit {
         font-size: 40px;
         line-height: 40px;
         font-weight: 500;
         width: 100%;
-      }
+    }
 
-      .karon-section .pinat-batter-header {
+    main .karon-section .pinat-batter-header {
         font-size: 60px;
         font-weight: 600;
         line-height: 60px;
-      }
-      .last-section .main-container .payment-info {
-      padding: 10px;
-      max-width: 300px;
     }
-      .last-section .main-container .products-container .product .product-descrpton {
+
+    main .last-section .main-container .payment-info {
+        padding: 10px;
+        max-width: 300px;
+    }
+
+    main .last-section .main-container .products-container .product .product-descrpton {
         font-size: 1.1rem;
         font-weight: 500px;
-      }
-    
-      .karon-section .main-container .frame {
-      transform: rotate(0deg);
-      width:100%;
     }
-    .cards .card-container .landing-logo img {
-      width: 250px !important;
+
+    main .karon-section .main-container .frame {
+        transform: rotate(0deg);
     }
-      .last-section .main-container .products-container .product .product-name {
+
+    main .cards .card-container .landing-logo img {
+        width: 250px !important;
+    }
+
+    main .last-section .main-container .products-container .product .product-name {
         color: var(--lending-primary-green);
         font-size: 1.4rem;
         font-weight: 600;
         margin: 0;
-      }
-      /* landing css end  */
+    }
+
+    /* landing css end  */
 
 }
+
 /* @media screen and (max-width:1148px) {
     header .main-navbar .desktop-menu .nav-right .search-section {
         width: 200px;
@@ -121,6 +127,7 @@
     .bottom-nav {
         display: block;
     }
+
     /* desktop Menu */
     header .main-navbar .desktop-menu {
         display: none;
@@ -148,6 +155,7 @@
         font-size: 10px;
         line-height: 26px;
     }
+
     main .hero-container .swiper-container {
         height: 260px;
         /* Define the height explicitly */
@@ -401,60 +409,62 @@
         font-weight: 600;
         line-height: 42px;
     }
+
     /* checkout css start  */
-    .checkout-section .checkout-container .order-details {
+    main .checkout-section .checkout-container .order-details {
         flex-direction: column;
         align-items: center;
     }
 
-    .checkout-section .checkout-container .order-detail-item {
+    main .checkout-section .checkout-container .order-detail-item {
         width: 100%;
         flex-direction: row;
         justify-content: space-between;
     }
 
-    .checkout-section .checkout-container .checkout-header {
+    main .checkout-section .checkout-container .checkout-header {
         display: none;
     }
 }
 
 @media (max-width: 767px) {
-    .checkout-section .checkout-container .checkout-steps {
+    main .checkout-section .checkout-container .checkout-steps {
         flex-direction: column;
         border-bottom: none;
     }
 
-    .checkout-section .checkout-container .step {
+    main .checkout-section .checkout-container .step {
         margin-bottom: 0.5rem;
     }
 
-    .checkout-section .checkout-container .order-section {
+    main .checkout-section .checkout-container .order-section {
         background-color: #F7F6F6;
         padding: 20px 10px;
     }
 
-    .checkout-section .checkout-container .step-arrow {
+    main .checkout-section .checkout-container .step-arrow {
         transform: rotate(90deg);
         margin: 0.5rem 0;
     }
 
-    .checkout-section .checkout-container .cart-header,
+    main .checkout-section .checkout-container .cart-header,
     .order-header {
         display: none;
     }
 
-    .checkout-section .checkout-container .cart-item,
+    main .checkout-section .checkout-container .cart-item,
     .order-item {
         padding: 1.5rem 0;
     }
 
-    .checkout-section .checkout-container .product-name {
+    main .checkout-section .checkout-container .product-name {
         font-size: 0.9rem;
     }
 
-    .checkout-section .checkout-container .decorative-images {
+    main .checkout-section .checkout-container .decorative-images {
         display: none;
     }
+
     /* checkout css end  */
 }
 
@@ -590,13 +600,10 @@
         text-align: center;
         font-size: 18px !important;
         background: var(--besic-white);
-        display: flex;
-        justify-content: center;
-        align-items: center;
     }
 
     main .client-review-section .review-swiper-container .swiper .swiper-wrapper .swiper-slide .review-card .review-text {
-        font-size: 10px;
+        font-size: 12px;
         line-height: 15px;
     }
 
@@ -622,8 +629,8 @@
 
     main .client-review-section .review-swiper-container .swiper .swiper-wrapper .swiper-slide .review-card {
         width: 100%;
-        padding: 20px 30px;
-        height: 283px;
+        padding: 20px 40px;
+        height: 200px;
         gap: 12px;
     }
 
@@ -645,7 +652,7 @@
     }
 
     main .blog-section .card-box img {
-        width: 100%;
+        width: 100% !important;
         height: auto;
     }
 
@@ -757,151 +764,154 @@
     main .blog-container .category-tag {
         left: 35%;
     }
+
     /* lending css  */
-    .cards .card-container .text-section .bengali-text {
+    main .cards .card-container .text-section .bengali-text {
         font-size: 40px;
         font-weight: 500;
         line-height: 60px;
-      }
+    }
 
-      .cards .card-container .text-section .secondary-text {
+    main .cards .card-container .text-section .secondary-text {
         font-size: 30px !important;
         font-weight: 400;
         line-height: 30px;
 
-      }
+    }
 
-      .chamos-section .main-container .heading-container {
+    main .chamos-section .main-container .heading-container {
         font-size: 40px;
         font-weight: 500;
         line-height: 40px;
-      }
+    }
 
-      .order-btn {
+    .lending-order-btn {
         padding: 15px 60px;
         border: 4px solid white;
         font-size: 1.3rem;
-      }
+    }
 
-      .chamos-section .main-container .benefit {
+    main .chamos-section .main-container .benefit {
         font-size: 30px;
         line-height: 30px;
         font-weight: 400;
-      }
+    }
 
-      .karon-section .pinat-batter-header {
+    main .karon-section .pinat-batter-header {
         font-size: 40px;
         font-weight: 500;
         line-height: 50px;
-      }
+    }
 
-      .product-section .product-title {
+    main .product-section .product-title {
         font-size: 1.1rem;
         font-weight: 500;
         line-height: 1;
-      }
+    }
 
-      .product-section .header-title h1 {
+    main .product-section .header-title h1 {
         font-size: 2.5rem;
         font-weight: 600;
         margin-bottom: 0;
         line-height: 1.1;
-      }
+    }
 
-      .last-section .main-container .check-icon {
+    main .last-section .main-container .check-icon {
         width: 28px;
         height: 28px;
-      }
-
-      .last-section .main-container .feature-text {
+    }
+    .comparison-container {
+        max-width: 90%;
+    }
+    main .last-section .main-container .feature-text {
         font-size: 1rem;
         margin: 0;
         font-weight: 400;
-      }
-
-      .karon-section .main-container {
-      padding: 5px;
+    }
+    main .last-section .main-container .products-container {
+        margin-bottom: 0px;
     }
 
-    .karon-section .main-container .text-content {
-      max-width: 100%;
+    main .karon-section .main-container {
+        padding: 5px;
     }
 
-    .karon-section .main-container .image-container {
-      max-width: 100%;
+    main .karon-section .main-container .text-content {
+
+        max-width: 100%;
     }
 
-    .karon-section .main-container .frame {
-      transform: rotate(0deg);
-      max-width: 100%;
+    main .karon-section .main-container .frame {
+        transform: rotate(0deg);
     }
 
-    .karon-section .main-container .frame img {
-      padding: 10px;
-      width: 100%;
-      height: 350px;
-      object-fit: cover;
-      border-radius: 2px;
+    main .karon-section .main-container .frame img {
+        padding: 10px;
+        /* max-width: 400px !important; */
+        height: 350px;
+        object-fit: cover;
+        border-radius: 2px;
     }
 
-    .karon-section .main-container .text-content {
-      flex-grow: 1;
-      padding-top: 15px;
+    main .karon-section .main-container .text-content {
+        flex-grow: 1;
+        padding-top: 15px;
     }
 
-    .karon-section .heading {
-      color: var(--text-gold);
+    main .karon-section .heading {
+        color: var(--text-gold);
     }
 
-    .karon-section .main-container .text-content .heading {
-      font-size: 2rem;
-      line-height: 1.1;
-      font-weight: 600;
+    main .karon-section .main-container .text-content .heading {
+        font-size: 2rem;
+        line-height: 1.1;
+        font-weight: 500;
+        text-align: center;
     }
 
-    .karon-section .main-container .text-content .description {
-      color: white;
-      font-size: 2rem;
-      line-height: 1.1;
-      font-weight: 600;
-      margin: 0;
+    main .karon-section .main-container .text-content .description {
+        color: white;
+        font-size: 2rem;
+        line-height: 1.1;
+        font-weight: 500;
+        margin: 0;
+        text-align: center;
     }
 
-    .karon-section .main-container .info-section:nth-child(even) .frame {
-      transform: rotate(10deg);
+    main .karon-section .main-container .info-section:nth-child(even) .frame {
+        transform: rotate(10deg);
     }
-    .chamos-section .main-container .benefit {
-      font-size: 40px !important;
-      line-height: 40px;
-      width: 100%;
+
+    main .chamos-section .main-container .benefit {
+        font-size: 40px !important;
+        line-height: 40px;
+        width: 100%;
     }
-    .karon-section .main-container .info-section {
+
+    main .karon-section .main-container .info-section {
         flex-direction: column;
         align-items: center;
         text-align: center;
-      }
+    }
 
-      .karon-section .main-container .image-container {
-        width: 180px;
-      }
-
-      .karon-section .main-container .text-content {
+    main .karon-section .main-container .text-content {
         padding-top: 20px;
-      }
-      .main-heading {
+    }
+
+    .main-heading {
         font-size: 2.5rem;
-      }
+    }
 
 
-      .benefits-container {
+    .benefits-container {
         flex-direction: column;
         align-items: center;
         gap: 30px;
-      }
+    }
 
-      .benefit {
+    .benefit {
         width: 80%;
-      }
+    }
 }
 
 @media screen and (max-width:600px) {
@@ -946,30 +956,79 @@
         color: rgb(165, 165, 165);
     }
 
-    .tags-container {
+   main .tags-container {
         text-align: start !important;
     }
-    .product-section .product-card .product-image {
+
+    main .product-section .product-card .product-image {
         max-width: 180px;
         height: 180px;
-      }
+    }
 
-      .main-heading {
+   main .main-heading {
         font-size: 1.6rem;
-      }
+    }
 
-      .product img {
+   main .product img {
         max-width: 120px;
-      }
-
-      .comparison-item {
+    }
+   main .comparison-item {
         flex-direction: column;
         gap: 10px;
-      }
+    }
 
-      .feature {
+    main .feature {
         width: 100%;
+    }
+    main .cards .card-container .landing-logo img {
+        width: 350px !important;
+    }
+    main .cards .card-container .text-section .bengali-text {
+        font-size: 30px !important;
+        font-weight: 500;
+        line-height: 30px;
+    }
+    main .cards .card-container .text-section .secondary-text {
+        font-size: 1rem !important;
+        font-weight: 400;
+        line-height: 18px;
+    }
+    main .lending-order-btn {
+        color: white;
+        padding: 14px 35px;
+        border: 6px solid white;
+        font-size: 1.6rem;
       }
+      main .chamos-section .main-container .heading-container {
+        font-size: 30px;
+        font-weight: 500;
+        line-height: 30px;
+    }
+    main .chamos-section .main-container .two-size {
+        font-size: 60px !important;
+    }
+    main .chamos-section .main-container .benefit {
+        font-size: 20px !important;
+        line-height: 20px;
+    }
+    main .chamos-section .main-container .spoons-container {
+        margin-top: 20px;
+        text-align: center;
+    }
+    main .karon-section .pinat-batter-header {
+        font-size: 25px;
+        font-weight: 500;
+        line-height: 25px;
+    }
+    main .karon-section .main-container .text-content .heading {
+        font-size: 20px;
+        line-height: 1.1;
+    }
+    main .karon-section .main-container .text-content .description {
+        color: white;
+        font-size: 18px;
+        line-height: 18px;
+    }
 }
 
 @media (max-width:512px) {
@@ -996,6 +1055,9 @@
     main .service-container {
         padding: 40px 10px;
     }
+
+    /* lending page css  */
+
 }
 
 @media screen and (max-width:496px) {
@@ -1017,6 +1079,33 @@
     main .image-container .image-content .banner-img img {
         max-width: 180px !important;
         height: auto;
+    }
+
+    main .client-review-section .review-swiper-container .swiper .swiper-wrapper .swiper-slide .review-card {
+        width: 100%;
+        padding: 20px 25px;
+        height: 230px;
+    }
+    main .karon-section .main-container .frame {
+        transform: rotate(0deg);
+    }
+
+    main .karon-section .main-container .frame img {
+        padding: 10px;
+        max-width: 300px !important;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 2px;
+    }
+    main .karon-section .main-container .image-container {
+        max-width: 300px;
+    }
+    main .karon-section .main-container .frame {
+        margin-top:5px !important;
+        width: 300px;
+    }
+    .benefits-container {
+        gap:0px;
     }
 }
 
