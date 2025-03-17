@@ -96,7 +96,7 @@ main .hero-container .hero-content .banner-store {
 main .card-container .medium-card-container {
   display: grid;
   grid-template-columns: repeat(4,1fr);
-  gap: 20px;
+  gap: 10px;
 }
 main .card-container .medium-card-container .card {
   width: 100%;

@@ -1274,7 +1274,7 @@ main .banner-container .banner-content .join-header {
 main .banner-container .banner-content .join-header .highlight {
     position: relative;
     display: inline-block;
-    padding: 8px 25px;
+    padding: 4px 15px;
   }
 
 main .banner-container .banner-content .join-header .highlight .border-animation {
