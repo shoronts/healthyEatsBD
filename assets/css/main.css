@@ -980,15 +980,22 @@ main .service-container .service-card .service .service-second {
     color: rgb(0, 0, 0);
 }
 main .service-banner {
-    width: 100%;
+    /* width: 100%;
     height: 130px !important;
-    overflow: hidden;
+    overflow: hidden; */
+    width: 100%;
+    height: 130px;
+    background-image: url("../media/home/banner-section/home-bottom.jpg");
+    background-position: 55% 100%; /* Adjust position */
+    background-size: cover; /* Fills the entire area */
+    background-repeat: no-repeat;
 }
 
 main .service-banner img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    display: none;
 }
 
 
