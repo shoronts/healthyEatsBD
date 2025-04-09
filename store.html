@@ -508,29 +508,32 @@
                         </div>
                         <div class="col-12 col-md-6 col-lg">
                             <div class="dropdown">
-                                <button
-                                    class="btn btn-secondary dropdown-toggle main-dropdown d-flex justify-content-between align-items-center"
-                                    type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    FILTER BY PRICE
-                                </button>
-                                <ul class="dropdown-menu" style="width: 100%;">
-                                    <div class="price-range-container">
-                                        <div class="slider-container">
-                                            <input type="range" class="form-range slider" min="0" max="932" value="0"
-                                                id="minRange" />
-                                            <input type="range" class="form-range slider" min="0" max="932" value="932"
-                                                id="maxRange" />
-                                            <div class="slider-track"></div>
-                                        </div>
-                                        <div class="price-labels d-flex justify-content-between mt-2">
-                                            <span>৳ <span id="minValue">0</span></span>
-                                            <span>৳ <span id="maxValue">1800</span></span>
-                                        </div>
-                                    </div>
-
-                                </ul>
+                              <button
+                                class="btn btn-secondary dropdown-toggle main-dropdown d-flex justify-content-between align-items-center"
+                                type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <span>FILTER BY PRICE</span>
+                                <span class="price-range-text" id="priceRangeText">৳0 - ৳932</span>
+                              </button>
+                              <ul class="dropdown-menu" style="width: 100%;">
+                                <div class="price-range-container">
+                                  <div class="slider-container">
+                                    <input type="range" class="form-range slider" min="0" max="932" value="0"
+                                      id="minRange" />
+                                    <input type="range" class="form-range slider" min="0" max="932" value="932"
+                                      id="maxRange" />
+                                    <div class="slider-track"></div>
+                                    <div class="slider-range" id="sliderRange"></div>
+                                    <div class="slider-thumb" id="minThumb"></div>
+                                    <div class="slider-thumb" id="maxThumb"></div>
+                                  </div>
+                                  <div class="price-labels d-flex justify-content-between mt-2">
+                                    <span>৳ <span id="minValue">0</span></span>
+                                    <span>৳ <span id="maxValue">932</span></span>
+                                  </div>
+                                </div>
+                              </ul>
                             </div>
-                        </div>
+                          </div>
                         <div class="col-12 col-md-12 col-lg text-center">
                             <button class="filter-btn">FILTER</button>
                         </div>
