@@ -1,10 +1,16 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Sticky Header
+
+
+  //Header js start 
+
+
+
   document.addEventListener("scroll", () => {
     const header = document.getElementById("header");
     header.classList.toggle("scrolled", window.scrollY > 30);
   });
-  // fixed bottom navbar 
+
+
   document.querySelectorAll('.nav-item').forEach(item => {
     item.addEventListener('click', (e) => {
         e.preventDefault();
@@ -14,7 +20,14 @@ document.addEventListener("DOMContentLoaded", () => {
         e.currentTarget.classList.add('active');
     });
 });
-  // hero section 
+
+//Header js end
+
+
+
+  // hero section js start 
+
+
   const swiper = new Swiper(".custom-swiper", {
     loop: true,
     slidesPerView: 1,
@@ -32,7 +45,13 @@ document.addEventListener("DOMContentLoaded", () => {
       prevEl: ".swiper-button-prev",
     },
   });
-  // card slider 
+
+  //hero section js end 
+
+
+
+  // card slider js start 
+
   const Cardswiper = new Swiper(".myCardSwiper", {
     slidesPerView: 5,
     spaceBetween: 10,
@@ -42,7 +61,13 @@ document.addEventListener("DOMContentLoaded", () => {
       prevEl: ".swiper-button-prev",
     },
   });
-  // review slider 
+
+  //card slider js end 
+
+
+
+  // review slider js start 
+
   const reviewSwiper = new Swiper(".mySwiper", {
     slidesPerView: 1,
     loop: true,
@@ -52,16 +77,21 @@ document.addEventListener("DOMContentLoaded", () => {
     },
   });
 
-  // checkout js 
-    // Get elements
-    const minInput = document.getElementById('minRange');
-    const maxInput = document.getElementById('maxRange');
-    const minThumb = document.getElementById('minThumb');
-    const maxThumb = document.getElementById('maxThumb');
-    const sliderRange = document.getElementById('sliderRange');
-    const minValueDisplay = document.getElementById('minValue');
-    const maxValueDisplay = document.getElementById('maxValue');
-    const priceRangeText = document.getElementById('priceRangeText');
+  //review slider js end 
+
+
+
+  // checkout js start 
+
+
+    const minInput = document.querySelector('minRange');
+    const maxInput = document.querySelector('maxRange');
+    const minThumb = document.querySelector('minThumb');
+    const maxThumb = document.querySelector('maxThumb');
+    const sliderRange = document.querySelector('sliderRange');
+    const minValueDisplay = document.querySelector('minValue');
+    const maxValueDisplay = document.querySelector('maxValue');
+    const priceRangeText = document.querySelector('priceRangeText');
     if(priceRangeText<932 && priceRangeText>0){
       priceRangeText.style.display = "block";
     }
@@ -108,7 +138,7 @@ document.addEventListener("DOMContentLoaded", () => {
     minInput.addEventListener('input', function() {
       currentMin = parseInt(minInput.value);
       
-      // Ensure min doesn't exceed max - 1
+  
       if (currentMin >= currentMax - 1) {
         currentMin = currentMax - 1;
         minInput.value = currentMin;
@@ -133,18 +163,22 @@ document.addEventListener("DOMContentLoaded", () => {
     // Add mouse and touch events for better slider interaction
     let activeThumb = null;
     
+
     // Function to handle thumb movement
     function handleMove(e) {
       if (!activeThumb) return;
       
+
       // Get mouse/touch position
       const clientX = e.type.includes('touch') ? e.touches[0].clientX : e.clientX;
       const rect = document.querySelector('.slider-container').getBoundingClientRect();
       const position = (clientX - rect.left) / rect.width;
       
+
       // Calculate new value
       let newValue = Math.round(position * (maxPrice - minPrice) + minPrice);
       
+
       // Update the appropriate input
       if (activeThumb === minThumb) {
         newValue = Math.min(newValue, currentMax - 1);
@@ -161,6 +195,7 @@ document.addEventListener("DOMContentLoaded", () => {
       updateSlider();
     }
     
+
     // Mouse events for thumbs
     minThumb.addEventListener('mousedown', function() {
       activeThumb = minThumb;
@@ -175,6 +210,7 @@ document.addEventListener("DOMContentLoaded", () => {
       activeThumb = null;
     });
     
+
     // Touch events for mobile
     minThumb.addEventListener('touchstart', function() {
       activeThumb = minThumb;
@@ -189,8 +225,11 @@ document.addEventListener("DOMContentLoaded", () => {
       activeThumb = null;
     });
     
+
     // Prevent dropdown from closing when clicking inside it
     document.querySelector('.price-range-container').addEventListener('click', function(e) {
       e.stopPropagation();
     });
 });
+
+// Checkout js end 
