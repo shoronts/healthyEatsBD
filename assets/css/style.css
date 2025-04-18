@@ -96,7 +96,10 @@ main .hero-container .hero-content .banner-store {
 main .card-container .medium-card-container {
   display: grid;
   grid-template-columns: repeat(4,1fr);
-  gap: 10px;
+  gap: 20px;
+}
+main .card-container .arrivals-card {
+  gap: 5px;
 }
 main .card-container .medium-card-container .card {
   width: 100%;
@@ -429,6 +432,9 @@ input:focus {
   margin: 0 auto;
   display: flex;
   justify-content: center;
+}
+.horizental{
+  border: 1px solid #CCCCCC;
 }
   @media screen and (max-width:1024px) {
     .bottom-nav {

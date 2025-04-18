@@ -1989,21 +1989,29 @@ main .product-container .product-gallery {
 
 main .product-container .product-gallery .side-img img {
     width: 130px;
-    height: 120px;
+    height: 160px;
     opacity: 0.6;
 }
 main .product-container .product-gallery .side-img img:hover {
     opacity:1;
 
 }
+main .product-container .side-img img {
+    width: 130px;
+    height: 120px;
+    opacity: 0.6;
+}
+main .product-container .side-img img:hover {
+    opacity:1;
 
+}
 main .product-container .product-gallery .main-image-container {
     flex-grow: 1;
 }
 
 main .product-container .product-gallery .main-image-container img {
     width: 100%;
-    height:80%;
+    height:100%;
     border-radius: 5px;
 }
 
