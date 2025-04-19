@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // review slider js start 
 
-  const reviewSwiper = new Swiper(".mySwiper", {
+  const reviewSwiper = new Swiper(".myReviewSwiper", {
     slidesPerView: 1,
     loop: true,
     navigation: {
@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   //review slider js end 
-  var lendingSwiper = new Swiper(".mySwiper", {
+  const  lendingSwiper = new Swiper(".myLendingSwiper", {
     loop: true,
     pagination: {
       el: ".swiper-pagination",

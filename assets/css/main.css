@@ -3097,3 +3097,155 @@ main .custom-section {
   main .custom-section .custom-section-container .custom-container .custom-content .custom-col .custom-button:hover {
     background-color: #166b3e;
   }
+  main .healthy-image-section h2{
+    font-family: "Hind Siliguri", Sans-serif;
+    font-size: 35px;
+    font-weight: 600;
+    line-height: 41px;
+    color: #000000;
+    text-align: center;
+  }
+  main  .healthy-image-content {
+    max-width: 1220px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  main  .healthy-image-content img {
+    height: 100%;
+    width: 100%;
+  }
+  main .healthy-image-content .cash-on-delevery {
+    max-width: 646px;
+    height: 170px;
+    margin: 0 auto;
+    border: 1px solid #787878;
+    background-color: #F5EFDD;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  main .healthy-image-content .cash-on-delevery img {
+    max-width: 544px;
+    height: 109px;
+  }
+  main .card-section {
+    background-color: #276B41;
+  }
+  main .card-section .card-container {
+    max-width: 1220px;
+    margin: 0 auto;
+    padding: 0px 100px !important;
+  }
+  main .card-section .card-container .card-content {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+    padding: 60px 5px;
+  }
+  main .card-section .card-container .card-content .card-items {
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    padding: 50px 5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+ .absolute-card {
+    position: relative;
+    top: -30px !important;
+  }
+  main .card-section .card-container .card-content .card-items img{
+    height: 280px;
+    width: 247px;
+    display: block;
+    margin: 0 auto;
+  }
+  main .card-section .card-container .card-content .card-items .card-title {
+    text-align: center;
+    font-family: "Hind Siliguri", Sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 17px;
+    color: #000000;
+  }
+  main .card-section .card-container .card-content .card-items .card-subtitle {
+    text-align: center;
+    font-family: "Hind Siliguri", Sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 17px;
+    color: #000000;
+    margin-top: 10px;
+  }
+  main .card-section .card-container .card-content .card-items .card-weight{
+    text-align: center;
+    font-family: "Hind Siliguri", Sans-serif;
+    font-size: 21px;
+    font-weight: 500;
+    color: #969696;
+  }
+  main .card-section .card-container .card-content .card-items .card-price {
+    font-family: "Hind Siliguri", Sans-serif;
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 41px;
+    color: #000000;
+    text-align: center;
+  }
+  main .card-section .card-container .card-content .card-items .card-through {
+    text-decoration: line-through;
+    font-size: 30px;
+    text-align: center;
+    margin: 0;
+  }
+  main .card-section .card-container .card-content .card-items .peanut-card-btn {
+    background-color: #00A651;
+    font-family: "Hind Siliguri", Sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 21px;
+    letter-spacing: 0.8px;
+    fill: #FFFFFF;
+    color: #FFFFFF;
+    border-radius: 5px 5px 5px 5px;
+    padding: 22px 45px 22px 45px;
+    border: none;
+    text-align: center;
+    margin: 0 auto;
+    display:block;
+  }
+  main .contact-section {
+    background-color: #192D36;
+    padding: 50px 0px;
+  }
+  main .contact-section .contact-num{
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    font-family: "Hind Siliguri", Sans-serif;
+    color: #FFBE00;
+    letter-spacing: 2px;
+  }
+  main .contact-section .contact-text{
+    text-align: center;
+    font-family: "Hind Siliguri", Sans-serif;
+    font-size: 27px;
+    font-weight: 500;
+    color: #FFFFFF;
+  }
+  main .copyright-reserved {
+    background-color: #FFBE00;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    height: 60px;
+  }
+  main .copyright-reserved p{
+    text-align: center;
+    text-align: center;
+    font-family: "Poppins", Sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    color: #000000;
+  }
