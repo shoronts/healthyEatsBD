@@ -78,8 +78,36 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   //review slider js end 
+  var lendingSwiper = new Swiper(".mySwiper", {
+    loop: true,
+    pagination: {
+      el: ".swiper-pagination",
+    },
+    slidesPerView: 3,
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+      },
+      768: {
+        slidesPerView: 2,
+      },
+      1024: {
+        slidesPerView: 3,
+      },
+    },
+    autoplay: {
+      delay: 6000,
+      disableOnInteraction: false,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+  
+  //lending slider start 
 
-
+  //lending slider end
 
   // checkout js start 
 

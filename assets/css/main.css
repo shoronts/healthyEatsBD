@@ -2347,215 +2347,6 @@ main .wish-container .wish-content .wish-btn {
     border-radius: 5px;
 }
 /* wish css end  */
-/* lendig page css start  */
-.lending-page {
-    font-family: 'Noto Sans Bengali', sans-serif;
-    background-color: #f5f5f5;
-  }
-main .cards .card-container .product-container {
-    border-radius: 1rem;
-    padding: 1rem;
-    margin-bottom: 1.5rem;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    text-align: center;
-  }
-
-  main .cards .card-container .product-container .product-image {
-    max-width: 100%;
-    height: auto;
-  }
-
-
-  main .cards .card-container .text-section .bengali-text {
-    font-size: 100px;
-    font-weight: 700;
-    margin-bottom: 0;
-    color: white;
-    line-height: 100px;
-  }
-
-  main .cards .card-container .text-section .secondary-text {
-    font-size: 60px;
-    font-weight: 600;
-    color: white;
-    line-height: 80px;
-  }
-
-
-
-  main .cards .card-container .text-section {
-    text-align: center;
-    margin-bottom: 1.5rem;
-  }
-
-  main .cards .card-container .landing-logo img {
-    width: 400px;
-    height: auto;
-  }
-
-
-  /* // Chamos Section */
-  main .chamos-section {
-    background-color: var(--background-mint);
-    min-height: 100vh;
-    padding: 20px;
-    overflow-x: hidden;
-  }
-
-  main .chamos-section .main-container {
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-
-  main .chamos-section .main-container .two-size {
-    font-size: 160px !important;
-  }
-
-  main .chamos-section .main-container .heading-container {
-    text-align: center;
-    margin-bottom: 30px;
-    font-size: 100px;
-    font-weight: 700;
-    margin-bottom: 0;
-    color: var(--light-green);
-    line-height: 100px;
-  }
-
-  main .chamos-section .main-container .benefit {
-    font-size: 60px;
-    line-height: 60px;
-    width: 40%;
-    text-align: center;
-    color: var(--lending-primary-orange);
-    font-weight: 500;
-  }
-
-  main .chamos-section .main-container .main-heading {
-    color: var(--lending-primary-green);
-    font-size: 3.5rem;
-    font-weight: 700;
-  }
-
-
-  main .chamos-section .main-container .benefits-container {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 50px;
-  }
-
-  main .chamos-section .main-container .spoons-container {
-    margin-top: 80px;
-    text-align: center;
-  }
-
-  main .chamos-section .main-container .spoons-container .spoons-image {
-    max-width: 400px;
-    width: 100%;
-    height: auto;
-  }
-
-  /* image and banner css  */
-  main .karon-section {
-    font-family: 'Noto Sans Bengali', sans-serif;
-    background-color: var(--lending-primary-green);
-    margin: 0;
-    padding: 20px;
-    min-height: 100vh;
-  }
-
-  main .karon-section .main-container {
-    max-width: 1068px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-
-  main .karon-section .main-container .text-content {
-    max-width: 534px;
-  }
-
-  main .karon-section .main-container .image-container {
-    max-width: 534px;
-  }
-
-  main .karon-section .main-container .frame {
-    background: white;
-    border-radius: 4px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transform: rotate(-3deg);
-    position: relative;
-    margin-top: 15px;
-    width: 400px;
-  }
-
-  main .karon-section .main-container .frame img {
-    padding: 10px;
-    width: 400px;
-    height: 450px;
-    object-fit: cover;
-    border-radius: 2px;
-  }
-
-  /* main .karon-section .main-container .frame .pin {
-    width: 20px;
-    height: 20px;
-    background: #ff4444;
-    border-radius: 50%;
-    position: absolute;
-    top: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-  }
-
-  main .karon-section .main-container .frame .pin::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 8px;
-    height: 8px;
-    background: rgba(255, 255, 255, 0.6);
-    border-radius: 50%;
-  } */
-
-  main .karon-section .main-container .text-content {
-    flex-grow: 1;
-    padding-top: 15px;
-  }
-
-  main .karon-section .pinat-batter-header {
-    font-size: 100px;
-    font-weight: 700;
-    margin-bottom: 0;
-    color: white;
-    line-height: 110px;
-  }
-
-  main .karon-section .heading {
-    color: var(--text-gold);
-  }
-
-  main .karon-section .main-container .text-content .heading {
-    font-size: 2rem;
-    line-height: 1.1;
-    font-weight: 600;
-  }
-
-  main .karon-section .main-container .text-content .description {
-    color: white;
-    font-size: 2rem;
-    line-height: 1.1;
-    font-weight: 600;
-    margin: 0;
-  }
-
-  main .karon-section .main-container .info-section:nth-child(even) .frame {
-    transform: rotate(10deg);
-  }
-
 
   /* product css  */
   main .product-section {
@@ -2622,141 +2413,13 @@ main .cards .card-container .product-container {
     margin-bottom: 10px;
   }
 
-  /* last css section  */
 
-  main .last-section {
-    font-family: 'Noto Sans Bengali', sans-serif;
-    background-color: var(--background-cream);
-    min-height: 100vh;
-  }
-
-  main .last-section .main-container {
-    max-width: 1068px;
-    margin: 0 auto;
-  }
-
-  main .last-section .main-container .main-heading {
-    color: var(--lending-primary-green);
-    font-size: 3.5rem;
-    font-weight: 700;
-    text-align: center;
-    margin-bottom: 40px;
-    line-height: 1;
-  }
-
-  main .last-section .main-container .products-container {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 30px;
-  }
-
-  main .last-section .main-container .products-container .product {
-    text-align: center;
-    width: 45%;
-  }
-
-  main .last-section .main-container .products-container .product img {
-    max-width: 150px;
-    height: auto;
-    margin-bottom: 15px;
-  }
-
-  main .last-section .main-container .products-container .product .product-descrpton {
-    font-size: 1.9rem;
-    font-weight: 600px;
-  }
-
-  main .last-section .main-container .products-container .product .product-name {
-    color: var(--lending-primary-green);
-    font-size: 2.2rem;
-    font-weight: 700;
-    margin: 0;
-  }
 
   .comparison-container {
     max-width: 80%;
     margin: 0 auto;
   }
 
-  main .last-section .main-container .feature {
-    padding: 15px;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    background-color: white;
-    margin-top: 15px;
-  }
-
-  main .last-section .main-container .check-icon {
-    width: 38px;
-    height: 38px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    flex-shrink: 0;
-  }
-
-  main .last-section .main-container .check-icon.positive {
-    background-color: var(--check-green);
-  }
-
-  main .last-section .main-container .check-icon.negative {
-    background-color: var(--cross-red);
-  }
-
-  main .last-section .main-container .feature-text {
-    font-size: 1.7rem;
-    margin: 0;
-    font-weight: 500;
-  }
-
-  main .last-section .main-container .payment-info {
-    border: 2px solid var(--lending-primary-green);
-    border-radius: 10px;
-    padding: 15px;
-    margin: 30px auto;
-    max-width: 400px;
-    display: flex;
-    align-items: center;
-    gap: 15px;
-  }
-
-  main .last-section .main-container .payment-icon {
-    width: 40px;
-    height: 40px;
-    flex-shrink: 0;
-  }
-
-  main .last-section .main-container .payment-text {
-    color: var(--lending-primary-green);
-    font-size: 1.1rem;
-    margin: 0;
-    line-height: 1.3;
-  }
-
-  main .last-section .main-container .order-button {
-    display: block;
-    width: 200px;
-    margin: 30px auto;
-    padding: 12px 30px;
-    background-color: var(--lending-primary-green);
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 1.2rem;
-    font-weight: 600;
-    cursor: pointer;
-    text-align: center;
-    text-decoration: none;
-  }
-
-  main .last-section .main-container .order-button:hover {
-    background-color: #0a4a27;
-    color: white;
-  }
 /* landing css end  */
 /* checkout css start  */
 main .checkout-section {
@@ -3227,3 +2890,210 @@ height: auto;
 footer .footer-container .footer-content hr {
 border: 1px solid #F2BD22;
 }
+
+/* lending page start  */
+main .navbar-container {
+    background-color:var(--green-text) ;
+}
+main .navbar-container .navbar-content{
+    max-width: 1220px;
+    margin: 0 auto;
+    padding: 10px 10px;
+}
+main .navbar-container .navbar-content .nav-logo img{
+    height: 80px;
+    width: 134px;
+}
+main .navbar-container .navbar-content .contact-number {
+    color: #FFFFFF;
+}
+.test{
+    height: 100%;
+    width: 100%;
+}
+main .knife-color-container {
+    background-color: #F3FEEF;
+}
+main .knife-container{
+    background-color: #F3FEEF;
+}
+main .knife-container .knife-content {
+    max-width: 1220px;
+    margin: 0 auto;
+    padding: 100px 0px;
+}
+main .knife-container .knife-content .grey-head {
+    font-family: 'Hind Siliguri';
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 45px;
+    color: #8C523C;
+    margin-bottom: 50px;
+}
+main .knife-container .knife-content .peragraph {
+    font-family: 'Hind Siliguri';
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 2.7rem;
+    color: #6B6B6B;
+}
+main .knife-container .knife-content .img-container img {
+    height: 165px;
+    width: 165px;
+}
+main .knife-container .knife-content .img-container .img-text {
+    font-family:'Hind Siliguri';
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 1.8rem;
+    color: #4C4C4C;
+}
+main .knife-container-small {
+    max-width:764px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+main .knife-container-small .upadan {
+    font-family: "Hind Siliguri", Sans-serif;
+    font-weight: 600;
+    color: #000000;
+    text-align: center;
+}
+main .knife-container-small .img-text {
+   text-align: center;
+   font-family:'Hind Siliguri';
+   font-size: 22px;
+   font-weight: 500;
+   line-height: 1.8rem;
+   color: #4C4C4C;
+}
+
+main .slider-container {
+    background-color: #276B41;
+  }
+
+  main .slider-container .slider-content {
+    max-width: 1220px;
+    margin: 0 auto;
+    padding: 40px 0px ;
+}
+main .slider-container .slider-content .review-text {
+    font-family: "Hind Siliguri", Sans-serif;
+    font-size: 35px;
+    font-weight: 600;
+    line-height: 41px;
+    color: #FFFFFF;
+    text-align: center;
+    margin: 20px;
+  }
+
+main .slider-container .slider-content .swiper-body {
+  position: relative;
+  height: 566px;
+  width: 100%;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+main .slider-container .slider-content .swiper-body .swiper {
+  width: 100%;
+  height: 566px;
+}
+ .swiper-pagination-bullet {
+padding: 4px;
+background-color: white;
+}
+
+main .slider-container .swiper-pagination-bullet-active {
+background-color:yellow;
+}
+main .slider-container .slider-content .swiper-body .swiper .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 500px;
+  background-color: #276B41;
+}
+
+main .slider-container .slider-content .swiper-body .swiper .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 500px ;
+  object-fit: cover;
+}
+
+
+main .custom-section {
+    background-color:white;
+    padding: 150px 0px 50px 0px;
+  }
+  main .custom-section .custom-section-container {
+    background-color:rgb(245,239,221);
+  }
+  main .custom-section .custom-section-container .custom-container {
+    max-width: 1220px;
+    margin: 0 auto;
+  }
+  
+  main .custom-section .custom-section-container .custom-container .custom-content {
+    position: relative;
+  }
+  
+  main .custom-section .custom-section-container .custom-container .custom-content .custom-col {
+    position: relative;
+  }
+  
+  main .custom-section .custom-section-container .custom-container .custom-content .custom-col .img-absolute img {
+    position: absolute;
+    top: -280px;
+    left: 0;
+    width: 209px;
+    max-width: 331px;
+  }
+  
+  main .custom-section .custom-section-container .custom-container .custom-content .custom-col .section-title {
+    font-family: "Hind Siliguri", Sans-serif;
+      font-size: 32px;
+      font-weight: 600;
+      line-height: 44px;
+      color: #000000;
+  }
+  
+  main .custom-section .custom-section-container .custom-container .custom-content .custom-col .custom-icon-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  main .custom-section .custom-section-container .custom-container .custom-content .custom-col .custom-icon-list li {
+    font-family: "Hind Siliguri", Sans-serif;
+      font-size: 22px;
+      font-weight: 400;
+      color: #000000;
+      transition: color 0.3s;
+      margin-top: 10px;
+  }
+  
+  main .custom-section .custom-section-container .custom-container .custom-content .custom-col .custom-button {
+    background-color: #276B41;
+      font-family: "Hind Siliguri", Sans-serif;
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 21px;
+      letter-spacing: 0.8px;
+      fill: #FFFFFF;
+      color: #FFFFFF;
+      border-radius: 5px 5px 5px 5px;
+      padding: 22px 45px 22px 45px;
+      text-decoration: none;
+  }
+  
+  main .custom-section .custom-section-container .custom-container .custom-content .custom-col .custom-button:hover {
+    background-color: #166b3e;
+  }
