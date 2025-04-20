@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Account Form</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    .dashboard-form-section {
+      padding: 40px;
+      background-color: #fff;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    label {
+      font-weight: 500;
+    }
+
+    .form-section {
+      border: 1px solid #ddd;
+      padding: 25px;
+      margin-top: 30px;
+      border-radius: 5px;
+    }
+
+    .form-section h5 {
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    .password-wrapper {
+      position: relative;
+    }
+
+    .password-wrapper input {
+      padding-right: 40px;
+    }
+
+    .password-wrapper .toggle-password {
+      position: absolute;
+      top: 75%;
+      right: 12px;
+      transform: translateY(-50%);
+      cursor: pointer;
+      color: #888;
+    }
+
+    .form-text {
+      font-size: 0.9rem;
+      color: #6c757d;
+    }
+
+    .btn-save {
+      margin-top: 20px;
+      background-color: #2e7d32;
+      color: white;
+      padding: 10px 25px;
+      font-weight: 500;
+      border: none;
+      border-radius: 4px;
+    }
+
+    .btn-save:hover {
+      background-color: #256428;
+    }
+  </style>
+</head>
+<body>
+<section class="dashboard-form-section">
+  <div class="container">
+    <form>
+      <div class="row g-3">
+        <div class="col-md-6">
+          <label for="firstName" class="form-label">First name <span class="text-danger">*</span></label>
+          <input type="text" class="form-control" id="firstName" value="Shafaet Hosser">
+        </div>
+        <div class="col-md-6">
+          <label for="lastName" class="form-label">Last name <span class="text-danger">*</span></label>
+          <input type="text" class="form-control" id="lastName" value="Shuvo">
+        </div>
+        <div class="col-12">
+          <label for="displayName" class="form-label">Display name <span class="text-danger">*</span></label>
+          <input type="text" class="form-control" id="displayName" value="Shafaet Hosser Shuvo">
+          <div class="form-text">This will be how your name will be displayed in the account section and in reviews</div>
+        </div>
+        <div class="col-12">
+          <label for="email" class="form-label">Email address <span class="text-danger">*</span></label>
+          <input type="email" class="form-control" id="email" value="nahidulcpa@gmail.com">
+        </div>
+      </div>
+  
+      <!-- Password Change Section -->
+      <div class="form-section mt-4">
+        <h5>Password change</h5>
+  
+        <div class="mb-3 password-wrapper">
+          <label for="currentPassword" class="form-label">Current password (leave blank to leave unchanged)</label>
+          <input type="password" class="form-control" id="currentPassword">
+          <i class="bi bi-eye-slash toggle-password" onclick="togglePassword(this, 'currentPassword')"></i>
+        </div>
+  
+        <div class="mb-3 password-wrapper">
+          <label for="newPassword" class="form-label">New password (leave blank to leave unchanged)</label>
+          <input type="password" class="form-control" id="newPassword">
+          <i class="bi bi-eye toggle-password" onclick="togglePassword(this, 'newPassword')"></i>
+        </div>
+  
+        <div class="mb-3 password-wrapper">
+          <label for="confirmPassword" class="form-label">Confirm new password</label>
+          <input type="password" class="form-control" id="confirmPassword">
+          <i class="bi bi-eye toggle-password" onclick="togglePassword(this, 'confirmPassword')"></i>
+        </div>
+      </div>
+  
+      <button type="submit" class="btn btn-save">SAVE CHANGES</button>
+    </form>
+  </div>
+</section>
+
+
+<!-- Password Toggle Script -->
+<script>
+  function togglePassword(icon, inputId) {
+    const input = document.getElementById(inputId);
+    const isVisible = input.type === 'text';
+    input.type = isVisible ? 'password' : 'text';
+    icon.classList.toggle('bi-eye');
+    icon.classList.toggle('bi-eye-slash');
+  }
+</script>
+
+</body>
+</html>

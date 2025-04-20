@@ -20,15 +20,21 @@
   <link rel="stylesheet" href="assets/css/main.css">
   <link rel="stylesheet" href="assets/css/responsive.css">
   <link rel="stylesheet" href="assets/css/style.css">
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+/>
+
   <style>
     main .dashboard-section {
       background-color: #fff;
-      font-family: 'Segoe UI', sans-serif;
+      font-family: "Hind Siliguri", Sans-serif;
       padding: 40px;
+      max-width: 1220px;
+      margin: 0 auto;
     }
 
     main .dashboard-section .account-section {
-      border: 1px solid #eee;
       padding: 30px;
       background-color: #fff;
     }
@@ -51,6 +57,7 @@
       padding: 10px 15px;
       cursor: pointer;
       transition: 0.2s;
+      font-weight: 500;
     }
 
     main .dashboard-section .account-section .sidebar-nav li:hover {
@@ -62,24 +69,46 @@
       font-weight: 600;
       border-left: 4px solid #FFBE00;
     }
-
    main .dashboard-section .account-section .account-content {
       display: none;
     }
-
+    main .dashboard-section .account-section .account-content .wish-container {
+        padding: 30px 0px !important;
+    }
+    main .dashboard-section .account-section .account-content p {
+        color: #9F8D7B;
+        font-size: 14px;
+    }
    main .dashboard-section .account-section .account-content.active {
       display: block;
     }
 
     main .dashboard-section .account-section .account-card {
-      border: 1px solid #eee;
       padding: 20px;
-      text-align: center;
       border-radius: 5px;
       transition: 0.3s;
       height: 100%;
     }
-
+    main .dashboard-section .account-section .account-card .address-head {
+        text-transform: uppercase;
+        font-size: 22px;
+        font-weight: 600;
+    }
+    main .dashboard-section .account-section .account-card .address-billing {
+        font-size: 16px !important;
+        font-weight: 300 !important;
+        color: black !important;
+    }
+    main .dashboard-section .account-section .account-card .address-text {
+        font-size: 16px !important;
+        color: #313131 !important;
+        font-weight: 300 !important;
+        font-style:italic !important;
+    }
+    main .dashboard-section .account-section .account-card .address-billing>i {
+        font-size: 18px !important;
+        margin-right: 10px !important;
+    }
    main .dashboard-section .account-section .account-card:hover {
       box-shadow: 0 0 10px rgba(0,0,0,0.05);
     }
@@ -100,54 +129,67 @@
       font-size: 14px;
       color: #666;
     }
+    main .dashboard-section .account-section .dashboard-form-section { 
+        /* remember padding will changed  */
+      padding:5px; 
+      background-color: #fff;
+      font-family: "Hind Siliguri", Sans-serif;
+      font-size: 12px;
+      font-style: italic;
+    }
 
-    .dashboard-card {
-  background-color: var(--card-bg);
-  border: 1px solid var(--border-color);
-  border-radius: 0.5rem;
-  box-shadow: var(--shadow-sm);
-  color: var(--text-color);
-  transition: all var(--transition-speed) ease;
-}
+    main .dashboard-section  label {
+      font-weight: 500;
+    }
 
-.dashboard-card:hover {
-  box-shadow: var(--shadow-md);
-  transform: translateY(-3px);
-  border-color: var(--hover-color);
-}
+    main .dashboard-section .account-section .form-section {
+      border: 1px solid #ddd;
+      padding: 25px;
+      margin-top: 30px;
+      border-radius: 5px;
+    }
 
-.icon-wrapper {
-  color: var(--primary-color);
-  margin: 0 auto;
-  transition: all var(--transition-speed) ease;
-}
+    main .dashboard-section .account-section .form-section h5 {
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
 
-.dashboard-card:hover .icon-wrapper {
-  transform: scale(1.1);
-}
+    main .dashboard-section .account-section .password-wrapper {
+      position: relative;
+    }
 
-/* Responsive adjustments */
-@media (max-width: 767.98px) {
-  .list-group {
-    flex-direction: row;
-    flex-wrap: wrap;
-    padding: 0;
-  }
-  
-  .list-group-item {
-    flex: 0 0 50%;
-    text-align: center;
-    border-radius: 0 !important;
-  }
-  
-  .account-sidebar {
-    padding: 1rem;
-  }
-  
-  .account-content {
-    padding: 1rem;
-  }
-}
+    main .dashboard-section .account-section .password-wrapper input {
+      padding-right: 40px;
+    }
+
+    main .dashboard-section .account-section .password-wrapper .toggle-password {
+      position: absolute;
+      top: 75%;
+      right: 12px;
+      transform: translateY(-50%);
+      cursor: pointer;
+      color: #888;
+    }
+
+    main .dashboard-section .account-section .form-text {
+      font-size: 0.9rem;
+      color: #6c757d;
+    }
+
+    main .dashboard-section .account-section .btn-save {
+      margin-top: 20px;
+      background-color: #256428;
+      color: white;
+      padding: 10px 25px;
+      font-weight: 500;
+      border: none;
+      border-radius: 4px;
+    }
+
+    main .dashboard-section .account-section .btn-save:hover {
+      background-color: #256428;
+      color: white;
+    }
   </style>
 </head>
 <body>
@@ -525,152 +567,198 @@
     </header>
     <!-- Header End -->
 <main>
-<!-- hero section start  -->
+
+            <!-- hero section start  -->
+            <section>
+                <div class="hero-container d-flex align-items-center justify-content-center"
+                    style="background-image: url(assets/media/store/banner/Home-Image-1-scaled-1.jpg);">
+                    <div class="hero-content">
+                        <h1 class="banner-header">My account</h1>
+                        <div class="d-flex gap-2 justify-content-center">
+                            <p class="banner-home "><a class="raf-tag" href="index.html">Home</a></p>
+                            <span>/</span>
+                            <p class="banner-store "><a class="raf-tag" href="login.html">My account</a></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- hero section end  -->
     <section>
-        <div class="hero-container d-flex align-items-center justify-content-center"
-            style="background-image: url(assets/media/store/banner/Home-Image-1-scaled-1.jpg);">
-            <div class="hero-content">
-                <h1 class="banner-header">My account</h1>
-                <div class="d-flex gap-2 justify-content-center">
-                    <p class="banner-home "><a class="raf-tag" href="index.html">Home</a></p>
-                    <span>/</span>
-                    <p class="banner-store "><a class="raf-tag" href="login.html">My account</a></p>
+        <div class="dashboard-section">
+            <div class="container account-section">
+                <div class="row">
+                  <!-- Sidebar -->
+                  <div class="col-md-3 sidebar-nav">
+                    <h5>MY ACCOUNT</h5>
+                    <hr>
+                    <ul id="sidebar-menu">
+                      <li class="active" data-section="dashboard">Dashboard</li>
+                      <li data-section="orders">Orders</li>
+                      <li data-section="addresses">Addresses</li>
+                      <li data-section="account">Account details</li>
+                      <li data-section="wishlist">Wishlist</li>
+                      <li data-section="logout text-black">
+                        <a class="text-decoration-none text-body" href="login.html">Logout</a>
+                      </li>
+                    </ul>
+                  </div>
+              
+                  <!-- Main Sections -->
+                  <div class="col-md-9">
+                    <!-- Dashboard -->
+                    <div class="account-content active" id="dashboard">
+                      <p>Hello <strong>Shafaet Hosser Shuvo</strong> (not <strong>Shafaet Hosser Shuvo</strong>? <a href="#">Log out</a>)</p>
+                      <p>From your account dashboard you can view your <a href="#">recent orders</a>, manage your <a href="#">shipping and billing addresses</a>, and <a href="#">edit your password</a> and account details.</p>
+                      <div class="row gap-3 ms-3">
+                        <div class="col-12 col-md-5 col-lg-3 border details-dev px-5 py-4 text-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="42" height="42" viewBox="0 0 32 32">
+                                <path d="M 8 3 C 6.90625 3 6 3.90625 6 5 L 6 27 C 6 28.09375 6.90625 29 8 29 L 24 29 C 25.09375 29 26 28.09375 26 27 L 26 9.59375 L 25.71875 9.28125 L 19.71875 3.28125 L 19.40625 3 Z M 8 5 L 17 5 L 17 10 C 17 11.09375 17.90625 12 19 12 L 24 12 L 24 27 L 8 27 Z M 19 5.4375 L 23.5625 10 L 19 10 Z M 11 15 L 11 17 L 21 17 L 21 15 Z M 11 18 L 11 20 L 21 20 L 21 18 Z M 11 21 L 11 23 L 16 23 L 16 21 Z"></path>
+                                </svg>
+                            <p>Orders</p>
+                        </div>
+                        <div class="col-12 col-md-5 col-lg-3 border details-dev px-5 py-4 text-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 53 53" fill="none">
+                                <g clip-path="url(#clip0_187_2751)">
+                                    <path d="M26.5 11.5938C21.9271 11.5938 18.2188 15.3021 18.2188 19.875C18.2188 24.4479 21.9271 28.1563 26.5 28.1563C31.0729 28.1563 34.7812 24.4479 34.7812 19.875C34.7812 15.3021 31.0729 11.5938 26.5 11.5938ZM26.5 24.8438C23.7556 24.8438 21.5312 22.6194 21.5312 19.875C21.5312 17.1306 23.7556 14.9063 26.5 14.9063C29.2444 14.9063 31.4688 17.1306 31.4688 19.875C31.4688 22.6194 29.2444 24.8438 26.5 24.8438ZM26.5 0C15.524 0 6.625 8.89906 6.625 19.875C6.625 28.1845 23.1958 53.0167 26.5 53.0001C29.7529 53.0166 46.375 28.0735 46.375 19.875C46.375 8.89906 37.476 0 26.5 0ZM26.5 48.0313C23.7457 48.0462 9.9375 26.7998 9.9375 19.875C9.9375 10.7276 17.3525 3.3125 26.5 3.3125C35.6475 3.3125 43.0625 10.7276 43.0625 19.875C43.0625 26.7071 29.2113 48.0462 26.5 48.0313Z" fill="#D1D1D1"></path>
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_187_2751">
+                                        <rect width="53" height="53" fill="white"></rect>
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                            <p>Address</p>
+                        </div>
+                        <div class="col-12 col-md-5 col-lg-3 border details-dev px-5 py-4 text-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 24 24" fill="currentColor">
+                                <path fill="currentColor" d="M12 5.9a2.1 2.1 0 1 1 0 4.2a2.1 2.1 0 0 1 0-4.2m0 9c2.97 0 6.1 1.46 6.1 2.1v1.1H5.9V17c0-.64 3.13-2.1 6.1-2.1M12 4C9.79 4 8 5.79 8 8s1.79 4 4 4s4-1.79 4-4s-1.79-4-4-4m0 9c-2.67 0-8 1.34-8 4v3h16v-3c0-2.66-5.33-4-8-4"></path>
+                            </svg>
+                            <p>Account details</p>
+                        </div>
+                        <div class="col-12 col-md-5 col-lg-3 border details-dev px-5 py-4 text-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" fill="currentColor" class="bi bi-suit-heart" viewBox="0 0 16 16">
+                                <path d="m8 6.236-.894-1.789c-.222-.443-.607-1.08-1.152-1.595C5.418 2.345 4.776 2 4 2 2.324 2 1 3.326 1 4.92c0 1.211.554 2.066 1.868 3.37.337.334.721.695 1.146 1.093C5.122 10.423 6.5 11.717 8 13.447c1.5-1.73 2.878-3.024 3.986-4.064.425-.398.81-.76 1.146-1.093C14.446 6.986 15 6.131 15 4.92 15 3.326 13.676 2 12 2c-.777 0-1.418.345-1.954.852-.545.515-.93 1.152-1.152 1.595zm.392 8.292a.513.513 0 0 1-.784 0c-1.601-1.902-3.05-3.262-4.243-4.381C1.3 8.208 0 6.989 0 4.92 0 2.755 1.79 1 4 1c1.6 0 2.719 1.05 3.404 2.008.26.365.458.716.596.992a7.6 7.6 0 0 1 .596-.992C9.281 2.049 10.4 1 12 1c2.21 0 4 1.755 4 3.92 0 2.069-1.3 3.288-3.365 5.227-1.193 1.12-2.642 2.48-4.243 4.38z"></path>
+                            </svg>
+                            <p>Wishlist</p>
+                        </div>
+                        <div class="col-12 col-md-5 col-lg-3 border details-dev px-5 py-4 text-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 24 24" fill="currentColor">
+                                <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                                    <path d="M3 3h2l.5 3m0 0L7 15h11l3-9z"></path>
+                                    <circle cx="8" cy="20" r="1"></circle>
+                                    <circle cx="17" cy="20" r="1"></circle>
+                                </g>
+                            </svg>
+                            <p>Logout</p>
+                        </div>
+                      </div>
+                    </div>
+              
+                    <!-- Orders -->
+                    <div class="account-content" id="orders">
+                      <h6>Your Orders</h6>
+                      <p>No orders yet.</p>
+                      <div class="account-card mt-3">
+                        <i class="bi bi-card-checklist"></i>
+                        <p>Order #001</p>
+                        <span>Status: Pending</span>
+                      </div>
+                    </div>
+              
+                    <!-- Addresses -->
+                    <div class="account-content" id="addresses">
+                      <h6>The following addresses will be used on the checkout page by default.</h6>
+                      <div class="account-card mt-3 row gap-3">
+                        <div class="col-12 col-md-5">
+                            <h4 class="address-head">Billing address</h4>
+                            <p class="address-billing"><i class="fa-solid fa-pen-to-square"></i>Add Billing address</p>
+                            <p class="address-text">You have not set up this type of address yet.</p>
+                        </div>
+                        <div class="col-12 col-md-5">
+                            <h4 class="address-head">Shipping address</h4>
+                            <p class="address-billing"><i class="fa-solid fa-pen-to-square"></i>Add Billing address</p>
+                            <p class="address-text">You have not set up this type of address yet.</p>
+                        </div>
+                      </div>
+                    </div>
+              
+                    <!-- Account details -->
+                    <div class="account-content" id="account">
+                        <section class="dashboard-form-section">
+                            <div class="container">
+                              <form>
+                                <div class="row g-3">
+                                  <div class="col-md-6">
+                                    <label for="firstName" class="form-label">First name <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" id="firstName" value="Shafaet Hosser">
+                                  </div>
+                                  <div class="col-md-6">
+                                    <label for="lastName" class="form-label">Last name <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" id="lastName" value="Shuvo">
+                                  </div>
+                                  <div class="col-12">
+                                    <label for="displayName" class="form-label">Display name <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" id="displayName" value="Shafaet Hosser Shuvo">
+                                    <div class="form-text">This will be how your name will be displayed in the account section and in reviews</div>
+                                  </div>
+                                  <div class="col-12">
+                                    <label for="email" class="form-label">Email address <span class="text-danger">*</span></label>
+                                    <input type="email" class="form-control" id="email" value="nahidulcpa@gmail.com">
+                                  </div>
+                                </div>
+                            
+                                <!-- Password Change Section -->
+                                <div class="form-section mt-4">
+                                  <h5>Password change</h5>
+                            
+                                  <div class="mb-3 password-wrapper">
+                                    <label for="currentPassword" class="form-label">Current password (leave blank to leave unchanged)</label>
+                                    <input type="password" class="form-control" id="currentPassword">
+                                    <i class="bi bi-eye-slash toggle-password" onclick="togglePassword(this, 'currentPassword')"></i>
+                                  </div>
+                            
+                                  <div class="mb-3 password-wrapper">
+                                    <label for="newPassword" class="form-label">New password (leave blank to leave unchanged)</label>
+                                    <input type="password" class="form-control" id="newPassword">
+                                    <i class="bi bi-eye toggle-password" onclick="togglePassword(this, 'newPassword')"></i>
+                                  </div>
+                            
+                                  <div class="mb-3 password-wrapper">
+                                    <label for="confirmPassword" class="form-label">Confirm new password</label>
+                                    <input type="password" class="form-control" id="confirmPassword">
+                                    <i class="bi bi-eye toggle-password" onclick="togglePassword(this, 'confirmPassword')"></i>
+                                  </div>
+                                </div>
+                            
+                                <button type="submit" class="btn btn-save">SAVE CHANGES</button>
+                              </form>
+                            </div>
+                          </section>
+                    </div>
+              
+                    <!-- Wishlist -->
+                    <div class="account-content" id="wishlist">
+                              <!-- wish section start  -->
+            <div class="wish-container d-flex align-items-center justify-content-center">
+                <div class="wish-content text-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" fill="currentColor"
+                        class="bi bi-suit-heart" viewBox="0 0 16 16">
+                        <path
+                            d="m8 6.236-.894-1.789c-.222-.443-.607-1.08-1.152-1.595C5.418 2.345 4.776 2 4 2 2.324 2 1 3.326 1 4.92c0 1.211.554 2.066 1.868 3.37.337.334.721.695 1.146 1.093C5.122 10.423 6.5 11.717 8 13.447c1.5-1.73 2.878-3.024 3.986-4.064.425-.398.81-.76 1.146-1.093C14.446 6.986 15 6.131 15 4.92 15 3.326 13.676 2 12 2c-.777 0-1.418.345-1.954.852-.545.515-.93 1.152-1.152 1.595zm.392 8.292a.513.513 0 0 1-.784 0c-1.601-1.902-3.05-3.262-4.243-4.381C1.3 8.208 0 6.989 0 4.92 0 2.755 1.79 1 4 1c1.6 0 2.719 1.05 3.404 2.008.26.365.458.716.596.992a7.6 7.6 0 0 1 .596-.992C9.281 2.049 10.4 1 12 1c2.21 0 4 1.755 4 3.92 0 2.069-1.3 3.288-3.365 5.227-1.193 1.12-2.642 2.48-4.243 4.38z" />
+                    </svg>
+                    <h2 class="wish-error my-4">This wishlist is empty.</h2>
+                    <p class="wish-text">You don't have any products in the wishlist yet. You will find a lot of
+                        interesting products on our "Shop" page.</p>
+                    <a href="index.html" class="wish-btn text-decoration-none my-5">RETURN TO SHOP</a>
                 </div>
             </div>
+        <!-- wish section end  -->
+                    </div>
+                  </div>
+                </div>
+              </div>
         </div>
     </section>
-<!-- hero section end  -->
-<section>
-    <div class="dashboard-section">
-        <div class="container account-section">
-            <div class="row">
-              <!-- Sidebar -->
-              <div class="col-md-3 sidebar-nav">
-                <h5>MY ACCOUNT</h5>
-                <ul id="sidebar-menu">
-                  <li class="active" data-section="dashboard">Dashboard</li>
-                  <li data-section="orders">Orders</li>
-                  <li data-section="addresses">Addresses</li>
-                  <li data-section="account">Account details</li>
-                  <li data-section="wishlist">Wishlist</li>
-                  <li data-section="logout">Logout</li>
-                </ul>
-              </div>
-          
-              <!-- Main Sections -->
-              <div class="col-md-9">
-                <!-- Dashboard -->
-                <div class="account-content active" id="dashboard">
-                  <p>Hello <strong>Shafaet Hosser Shuvo</strong> (not <strong>Shafaet Hosser Shuvo</strong>? <a href="#">Log out</a>)</p>
-                  <p>From your account dashboard you can view your <a href="#">recent orders</a>, manage your <a href="#">shipping and billing addresses</a>, and <a href="#">edit your password</a> and account details.</p>
-                  <!-- Dashboard Quick Links -->
-            <div class="row g-4">
-                <!-- Orders Card -->
-                <div class="col-md-4 col-sm-6">
-                  <a href="#" class="text-decoration-none">
-                    <div class="dashboard-card text-center p-4 h-100">
-                      <div class="icon-wrapper mb-3">
-                        <i class="bi bi-file-text fs-1"></i>
-                      </div>
-                      <h5>Orders</h5>
-                    </div>
-                  </a>
-                </div>
-                
-                <!-- Addresses Card -->
-                <div class="col-md-4 col-sm-6">
-                  <a href="#" class="text-decoration-none">
-                    <div class="dashboard-card text-center p-4 h-100">
-                      <div class="icon-wrapper mb-3">
-                        <i class="bi bi-geo-alt fs-1"></i>
-                      </div>
-                      <h5>Addresses</h5>
-                    </div>
-                  </a>
-                </div>
-                
-                <!-- Account Details Card -->
-                <div class="col-md-4 col-sm-6">
-                  <a href="#" class="text-decoration-none">
-                    <div class="dashboard-card text-center p-4 h-100">
-                      <div class="icon-wrapper mb-3">
-                        <i class="bi bi-person-circle fs-1"></i>
-                      </div>
-                      <h5>Account details</h5>
-                    </div>
-                  </a>
-                </div>
-                
-                <!-- Wishlist Card -->
-                <div class="col-md-4 col-sm-6">
-                  <a href="#" class="text-decoration-none">
-                    <div class="dashboard-card text-center p-4 h-100">
-                      <div class="icon-wrapper mb-3">
-                        <i class="bi bi-heart fs-1"></i>
-                      </div>
-                      <h5>Wishlist</h5>
-                    </div>
-                  </a>
-                </div>
-                
-                <!-- Logout Card -->
-                <div class="col-md-4 col-sm-6">
-                  <a href="#" class="text-decoration-none">
-                    <div class="dashboard-card text-center p-4 h-100">
-                      <div class="icon-wrapper mb-3">
-                        <i class="bi bi-box-arrow-right fs-1"></i>
-                      </div>
-                      <h5>Logout</h5>
-                    </div>
-                  </a>
-                </div>
-              </div>
-            </div>
-                </div>
-          
-                <!-- Orders -->
-                <div class="account-content" id="orders">
-                  <h6>Your Orders</h6>
-                  <p>No orders yet.</p>
-                  <div class="account-card mt-3">
-                    <i class="bi bi-card-checklist"></i>
-                    <p>Order #001</p>
-                    <span>Status: Pending</span>
-                  </div>
-                </div>
-          
-                <!-- Addresses -->
-                <div class="account-content" id="addresses">
-                  <h6>Saved Addresses</h6>
-                  <div class="account-card mt-3">
-                    <i class="bi bi-geo-alt"></i>
-                    <p>Shipping Address</p>
-                    <span>123 Street, Dhaka</span>
-                  </div>
-                </div>
-          
-                <!-- Account details -->
-                <div class="account-content" id="account">
-                  <h6>Account Details</h6>
-                  <p>Name: Shafaet Hosser Shuvo</p>
-                  <p>Email: example@email.com</p>
-                </div>
-          
-                <!-- Wishlist -->
-                <div class="account-content" id="wishlist">
-                  <h6>Your Wishlist</h6>
-                  <p>You haven't saved any items yet.</p>
-                </div>
-          
-                <!-- Logout -->
-                <div class="account-content" id="logout">
-                  <h6>You have been logged out.</h6>
-                  <a href="#">Log in again</a>
-                </div>
-              </div>
-            </div>
-    </div>
-</section>
 </main>
 <footer>
     <section>

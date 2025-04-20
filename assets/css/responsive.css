@@ -695,6 +695,10 @@
     main .card-section .card-container .card-content .card-items .absolute-card {
         height: 100% !important;
       }
+      main .dashboard-section {
+        padding: 0px !important;
+         max-width: auto;
+      }
 }
 
 
