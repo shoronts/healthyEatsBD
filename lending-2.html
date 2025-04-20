@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Healthy Eats BD | dashboard</title>
+
+    <link
+      rel="shortcut icon"
+      href="./assets/media/favicon.ico"
+      type="image/x-icon"
+    />
+    <!-- google fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Signika:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap CSS  -->
+    <link rel="stylesheet" href="assets/css/bootstrap.css" />
+    <!-- Swiper Slider CSS -->
+    <link rel="stylesheet" href="./assets/css/swiper.css" />
+    <!-- My CSS -->
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <style>
+      main .lending-banner-container .lending-banner-content {
+        text-align: center;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+      }
+      main .lending-banner-container .lending-banner-content .logo-img img {
+        width: 150px;
+        height: 90px;
+        margin: 0 auto;
+      }
+      main .lending-banner-container .lending-banner-content .first-banner img {
+        height: 168px;
+        width: 400px;
+      }
+      main .lending-banner-container .lending-banner-content .product-image {
+        height: auto;
+        max-width: 1122px;
+        margin: 0 auto;
+      }
+      main .lending-banner-container .lending-order-btn {
+        font-size: 24px;
+        padding: 12px 40px;
+        background-color: #1c5f3b;
+        color: white;
+        border: none;
+        border-radius: 10px;
+      }
+      main .lending-banner-container .lending-order-btn:hover {
+        background-color: #cef00c;
+      }
+      main .upokarita-section {
+        text-align: center;
+      }
+      main .upokarita-section .upokarita-container {
+        padding: 20px 30px;
+      }
+      main .upokarita-section .upokarita-container .upokarita-first-img {
+        margin: 0 auto;
+        text-align: center;
+      }
+      main .upokarita-section .upokarita-container .upokarita-second-img {
+        margin: 0 auto;
+        text-align: center;
+      }
+      main .upokarita-section .another-order-btn {
+        font-size: 24px;
+        padding: 12px 40px 12px 40px;
+        background-color: #fcdb32;
+        color: #000000;
+        border-color: #000000;
+        border: none;
+        border-radius: 10px;
+      }
+      main .upadan-section {
+        background-color: #f0f5e1;
+      }
+      main .certificate-section .certificate-container {
+        padding: 10px 20px;
+      }
+      main .certificate-section .certificate-container .certificate-second-img {
+        max-width: 1400px;
+        margin: 0 auto;
+      }
+      main .keno-kinben-section {
+        background-color: #f0f5e1;
+      }
+      main .keno-kinben-section .lending-order-btn {
+        font-size: 24px;
+        padding: 12px 40px;
+        background-color: #1c5f3b;
+        color: white;
+        border: none;
+        border-radius: 10px;
+      }
+
+      main .animated-underline {
+        display: inline-block;
+        position: relative;
+        font-size: 2rem;
+        font-weight: bold;
+        color: #222;
+      }
+
+      main .animated-underline::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -5px;
+        height: 3px;
+        width: 100%;
+        background-color: #ffc107;
+        transform: scaleX(0);
+        transform-origin: left;
+        animation: underlineAnim 4s infinite;
+      }
+
+      @keyframes underlineAnim {
+        0% {
+          transform: scaleX(0);
+        }
+        50% {
+          transform: scaleX(1);
+        }
+        100% {
+          transform: scaleX(0);
+        }
+      }
+      main .semifooter-section .semifooter-container .order-confirmed {
+        background-color: #192d36;
+        padding: 60px 0px;
+        position: relative;
+      }
+      main
+        .semifooter-section
+        .semifooter-container
+        .order-confirmed
+        .order-text {
+        text-align: center;
+        font-family: "Hind Siliguri", Sans-serif;
+        font-size: 27px;
+        font-weight: 500;
+        color: #ffffff;
+      }
+      main
+        .semifooter-section
+        .semifooter-container
+        .order-confirmed
+        .order-confirmed-btn {
+        padding: 12px 36px;
+        border: none;
+        border-radius: 10px;
+        background-color: #ffbe00;
+        position: absolute;
+        left: -100px;
+      }
+      main
+        .semifooter-section
+        .semifooter-container
+        .order-confirmed
+        .animated-button {
+        animation: sideSlide 2s infinite ease-in-out;
+      }
+
+      @keyframes sideSlide {
+        0% {
+          transform: translateX(0%);
+        }
+        50% {
+          transform: translateX(40%);
+        }
+        100% {
+          transform: translateX(0%);
+        }
+      }
+      main .semifooter-section .semifooter-jiggasha {
+        background-color: #1c5f3b;
+        padding: 10px 0px;
+      }
+      main .semifooter-section .accordion {
+        padding: 0px 20px;
+      }
+      main .semifooter-section .accordion-items {
+        background-color: #1c5f3b;
+        color: white;
+      }
+      main .semifooter-section .accordion-button {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 10px;
+        background-color: #1c5f3b;
+        color: white;
+      }
+
+      main .semifooter-section .accordion-button::before {
+        content: "+";
+        font-size: 1.2rem;
+        margin-right: 10px;
+        transition: transform 0.2s;
+      }
+
+      main .semifooter-section .accordion-button:not(.collapsed)::before {
+        content: "-";
+      }
+      main .semifooter-section .accordion-button:focus {
+        box-shadow: none;
+        outline: none;
+        border: none;
+        background-color: #1c5f3b;
+        color: white;
+      }
+      main .semifooter-section .accordion-body {
+        background-color: #1c5f3b;
+        color: white;
+        text-align: start;
+      }
+
+      main .semifooter-section .accordion-button::after {
+        display: none !important;
+      }
+      main .footer-section .footer-container {
+        background-color: #F0F5E1;
+        padding: 40px 0px;
+      }
+      main .footer-section .footer-container p {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <!-- banner section start  -->
+      <section>
+        <div class="lending-banner-container">
+          <div
+            class="lending-banner-content"
+            style="
+              background-image: url(assets/media/lenging-2/Bg-3-min-scaled.webp);
+            "
+          >
+            <div class="logo-img">
+              <img
+                src="assets/media/healthy-eats-logo-1.png"
+                alt="lending-logo"
+                decoding="async"
+                loading="lazy"
+                class="img-fluid"
+              />
+            </div>
+            <div class="first-banner">
+              <img
+                src="assets/media/lenging-2/Heading-1-1 (1).webp"
+                alt="lending-header"
+                decoding="async"
+                loading="lazy"
+                class="img-fluid"
+              />
+            </div>
+            <div class="product-image">
+              <img
+                src="assets/media/lenging-2/Product-2-1.webp"
+                alt="product-image"
+                loading="lazy"
+                decoding="async"
+                class="img-fluid"
+              />
+            </div>
+          </div>
+          <button class="lending-order-btn my-3">অর্ডার করুন</button>
+        </div>
+      </section>
+      <!-- banner section end  -->
+
+      <!-- upokarita section start  -->
+      <section>
+        <div class="upokarita-section">
+          <div
+            class="upokarita-container"
+            style="
+              background-image: url(assets/media/lenging-2/Bg-3-min-scaled.webp);
+            "
+          >
+            <div class="upokarita-first-img">
+              <img
+                src="assets/media/lenging-2/Heading-2.webp"
+                alt="upokarita-image"
+                loading="lazy"
+                decoding="async"
+                class="img-fluid"
+              />
+            </div>
+            <div class="upokarita-second-img">
+              <img
+                src="assets/media/lenging-2/Upukarita-1-1.webp"
+                alt="upokarita-image"
+                loading="lazy"
+                decoding="async"
+                class="img-fluid"
+              />
+            </div>
+            <button class="another-order-btn mt-3">অর্ডার করুন</button>
+          </div>
+        </div>
+      </section>
+      <!-- upokarita section end  -->
+
+      <!-- upadan sectin start  -->
+      <section>
+        <div class="upadan-section text-center">
+          <div class="upadan-container">
+            <div class="upokarita-first-img">
+              <img
+                src="assets/media/lenging-2/Heading-3.0.webp"
+                alt="upokarita-image"
+                loading="lazy"
+                decoding="async"
+                class="img-fluid"
+              />
+            </div>
+            <div class="upokarita-second-img">
+              <img
+                src="assets/media/lenging-2/Upukarita-2-1.webp"
+                alt="upokarita-image"
+                loading="lazy"
+                decoding="async"
+                class="img-fluid"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- upadan sectin end  -->
+
+      <!-- certificate section start  -->
+      <section>
+        <div class="certificate-section">
+          <div
+            class="certificate-container text-center"
+            style="
+              background-image: url(assets/media/lenging-2/Bg-3-min-scaled.webp);
+            "
+          >
+            <div class="certificate-first-image">
+              <img
+                src="assets/media/lenging-2/Heading-7.webp"
+                alt="upokarita-image"
+                loading="lazy"
+                decoding="async"
+                class="img-fluid"
+              />
+            </div>
+            <div class="certificate-second-img">
+              <img
+                src="assets/media/lenging-2/BSTI-Certificate-scaled.webp"
+                alt="upokarita-image"
+                loading="lazy"
+                decoding="async"
+                class="img-fluid"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- certificate section end  -->
+
+      <!-- keno kinben section start -->
+      <section>
+        <div class="keno-kinben-section">
+          <div class="keno-kinbern-container text-center">
+            <div class="keno-first-image">
+              <img
+                src="assets/media/lenging-2/Heading-4.webp"
+                alt="upokarita-image"
+                loading="lazy"
+                decoding="async"
+                class="img-fluid"
+              />
+            </div>
+            <div class="keno-second-img">
+              <img
+                src="assets/media/lenging-2/Keno-sera-3-2.webp"
+                alt="upokarita-image"
+                loading="lazy"
+                decoding="async"
+                class="img-fluid"
+              />
+            </div>
+          </div>
+          <button class="lending-order-btn my-3">অর্ডার করুন</button>
+        </div>
+      </section>
+      <!-- keno kinben section end -->
+
+      <!-- slider section start  -->
+      <section>
+        <div class="slider-container text-center">
+          <div class="slider-content">
+            <h2 class="review-text fs-6">
+              পণ্য সম্পর্কে আমাদের <br />
+              <span class="fs-1 text-warning animated-underline">
+                কাস্টমার থেকেই শুনুন
+              </span>
+            </h2>
+            <div class="swiper-body">
+              <div class="swiper myLendingSwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide d-flex gap-5">
+                    <img
+                      src="assets/media/lending/feedback-01-1.png"
+                      alt="slider-img"
+                      decoding="async"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="swiper-slide d-flex gap-5">
+                    <img
+                      src="assets/media/lending/feedback-07-1 (1).png"
+                      alt="slider-img"
+                      decoding="async"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="swiper-slide d-flex gap-5">
+                    <img
+                      src="assets/media/lending/feedback-07-1 (1).png"
+                      alt="slider-img"
+                      decoding="async"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="swiper-slide d-flex gap-5">
+                    <img
+                      src="assets/media/lending/feedback-01-1.png"
+                      alt="slider-img"
+                      decoding="async"
+                      loading="lazy"
+                    />
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <img
+              src="assets/media/lenging-2/Test-2.webp"
+              alt="proyojon-image"
+              loading="lazy"
+              decoding="async"
+              class="img-fluid"
+            />
+          </div>
+        </div>
+      </section>
+      <!-- slider section end  -->
+
+      <!-- card section start  -->
+      <section>
+        <div class="card-section p-4 p-md-0">
+          <div class="card-container">
+            <div class="card-content">
+              <!-- card -1  -->
+              <div class="card-items">
+                <img
+                  src="assets/media/lending/card-1.png"
+                  alt="card-image"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <p class="card-title">পিনাট বাটার (রেগুলার)</p>
+                <p class="card-weight">৮০০ গ্রাম</p>
+                <p class="card-price">৯৪০/-</p>
+                <button class="peanut-card-btn">অর্ডার করুন</button>
+              </div>
+              <!-- card-2  -->
+              <div class="card-items absolute-card my-4 my-lg-0">
+                <img
+                  src="assets/media/lending/card-2.png"
+                  alt="card-image"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <p class="card-title">পিনাট বাটার</p>
+                <p class="card-subtitle">(ডার্ক চকলেট+রেগুলার)</p>
+                <p class="card-weight">৪০০ গ্রাম + ৪০০ গ্রাম</p>
+                <p class="card-through d-none d-md-block">১১৪০/-</p>
+                <p class="card-price">১০৫০/-</p>
+                <button class="peanut-card-btn">অর্ডার করুন</button>
+              </div>
+              <!-- card-3  -->
+              <div class="card-items">
+                <img
+                  src="assets/media/lending/card-3.png"
+                  alt="card-image"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <p class="card-title">পিনাট বাটার (ডার্ক চকলেট)</p>
+                <p class="card-weight">৮০০ গ্রাম</p>
+                <p class="card-price">১১৯০/-</p>
+                <button class="peanut-card-btn">অর্ডার করুন</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- card section start  -->
+
+      <!-- semi footer section start  -->
+      <section>
+        <div class="semifooter-section">
+          <div class="semifooter-container">
+            <div class="order-confirmed text-center">
+              <p class="order-text">সরাসরি কল করে অর্ডার করুন</p>
+              <button class="order-confirmed-btn animated-button">
+                <span
+                  ><svg
+                    aria-hidden="true"
+                    height="24"
+                    width="24"
+                    class="ms-2 e-font-icon-svg e-fas-phone-volume"
+                    viewBox="0 0 384 512"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M97.333 506.966c-129.874-129.874-129.681-340.252 0-469.933 5.698-5.698 14.527-6.632 21.263-2.422l64.817 40.513a17.187 17.187 0 0 1 6.849 20.958l-32.408 81.021a17.188 17.188 0 0 1-17.669 10.719l-55.81-5.58c-21.051 58.261-20.612 122.471 0 179.515l55.811-5.581a17.188 17.188 0 0 1 17.669 10.719l32.408 81.022a17.188 17.188 0 0 1-6.849 20.958l-64.817 40.513a17.19 17.19 0 0 1-21.264-2.422zM247.126 95.473c11.832 20.047 11.832 45.008 0 65.055-3.95 6.693-13.108 7.959-18.718 2.581l-5.975-5.726c-3.911-3.748-4.793-9.622-2.261-14.41a32.063 32.063 0 0 0 0-29.945c-2.533-4.788-1.65-10.662 2.261-14.41l5.975-5.726c5.61-5.378 14.768-4.112 18.718 2.581zm91.787-91.187c60.14 71.604 60.092 175.882 0 247.428-4.474 5.327-12.53 5.746-17.552.933l-5.798-5.557c-4.56-4.371-4.977-11.529-.93-16.379 49.687-59.538 49.646-145.933 0-205.422-4.047-4.85-3.631-12.008.93-16.379l5.798-5.557c5.022-4.813 13.078-4.394 17.552.933zm-45.972 44.941c36.05 46.322 36.108 111.149 0 157.546-4.39 5.641-12.697 6.251-17.856 1.304l-5.818-5.579c-4.4-4.219-4.998-11.095-1.285-15.931 26.536-34.564 26.534-82.572 0-117.134-3.713-4.836-3.115-11.711 1.285-15.931l5.818-5.579c5.159-4.947 13.466-4.337 17.856 1.304z"
+                    ></path></svg></span
+                >01742-028174
+              </button>
+            </div>
+
+            <div class="semifooter-jiggasha text-center">
+              <h2 class="review-text fs-2 text-light">
+                আপনাদের সাধারণ <br />
+                <span class="fs-1 text-warning animated-underline">
+                  জিজ্ঞাসা
+                </span>
+              </h2>
+
+              <div class="mt-5">
+                <div class="accordion" id="accordionExample">
+                  <!-- Accordion Item 1 -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne"
+                      >
+                        পিনাট বাটার কারা খেতে পারবে ?
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseOne"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        শিশু, কিশোর, বৃদ্ধ সবার জন্য পিনাট বাটার।একজন
+                        সাস্থ্যসচেতন মানুষের অবশ্যই দৈনিক কমপক্ষে ২ চামচ পিনাট
+                        বাটার খাওয়া উচিত। মত্র ২ চামচ পিনাট বাটারে প্রচুর
+                        পরিমাণে প্রোটিন, ভিটামিন্‌ফাইবার, মিনারেল ও
+                        এন্টিওক্সিডেন্ট রয়েছে যা তাৎক্ষণিক শক্তি যোগায় আর দিনভর
+                        এনারজেটিক রাখে।
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Accordion Item 2 -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo"
+                      >
+                        কত বছর বয়সের বাচ্চারা খেতে পারবে ?
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseTwo"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        বাচ্চাদের জন্য পিনাট বাটার খুবই উপকারি বিশেষ করে
+                        বাচ্চাদের মেধা বিকাশ ও সুষম প্রোটিন এর চাহিদা পূরণে
+                        বিশেষ ভূমিকা রাখে। সাধারণত ১.৫ বছরের বেশি বয়সের বাচ্চারা
+                        পিনাট বাটার সরাসরি খেতে পারবে পরিমিত পরিমাণে ,কিন্তু
+                        যাদের বয়স ৮ মাসের বেশি তারা বার্লি, সুজি ও দুধের সাথে
+                        মিশিয়ে খাওয়াতে পারেন যা আপনার বাচ্চাকে পুষ্টি প্রদান
+                        করবে।
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- semi footer section end  -->
+
+
+      <!-- footer section start  -->
+      <section>
+        <div class="footer-section">
+          <div class="footer-container">
+            <p class="fw-semibold">© Copyright <strong>Healthy Eats BD</strong> – 2024 | All rights reserved.</p>
+          </div>
+        </div>
+      </section>
+      <!-- footer section start  -->
+      <!-- Bootstrap JS -->
+      <script src="./assets/js/bootstrap.js"></script>
+
+      <!-- Swiper JS -->
+      <script src="./assets/js/swiper.js"></script>
+
+      <!-- My JS -->
+      <script src="./assets/js/main.js"></script>
+    </main>
+  </body>
+</html>
