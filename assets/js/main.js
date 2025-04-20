@@ -1,6 +1,26 @@
 document.addEventListener("DOMContentLoaded", () => {
 
 
+  // dashboard js start 
+
+  const menuItems = document.querySelectorAll('#sidebar-menu li');
+  const sections = document.querySelectorAll('.account-content');
+
+  menuItems.forEach(item => {
+    item.addEventListener('click', () => {
+      // Remove active class from all
+      menuItems.forEach(i => i.classList.remove('active'));
+      sections.forEach(s => s.classList.remove('active'));
+
+      // Add active class to clicked item and show its section
+      item.classList.add('active');
+      const targetId = item.getAttribute('data-section');
+      document.getElementById(targetId).classList.add('active');
+    });
+  });
+
+
+  // dashobard js end 
   //Header js start 
 
 
