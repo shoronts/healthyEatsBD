@@ -1,0 +1,103 @@
+/* Dashboard Layout */
+.dashboard-container {
+  min-height: 100vh;
+  width: 100%;
+}
+
+.sidebar {
+  width: 70px;
+  background-color: #f8f9fa;
+  border-right: 1px solid #e9ecef;
+  height: 100vh;
+  position: fixed;
+  z-index: 100;
+}
+
+.main-content {
+  margin-left: 70px;
+  width: calc(100% - 70px);
+  background-color: #f5f7f9;
+}
+
+.dashboard-content {
+  padding: 20px;
+}
+
+/* Sidebar Styling */
+.sidebar-header {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.logo-container {
+  padding: 10px 0;
+}
+
+.logo-wrapper {
+  width: 50px;
+  height: 50px;
+  background-color: #e9f5f3;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.sidebar-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu-item {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+  color: #6c757d;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.menu-item:hover {
+  background-color: #e9f5f3;
+  color: #2a9d8f;
+}
+
+.menu-item.active {
+  background-color: #e9f5f3;
+  color: #2a9d8f;
+}
+
+/* Chart Styling */
+.chart-container {
+  width: 100%;
+  height: 100%;
+}
+
+.chart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.date-separator {
+  margin: 0 5px;
+  display: flex;
+  align-items: center;
+}
+
+/* Custom Colors for Charts */
+.recharts-default-tooltip {
+  background-color: #fff !important;
+  border: 1px solid #e9ecef !important;
+  border-radius: 4px !important;
+  padding: 8px !important;
+}
