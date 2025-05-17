@@ -13,7 +13,7 @@ export default function HeaderWithSidebar() {
   const shouldExpand = expanded || isHovering;
   const handleActive=()=>setActive(!active);
   return (
-    <div className="flex h-auto">
+    <div className="flex h-screen">
       {/* Sidebar */}
       <div
         className={`bg-white dark:bg-slate-800 text-slate-900 dark:text-white transition-all duration-300 ease-in-out ${
@@ -109,5 +109,6 @@ export default function HeaderWithSidebar() {
         </nav>
       </div>
     </div>
+    
   );
 }

@@ -37,7 +37,7 @@ export default function Dashboard() {
 
       <Payments dateRange={dateRange} />
 
-      <div className="bg-white rounded-lg shadow p-4">
+      <div className=" dark:bg-[#0F172A] bg-white rounded-lg shadow p-4">
         <div className="flex justify-between items-center mb-4">
           <div className="flex items-center space-x-2">
             <h2 className="text-lg font-medium">Top 10 Selling Items</h2>
@@ -47,13 +47,13 @@ export default function Dashboard() {
             <RefreshCw className="h-4 w-4 text-teal-500" />
             <div className="text-xs text-gray-500">{dateRange}</div>
             <div className="flex space-x-2">
-              <select className="h-8 bg-gray-100 text-xs border-0 rounded px-2 py-1 focus:outline-none focus:ring-1 focus:ring-teal-500">
+              <select className="h-8 bg-gray-100 dark:bg-[#0F172A] text-xs border-0 rounded px-2 py-1 focus:outline-none focus:ring-1 focus:ring-teal-500">
                 <option value="variants">By Variants</option>
               </select>
-              <select className="h-8 bg-gray-100 text-xs border-0 rounded px-2 py-1 focus:outline-none focus:ring-1 focus:ring-teal-500">
+              <select className="h-8 bg-gray-100 dark:bg-[#0F172A] text-xs border-0 rounded px-2 py-1 focus:outline-none focus:ring-1 focus:ring-teal-500">
                 <option value="requested">By Requested</option>
               </select>
-              <button className="h-8 bg-gray-100 text-xs border-0 rounded px-3 py-1 hover:bg-gray-200 focus:outline-none focus:ring-1 focus:ring-teal-500">
+              <button className="h-8 bg-gray-100 dark:bg-[#0F172A] text-xs border-0 rounded px-3 py-1 hover:bg-gray-200 focus:outline-none focus:ring-1 focus:ring-teal-500">
                 Today
               </button>
             </div>

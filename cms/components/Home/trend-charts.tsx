@@ -78,17 +78,17 @@ const salesData = [
 
 export default function TrendCharts() {
   return (
-    <div className="bg-white rounded-lg shadow p-4">
+    <div className="dark:bg-[#0F172A]  bg-white rounded-lg shadow p-4">
       <div className="flex justify-between items-center mb-4">
         <div className="flex items-center space-x-2">
           <h2 className="text-lg font-medium">Trends</h2>
           <RefreshCw className="h-4 w-4 text-teal-500" />
         </div>
         <div className="flex space-x-2">
-          <button className="h-8 bg-gray-100 text-xs border-0 rounded px-3 py-1 hover:bg-gray-200 focus:outline-none focus:ring-1 focus:ring-teal-500">
+          <button className="h-8 dark:bg-[#0F172A] bg-gray-100 text-xs border-0 rounded px-3 py-1 hover:bg-gray-200 focus:outline-none focus:ring-1 focus:ring-teal-500">
             By Approved
           </button>
-          <button className="h-8 bg-gray-100 text-xs border-0 rounded px-3 py-1 hover:bg-gray-200 focus:outline-none focus:ring-1 focus:ring-teal-500">
+          <button className="h-8 dark:bg-[#0F172A] bg-gray-100 text-xs border-0 rounded px-3 py-1 hover:bg-gray-200 focus:outline-none focus:ring-1 focus:ring-teal-500">
             Daily
           </button>
         </div>

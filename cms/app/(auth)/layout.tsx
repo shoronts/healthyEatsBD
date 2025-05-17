@@ -20,9 +20,13 @@ export default function RootLayout({
       >
         <ThemeProvider>
           <div className="flex min-h-screen">
-            <Sidebar />
-            <div className="flex flex-col mx-auto">
+            <div className="sticky top-0 h-screen">
+              <Sidebar />
+            </div>
+            <div className="flex flex-col mx-auto w-full">
+              <div className="sticky top-0 z-50">
               <Header />
+            </div>
               <main className=" p-4">{children}</main>
               <Footer />
             </div>
