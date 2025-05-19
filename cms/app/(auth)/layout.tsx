@@ -14,7 +14,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en">
       <body
         className={`${inter.className} bg-white text-gray-900 dark:bg-slate-900 dark:text-white transition-colors duration-200`}
       >
@@ -27,7 +27,7 @@ export default function RootLayout({
               <div className="sticky top-0 z-50">
               <Header />
             </div>
-              <main className=" p-4">{children}</main>
+              {children}
               <Footer />
             </div>
           </div>

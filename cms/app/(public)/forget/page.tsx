@@ -102,7 +102,7 @@ export default function Page() {
           </form>
 
           <p className="text-center mt-4 text-sm">
-            <Link href="/login" className="text-[#7367F0] hover:underline">
+            <Link href="/" className="text-[#7367F0] hover:underline">
               ← Back to login
             </Link>
           </p>

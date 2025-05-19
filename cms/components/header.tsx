@@ -1,8 +1,5 @@
 "use client";
 import { useState, useRef, useEffect } from "react";
-import {
-  ShoppingCart,
-} from "lucide-react";
 import Image from "next/image";
 import { useTheme } from "@/context/theme-context";
 import Link from "next/link";
@@ -184,181 +181,6 @@ export default function Header() {
             </button>
           </div>
 
-          <div className="relative">
-            <button
-              onClick={() => toggleDropdown("cart")}
-              className="relative text-gray-300 hover:text-white"
-            >
-              <ShoppingCart className="h-6 w-6" />
-              <span className="absolute -top-2 -right-2 h-5 w-5 rounded-full bg-indigo-500 text-xs text-white flex items-center justify-center">
-                6
-              </span>
-            </button>
-            {cartOpen && (
-              <div className="absolute right-0 top-full z-30 mt-2 w-[500px] rounded-md dark:bg-[#0F172A] bg-white  py-2 shadow-lg">
-                <div className="w-full max-w-[500px] dark:bg-[#0F172A] bg-white   dark:text-white text-[#605A75] rounded-lg overflow-hidden">
-                  {/* Header */}
-                  <div className="flex justify-between items-center p-5">
-                    <h2 className="text-xl font-medium">My Cart</h2>
-                    <span className="text-[#7367F0] font-medium">4 Items</span>
-                  </div>
-
-                  {/* Cart Items */}
-                  <div className="divide-y divide-[#2a304a]">
-                    {/* Apple Watch 5 */}
-                    <div className="flex items-center p-4 gap-3">
-                      <div className="w-12 h-12 bg-[#2a304a] rounded-md overflow-hidden flex items-center justify-center">
-                        <img
-                          src="/placeholder.svg?height=48&width=48"
-                          alt="Apple Watch 5"
-                          className="w-10 h-10 object-cover"
-                        />
-                      </div>
-                      <div className="flex-1">
-                        <h3 className="text-sm font-medium">Apple watch 5</h3>
-                        <p className="text-xs text-gray-400">By Apple</p>
-                      </div>
-                      <div className="flex items-center gap-2">
-                        <button className="w-7 h-7 bg-[#7367F0] rounded flex items-center justify-center text-white">
-                          <span className="text-lg font-bold">-</span>
-                        </button>
-                        <span className="w-5 text-center">2</span>
-                        <button className="w-7 h-7 bg-[#7367F0] rounded flex items-center justify-center text-white">
-                          <span className="text-lg font-bold">+</span>
-                        </button>
-                      </div>
-                      <div className="w-20 text-right">
-                        <span className="font-medium">$374.90</span>
-                      </div>
-                    </div>
-
-                    {/* Google Home Mini */}
-                    <div className="flex items-center p-4 gap-3">
-                      <div className="w-12 h-12 bg-[#2a304a] rounded-md overflow-hidden flex items-center justify-center">
-                        <img
-                          src="/placeholder.svg?height=48&width=48"
-                          alt="Google Home Mini"
-                          className="w-10 h-10 object-cover"
-                        />
-                      </div>
-                      <div className="flex-1">
-                        <h3 className="text-sm font-medium">
-                          Google Home Mini
-                        </h3>
-                        <p className="text-xs text-gray-400">By Google</p>
-                      </div>
-                      <div className="flex items-center gap-2">
-                        <button className="w-7 h-7 bg-[#7367F0] rounded flex items-center justify-center text-white">
-                          <span className="text-lg font-bold">-</span>
-                        </button>
-                        <span className="w-5 text-center">14</span>
-                        <button className="w-7 h-7 bg-[#7367F0] rounded flex items-center justify-center text-white">
-                          <span className="text-lg font-bold">+</span>
-                        </button>
-                      </div>
-                      <div className="w-20 text-right">
-                        <span className="font-medium">$129.40</span>
-                      </div>
-                    </div>
-
-                    {/* iPhone 11 Pro */}
-                    <div className="flex items-center p-4 gap-3">
-                      <div className="w-12 h-12 bg-[#2a304a] rounded-md overflow-hidden flex items-center justify-center">
-                        <img
-                          src="/placeholder.svg?height=48&width=48"
-                          alt="iPhone 11 Pro"
-                          className="w-10 h-10 object-cover"
-                        />
-                      </div>
-                      <div className="flex-1">
-                        <h3 className="text-sm font-medium">iPhone 11 Pro</h3>
-                        <p className="text-xs text-gray-400">By Apple</p>
-                      </div>
-                      <div className="flex items-center gap-2">
-                        <button className="w-7 h-7 bg-[#7367F0] rounded flex items-center justify-center text-white">
-                          <span className="text-lg font-bold">-</span>
-                        </button>
-                        <span className="w-5 text-center">2</span>
-                        <button className="w-7 h-7 bg-[#7367F0] rounded flex items-center justify-center text-white">
-                          <span className="text-lg font-bold">+</span>
-                        </button>
-                      </div>
-                      <div className="w-20 text-right">
-                        <span className="font-medium">$699.00</span>
-                      </div>
-                    </div>
-
-                    {/* iMac Pro */}
-                    <div className="flex items-center p-4 gap-3">
-                      <div className="w-12 h-12 bg-[#2a304a] rounded-md overflow-hidden flex items-center justify-center">
-                        <img
-                          src="/placeholder.svg?height=48&width=48"
-                          alt="iMac Pro"
-                          className="w-10 h-10 object-cover"
-                        />
-                      </div>
-                      <div className="flex-1">
-                        <h3 className="text-sm font-medium">iMac Pro</h3>
-                        <p className="text-xs text-gray-400">By Apple</p>
-                      </div>
-                      <div className="flex items-center gap-2">
-                        <button className="w-7 h-7 bg-[#7367F0] rounded flex items-center justify-center text-white">
-                          <span className="text-lg font-bold">-</span>
-                        </button>
-                        <span className="w-5 text-center">1</span>
-                        <button className="w-7 h-7 bg-[#7367F0] rounded flex items-center justify-center text-white">
-                          <span className="text-lg font-bold">+</span>
-                        </button>
-                      </div>
-                      <div className="w-20 text-right">
-                        <span className="font-medium">$4,999.00</span>
-                      </div>
-                    </div>
-
-                    {/* MacBook Pro (partially visible in the image) */}
-                    <div className="flex items-center p-4 gap-3">
-                      <div className="w-12 h-12 bg-[#2a304a] rounded-md overflow-hidden flex items-center justify-center">
-                        <img
-                          src="/placeholder.svg?height=48&width=48"
-                          alt="MacBook Pro"
-                          className="w-10 h-10 object-cover"
-                        />
-                      </div>
-                      <div className="flex-1">
-                        <h3 className="text-sm font-medium">MacBook Pro</h3>
-                        <p className="text-xs text-gray-400">By Apple</p>
-                      </div>
-                      <div className="flex items-center gap-2">
-                        <button className="w-7 h-7 bg-[#7367F0] rounded flex items-center justify-center text-white">
-                          <span className="text-lg font-bold">-</span>
-                        </button>
-                        <span className="w-5 text-center">1</span>
-                        <button className="w-7 h-7 bg-[#7367F0] rounded flex items-center justify-center text-white">
-                          <span className="text-lg font-bold">+</span>
-                        </button>
-                      </div>
-                      <div className="w-20 text-right">
-                        <span className="font-medium">$4,999.00</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Total and Checkout */}
-                  <div className="p-5 space-y-4">
-                    <div className="flex justify-between items-center">
-                      <span className="font-medium">Total:</span>
-                      <span className="text-lg font-medium text-purple-400">
-                        $10,999.00
-                      </span>
-                    </div>
-                    <button className="w-full py-3 bg-[#7367F0] text-white rounded-border font-medium">
-                      Checkout
-                    </button>
-                  </div>
-                </div>
-              </div>
-            )}
-          </div>
 
           {/* Notifications */}
           <div className="relative">
@@ -384,10 +206,10 @@ export default function Header() {
               </span>
             </button>
             {notificationsOpen && (
-              <div className="absolute right-0 top-full z-30 mt-2 w-96 rounded-md dark:bg-[#0F172A] bg-white py-2 shadow-lg">
-                <div className="w-full max-w-md dark:bg-[#0F172A] bg-white dark:text-white text-[#605A75] rounded-lg overflow-hidden">
+              <div className="absolute right-0 top-full z-30 mt-2 w-96 rounded-md dark:bg-[#283046] bg-white py-2 shadow-lg">
+                <div className="w-full max-w-md dark:bg-[#283046] bg-white dark:text-white text-[#605A75] rounded-lg overflow-hidden">
                   {/* Header */}
-                  <div className="flex justify-between items-center p-5">
+                  <div className="flex justify-between items-center p-5 border-b border-b-gray-300">
                     <h2 className="text-xl font-medium">Notifications</h2>
                     <span className="text-[#7367F0] font-medium">6 New</span>
                   </div>
@@ -395,7 +217,7 @@ export default function Header() {
                   {/* Notifications List */}
                   <div className="divide-y divide-[#2a304a]">
                     {/* Notification 1 */}
-                    <div className="flex items-start p-4 gap-3">
+                    <div className="flex items-start p-4 gap-3 border-b border-b-gray-300">
                       <div className="w-10 h-10 rounded-full bg-[#2a304a] overflow-hidden flex-shrink-0">
                         <img
                           src="/placeholder.svg?height=40&width=40"
@@ -582,14 +404,14 @@ export default function Header() {
                Company Settings
               </Link>
                <Link
-                href="#"
+                href="http://localhost:3000/company/payments"
                 className="flex items-center px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-slate-700"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-2" viewBox="0 0 15 15"><g fill="none"><path fillRule="evenodd" clipRule="evenodd" d="M2 3.25C2 2.56 2.56 2 3.25 2h8.5c.69 0 1.25.56 1.25 1.25v2.5C13 6.44 12.44 7 11.75 7h-8.5C2.56 7 2 6.44 2 5.75v-2.5zM3.25 3a.25.25 0 0 0-.25.25v2.5c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25v-2.5a.25.25 0 0 0-.25-.25h-8.5zM4 9.25C4 8.56 4.56 8 5.25 8h4.5c.69 0 1.25.56 1.25 1.25v2.5c0 .69-.56 1.25-1.25 1.25h-4.5C4.56 13 4 12.44 4 11.75v-2.5z" fill="currentColor"/></g></svg>                
                 payment
               </Link>
                <Link
-                href="#"
+                href="/whatsNew"
                 className="flex items-center px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-slate-700"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-2" viewBox="0 0 15 15"><g fill="none"><path fillRule="evenodd" clipRule="evenodd" d="M3.25 2C2.56 2 2 2.56 2 3.25v8.5c0 .69.56 1.25 1.25 1.25h2.5C6.44 13 7 12.44 7 11.75v-8.5C7 2.56 6.44 2 5.75 2h-2.5zM3 3.25A.25.25 0 0 1 3.25 3h2.5a.25.25 0 0 1 .25.25v8.5a.25.25 0 0 1-.25.25h-2.5a.25.25 0 0 1-.25-.25v-8.5zM9.25 4C8.56 4 8 4.56 8 5.25v4.5c0 .69.56 1.25 1.25 1.25h2.5c.69 0 1.25-.56 1.25-1.25v-4.5C13 4.56 12.44 4 11.75 4h-2.5z" fill="currentColor"/></g></svg>                
