@@ -2,106 +2,80 @@
 import Image from "next/image";
 import React, { useState } from "react";
 
-const Customers = () => {
+const Locations = () => {
   const [showAddProduct, setShowAddProduct] = useState(false);
   const [currentStep, setCurrentStep] = useState(1);
   const [currentPage, setCurrentPage] = useState(1);
   const inventoryStats = [
-    { label: "Total Customers", value: "6035" },
-    { label: "New Customers", value: "1414" },
-    { label: "Active Customers", value: "1505" },
+    { label: "Total Partner", value: "3" },
+    { label: "Active Partner", value: "3" },
   ];
 
   const inventoryData = [
     {
-      sku: "01-PBC-800",
-      name: " Ashrful islam",
-      tag: "New",
-      source: "View-Source",
-      totalWarehouses: 1,
-      available: 3282,
-      processing: 508,
-      transit: 483,
-      returning: 24,
-      stockValue: "BDT 3,446,100.00",
-      purchaseCost: "BDT 0.00",
-      shortage: 0,
-      id: "c-481205",
-      ids: "Ecommarce-Customer",
-      wastage: 0,
-      status: "Active",
+      lavel:"Ai-razi complex 2nd floor,Mamun coffee house road-32 Dhaka",
+      type:"Billing",
+      address:"mirput 1 dhaka",
+      internalId:"",
+      contactNumber:"",
+      phone:"",
+      cordinates:"22-25-23805",
+      codinate:"91.1903894893",
+      usages:"OrderDropOff",
+      usage:"Customer",
+      createdAt:"may-10-2025",
     },
     {
-      sku: "01-PBC-800",
-      name: " Ashrful islam",
-      source: "View-Source",
-      tag: "New",
-      totalWarehouses: 1,
-      available: 3282,
-      processing: 508,
-      transit: 483,
-      returning: 24,
-      stockValue: "BDT 3,446,100.00",
-      purchaseCost: "BDT 0.00",
-      shortage: 0,
-      id: "c-481205",
-      ids: "Ecommarce-Customer",
-      wastage: 0,
-      status: "Active",
+      lavel:"Ai-razi complex 2nd floor,Mamun coffee house road-32 Dhaka",
+      type:"Billing",
+      address:"mirput 1 dhaka",
+      internalId:"",
+      contactNumber:"",
+      phone:"",
+      cordinates:"22-25-23805",
+      codinate:"91.1903894893",
+      usages:"OrderDropOff",
+      usage:"Customer",
+      createdAt:"may-10-2025",
     },
     {
-      sku: "01-PBC-800",
-      name: " Ashrful islam",
-      tag: "New",
-      source: "View-Source",
-      totalWarehouses: 1,
-      available: 3282,
-      processing: 508,
-      transit: 483,
-      returning: 24,
-      stockValue: "BDT 3,446,100.00",
-      purchaseCost: "BDT 0.00",
-      shortage: 0,
-      id: "c-481205",
-      ids: "Ecommarce-Customer",
-      wastage: 0,
-      status: "Active",
+      lavel:"Ai-razi complex 2nd floor,Mamun coffee house road-32 Dhaka",
+      type:"Billing",
+      address:"mirput 1 dhaka",
+      internalId:"",
+      contactNumber:"",
+      phone:"",
+      cordinates:"22-25-23805",
+      codinate:"91.1903894893",
+      usages:"OrderDropOff",
+      usage:"Customer",
+      createdAt:"may-10-2025",
     },
     {
-      sku: "01-PBC-800",
-      name: " Ashrful islam",
-      tag: "New",
-      source: "View-Source",
-      totalWarehouses: 1,
-      available: 3282,
-      processing: 508,
-      transit: 483,
-      returning: 24,
-      stockValue: "BDT 3,446,100.00",
-      purchaseCost: "BDT 0.00",
-      shortage: 0,
-      id: "c-481205",
-      ids: "Ecommarce-Customer",
-      wastage: 0,
-      status: "Active",
+      lavel:"Ai-razi complex 2nd floor,Mamun coffee house road-32 Dhaka",
+      type:"Billing",
+      address:"mirput 1 dhaka",
+      internalId:"",
+      contactNumber:"",
+      phone:"",
+      cordinates:"22-25-23805",
+      codinate:"91.1903894893",
+      usages:"OrderDropOff",
+      usage:"Customer",
+      createdAt:"may-10-2025",
     },
     {
-      sku: "01-PBC-800",
-      name: " Ashrful islam",
-      tag: "New",
-      source: "View-Source",
-      totalWarehouses: 1,
-      available: 3282,
-      processing: 508,
-      transit: 483,
-      returning: 24,
-      stockValue: "BDT 3,446,100.00",
-      purchaseCost: "BDT 0.00",
-      shortage: 0,
-      id: "c-481205",
-      ids: "Ecommarce-Customer",
-      wastage: 0,
-      status: "Active",
+      lavel:"Ai-razi complex 2nd floor,Mamun coffee house road-32 Dhaka",
+      type:"Billing",
+      address:"mirput 1 dhaka",
+      internalId:"",
+      contactNumber:"",
+      phone:"",
+      cordinates:"22-25-23805",
+      codinate:"91.1903894893",
+      usages:"OrderDropOff",
+      usage:"Customer",
+      createdAt:"may-10-2025",
     },
     // Add additional rows based on image
   ];
@@ -109,95 +83,18 @@ const Customers = () => {
   return (
     <div className="p-6 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 min-h-screen">
       <div className="flex justify-between">
-        <h1 className="text-3xl font-semibold mb-6">Customers</h1>
-
-        <div className="max-w-[1100px] mx-auto grid grid-cols-2 md:grid-cols-3  gap-4 mb-8">
-          {inventoryStats.map((stat, index) => (
-            <div
-              key={index}
-              className="bg-gray-50 dark:bg-gray-800 border border-gray-50 dark:border-gray-700 p-4 rounded-xl shadow"
-            >
-              <div className="flex gap-1 text-[12px] text-gray-600 dark:text-gray-400 mb-1 text-nowrap">
-                {stat.label}
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-4 w-4"
-                  viewBox="0 0 15 15"
-                >
-                  <path
-                    fill="currentColor"
-                    fillRule="evenodd"
-                    d="M7.5.877a6.623 6.623 0 1 0 0 13.246A6.623 6.623 0 0 0 7.5.877M1.827 7.5a5.673 5.673 0 1 1 11.346 0a5.673 5.673 0 0 1-11.346 0m6.423-3a.75.75 0 1 1-1.5 0a.75.75 0 0 1 1.5 0M6 6h1.5a.5.5 0 0 1 .5.5V10h1v1H6v-1h1V7H6z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-              </div>
-              <div
-                className={`text-[14px] text-green-400 font-semibold ${
-                  stat.label.includes("Value") || stat.label.includes("Cost")
-                    ? "text-green-600 dark:text-green-400"
-                    : ""
-                }`}
-              >
-                {stat.value}
-              </div>
-            </div>
-          ))}
-        </div>
+        <h1 className="text-3xl font-semibold mb-6">Locations</h1>
         <div className="flex items-start gap-3">
-          <div className="flex items-center gap-3">
-            <div className="p-2 rounded-full bg-gray-100 dark:text-white dark:bg-gray-800">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6"
-                viewBox="0 0 15 15"
-              >
-                <path
-                  fill="currentColor"
-                  fillRule="evenodd"
-                  d="M11.5 1a.5.5 0 0 1 .5.5v12a.5.5 0 0 1-1 0v-12a.5.5 0 0 1 .5-.5m-2 2a.5.5 0 0 1 .5.5v10a.5.5 0 0 1-1 0v-10a.5.5 0 0 1 .5-.5m4 0a.5.5 0 0 1 .5.5v10a.5.5 0 0 1-1 0v-10a.5.5 0 0 1 .5-.5m-8 1a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-1 0v-9a.5.5 0 0 1 .5-.5m-4 1a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-1 0v-8a.5.5 0 0 1 .5-.5m6 0a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-1 0v-8a.5.5 0 0 1 .5-.5m-4 2a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0v-6a.5.5 0 0 1 .5-.5"
-                  clipRule="evenodd"
-                />
-              </svg>
-            </div>
-            <div className="p-2 rounded-full bg-gray-100 dark:text-white dark:bg-gray-800">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6"
-                viewBox="0 0 15 15"
-              >
-                <path
-                  fill="currentColor"
-                  fillRule="evenodd"
-                  d="M2 1.5a.5.5 0 1 1-1 0a.5.5 0 0 1 1 0M2 5v5h11V5zm0-1a1 1 0 0 0-1 1v5a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1zm-.5 10a.5.5 0 1 0 0-1a.5.5 0 0 0 0 1M4 1.5a.5.5 0 1 1-1 0a.5.5 0 0 1 1 0M3.5 14a.5.5 0 1 0 0-1a.5.5 0 0 0 0 1M6 1.5a.5.5 0 1 1-1 0a.5.5 0 0 1 1 0M5.5 14a.5.5 0 1 0 0-1a.5.5 0 0 0 0 1M8 1.5a.5.5 0 1 1-1 0a.5.5 0 0 1 1 0M7.5 14a.5.5 0 1 0 0-1a.5.5 0 0 0 0 1M10 1.5a.5.5 0 1 1-1 0a.5.5 0 0 1 1 0M9.5 14a.5.5 0 1 0 0-1a.5.5 0 0 0 0 1M12 1.5a.5.5 0 1 1-1 0a.5.5 0 0 1 1 0M11.5 14a.5.5 0 1 0 0-1a.5.5 0 0 0 0 1M14 1.5a.5.5 0 1 1-1 0a.5.5 0 0 1 1 0M13.5 14a.5.5 0 1 0 0-1a.5.5 0 0 0 0 1"
-                  clipRule="evenodd"
-                />
-              </svg>
-            </div>
-            <div className=" p-2 rounded-full bg-teal-700">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6 text-white"
-                viewBox="0 0 15 15"
-              >
-                <path
-                  fill="currentColor"
-                  fillRule="evenodd"
-                  d="M1.5 5.25a.75.75 0 1 0 0-1.5a.75.75 0 0 0 0 1.5M4 4.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5M4.5 7a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1zM2.25 7.5a.75.75 0 1 1-1.5 0a.75.75 0 0 1 1.5 0m-.75 3.75a.75.75 0 1 0 0-1.5a.75.75 0 0 0 0 1.5"
-                  clipRule="evenodd"
-                />
-              </svg>
-            </div>
-          </div>
+          <div className="flex items-center gap-3"></div>
           <div>
-            <button className="px-6 py-1 bg-white dark:bg-gray-900 text-teal-700 dark:text-white font-semibold border border-gray-400 rounded hover:bg-teal-700 hover:text-white">
+            <button className="px-6 py-1 bg-white dark:bg-gray-900 text-teal-700 dark:text-white font-semibold border border-gray-300 rounded hover:bg-teal-700 hover:text-white">
               Action
             </button>
             <button
               className="px-6 py-1 bg-teal-700 dark:bg-teal-700 dark:text-white-700 font-semibold border border-gray-400 rounded hover:bg-teal-700 hover:text-white text-white ml-3"
               onClick={() => setShowAddProduct(true)}
             >
-              Add Customer
+              Add Location
             </button>
           </div>
         </div>
@@ -212,7 +109,7 @@ const Customers = () => {
           <div className="bg-white dark:bg-gray-800 w-full max-w-md relative z-10 overflow-y-auto h-full shadow-lg">
             <div className="p-4 flex justify-between items-center">
               <h2 className="text-lg font-medium text-gray-800 dark:text-gray-100">
-                Add Customer
+                Add Location
               </h2>
               <button onClick={() => setShowAddProduct(false)}>
                 <svg
@@ -239,14 +136,15 @@ const Customers = () => {
                   <div className="space-y-6">
                     <div>
                       <div className="space-y-4">
-                        
                         <div>
                           <label className="text-xs text-gray-600 mb-1 block">
-                            Customer Type
+                            Select Delvery Partner
                           </label>
                           <div className="relative">
                             <select className="w-full border border-gray-200 dark:bg-gray-700 rounded-md p-2 pr-8 appearance-none focus:outline-none focus:ring-1 focus:ring-[#3498db] text-sm">
-                              <option value="">Ecommarce Customer</option>
+                              <option value="">Steadfast</option>
+                              <option value="">Patho</option>
+                              <option value="">RedX</option>
                             </select>
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
@@ -262,9 +160,36 @@ const Customers = () => {
                             </svg>
                           </div>
                         </div>
+
                         <div>
                           <label className="text-xs text-gray-600 mb-1 block">
-                            Customer Name
+                            Select Delvery Partner
+                          </label>
+                          <div className="relative">
+                            <select className="w-full border border-gray-200 dark:bg-gray-700 rounded-md p-2 pr-8 appearance-none focus:outline-none focus:ring-1 focus:ring-[#3498db] text-sm">
+                              <option value="">Steadfast</option>
+                              <option value="">Patho</option>
+                              <option value="">RedX</option>{" "}
+                            </select>
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              className="absolute right-2 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-500 pointer-events-none
+"
+                              viewBox="0 0 15 15"
+                            >
+                              <path
+                                fill="currentColor"
+                                fillRule="evenodd"
+                                d="M1.903 7.297c0 3.044 2.207 5.118 4.686 5.547a.521.521 0 1 1-.178 1.027C3.5 13.367.861 10.913.861 7.297c0-1.537.699-2.745 1.515-3.663c.585-.658 1.254-1.193 1.792-1.602H2.532a.5.5 0 0 1 0-1h3a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0V2.686l-.001.002c-.572.43-1.27.957-1.875 1.638c-.715.804-1.253 1.776-1.253 2.97m11.108.406c0-3.012-2.16-5.073-4.607-5.533a.521.521 0 1 1 .192-1.024c2.874.54 5.457 2.98 5.457 6.557c0 1.537-.699 2.744-1.515 3.663c-.585.658-1.254 1.193-1.792 1.602h1.636a.5.5 0 1 1 0 1h-3a.5.5 0 0 1-.5-.5v-3a.5.5 0 1 1 1 0v1.845h.002c.571-.432 1.27-.958 1.874-1.64c.715-.803 1.253-1.775 1.253-2.97"
+                                clipRule="evenodd"
+                              />
+                            </svg>
+                          </div>
+                        </div>
+
+                        <div>
+                          <label className="text-xs text-gray-600 mb-1 block">
+                            Parter Name
                           </label>
                           <input
                             type="phone"
@@ -272,89 +197,142 @@ const Customers = () => {
                             placeholder="name"
                           />
                         </div>
+
                         <div>
                           <label className="text-xs text-gray-600 mb-1 block">
-                            Phone Number
-                          </label>
-                          <input
-                            type="email"
-                            className="w-full border border-gray-200 bg-red-50 dark:bg-gray-700 rounded-md p-2 focus:outline-none focus:ring-1 focus:ring-[#3498db] text-sm"
-                            placeholder="+0185493765"
-                            
-                          />
-                        </div>
-                        <div>
-                          <label className="text-xs text-gray-600 mb-1 block">
-                            Email Address
+                            Contact person
                           </label>
                           <input
                             type="text"
                             className="w-full border border-gray-200 bg-red-50 dark:bg-gray-700 rounded-md p-2 focus:outline-none focus:ring-1 focus:ring-[#3498db] text-sm"
-                            placeholder="Jhondoe@gmail.com"
+                            placeholder=""
                           />
                         </div>
-                        <div>
-                          <textarea
-                            className="w-full border border-gray-200 dark:bg-gray-700 rounded-md p-2 h-24 focus:outline-none focus:ring-1 focus:ring-[#3498db] text-sm"
-                            placeholder="Additioanal Information"
-                          ></textarea>
-                        </div>
+                        <div className="dark:bg-gray-800 bg-gray-100 p-2">
+                          <label className="text-xs text-gray-600 mb-1 block">
+                            Phone Number
+                          </label>
 
-                         <div>
-                          <button className="px-3 py-1 border border-gray-400 text-[#2980b9]">View Map</button>
+                          <div className="flex items-center dark:bg-gray-800 bg-gray-100 px-2 py-2 dark:border border-gray-300">
+                            {/* Country Code Select */}
+                            <select className="bg-transparent text-gray-800 border-r border-gray-300 outline-none">
+                              <option>🇧🇩</option>
+                              <option>🇮🇳</option>
+                              <option>🇺🇸</option>
+                              <option>🇬🇧</option>
+                            </select>
+
+                            {/* Phone Number Input */}
+                            <input
+                              type="tel"
+                              placeholder="Enter number"
+                              className="flex-1 outline-none bg-transparent pl-2 text-gray-700"
+                            />
+                          </div>
                         </div>
                         <div>
                           <label className="text-xs text-gray-600 mb-1 block">
-                            Customer Tag (Optional)
+                            Select Warehouse
                           </label>
                           <div className="relative">
                             <select className="w-full border border-gray-200 dark:bg-gray-700 rounded-md p-2 pr-8 appearance-none focus:outline-none focus:ring-1 focus:ring-[#3498db] text-sm">
-                              <option value="">New</option>
-                              <option value="">Regular</option>
-                              <option value="">Active</option>
+                              <option value="">Dhaka</option>
+                              <option value="">Mymensing</option>
+                              <option value="">Rongpur</option>{" "}
                             </select>
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
-                              className="absolute right-2 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-500 pointer-events-none"
+                              className="absolute right-2 top-1/2 transform -translate-y-1/2 pw-4 h-4 text-gray-500 pointer-events-none"
                               viewBox="0 0 15 15"
                             >
                               <path
                                 fill="currentColor"
                                 fillRule="evenodd"
-                                d="M3.135 6.158a.5.5 0 0 1 .707-.023L7.5 9.565l3.658-3.43a.5.5 0 0 1 .684.73l-4 3.75a.5.5 0 0 1-.684 0l-4-3.75a.5.5 0 0 1-.023-.707"
+                                d="M10 6.5a3.5 3.5 0 1 1-7 0a3.5 3.5 0 0 1 7 0m-.691 3.516a4.5 4.5 0 1 1 .707-.707l2.838 2.837a.5.5 0 0 1-.708.708z"
                                 clipRule="evenodd"
                               />
                             </svg>
                           </div>
                         </div>
-
-                        <div>
-                          <label className="text-xs text-gray-600 mb-1 block">
-                            Customers Source
-                          </label>
-                          <div className="relative">
-                            <select className="w-full border border-gray-200 dark:bg-gray-700 rounded-md p-2 pr-8 appearance-none focus:outline-none focus:ring-1 focus:ring-[#3498db] text-sm">
-                              <option value=""> Web</option>
-                              <option value=""> Facebook</option>
-                            </select>
+                        <div className="border border-gray-700 rounded-md p-4 w-full max-w-md dark:bg-gray-800 bg-white text-sm shadow-sm">
+                          <div className="flex items-center justify-between cursor-pointer border-b pb-2 mb-4">
+                            <h2 className="text-gray-800 font-medium">
+                              Set Delivery Fees
+                            </h2>
                             <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              className="absolute right-2 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-500 pointer-events-none"
-                              viewBox="0 0 15 15"
+                              className="w-4 h-4 text-gray-600"
+                              fill="none"
+                              stroke="currentColor"
+                              viewBox="0 0 24 24"
                             >
                               <path
-                                fill="currentColor"
-                                fillRule="evenodd"
-                                d="M3.135 6.158a.5.5 0 0 1 .707-.023L7.5 9.565l3.658-3.43a.5.5 0 0 1 .684.73l-4 3.75a.5.5 0 0 1-.684 0l-4-3.75a.5.5 0 0 1-.023-.707"
-                                clipRule="evenodd"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth={2}
+                                d="M19 9l-7 7-7-7"
                               />
                             </svg>
                           </div>
+
+                          <div className="flex items-center space-x-6 mb-4">
+                            <label className="flex items-center space-x-2">
+                              <input
+                                type="radio"
+                                name="delivery"
+                                className="form-radio text-cyan-600"
+                                defaultChecked
+                              />
+                              <span className="text-cyan-600 font-medium">
+                                Regular Delivery
+                              </span>
+                            </label>
+                            <label className="flex items-center space-x-2">
+                              <input
+                                type="radio"
+                                name="delivery"
+                                className="form-radio text-gray-600"
+                              />
+                              <span className="text-gray-700">
+                                Express Delivery
+                              </span>
+                            </label>
+                          </div>
+
+                          <div className="grid grid-cols-2 gap-4">
+                            <div className="space-y-4">
+                              <div className="text-sm font-medium text-cyan-700">
+                                INSIDE
+                              </div>
+                              <div className="text-sm font-medium text-cyan-700">
+                                OUTSIDE
+                              </div>
+                              <div className="text-sm font-medium text-cyan-700">
+                                SUBURB
+                              </div>
+                            </div>
+
+                            <div className="space-y-4">
+                              <input
+                                type="text"
+                                value="BDT 50.00"
+                                readOnly
+                                className="w-full px-3 py-2 border bg-gray-100 text-gray-800 rounded"
+                              />
+                              <input
+                                type="text"
+                                value="BDT 100.00"
+                                readOnly
+                                className="w-full px-3 py-2 border bg-gray-100 text-gray-800 rounded"
+                              />
+                              <input
+                                type="text"
+                                value="BDT 70.00"
+                                readOnly
+                                className="w-full px-3 py-2 border bg-gray-100 text-gray-800 rounded"
+                              />
+                            </div>
+                          </div>
                         </div>
-
-                       
-
-
                       </div>
                     </div>
                   </div>
@@ -426,16 +404,6 @@ const Customers = () => {
       )}
       {/* end product modal  */}
 
-      <div className="flex items-center justify-between mb-4">
-        <div className="flex space-x-4">
-          <button className="text-sm px-4 py-2 bg-teal-100 dark:bg-gray-800 text-blue-700 dark:text-blue-300 font-medium rounded">
-            Stock
-          </button>
-          <button className="text-sm px-4 py-2 text-gray-600 dark:text-gray-400">
-            Logs
-          </button>
-        </div>
-      </div>
       <div className="mt-8 flex justify-between p-3 border-gray-100 border dark:border-gray-800">
         <div className="flex items-center gap-5">
           <button className="bg-gray-50 dark:bg-gray-800 p-2">
@@ -452,24 +420,6 @@ const Customers = () => {
               />
             </svg>
           </button>
-
-          <div>
-            <button className="flex items-center gap-2 border border-gray-500 rounded px-3 py-1.5 text-sm">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5"
-                viewBox="0 0 15 15"
-              >
-                <path
-                  fill="currentColor"
-                  fillRule="evenodd"
-                  d="M2 4.5a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1h-10a.5.5 0 0 1-.5-.5m0 3a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m0 3a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 0 1h-8a.5.5 0 0 1-.5-.5"
-                  clipRule="evenodd"
-                />
-              </svg>
-              <span>Filter Column</span>
-            </button>
-          </div>
         </div>
         <div className="flex items-center space-x-1 text-sm">
           <button className="px-2 text-gray-500 dark:text-gray-400 rounded-midium ">
@@ -491,23 +441,19 @@ const Customers = () => {
           </button>
           <button className="px-2 dark:text-gray-400 bg-gray-100 text-gray-800 dark:bg-gray-800 border border-gray-200 dark:border-gray-800">
             2
-          </button>
+          </button>{" "}
           <button className="px-2 dark:text-gray-400 bg-gray-100 text-gray-800 dark:bg-gray-800 border border-gray-200 dark:border-gray-800">
             3
-          </button>
+          </button>{" "}
           <button className="px-2 dark:text-gray-400 bg-gray-100 text-gray-800 dark:bg-gray-800 border border-gray-200 dark:border-gray-800">
             4
-          </button>
-          <button className="px-2 dark:text-gray-400 bg-gray-100 text-gray-800 dark:bg-gray-800 border border-gray-200 dark:border-gray-800">
-            5
-          </button>
+          </button>{" "}
           <button className="px-2 dark:text-gray-400 bg-gray-100 text-gray-800 dark:bg-gray-800 border border-gray-200 dark:border-gray-800">
             ...
-          </button>
+          </button>{" "}
           <button className="px-2 dark:text-gray-400 bg-gray-100 text-gray-800 dark:bg-gray-800 border border-gray-200 dark:border-gray-800">
-            124
+            178
           </button>
-
           <button className="px-2 text-gray-500 dark:text-gray-400 ">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -529,17 +475,20 @@ const Customers = () => {
         <table className="min-w-full table-auto text-sm">
           <thead>
             <tr className="bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300">
-              <th className="ps-2 text-start text-[11px] m-0 p-0">id</th>
-              <th className="px-4 py-3 text-start text-[11px]">Contact</th>
-              <th className="px-4 py-3 text-start text-[11px]">Name</th>
-              <th className="px-4 py-3 text-start text-[11px]">Manager</th>
-              <th className="px-4 py-3 text-start text-[11px]">Location</th>
-              <th className="px-4 py-3 text-start text-[11px]">Orders</th>
-              <th className="px-4 py-3 text-start text-[11px]">Created At</th>
+              <th className="ps-2 text-start text-[11px] m-0 p-0">Lavel</th>
+              <th className="px-4 py-3 text-start text-[11px]">Type</th>
               <th className="px-4 py-3 text-start text-[11px]">
-                Last Order Date
+                Address
               </th>
-              <th className="px-4 py-3 text-start text-[11px]">Sms Count</th>
+              <th className="px-4 py-3 text-start text-[11px]">Internal ID</th>
+              <th className="px-4 py-3 text-start text-[11px]">Contact Person</th>
+              <th className="px-4 py-3 text-start text-[11px]">Phone Number</th>
+              <th className="px-4 py-3 text-start text-[11px]">
+                Cordinators
+              </th>
+              <th className="px-4 py-3 text-start text-[11px]">Usages</th>
+              <th className="px-4 py-3 text-start text-[11px]">Created At</th>
+              <th className="px-4 py-3 text-start text-[11px]">Action</th>
             </tr>
           </thead>
           <tbody>
@@ -549,39 +498,37 @@ const Customers = () => {
                 className="even:bg-gray-50 odd:bg-white dark:even:bg-gray-800 dark:odd:bg-gray-700"
               >
                 <td className="ps-2 text-start text-[10px] m-0 p-0 text-teal-400">
-                  {item.id} <br />{" "}
-                  <span className="text-gray-300">{item.ids}</span>
+                  {item.lavel} <br />{" "}
                 </td>
-                <td className="px-4 py-2 text-start text-[10px]">{item.sku}</td>
                 <td className="px-4 py-2 text-start text-[10px]">
-                  {item.name} <br />
-                  <span>
-                    tag:{" "}
-                    <span className="bg-gray-500 py-1 text-black px-1">
-                      {item.tag}
-                    </span>
-                  </span>
-                  <br />
-                  source:{" "}
-                  <span className="py-1 bg-teal-300 text-white">
-                    {item.source}
-                  </span>
+                  {/* <Image src="" alt="logo" height={40} width={35}></Image> */}
+                  {item.type}
                 </td>
-                <td className="px-4 py-2 text-start text-[10px] ">N/A</td>
-                <td className="px-4 py-2 text-start text-[10px] ">
-                  {item.totalWarehouses}
+                <td className="px-4 py-2 text-start text-[10px]">
+                  {item.address}
                 </td>
                 <td className="px-4 py-2 text-start text-[10px] ">
-                  {item.available}
+                  {item.internalId}
                 </td>
                 <td className="px-4 py-2 text-start text-[10px] ">
-                  {item.processing}
+                  {item.contactNumber}
                 </td>
                 <td className="px-4 py-2 text-start text-[10px] ">
-                  {item.transit}
+                  {item.phone}
+                </td>
+                <td className="px-4 py-2 text-start text-[10px] text-teal-500 ">
+                  {item.cordinates} <br />
+                  {item.codinate}
+                </td>
+                <td className="px-4 py-2 text-start text-[10px] text-white font-semibold">
+                  <span className="px-2 py-1 bg-teal-400 inline-block mb-2">{item.usages}</span> <br />
+                  <span className="px-2 py-1 bg-teal-400">{item.usage}</span>
+                </td>
+                <td className="px-4 py-2 text-start text-[10px] text-teal-500 ">
+                  {item.createdAt}
                 </td>
                 <td className="px-4 py-2 text-start text-[10px] ">
-                  {item.returning}
+                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-teal-500" viewBox="0 0 15 15"><path fill="currentColor" fillRule="evenodd" d="M12.146 1.146a.5.5 0 0 1 .707 0l2 2a.5.5 0 0 1 0 .708l-3.942 3.942a1 1 0 0 1-.26.188L6.724 9.947a.5.5 0 0 1-.671-.67l1.963-3.928a1 1 0 0 1 .188-.26zm.354 1.061l-3.59 3.59l-1.037 2.076l.254.254l2.077-1.038L13.793 3.5zM10 2L9 3H4.9c-.428 0-.72 0-.944.019c-.22.018-.332.05-.41.09a1 1 0 0 0-.437.437c-.04.078-.072.19-.09.41C3 4.18 3 4.472 3 4.9v6.2c0 .428 0 .72.019.944c.018.22.05.332.09.41a1 1 0 0 0 .437.437c.078.04.19.072.41.09c.225.019.516.019.944.019h6.2c.428 0 .72 0 .944-.019c.22-.018.332-.05.41-.09a1 1 0 0 0 .437-.437c.04-.078.072-.19.09-.41c.019-.225.019-.516.019-.944V7l1-1v5.12c0 .403 0 .735-.022 1.006c-.023.281-.072.54-.196.782a2 2 0 0 1-.874.874c-.243.124-.501.173-.782.196c-.27.022-.603.022-1.005.022H4.88c-.403 0-.735 0-1.006-.022c-.281-.023-.54-.072-.782-.196a2 2 0 0 1-.874-.874c-.124-.243-.173-.501-.196-.782C2 11.856 2 11.523 2 11.12V4.88c0-.403 0-.735.022-1.006c.023-.281.072-.54.196-.782a2 2 0 0 1 .874-.874c.243-.124.501-.173.782-.196C4.144 2 4.477 2 4.88 2z" clipRule="evenodd"/></svg>
                 </td>
               </tr>
             ))}
@@ -592,4 +539,4 @@ const Customers = () => {
   );
 };
 
-export default Customers;
+export default Locations;
