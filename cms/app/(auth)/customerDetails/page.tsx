@@ -18,7 +18,7 @@ const data = [
   { day: "Day 9", value: 0 },
   { day: "Day 10", value: 0 },
 ];
-import { Maximize2, RefreshCw, ChevronLeft, ChevronRight } from "lucide-react";
+import { Maximize2} from "lucide-react";
 
 export default function CustomerDetails() {
   return (
@@ -41,7 +41,7 @@ export default function CustomerDetails() {
         <div className=" bg-white rounded-md border border-gray-200 mb-6">
           <div className="p-3 grid grid-cols-1 md:grid-cols-12 gap-6">
             {/* Customer Basic Info */}
-            <div className="flex flex-col p-3 border border-gray-200 col-span-4">
+            <div className="flex flex-col p-3 col-span-4">
               <div>
                 <h2 className="text-gray-800 font-medium text-lg mb-3">
                   C-4912105
@@ -191,7 +191,7 @@ export default function CustomerDetails() {
   ></iframe>
                   <div className="absolute top-2 right-2">
                     <button className="bg-white p-1 rounded shadow">
-                      <Maximize2 className="w-4 h-4 text-gray-600" />
+                      <svg xmlns="http://www.w3.org/2000/svg" className="text-gray-600 h-4 w-4" viewBox="0 0 15 15"><path fill="currentColor" fillRule="evenodd" d="M1.85 7.5c0-2.835 2.21-5.65 5.65-5.65c2.778 0 4.152 2.056 4.737 3.15H10.5a.5.5 0 0 0 0 1h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-1 0v1.813C12.296 3.071 10.666.85 7.5.85C3.437.85.85 4.185.85 7.5s2.587 6.65 6.65 6.65c1.944 0 3.562-.77 4.714-1.942a6.8 6.8 0 0 0 1.428-2.167a.5.5 0 1 0-.925-.38a5.8 5.8 0 0 1-1.216 1.846c-.971.99-2.336 1.643-4.001 1.643c-3.44 0-5.65-2.815-5.65-5.65" clipRule="evenodd"/></svg>
                     </button>
                   </div>
                   <div className="absolute bottom-0 right-0 text-xs text-gray-600 bg-white p-1 w-full">
@@ -361,17 +361,17 @@ export default function CustomerDetails() {
           </div>
           <div className="p-6 flex items-center justify-between">
                       <button className="w-8 h-8 flex items-center justify-center text-white bg-teal-500 rounded-full">
-              <RefreshCw className="w-4 h-4" />
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 15 15"><path fill="currentColor" fillRule="evenodd" d="M1.903 7.297c0 3.044 2.207 5.118 4.686 5.547a.521.521 0 1 1-.178 1.027C3.5 13.367.861 10.913.861 7.297c0-1.537.699-2.745 1.515-3.663c.585-.658 1.254-1.193 1.792-1.602H2.532a.5.5 0 0 1 0-1h3a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0V2.686l-.001.002c-.572.43-1.27.957-1.875 1.638c-.715.804-1.253 1.776-1.253 2.97m11.108.406c0-3.012-2.16-5.073-4.607-5.533a.521.521 0 1 1 .192-1.024c2.874.54 5.457 2.98 5.457 6.557c0 1.537-.699 2.744-1.515 3.663c-.585.658-1.254 1.193-1.792 1.602h1.636a.5.5 0 1 1 0 1h-3a.5.5 0 0 1-.5-.5v-3a.5.5 0 1 1 1 0v1.845h.002c.571-.432 1.27-.958 1.874-1.64c.715-.803 1.253-1.775 1.253-2.97" clipRule="evenodd"/></svg>
             </button>
             <div className="flex items-center gap-1">
               <button className="w-8 h-8 flex items-center justify-center text-gray-400 border rounded-full">
-                <ChevronLeft className="w-4 h-4" />
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 15 15"><path fill="currentColor" fillRule="evenodd" d="M8.842 3.135a.5.5 0 0 1 .023.707L5.435 7.5l3.43 3.658a.5.5 0 0 1-.73.684l-3.75-4a.5.5 0 0 1 0-.684l3.75-4a.5.5 0 0 1 .707-.023" clipRule="evenodd"/></svg>
               </button>
               <button className="w-8 h-8 flex items-center justify-center text-white bg-teal-500 border border-teal-500 rounded-full">
                 1
               </button>
               <button className="w-8 h-8 flex items-center justify-center text-gray-400 border rounded-full">
-                <ChevronRight className="w-4 h-4" />
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 15 15"><path fill="currentColor" fillRule="evenodd" d="M6.158 3.135a.5.5 0 0 1 .707.023l3.75 4a.5.5 0 0 1 0 .684l-3.75 4a.5.5 0 1 1-.73-.684L9.566 7.5l-3.43-3.658a.5.5 0 0 1 .023-.707" clipRule="evenodd"/></svg>
               </button>
             </div>
 
