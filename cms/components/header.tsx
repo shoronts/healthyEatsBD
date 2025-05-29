@@ -53,7 +53,7 @@ export default function Header() {
     <header className="w-full px-4">
       <div className="h-16 my-3 mx-auto bg-white dark:bg-slate-800 border-b border-gray-200 dark:border-slate-700  flex items-center justify-between px-6 py-4 rounded-header transition-colors duration-200">
         <div className="flex items-center space-x-4">
-          <Link href="#" className="text-gray-300 hover:text-white">
+          <Link href="#" className="text-gray-300 hover:text-gray-700">
             
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -68,7 +68,7 @@ export default function Header() {
               />
             </svg>
           </Link>
-          <Link href="#" className="text-gray-300 hover:text-white">
+          <Link href="#" className="text-gray-300 hover:text-gray-700">
             
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -83,7 +83,7 @@ export default function Header() {
               />
             </svg>
           </Link>
-          <Link href="#" className="text-gray-300 hover:text-white">
+          <Link href="#" className="text-gray-300 hover:text-gray-700">
             
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -98,7 +98,7 @@ export default function Header() {
               />
             </svg>
           </Link>
-          <Link href="#" className="text-gray-300 hover:text-white">
+          <Link href="#" className="text-gray-300 hover:text-gray-700">
             
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -113,7 +113,7 @@ export default function Header() {
               />
             </svg>
           </Link>
-          <Link href="#" className="text-gray-300 hover:text-white">
+          <Link href="#" className="text-gray-300 hover:text-gray-700">
            
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -136,7 +136,7 @@ export default function Header() {
         >
           <div className="relative">
             <button
-              className="text-gray-400 hover:text-gray-100 dark:hover:text-white light:hover:text-gray-800 transition-colors"
+              className="text-gray-400 hover:text-gray-500 dark:hover:text-gray-700 light:hover:text-gray-800 transition-colors"
               onClick={toggleTheme}
               aria-label="Toggle theme"
             >
@@ -174,7 +174,7 @@ export default function Header() {
           <div className="relative">
             <button
               onClick={() => setSearchOpen(true)}
-              className="text-gray-300 hover:text-white"
+              className="text-gray-300 hover:text-gray-700"
             >
               
               <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 15 15"><path fill="currentColor" fillRule="evenodd" d="M10 6.5a3.5 3.5 0 1 1-7 0a3.5 3.5 0 0 1 7 0m-.691 3.516a4.5 4.5 0 1 1 .707-.707l2.838 2.837a.5.5 0 0 1-.708.708z" clipRule="evenodd"/></svg>
@@ -186,7 +186,7 @@ export default function Header() {
           <div className="relative">
             <button
               onClick={() => toggleDropdown("notifications")}
-              className="relative text-gray-300 hover:text-white"
+              className="relative text-gray-300 hover:text-gray-700"
             >
               
               <svg
@@ -379,7 +379,7 @@ export default function Header() {
               />
               <button
                 onClick={() => setSearchOpen(false)}
-                className="ml-2 text-gray-400 hover:text-white"
+                className="ml-2 text-gray-400 hover:text-gray-700"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 15 15"><path fill="currentColor" fillRule="evenodd" d="M11.782 4.032a.575.575 0 1 0-.813-.814L7.5 6.687L4.032 3.218a.575.575 0 0 0-.814.814L6.687 7.5l-3.469 3.468a.575.575 0 0 0 .814.814L7.5 8.313l3.469 3.469a.575.575 0 0 0 .813-.814L8.313 7.5z" clipRule="evenodd"/></svg>
               </button>

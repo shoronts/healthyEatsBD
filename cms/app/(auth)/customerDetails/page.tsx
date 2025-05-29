@@ -22,11 +22,11 @@ import { Maximize2} from "lucide-react";
 
 export default function CustomerDetails() {
   return (
-    <div className="bg-white min-h-screen p-3">
+    <div className="bg-white dark:bg-gray-900 min-h-screen p-3">
       <div className="mx-auto">
         {/* Header */}
         <div className="flex justify-between items-center mb-6">
-          <h1 className="text-xl font-bold text-gray-900">Customer Details</h1>
+          <h1 className="text-xl font-bold text-gray-900 dark:text-white">Customer Details</h1>
           <div className="flex gap-2">
             <button className="px-4 py-1.5 text-sm text-teal-600 border border-teal-600 rounded hover:bg-teal-50">
               Action
@@ -38,7 +38,7 @@ export default function CustomerDetails() {
         </div>
 
         {/* Top Section */}
-        <div className=" bg-white rounded-md border border-gray-200 mb-6">
+        <div className=" bg-white dark:bg-gray-900 rounded-md border border-gray-200 dark:border-gray-700 mb-6">
           <div className="p-3 grid grid-cols-1 md:grid-cols-12 gap-6">
             {/* Customer Basic Info */}
             <div className="flex flex-col p-3 col-span-4">
@@ -190,7 +190,7 @@ export default function CustomerDetails() {
     className="absolute inset-0 w-full h-full border-0"
   ></iframe>
                   <div className="absolute top-2 right-2">
-                    <button className="bg-white p-1 rounded shadow">
+                    <button className="bg-white dark:bg-gray-900 p-1 rounded shadow">
                       <svg xmlns="http://www.w3.org/2000/svg" className="text-gray-600 h-4 w-4" viewBox="0 0 15 15"><path fill="currentColor" fillRule="evenodd" d="M1.85 7.5c0-2.835 2.21-5.65 5.65-5.65c2.778 0 4.152 2.056 4.737 3.15H10.5a.5.5 0 0 0 0 1h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-1 0v1.813C12.296 3.071 10.666.85 7.5.85C3.437.85.85 4.185.85 7.5s2.587 6.65 6.65 6.65c1.944 0 3.562-.77 4.714-1.942a6.8 6.8 0 0 0 1.428-2.167a.5.5 0 1 0-.925-.38a5.8 5.8 0 0 1-1.216 1.846c-.971.99-2.336 1.643-4.001 1.643c-3.44 0-5.65-2.815-5.65-5.65" clipRule="evenodd"/></svg>
                     </button>
                   </div>
@@ -209,9 +209,9 @@ export default function CustomerDetails() {
             <div className="col-span-3">
               <div>
                 <div>
-                  <div className="bg-white rounded-md">
+                  <div className="bg-white dark:bg-gray-900 rounded-md">
                     <div className="p-4">
-                      <div className="flex items-center gap-2 border p-3 border-gray-100 rounded">
+                      <div className="flex items-center gap-2 border p-3 border-gray-100 dark:border-gray-700 rounded">
                         <div className=" bg-green-100 p-1 rounded-2xl">
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -237,7 +237,7 @@ export default function CustomerDetails() {
                       </div>
                     </div>
                     <div className="p-4">
-                      <div className="flex items-center gap-2 border p-3 border-gray-100 rounded">
+                      <div className="flex items-center gap-2 border p-3 border-gray-100 dark:border-gray-700 rounded">
                         <div className="bg-gray-100 p-1 rounded-2xl">
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -263,7 +263,7 @@ export default function CustomerDetails() {
                       </div>
                     </div>
                     <div className="p-4">
-                      <div className="flex items-center gap-2 border p-3 border-gray-100 rounded">
+                      <div className="flex items-center gap-2 border p-3 border-gray-100 dark:border-gray-700 rounded">
                         <div className="bg-red-100 p-1 rounded-2xl">
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -297,9 +297,9 @@ export default function CustomerDetails() {
         </div>
 
         {/* Charts Section */}
-            <div className="grid grid-cols-2 gap-6 p-6 bg-white rounded-lg shadow">
+            <div className="grid grid-cols-2 gap-6 p-6 bg-white dark:bg-gray-900 rounded-lg shadow">
               {/* Orders Chart */}
-              <div className="bg-white rounded-lg  p-4 shadow-sm">
+              <div className="bg-white rounded-lg dark:bg-gray-900  p-4 shadow-sm">
                 <div className="flex justify-between items-center mb-2">
                   <h2 className="text-sm font-semibold text-gray-700">Orders</h2>
                   <div className="flex space-x-2">
@@ -321,7 +321,7 @@ export default function CustomerDetails() {
               </div>
         
               {/* Sales Chart */}
-              <div className="bg-white rounded-lg border border-gray-200 p-4 shadow-sm">
+              <div className="bg-white rounded-lg dark:bg-gray-900 p-4 shadow-sm">
                 <div className="flex justify-between items-center mb-2">
                   <h2 className="text-sm font-semibold text-gray-700">Sales</h2>
                   <div className="flex space-x-2">
@@ -344,8 +344,8 @@ export default function CustomerDetails() {
             </div>
 
         {/* Order History Section */}
-        <div className="bg-white rounded-md border border-gray-300">
-          <div className="border border-b-gray-300">
+        <div className="bg-white dark:bg-gray-900 dark:border-gray-700 rounded-md border border-gray-300">
+          <div className="border border-b-gray-300 dark:border-gray-700">
             <div className="flex">
               <button className="px-4 py-3 text-sm text-teal-500 border-b-2 border-teal-500 font-medium">
                 Order History
