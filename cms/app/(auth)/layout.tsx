@@ -16,7 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.className} bg-white text-gray-900 dark:bg-slate-900 dark:text-white transition-colors duration-200`}
+        className={`${inter.className} text-gray-900 dark:text-white transition-colors duration-200 dark:bg-gray-900 bg-white`}
       >
         <ThemeProvider>
           <div className="flex min-h-screen">
@@ -24,7 +24,7 @@ export default function RootLayout({
               <Sidebar />
             </div>
             <div className="flex flex-col mx-auto w-full">
-              <div className="sticky top-0 z-50">
+              <div className="sticky top-0 z-50 mt-2">
               <Header />
             </div>
               {children}

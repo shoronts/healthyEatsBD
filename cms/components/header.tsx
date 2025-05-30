@@ -12,13 +12,24 @@ export default function Header() {
   const [notificationsOpen, setNotificationsOpen] = useState(false);
   const [languageOpen, setLanguageOpen] = useState(false);
   const [cartOpen, setCartOpen] = useState(false);
+     const notificationsRef = useRef<HTMLDivElement>(null);
+
 
   // Close dropdown when clicking outside
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
+      const target = event.target as Node;
+
+      if (
+        notificationsRef.current &&
+        !notificationsRef.current.contains(target)
+      ) {
+        setNotificationsOpen(false);
+      }
+
       if (
         dropdownRef.current &&
-        !dropdownRef.current.contains(event.target as Node)
+        !dropdownRef.current.contains(target)
       ) {
         setIsDropdownOpen(false);
       }
@@ -51,9 +62,9 @@ export default function Header() {
 
   return (
     <header className="w-full px-4">
-      <div className="h-16 my-3 mx-auto bg-white dark:bg-slate-800 border-b border-gray-200 dark:border-slate-700  flex items-center justify-between px-6 py-4 rounded-header transition-colors duration-200">
+      <div className="h-16 my-3 mx-auto bg-[#FFFFFF] dark:bg-slate-800 border-b border-gray-200 dark:border-slate-700  flex items-center justify-between px-6 py-4 rounded-header transition-colors duration-200 shadow-[rgba(0,_0,_0,_0.1)_0px_0px_5px_0px,_rgba(0,_0,_0,_0.1)_0px_0px_1px_0px] dark:shadow-none">
         <div className="flex items-center space-x-4">
-          <Link href="#" className="text-gray-300 hover:text-gray-700">
+          <Link href="#" className="dark:text-gray-300 hover:text-indigo-600 dark:hover:text-gray-100 text-gray-600">
             
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -68,7 +79,7 @@ export default function Header() {
               />
             </svg>
           </Link>
-          <Link href="#" className="text-gray-300 hover:text-gray-700">
+          <Link href="#" className="dark:text-gray-300 hover:text-indigo-600 dark:hover:text-gray-100 text-gray-600">
             
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -83,7 +94,7 @@ export default function Header() {
               />
             </svg>
           </Link>
-          <Link href="#" className="text-gray-300 hover:text-gray-700">
+          <Link href="#" className="dark:text-gray-300 hover:text-indigo-600 dark:hover:text-gray-100 text-gray-600">
             
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -98,7 +109,7 @@ export default function Header() {
               />
             </svg>
           </Link>
-          <Link href="#" className="text-gray-300 hover:text-gray-700">
+          <Link href="#" className="dark:text-gray-300 hover:text-indigo-600 dark:hover:text-gray-100 text-gray-600">
             
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -113,7 +124,7 @@ export default function Header() {
               />
             </svg>
           </Link>
-          <Link href="#" className="text-gray-300 hover:text-gray-700">
+          <Link href="#" className="dark:text-gray-300 hover:text-indigo-600 dark:hover:text-gray-100 text-gray-600">
            
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -136,7 +147,7 @@ export default function Header() {
         >
           <div className="relative">
             <button
-              className="text-gray-400 hover:text-gray-500 dark:hover:text-gray-700 light:hover:text-gray-800 transition-colors"
+              className="text-gray-400 hover:text-gray-500 dark:hover:text-indigo-600 dark:hover:text-gray-100 light:hover:text-gray-800 transition-colors"
               onClick={toggleTheme}
               aria-label="Toggle theme"
             >
@@ -174,7 +185,7 @@ export default function Header() {
           <div className="relative">
             <button
               onClick={() => setSearchOpen(true)}
-              className="text-gray-300 hover:text-gray-700"
+              className="dark:text-gray-300 hover:text-indigo-600 dark:hover:text-gray-100 text-gray-600"
             >
               
               <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 15 15"><path fill="currentColor" fillRule="evenodd" d="M10 6.5a3.5 3.5 0 1 1-7 0a3.5 3.5 0 0 1 7 0m-.691 3.516a4.5 4.5 0 1 1 .707-.707l2.838 2.837a.5.5 0 0 1-.708.708z" clipRule="evenodd"/></svg>
@@ -183,10 +194,10 @@ export default function Header() {
 
 
           {/* Notifications */}
-          <div className="relative">
-            <button
+          <div className="relative" ref={notificationsRef}>
+            <button 
               onClick={() => toggleDropdown("notifications")}
-              className="relative text-gray-300 hover:text-gray-700"
+              className="relative dark:text-gray-300 hover:text-indigo-600 dark:hover:text-gray-100 text-gray-600"
             >
               
               <svg
@@ -206,18 +217,18 @@ export default function Header() {
               </span>
             </button>
             {notificationsOpen && (
-              <div className="absolute right-0 top-full z-30 mt-2 w-96 rounded-md dark:bg-[#283046] bg-white py-2 shadow-lg">
-                <div className="w-full max-w-md dark:bg-[#283046] bg-white dark:text-white text-[#605A75] rounded-lg overflow-hidden">
+              <div className="absolute right-0 top-full z-30 mt-4 w-[420px] rounded dark:bg-[#1E293B] bg-white py-2 shadow-lg border border-gray-200 dark:border-gray-800">
+                <div className="w-full max-w-md dark:bg-[#1E293B] bg-white dark:text-white text-[#605A75] rounded-lg overflow-hidden">
                   {/* Header */}
-                  <div className="flex justify-between items-center p-5 border-b border-b-gray-300">
-                    <h2 className="text-xl font-medium">Notifications</h2>
-                    <span className="text-[#7367F0] font-medium">6 New</span>
+                  <div className="flex justify-between items-center p-3 border-b border-b-gray-200 dark:border-b dark:border-b-gray-700">
+                    <h2 className="text-xl text-gray-600 dark:text-gray-300">Notifications</h2>
+                    <span className="text-[#7367F0] text-[14px]">6 New</span>
                   </div>
 
                   {/* Notifications List */}
-                  <div className="divide-y divide-[#2a304a]">
+                  <div className="divide-y divide-gray-200 dark:divide-gray-700">
                     {/* Notification 1 */}
-                    <div className="flex items-start p-4 gap-3 border-b border-b-gray-300">
+                    <div className="flex items-start p-3 gap-3">
                       <div className="w-10 h-10 rounded-full bg-[#2a304a] overflow-hidden flex-shrink-0">
                         <img
                           src="/placeholder.svg?height=40&width=40"
@@ -227,20 +238,20 @@ export default function Header() {
                       </div>
                       <div className="flex-1">
                         <div className="flex items-center gap-1">
-                          <span className="font-medium">
+                          <span className="dark:text-gray-300 text-gray-600">
                             Congratulation Sam
                           </span>
                           <span>🎉</span>
                           <span className="text-[#7367F0]">winner!</span>
                         </div>
-                        <p className="text-xs text-gray-400">
+                        <p className="text-xs dark:text-gray-500 text-gray-400 font-light">
                           Won the monthly best seller badge.
                         </p>
                       </div>
                     </div>
 
                     {/* Notification 2 */}
-                    <div className="flex items-start p-4 gap-3">
+                    <div className="flex items-start p-3 gap-3">
                       <div className="w-10 h-10 rounded-full bg-[#2a304a] overflow-hidden flex-shrink-0">
                         <img
                           src="/placeholder.svg?height=40&width=40"
@@ -250,17 +261,17 @@ export default function Header() {
                       </div>
                       <div className="flex-1">
                         <div className="flex items-center gap-1">
-                          <span className="font-medium">New message</span>
+                          <span className="dark:text-gray-300 text-gray-600">New message</span>
                           <span className="text-[#7367F0]">received</span>
                         </div>
-                        <p className="text-xs text-gray-400">
+                        <p className="text-xs dark:text-gray-500 text-gray-400 font-light">
                           You have 10 unread messages
                         </p>
                       </div>
                     </div>
 
                     {/* Notification 3 */}
-                    <div className="flex items-start p-4 gap-3">
+                    <div className="flex items-start p-3 gap-3">
                       <div className="w-10 h-10 rounded-full bg-[#2a304a] overflow-hidden flex-shrink-0 flex items-center justify-center">
                         <span className="text-red-500 font-bold text-sm">
                           MD
@@ -268,51 +279,51 @@ export default function Header() {
                       </div>
                       <div className="flex-1">
                         <div className="flex items-center gap-1">
-                          <span className="font-medium">Revised Order</span>
+                          <span className="dark:text-gray-300 text-gray-600">Revised Order</span>
                           <span>👋</span>
                           <span className="text-[#7367F0]">checkout</span>
                         </div>
-                        <p className="text-xs text-gray-400">
+                        <p className="text-xs dark:text-gray-500 text-gray-400 font-light">
                           MD Inc. order updated
                         </p>
                       </div>
                     </div>
 
                     {/* System Notifications Header */}
-                    <div className="flex justify-between items-center p-4">
-                      <h3 className="font-medium">System Notifications</h3>
+                    <div className="flex justify-between items-center p-3">
+                      <h3 className="text-gray-300">System Notifications</h3>
                       <div className="w-12 h-6 bg-[#7367F0] rounded-full relative">
                         <div className="absolute right-1 top-1 w-4 h-4 bg-white rounded-full"></div>
                       </div>
                     </div>
 
                     {/* System Notification 1 */}
-                    <div className="flex items-start p-4 gap-3">
+                    <div className="flex items-start p-3 gap-3">
                       <div className="w-6 h-6 rounded-full bg-red-500/20 flex items-center justify-center flex-shrink-0">
                         <span className="text-red-500 text-xs">×</span>
                       </div>
                       <div className="flex-1">
                         <div className="flex items-center gap-1">
-                          <span className="font-medium">Server down</span>
+                          <span className="dark:text-gray-300 text-gray-600">Server down</span>
                           <span className="text-[#7367F0]">registered</span>
                         </div>
-                        <p className="text-xs text-gray-400">
+                        <p className="text-xs dark:text-gray-500 text-gray-400 font-light">
                           USA Server is down due to high CPU usage
                         </p>
                       </div>
                     </div>
 
                     {/* System Notification 2 */}
-                    <div className="flex items-start p-4 gap-3">
+                    <div className="flex items-start p-3 gap-3">
                       <div className="w-6 h-6 rounded-full bg-green-500/20 flex items-center justify-center flex-shrink-0">
                         <span className="text-green-500 text-xs">✓</span>
                       </div>
                       <div className="flex-1">
                         <div className="flex items-center gap-1">
-                          <span className="font-medium">Sales report</span>
+                          <span className="dark:text-gray-300 text-gray-600">Sales report</span>
                           <span className="text-[#7367F0]">generated</span>
                         </div>
-                        <p className="text-xs text-gray-400">
+                        <p className="text-xs dark:text-gray-500 text-gray-400 font-light">
                           Last month sales report generated
                         </p>
                       </div>
@@ -320,8 +331,8 @@ export default function Header() {
                   </div>
 
                   {/* Read All Button */}
-                  <div className="p-5">
-                    <button className="w-full py-3 bg-[#7367F0] text-white rounded-border font-medium">
+                  <div className="p-3">
+                    <button className="w-full py-2 bg-[#7367F0] rounded-border text-gray-300">
                       Read all notifications
                     </button>
                   </div>
@@ -379,7 +390,7 @@ export default function Header() {
               />
               <button
                 onClick={() => setSearchOpen(false)}
-                className="ml-2 text-gray-400 hover:text-gray-700"
+                className="ml-2 text-gray-400 hover:text-indigo-600 dark:hover:text-gray-100"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 15 15"><path fill="currentColor" fillRule="evenodd" d="M11.782 4.032a.575.575 0 1 0-.813-.814L7.5 6.687L4.032 3.218a.575.575 0 0 0-.814.814L6.687 7.5l-3.469 3.468a.575.575 0 0 0 .814.814L7.5 8.313l3.469 3.469a.575.575 0 0 0 .813-.814L8.313 7.5z" clipRule="evenodd"/></svg>
               </button>

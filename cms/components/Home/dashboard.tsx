@@ -17,7 +17,7 @@ export default function Dashboard() {
   const [dateRange] = useState("May 10, 2025 12:00 AM - May 10, 2025 11:59 PM")
 
   return (
-    <div className="container mx-auto p-4 space-y-6 bg-white text-gray-900 dark:bg-slate-900 dark:text-white transition-colors duration-200">
+    <div className="space-y-6 bg-white text-gray-900 dark:bg-slate-900 dark:text-white transition-colors duration-200 p-4">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <OrderCount />
         <SalesAmount />
