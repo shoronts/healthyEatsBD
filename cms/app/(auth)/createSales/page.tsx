@@ -91,7 +91,7 @@ const CreateSales = () => {
     );
   };
 
-  const removeItem = (id) => {
+  const removeItem = (id:any) => {
     setCartItems((items) => items.filter((item) => item.id !== id));
   };
 
@@ -100,7 +100,7 @@ const CreateSales = () => {
     0
   );
 
-  const addToCart = (product) => {
+  const addToCart = (produc:any) => {
     const existingItem = cartItems.find((item) => item.sku === product.sku);
     if (existingItem) {
       updateQuantity(existingItem.id, 1);
@@ -117,26 +117,26 @@ const CreateSales = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 grid grid-cols-12">
+    <div className="min-h-screen bg-gray-50 grid grid-cols-12 dark:bg-gray-900">
       {/* Left Side - Product Selection */}
       <div className="col-span-3 p-5">
-        <h1 className="text-xl font-semibold text-gray-800 mb-6">
+        <h1 className="text-xl font-semibold text-gray-800 mb-6 dark:text-gray-200">
           Create Sales Order
         </h1>
 
         {/* Customer Search */}
-        <div className="mb-6 border-2 p-2 bg-gray-100  border-t-red-300 border-l-red-300 border-b-gray-400 border-r-gray-400">
+        <div className="mb-6 border-2 p-2 bg-gray-100  border-t-red-300 border-l-red-300 border-b-gray-400 border-r-gray-400 dark:bg-gray-800">
             <label htmlFor="tel" className="text-[14px] font-light">search customer</label>
           <input
             type="tel"
             placeholder="Search Customer"
-            className="w-full p-3 border border-gray-100 rounded text-sm bg-gray-100"
+            className="w-full p-3 border border-gray-100 rounded text-sm bg-gray-100 dark:bg-gray-700"
             defaultValue="+880"
           />
         </div>
       </div>
       {/* middle side  */}
-      <div className="col-span-5 bg-white p-6">
+      <div className="col-span-5 bg-white p-6 dark:bg-gray-900">
          {/* Product Search */}
         <div className="mb-6 flex items-center gap-4">
           <div className="flex-1 relative p-2 bg-gray-100">
@@ -209,7 +209,7 @@ const CreateSales = () => {
       </div>
 
       {/* Right Side - Cart or Delivery */}
-      <div className="col-span-4 bg-white border-l border-gray-200">
+      <div className="col-span-4 bg-white border-l border-gray-200 dark:bg-gray-900">
         {currentView === "cart" ? (
           /* Cart View */
           <div className="p-6">

@@ -19,8 +19,63 @@ const data = [
   { day: "Day 10", value: 0 },
 ];
 import { Maximize2} from "lucide-react";
+import { useEffect, useRef, useState } from "react";
+import Link from "next/link";
 
 export default function CustomerDetails() {
+    const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+    const dropdownRef = useRef<HTMLDivElement>(null);
+    const [searchOpen, setSearchOpen] = useState(false);
+    const [notificationsOpen, setNotificationsOpen] = useState(false);
+    const [languageOpen, setLanguageOpen] = useState(false);
+    const [cartOpen, setCartOpen] = useState(false);
+       const notificationsRef = useRef<HTMLDivElement>(null);
+  
+  
+    // Close dropdown when clicking outside
+    useEffect(() => {
+      function handleClickOutside(event: MouseEvent) {
+        const target = event.target as Node;
+  
+        if (
+          notificationsRef.current &&
+          !notificationsRef.current.contains(target)
+        ) {
+          setNotificationsOpen(false);
+        }
+  
+        if (
+          dropdownRef.current &&
+          !dropdownRef.current.contains(target)
+        ) {
+          setIsDropdownOpen(false);
+        }
+      }
+  
+      document.addEventListener("mousedown", handleClickOutside);
+      return () => {
+        document.removeEventListener("mousedown", handleClickOutside);
+      };
+    }, []);
+    const closeAllDropdowns = () => {
+      setNotificationsOpen(false);
+      setLanguageOpen(false);
+      setCartOpen(false);
+    };
+    const toggleDropdown = (dropdown: string) => {
+      closeAllDropdowns();
+      switch (dropdown) {
+        case "notifications":
+          setNotificationsOpen(!notificationsOpen);
+          break;
+        case "language":
+          setLanguageOpen(!languageOpen);
+          break;
+        case "cart":
+          setCartOpen(!cartOpen);
+          break;
+      }
+    };
   return (
     <div className="bg-white dark:bg-gray-900 min-h-screen p-3">
       <div className="mx-auto">
@@ -28,7 +83,7 @@ export default function CustomerDetails() {
         <div className="flex justify-between items-center mb-6">
           <h1 className="text-xl font-bold text-gray-900 dark:text-white">Customer Details</h1>
           <div className="flex gap-2">
-            <button className="px-4 py-1.5 text-sm text-teal-600 border border-teal-600 rounded hover:bg-teal-50">
+            <button className="px-4 py-1.5 text-sm text-teal-600 border border-teal-600 rounded hover:bg-teal-50" onClick={() => setIsDropdownOpen(!isDropdownOpen)}>
               Action
             </button>
             <button className="px-4 py-1.5 text-sm text-white bg-teal-600 rounded hover:bg-teal-700">
@@ -36,7 +91,25 @@ export default function CustomerDetails() {
             </button>
           </div>
         </div>
+                  {isDropdownOpen && (
+            <div className="absolute right-0 top-28 w-48 mt-9 bg-white dark:bg-slate-800 rounded-md shadow-lg py-1 z-10 border border-gray-200 dark:border-slate-700 transition-all duration-200 transform origin-top-right mr-16">
+              <Link
+                href="/createSales"
+                className="flex items-center px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-slate-700"
+              >
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 32 32"><path fill="currentColor" d="M10 18h8v2h-8zm0-5h12v2H10zm0 10h5v2h-5z"/><path fill="currentColor" d="M25 5h-3V4a2 2 0 0 0-2-2h-8a2 2 0 0 0-2 2v1H7a2 2 0 0 0-2 2v21a2 2 0 0 0 2 2h18a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2M12 4h8v4h-8Zm13 24H7V7h3v3h12V7h3Z"/></svg>              
+                  Create Order
+              </Link>
 
+              <Link
+                href="/userProfile"
+                className="flex items-center px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-slate-700"
+              >
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 24 24"><path fill="currentColor" d="M11 13H5v-2h6V5h2v6h6v2h-6v6h-2z"/></svg>                
+                Export Sales Report
+              </Link>
+            </div>
+          )}
         {/* Top Section */}
         <div className=" bg-white dark:bg-gray-900 rounded-md border border-gray-200 dark:border-gray-700 mb-6">
           <div className="p-3 grid grid-cols-1 md:grid-cols-12 gap-6">

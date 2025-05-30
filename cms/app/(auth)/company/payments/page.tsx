@@ -20,7 +20,6 @@ export default function Payments() {
         <button className="mt-4 px-6 py-2 bg-teal-600 hover:bg-teal-700 text-white rounded">Change Plan</button>
         <div className="absolute inset-0 opacity-10 bg-[url('/bg-pattern.svg')] bg-no-repeat bg-center"></div>
       </div>
-
       {/* Collapsible sections (mock) */}
        <div className="mb-8 rounded">
         <div>

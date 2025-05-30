@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import React, { useState } from "react";
 
 const Customers = () => {
@@ -549,8 +550,8 @@ const Customers = () => {
                 className="even:bg-gray-50 odd:bg-white dark:even:bg-gray-800 dark:odd:bg-gray-700"
               >
                 <td className="ps-2 text-start text-[10px] m-0 p-0 text-teal-400">
-                  {item.id} <br />{" "}
-                  <span className="text-gray-300">{item.ids}</span>
+                  <Link href={"/customerDetails"}>{item.id} <br />{" "}</Link>
+                  <Link href={"/customerDetails"} className="text-gray-300">{item.ids}</Link>
                 </td>
                 <td className="px-4 py-2 text-start text-[10px]">{item.sku}</td>
                 <td className="px-4 py-2 text-start text-[10px]">
