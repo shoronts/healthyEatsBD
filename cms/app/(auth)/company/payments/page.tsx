@@ -1,10 +1,84 @@
 // import { FaEye } from 'react-icons/fa';
 "use client"
-
-import { useState } from "react";
+import { X, Check } from "lucide-react"
+import { useEffect, useRef, useState } from "react";
 
 export default function Payments() {
+
     const [openAccordion, setOpenAccordion] = useState(null);
+      const [showModal, setShowModal] = useState(false)
+  const [notificationsOpen, setNotificationsOpen] = useState(false);
+       const notificationsRef = useRef<HTMLDivElement>(null);
+       const modalRef = useRef<HTMLDivElement>(null);
+  // const dropdownRef = useRef<HTMLDivElement>(null);
+  
+    // Close dropdown when clicking outside
+    useEffect(() => {
+  function handleClickOutside(event: MouseEvent) {
+    if (modalRef.current && !modalRef.current.contains(event.target as Node)) {
+      setShowModal(false);
+    }
+  }
+
+  if (showModal) {
+    document.addEventListener("mousedown", handleClickOutside);
+  }
+
+  return () => {
+    document.removeEventListener("mousedown", handleClickOutside);
+  };
+}, [showModal]);
+
+
+  const plans = [
+    {
+      name: "Basic",
+      price: "1,430.00",
+      currency: "BDT",
+      period: "Monthly",
+      features: ["Up To 1,000 Sales Orders/month", "Up To 150 SKUs", "Up To 4 Users (Extra cost ৳200/user)"],
+      isActive: true,
+    },
+    {
+      name: "Pro",
+      price: "10,000.00",
+      currency: "BDT",
+      period: "Monthly",
+      features: [
+        "Up To 12,000 Sales Orders/month",
+        "Up To 100 Purchase Orders/month",
+        "Up To 1,000 SKUs",
+        "Up To 20 Users (Extra cost ৳200/user)",
+      ],
+      isActive: false,
+    },
+    {
+      name: "Advanced",
+      price: "15,000.00",
+      currency: "BDT",
+      period: "Monthly",
+      features: [
+        "Up To 20,000 Sales Orders/month",
+        "Up To 300 Purchase Orders/month",
+        "Up To 2,500 SKUs",
+        "Up To 35 Users (Extra cost ৳200/user)",
+      ],
+      isActive: false,
+    },
+    {
+      name: "Platinum",
+      price: "20,000.00",
+      currency: "BDT",
+      period: "Monthly",
+      features: [
+        "Up To 30,000 Sales Orders/month",
+        "Up To 1,000 Purchase Orders/month",
+        "Up To 5,000 SKUs",
+        "Up To 50 Users (Extra cost ৳200/user)",
+      ],
+      isActive: false,
+    },
+  ]
   
     const toggleAccordion = (id:any) => {
       setOpenAccordion(openAccordion === id ? null : id);
@@ -12,14 +86,101 @@ export default function Payments() {
   return (
     <div className="p-6 dark:bg-slate-900 bg-white rounded shadow">
       {/* Active Plan Section */}
-      <div className="border dark:border-gray-800 border-gray-100 rounded p-10 text-center mb-8 relative">
-        <h2 className="dark:text-gray-200 text-gray-700 mb-1 text-2xl font-semibold"> <span className="text-teal-700 font-semibold">Active Plan </span> (Basic):<span className="text-teal-700 font-semibold">BDT 1,430.00</span>/Month</h2>
-        <p className="text-[18px] font-semibold dark:text-gray-200 text-gray-600">Since July 18, 2024</p>
+       <div className="flex items-center justify-center  mb-8 p-10 border dark:border-gray-800 border-gray-100 rounded">
+        <div className="text-center text-gray-700">
+                  <h2 className="dark:text-gray-200 text-gray-700 mb-1 text-2xl font-semibold"> <span className="text-teal-700 font-semibold">Active Plan </span> (Basic):<span className="text-teal-700 font-semibold">BDT 1,430.00</span>/Month</h2>
+          <p className="text-[18px] font-semibold dark:text-gray-200 text-gray-600">Since July 18, 2024</p>
         <p className="text-[18px] font-semibold dark:text-gray-200 text-gray-600">Current Billing Cycle: <span className="font-light">April 18, '25 - May 18, '25</span></p>
         <p className="text-[18px] font-semibold dark:text-gray-200 text-gray-600">Latest Invoice Status: <span className="text-teal-700 font-semibold">Paid</span></p>
-        <button className="mt-4 px-6 py-2 bg-teal-600 hover:bg-teal-700 text-white rounded">Change Plan</button>
-        <div className="absolute inset-0 opacity-10 bg-[url('/bg-pattern.svg')] bg-no-repeat bg-center"></div>
+          <button
+            onClick={() => setShowModal(true)} 
+            className="bg-teal-600 hover:bg-teal-700 text-white px-6 py-2 rounded text-sm font-medium transition-colors"
+          >
+            Change Plan
+          </button>
+        </div>
       </div>
+
+            {/* Modal Overlay */}
+      {showModal && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+          <div className="bg-white rounded-lg shadow-xl max-w-[80%] w-full max-h-[90vh] overflow-y-auto mx-auto" ref={modalRef}>
+            {/* Modal Header */}
+            <div className="flex items-center justify-between p-6 border-b border-gray-200">
+              <h2 className="text-lg font-medium text-gray-800">Change Plan</h2>
+              <button
+                onClick={() => setShowModal(false)}
+                className="text-gray-400 hover:text-gray-600 transition-colors"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+
+            {/* Modal Content */}
+            <div className="p-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                {plans.map((plan, index) => (
+                  <div
+                    key={plan.name}
+                    className={`border rounded-lg p-6 relative ${
+                      plan.isActive ? "border-teal-500 bg-teal-50" : "border-gray-200"
+                    }`}
+                  >
+                    {/* Plan Header */}
+                    <div className="mb-4">
+                      <h3
+                        className={`text-lg font-medium mb-2 ${
+                          index === 0
+                            ? "text-teal-600"
+                            : index === 1
+                              ? "text-teal-600"
+                              : index === 2
+                                ? "text-teal-600"
+                                : "text-teal-600"
+                        }`}
+                      >
+                        {plan.name}
+                      </h3>
+                      <div className="text-gray-800">
+                        <span className="text-sm">{plan.currency} </span>
+                        <span className="text-xl font-semibold">{plan.price}</span>
+                        <span className="text-sm text-gray-600">/{plan.period}</span>
+                      </div>
+                    </div>
+
+                    {/* Features */}
+                    <div className="space-y-3 mb-6">
+                      {plan.features.map((feature, featureIndex) => (
+                        <div key={featureIndex} className="flex items-start gap-2">
+                          <Check className="w-4 h-4 text-gray-400 mt-0.5 flex-shrink-0" />
+                          <span className="text-sm text-gray-600">{feature}</span>
+                        </div>
+                      ))}
+                    </div>
+
+                    {/* Action Button */}
+                    <div className="mt-auto">
+                      {plan.isActive ? (
+                        <div className="flex items-center justify-center py-2">
+                          <span className="text-teal-600 font-medium text-sm flex items-center gap-1">
+                            <Check className="w-4 h-4" />
+                            Activated
+                          </span>
+                        </div>
+                      ) : (
+                        <button className="w-full bg-teal-600 hover:bg-teal-700 text-white py-2 px-4 rounded text-sm font-medium transition-colors">
+                          Upgrade
+                        </button>
+                      )}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
       {/* Collapsible sections (mock) */}
        <div className="mb-8 rounded">
         <div>
@@ -115,7 +276,7 @@ export default function Payments() {
           <div className="flex items-center gap-2">
             <button className="border dark:border-gray-800 border-gray-100 rounded px-2 py-1">⟳</button>
             <label>Show</label>
-            <select className="border dark:bg-gray-100 dark:border-gray-800 border-gray-100 rounded px-2 py-1">
+            <select className="border bg-gray-100 dark:bg-gray-700  dark:border-gray-800 border-gray-100 rounded px-2 py-1">
               <option>50</option>
               <option>100</option>
             </select>
@@ -127,200 +288,200 @@ export default function Payments() {
           <table className="w-full text-left border-t dark:border-gray-800 border-gray-100 text-sm">
             <thead className="dark:bg-slate-900 bg-gray-50">
               <tr>
-                <th className="p-2">Payment Date</th>
-                <th className="p-2">Payment Cycle</th>
-                <th className="p-2">Type</th>
-                <th className="p-2">Payment ID</th>
-                <th className="p-2">Transaction ID</th>
-                <th className="p-2">Bank Name</th>
-                <th className="p-2">Amount</th>
-                <th className="p-2">Card Type</th>
-                <th className="p-2">Card No.</th>
-                <th className="p-2">Issuer Bank Country</th>
-                <th className="p-2">Invoice Number</th>
-                <th className="p-2">Receipt</th>
+                <th className="p-2 text-[13px]">Payment Date</th>
+                <th className="p-2 text-[13px]">Payment Cycle</th>
+                <th className="p-2 text-[13px]">Type</th>
+                <th className="p-2 text-[13px]">Payment ID</th>
+                <th className="p-2 text-[13px]">Transaction ID</th>
+                <th className="p-2 text-[13px]">Bank Name</th>
+                <th className="p-2 text-[13px]">Amount</th>
+                <th className="p-2 text-[13px]">Card Type</th>
+                <th className="p-2 text-[13px]">Card No.</th>
+                <th className="p-2 text-[13px]">Issuer Bank Country</th>
+                <th className="p-2 text-[13px]">Invoice Number</th>
+                <th className="p-2 text-[13px]">Receipt</th>
               </tr>
             </thead>
             <tbody>
               <tr className="border-t dark:border-gray-800 border-gray-100">
-                <td className="p-2">6 May 2025<br /><span className="text-xs">12:36 PM</span></td>
-                <td className="p-2">Invalid date to Invalid date</td>
-                <td className="p-2">Upsell</td>
-                <td className="p-2">ee43da43-e8a1-4407-8c09-95ed4cc8358a</td>
-                <td className="p-2">CE63V8J01J</td>
-                <td className="p-2">Bkash Mobile Banking</td>
-                <td className="p-2">BDT 1,502.00</td>
-                <td className="p-2">-</td>
-                <td className="p-2">-</td>
-                <td className="p-2">-</td>
-                <td className="p-2 text-teal-600 cursor-pointer">B6AF9633-0011</td>
-                <td className="p-2"></td>
+                <td className="p-2 text-[12px]">6 May 2025<br /><span className="text-xs">12:36 PM</span></td>
+                <td className="p-2 text-[12px]">Invalid date to Invalid date</td>
+                <td className="p-2 text-[12px]">Upsell</td>
+                <td className="p-2 text-[12px]">ee43da43-e8a1-4407-8c09-95ed4cc8358a</td>
+                <td className="p-2 text-[12px]">CE63V8J01J</td>
+                <td className="p-2 text-[12px]">Bkash Mobile Banking</td>
+                <td className="p-2 text-[12px]">BDT 1,502.00</td>
+                <td className="p-2 text-[12px]">-</td>
+                <td className="p-2 text-[12px]">-</td>
+                <td className="p-2 text-[12px]">-</td>
+                <td className="p-2 text-[12px] text-teal-600 cursor-pointer">B6AF9633-0011</td>
+                <td className="p-2 text-[12px]"></td>
               </tr>
               {/* Example row */}
               <tr className="border-t dark:border-gray-800 border-gray-100">
-                <td className="p-2">25 April 2025<br /><span className="text-xs">8:34 PM</span></td>
-                <td className="p-2">18 Apr, '25 to 18 May, '25</td>
-                <td className="p-2">Subscription Renewal</td>
-                <td className="p-2">3b31961e-7c86-4090-acf3-2807b1ebf83b</td>
-                <td className="p-2">-</td>
-                <td className="p-2">-</td>
-                <td className="p-2">BDT 1,501.50</td>
-                <td className="p-2">-</td>
-                <td className="p-2">-</td>
-                <td className="p-2">-</td>
-                <td className="p-2 text-teal-600 cursor-pointer">B6AF9633-0010</td>
-                <td className="p-2"></td>
+                <td className="p-2 text-[12px]">25 April 2025<br /><span className="text-xs">8:34 PM</span></td>
+                <td className="p-2 text-[12px]">18 Apr, '25 to 18 May, '25</td>
+                <td className="p-2 text-[12px]">Subscription Renewal</td>
+                <td className="p-2 text-[12px]">3b31961e-7c86-4090-acf3-2807b1ebf83b</td>
+                <td className="p-2 text-[12px]">-</td>
+                <td className="p-2 text-[12px]">-</td>
+                <td className="p-2 text-[12px]">BDT 1,501.50</td>
+                <td className="p-2 text-[12px]">-</td>
+                <td className="p-2 text-[12px]">-</td>
+                <td className="p-2 text-[12px]">-</td>
+                <td className="p-2 text-[12px] text-teal-600 cursor-pointer">B6AF9633-0010</td>
+                <td className="p-2 text-[12px]"></td>
               </tr>
               {/* Repeat more rows as needed */}
               <tr className="border-t dark:border-gray-800 border-gray-100">
-                <td className="p-2">25 April 2025<br /><span className="text-xs">8:34 PM</span></td>
-                <td className="p-2">18 Apr, '25 to 18 May, '25</td>
-                <td className="p-2">Subscription Renewal</td>
-                <td className="p-2">3b31961e-7c86-4090-acf3-2807b1ebf83b</td>
-                <td className="p-2">-</td>
-                <td className="p-2">-</td>
-                <td className="p-2">BDT 1,501.50</td>
-                <td className="p-2">-</td>
-                <td className="p-2">-</td>
-                <td className="p-2">-</td>
-                <td className="p-2 text-teal-600 cursor-pointer">B6AF9633-0010</td>
-                <td className="p-2"></td>
+                <td className="p-2 text-[12px]">25 April 2025<br /><span className="text-xs">8:34 PM</span></td>
+                <td className="p-2 text-[12px]">18 Apr, '25 to 18 May, '25</td>
+                <td className="p-2 text-[12px]">Subscription Renewal</td>
+                <td className="p-2 text-[12px]">3b31961e-7c86-4090-acf3-2807b1ebf83b</td>
+                <td className="p-2 text-[12px]">-</td>
+                <td className="p-2 text-[12px]">-</td>
+                <td className="p-2 text-[12px]">BDT 1,501.50</td>
+                <td className="p-2 text-[12px]">-</td>
+                <td className="p-2 text-[12px]">-</td>
+                <td className="p-2 text-[12px]">-</td>
+                <td className="p-2 text-[12px] text-teal-600 cursor-pointer">B6AF9633-0010</td>
+                <td className="p-2 text-[12px]"></td>
               </tr>
 
               <tr className="border-t dark:border-gray-800 border-gray-100">
-                <td className="p-2">25 April 2025<br /><span className="text-xs">8:34 PM</span></td>
-                <td className="p-2">18 Apr, '25 to 18 May, '25</td>
-                <td className="p-2">Subscription Renewal</td>
-                <td className="p-2">3b31961e-7c86-4090-acf3-2807b1ebf83b</td>
-                <td className="p-2">-</td>
-                <td className="p-2">-</td>
-                <td className="p-2">BDT 1,501.50</td>
-                <td className="p-2">-</td>
-                <td className="p-2">-</td>
-                <td className="p-2">-</td>
-                <td className="p-2 text-teal-600 cursor-pointer">B6AF9633-0010</td>
-                <td className="p-2"></td>
+                <td className="p-2 text-[12px]">25 April 2025<br /><span className="text-xs">8:34 PM</span></td>
+                <td className="p-2 text-[12px]">18 Apr, '25 to 18 May, '25</td>
+                <td className="p-2 text-[12px]">Subscription Renewal</td>
+                <td className="p-2 text-[12px]">3b31961e-7c86-4090-acf3-2807b1ebf83b</td>
+                <td className="p-2 text-[12px]">-</td>
+                <td className="p-2 text-[12px]">-</td>
+                <td className="p-2 text-[12px]">BDT 1,501.50</td>
+                <td className="p-2 text-[12px]">-</td>
+                <td className="p-2 text-[12px]">-</td>
+                <td className="p-2 text-[12px]">-</td>
+                <td className="p-2 text-[12px] text-teal-600 cursor-pointer">B6AF9633-0010</td>
+                <td className="p-2 text-[12px]"></td>
               </tr>
 
               <tr className="border-t dark:border-gray-800 border-gray-100">
-                <td className="p-2">25 April 2025<br /><span className="text-xs">8:34 PM</span></td>
-                <td className="p-2">18 Apr, '25 to 18 May, '25</td>
-                <td className="p-2">Subscription Renewal</td>
-                <td className="p-2">3b31961e-7c86-4090-acf3-2807b1ebf83b</td>
-                <td className="p-2">-</td>
-                <td className="p-2">-</td>
-                <td className="p-2">BDT 1,501.50</td>
-                <td className="p-2">-</td>
-                <td className="p-2">-</td>
-                <td className="p-2">-</td>
-                <td className="p-2 text-teal-600 cursor-pointer">B6AF9633-0010</td>
-                <td className="p-2"></td>
+                <td className="p-2 text-[12px]">25 April 2025<br /><span className="text-xs">8:34 PM</span></td>
+                <td className="p-2 text-[12px]">18 Apr, '25 to 18 May, '25</td>
+                <td className="p-2 text-[12px]">Subscription Renewal</td>
+                <td className="p-2 text-[12px]">3b31961e-7c86-4090-acf3-2807b1ebf83b</td>
+                <td className="p-2 text-[12px]">-</td>
+                <td className="p-2 text-[12px]">-</td>
+                <td className="p-2 text-[12px]">BDT 1,501.50</td>
+                <td className="p-2 text-[12px]">-</td>
+                <td className="p-2 text-[12px]">-</td>
+                <td className="p-2 text-[12px]">-</td>
+                <td className="p-2 text-[12px] text-teal-600 cursor-pointer">B6AF9633-0010</td>
+                <td className="p-2 text-[12px]"></td>
               </tr>
 
               <tr className="border-t dark:border-gray-800 border-gray-100">
-                <td className="p-2">25 April 2025<br /><span className="text-xs">8:34 PM</span></td>
-                <td className="p-2">18 Apr, '25 to 18 May, '25</td>
-                <td className="p-2">Subscription Renewal</td>
-                <td className="p-2">3b31961e-7c86-4090-acf3-2807b1ebf83b</td>
-                <td className="p-2">-</td>
-                <td className="p-2">-</td>
-                <td className="p-2">BDT 1,501.50</td>
-                <td className="p-2">-</td>
-                <td className="p-2">-</td>
-                <td className="p-2">-</td>
-                <td className="p-2 text-teal-600 cursor-pointer">B6AF9633-0010</td>
-                <td className="p-2"></td>
+                <td className="p-2 text-[12px]">25 April 2025<br /><span className="text-xs">8:34 PM</span></td>
+                <td className="p-2 text-[12px]">18 Apr, '25 to 18 May, '25</td>
+                <td className="p-2 text-[12px]">Subscription Renewal</td>
+                <td className="p-2 text-[12px]">3b31961e-7c86-4090-acf3-2807b1ebf83b</td>
+                <td className="p-2 text-[12px]">-</td>
+                <td className="p-2 text-[12px]">-</td>
+                <td className="p-2 text-[12px]">BDT 1,501.50</td>
+                <td className="p-2 text-[12px]">-</td>
+                <td className="p-2 text-[12px]">-</td>
+                <td className="p-2 text-[12px]">-</td>
+                <td className="p-2 text-[12px] text-teal-600 cursor-pointer">B6AF9633-0010</td>
+                <td className="p-2 text-[12px]"></td>
               </tr>
 
               <tr className="border-t dark:border-gray-800 border-gray-100">
-                <td className="p-2">25 April 2025<br /><span className="text-xs">8:34 PM</span></td>
-                <td className="p-2">18 Apr, '25 to 18 May, '25</td>
-                <td className="p-2">Subscription Renewal</td>
-                <td className="p-2">3b31961e-7c86-4090-acf3-2807b1ebf83b</td>
-                <td className="p-2">-</td>
-                <td className="p-2">-</td>
-                <td className="p-2">BDT 1,501.50</td>
-                <td className="p-2">-</td>
-                <td className="p-2">-</td>
-                <td className="p-2">-</td>
-                <td className="p-2 text-teal-600 cursor-pointer">B6AF9633-0010</td>
-                <td className="p-2"></td>
+                <td className="p-2 text-[12px]">25 April 2025<br /><span className="text-xs">8:34 PM</span></td>
+                <td className="p-2 text-[12px]">18 Apr, '25 to 18 May, '25</td>
+                <td className="p-2 text-[12px]">Subscription Renewal</td>
+                <td className="p-2 text-[12px]">3b31961e-7c86-4090-acf3-2807b1ebf83b</td>
+                <td className="p-2 text-[12px]">-</td>
+                <td className="p-2 text-[12px]">-</td>
+                <td className="p-2 text-[12px]">BDT 1,501.50</td>
+                <td className="p-2 text-[12px]">-</td>
+                <td className="p-2 text-[12px]">-</td>
+                <td className="p-2 text-[12px]">-</td>
+                <td className="p-2 text-[12px] text-teal-600 cursor-pointer">B6AF9633-0010</td>
+                <td className="p-2 text-[12px]"></td>
               </tr>
 
 
               <tr className="border-t dark:border-gray-800 border-gray-100">
-                <td className="p-2">25 April 2025<br /><span className="text-xs">8:34 PM</span></td>
-                <td className="p-2">18 Apr, '25 to 18 May, '25</td>
-                <td className="p-2">Subscription Renewal</td>
-                <td className="p-2">3b31961e-7c86-4090-acf3-2807b1ebf83b</td>
-                <td className="p-2">-</td>
-                <td className="p-2">-</td>
-                <td className="p-2">BDT 1,501.50</td>
-                <td className="p-2">-</td>
-                <td className="p-2">-</td>
-                <td className="p-2">-</td>
-                <td className="p-2 text-teal-600 cursor-pointer">B6AF9633-0010</td>
-                <td className="p-2"></td>
+                <td className="p-2 text-[12px]">25 April 2025<br /><span className="text-xs">8:34 PM</span></td>
+                <td className="p-2 text-[12px]">18 Apr, '25 to 18 May, '25</td>
+                <td className="p-2 text-[12px]">Subscription Renewal</td>
+                <td className="p-2 text-[12px]">3b31961e-7c86-4090-acf3-2807b1ebf83b</td>
+                <td className="p-2 text-[12px]">-</td>
+                <td className="p-2 text-[12px]">-</td>
+                <td className="p-2 text-[12px]">BDT 1,501.50</td>
+                <td className="p-2 text-[12px]">-</td>
+                <td className="p-2 text-[12px]">-</td>
+                <td className="p-2 text-[12px]">-</td>
+                <td className="p-2 text-[12px] text-teal-600 cursor-pointer">B6AF9633-0010</td>
+                <td className="p-2 text-[12px]"></td>
               </tr>
 
               <tr className="border-t dark:border-gray-800 border-gray-100">
-                <td className="p-2">25 April 2025<br /><span className="text-xs">8:34 PM</span></td>
-                <td className="p-2">18 Apr, '25 to 18 May, '25</td>
-                <td className="p-2">Subscription Renewal</td>
-                <td className="p-2">3b31961e-7c86-4090-acf3-2807b1ebf83b</td>
-                <td className="p-2">-</td>
-                <td className="p-2">-</td>
-                <td className="p-2">BDT 1,501.50</td>
-                <td className="p-2">-</td>
-                <td className="p-2">-</td>
-                <td className="p-2">-</td>
-                <td className="p-2 text-teal-600 cursor-pointer">B6AF9633-0010</td>
-                <td className="p-2"></td>
+                <td className="p-2 text-[12px]">25 April 2025<br /><span className="text-xs">8:34 PM</span></td>
+                <td className="p-2 text-[12px]">18 Apr, '25 to 18 May, '25</td>
+                <td className="p-2 text-[12px]">Subscription Renewal</td>
+                <td className="p-2 text-[12px]">3b31961e-7c86-4090-acf3-2807b1ebf83b</td>
+                <td className="p-2 text-[12px]">-</td>
+                <td className="p-2 text-[12px]">-</td>
+                <td className="p-2 text-[12px]">BDT 1,501.50</td>
+                <td className="p-2 text-[12px]">-</td>
+                <td className="p-2 text-[12px]">-</td>
+                <td className="p-2 text-[12px]">-</td>
+                <td className="p-2 text-[12px] text-teal-600 cursor-pointer">B6AF9633-0010</td>
+                <td className="p-2 text-[12px]"></td>
               </tr>
 
               <tr className="border-t dark:border-gray-800 border-gray-100">
-                <td className="p-2">25 April 2025<br /><span className="text-xs">8:34 PM</span></td>
-                <td className="p-2">18 Apr, '25 to 18 May, '25</td>
-                <td className="p-2">Subscription Renewal</td>
-                <td className="p-2">3b31961e-7c86-4090-acf3-2807b1ebf83b</td>
-                <td className="p-2">-</td>
-                <td className="p-2">-</td>
-                <td className="p-2">BDT 1,501.50</td>
-                <td className="p-2">-</td>
-                <td className="p-2">-</td>
-                <td className="p-2">-</td>
-                <td className="p-2 text-teal-600 cursor-pointer">B6AF9633-0010</td>
-                <td className="p-2"></td>
+                <td className="p-2 text-[12px]">25 April 2025<br /><span className="text-xs">8:34 PM</span></td>
+                <td className="p-2 text-[12px]">18 Apr, '25 to 18 May, '25</td>
+                <td className="p-2 text-[12px]">Subscription Renewal</td>
+                <td className="p-2 text-[12px]">3b31961e-7c86-4090-acf3-2807b1ebf83b</td>
+                <td className="p-2 text-[12px]">-</td>
+                <td className="p-2 text-[12px]">-</td>
+                <td className="p-2 text-[12px]">BDT 1,501.50</td>
+                <td className="p-2 text-[12px]">-</td>
+                <td className="p-2 text-[12px]">-</td>
+                <td className="p-2 text-[12px]">-</td>
+                <td className="p-2 text-[12px] text-teal-600 cursor-pointer">B6AF9633-0010</td>
+                <td className="p-2 text-[12px]"></td>
               </tr>
 
               <tr className="border-t dark:border-gray-800 border-gray-100">
-                <td className="p-2">25 April 2025<br /><span className="text-xs">8:34 PM</span></td>
-                <td className="p-2">18 Apr, '25 to 18 May, '25</td>
-                <td className="p-2">Subscription Renewal</td>
-                <td className="p-2">3b31961e-7c86-4090-acf3-2807b1ebf83b</td>
-                <td className="p-2">-</td>
-                <td className="p-2">-</td>
-                <td className="p-2">BDT 1,501.50</td>
-                <td className="p-2">-</td>
-                <td className="p-2">-</td>
-                <td className="p-2">-</td>
-                <td className="p-2 text-teal-600 cursor-pointer">B6AF9633-0010</td>
-                <td className="p-2"></td>
+                <td className="p-2 text-[12px]">25 April 2025<br /><span className="text-xs">8:34 PM</span></td>
+                <td className="p-2 text-[12px]">18 Apr, '25 to 18 May, '25</td>
+                <td className="p-2 text-[12px]">Subscription Renewal</td>
+                <td className="p-2 text-[12px]">3b31961e-7c86-4090-acf3-2807b1ebf83b</td>
+                <td className="p-2 text-[12px]">-</td>
+                <td className="p-2 text-[12px]">-</td>
+                <td className="p-2 text-[12px]">BDT 1,501.50</td>
+                <td className="p-2 text-[12px]">-</td>
+                <td className="p-2 text-[12px]">-</td>
+                <td className="p-2 text-[12px]">-</td>
+                <td className="p-2 text-[12px] text-teal-600 cursor-pointer">B6AF9633-0010</td>
+                <td className="p-2 text-[12px]"></td>
               </tr>
 
               <tr className="border-t dark:border-gray-800 border-gray-100">
-                <td className="p-2">25 April 2025<br /><span className="text-xs">8:34 PM</span></td>
-                <td className="p-2">18 Apr, '25 to 18 May, '25</td>
-                <td className="p-2">Subscription Renewal</td>
-                <td className="p-2">3b31961e-7c86-4090-acf3-2807b1ebf83b</td>
-                <td className="p-2">-</td>
-                <td className="p-2">-</td>
-                <td className="p-2">BDT 1,501.50</td>
-                <td className="p-2">-</td>
-                <td className="p-2">-</td>
-                <td className="p-2">-</td>
-                <td className="p-2 text-teal-600 cursor-pointer">B6AF9633-0010</td>
-                <td className="p-2"></td>
+                <td className="p-2 text-[12px]">25 April 2025<br /><span className="text-xs">8:34 PM</span></td>
+                <td className="p-2 text-[12px]">18 Apr, '25 to 18 May, '25</td>
+                <td className="p-2 text-[12px]">Subscription Renewal</td>
+                <td className="p-2 text-[12px]">3b31961e-7c86-4090-acf3-2807b1ebf83b</td>
+                <td className="p-2 text-[12px]">-</td>
+                <td className="p-2 text-[12px]">-</td>
+                <td className="p-2 text-[12px]">BDT 1,501.50</td>
+                <td className="p-2 text-[12px]">-</td>
+                <td className="p-2 text-[12px]">-</td>
+                <td className="p-2 text-[12px]">-</td>
+                <td className="p-2 text-[12px] text-teal-600 cursor-pointer">B6AF9633-0010</td>
+                <td className="p-2 text-[12px]"></td>
               </tr>
 
 

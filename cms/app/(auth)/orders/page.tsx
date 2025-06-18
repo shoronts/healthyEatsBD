@@ -175,12 +175,12 @@ const [isModalOpen, setIsModalOpen] = useState(false);
                 <span className="text-white text-sm font-medium">S</span>
               </div>
               <button className="p-1 hover:bg-gray-100 rounded">
-                <div className='bg-white dark:bg-[#111827] border border-gray-100 h-8 w-8 flex items-center justify-center'>
+                <div className='bg-white dark:bg-[#111827] border border-gray-100 dark:border-gray-700  h-8 w-8 flex items-center justify-center'>
                  <svg xmlns="http://www.w3.org/2000/svg" className='h-5 w-5 text-teal-500' viewBox="0 0 15 15"><g fill="currentColor"><rect width="1" height="1" x="7" y="5.025" rx=".5"/><rect width="1" height="1" x="7" y="3.025" rx=".5"/><rect width="1" height="1" x="7" y="7.025" rx=".5"/><rect width="1" height="1" x="7" y="13.025" rx=".5"/><rect width="1" height="1" x="7" y="1.025" rx=".5"/><rect width="1" height="1" x="13" y="7.025" rx=".5"/><rect width="1" height="1" x="5" y="7.025" rx=".5"/><rect width="1" height="1" x="3" y="7.025" rx=".5"/><rect width="1" height="1" x="9" y="7.025" rx=".5"/><rect width="1" height="1" x="11" y="7.025" rx=".5"/><rect width="1" height="1" x="7" y="9.025" rx=".5"/><rect width="1" height="1" x="7" y="11.025" rx=".5"/><rect width="1" height="1" x="1" y="7.025" rx=".5"/><path fillRule="evenodd" d="M1 1.5a.5.5 0 0 1 .5-.5H6v1H2v4H1zM13 2H9V1h4.5a.5.5 0 0 1 .5.5V6h-1zM1 13.5V9h1v4h4v1H1.5a.5.5 0 0 1-.5-.5m12-.5V9h1v4.5a.5.5 0 0 1-.5.5h-4v-1z" clipRule="evenodd"/></g></svg>
                 </div>
               </button>
             </div>
-            <button className="px-4 py-1 text-teal-600 border border-gray-200 rounded hover:bg-gray-50 font-semibold">
+            <button className="px-4 py-1 text-teal-600 border border-gray-200 rounded hover:bg-gray-50 font-semibold dark:border-gray-700 ">
               Action
             </button>
             <button className="px-4 py-1 bg-teal-600 text-white rounded hover:bg-teal-700 font-semibold">
@@ -234,12 +234,12 @@ const [isModalOpen, setIsModalOpen] = useState(false);
       <div className="flex items-center justify-between px-6 py-4 bg-white dark:bg-[#111827] mx-6 mt-4 rounded border border-gray-200 dark:border-gray-700">
         <div className="flex items-center gap-4">
           <div className="flex items-center gap-2">
-            <button className="text-gray-400 hover:text-gray-600 border p-2 rounded border-gray-200">
+            <button className="text-gray-400 hover:text-gray-600 border p-2 rounded dark:border-gray-700  border-gray-200">
               <svg xmlns="http://www.w3.org/2000/svg" className='w-5 h-5' viewBox="0 0 15 15"><path fill="currentColor" fillRule="evenodd" d="M1.85 7.5c0-2.835 2.21-5.65 5.65-5.65c2.778 0 4.152 2.056 4.737 3.15H10.5a.5.5 0 0 0 0 1h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-1 0v1.813C12.296 3.071 10.666.85 7.5.85C3.437.85.85 4.185.85 7.5s2.587 6.65 6.65 6.65c1.944 0 3.562-.77 4.714-1.942a6.8 6.8 0 0 0 1.428-2.167a.5.5 0 1 0-.925-.38a5.8 5.8 0 0 1-1.216 1.846c-.971.99-2.336 1.643-4.001 1.643c-3.44 0-5.65-2.815-5.65-5.65" clipRule="evenodd"/></svg>
             </button>
             <button 
               onClick={() => setShowColumnFilter(!showColumnFilter)}
-              className="flex items-center gap-2 px-3 py-2 text-sm border border-gray-300 rounded hover:bg-gray-50"
+              className="flex items-center gap-2 px-3 py-2 text-sm border border-gray-300 dark:border-gray-700 rounded hover:bg-gray-50"
             >
               <Filter className="w-4 h-4" />
               Filter Column
@@ -359,7 +359,7 @@ const [isModalOpen, setIsModalOpen] = useState(false);
           <select 
             value={itemsPerPage}
             onChange={(e) => setItemsPerPage(Number(e.target.value))}
-            className="border bg-gray-200 dark:bg-gray-700 border-gray-300 rounded px-3 py-2 text-sm p-3"
+            className="border bg-gray-200 dark:bg-gray-700 border-gray-300 rounded px-3 py-2 text-sm p-3 dark:border-gray-700 "
           >
             <option value={50}>50</option>
             <option value={100}>100</option>
@@ -479,34 +479,34 @@ const [isModalOpen, setIsModalOpen] = useState(false);
                       <div className="flex flex-col items-center gap-2">
                         <div className="flex gap-2">
                           <button className="w-4 h-4 text-gray-400 hover:text-gray-600">
-                            <svg xmlns="http://www.w3.org/2000/svg" className='h-5 w-5 text-teal-700' viewBox="0 0 15 15"><path fill="currentColor" fillRule="evenodd" d="M7.5.877a6.623 6.623 0 1 0 0 13.246A6.623 6.623 0 0 0 7.5.877M1.827 7.5a5.673 5.673 0 1 1 11.346 0a5.673 5.673 0 0 1-11.346 0m6.423-3a.75.75 0 1 1-1.5 0a.75.75 0 0 1 1.5 0M6 6h1.5a.5.5 0 0 1 .5.5V10h1v1H6v-1h1V7H6z" clipRule="evenodd"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" className='h-4 w-4 text-teal-700' viewBox="0 0 15 15"><path fill="currentColor" fillRule="evenodd" d="M7.5.877a6.623 6.623 0 1 0 0 13.246A6.623 6.623 0 0 0 7.5.877M1.827 7.5a5.673 5.673 0 1 1 11.346 0a5.673 5.673 0 0 1-11.346 0m6.423-3a.75.75 0 1 1-1.5 0a.75.75 0 0 1 1.5 0M6 6h1.5a.5.5 0 0 1 .5.5V10h1v1H6v-1h1V7H6z" clipRule="evenodd"/></svg>
                           </button>
                           <button className="w-4 h-4 text-gray-400 hover:text-gray-600">
-                            <svg xmlns="http://www.w3.org/2000/svg" className='h-5 w-5 text-teal-700' viewBox="0 0 15 15"><path fill="currentColor" fillRule="evenodd" d="M12.146 1.146a.5.5 0 0 1 .707 0l2 2a.5.5 0 0 1 0 .708l-3.942 3.942a1 1 0 0 1-.26.188L6.724 9.947a.5.5 0 0 1-.671-.67l1.963-3.928a1 1 0 0 1 .188-.26zm.354 1.061l-3.59 3.59l-1.037 2.076l.254.254l2.077-1.038L13.793 3.5zM10 2L9 3H4.9c-.428 0-.72 0-.944.019c-.22.018-.332.05-.41.09a1 1 0 0 0-.437.437c-.04.078-.072.19-.09.41C3 4.18 3 4.472 3 4.9v6.2c0 .428 0 .72.019.944c.018.22.05.332.09.41a1 1 0 0 0 .437.437c.078.04.19.072.41.09c.225.019.516.019.944.019h6.2c.428 0 .72 0 .944-.019c.22-.018.332-.05.41-.09a1 1 0 0 0 .437-.437c.04-.078.072-.19.09-.41c.019-.225.019-.516.019-.944V7l1-1v5.12c0 .403 0 .735-.022 1.006c-.023.281-.072.54-.196.782a2 2 0 0 1-.874.874c-.243.124-.501.173-.782.196c-.27.022-.603.022-1.005.022H4.88c-.403 0-.735 0-1.006-.022c-.281-.023-.54-.072-.782-.196a2 2 0 0 1-.874-.874c-.124-.243-.173-.501-.196-.782C2 11.856 2 11.523 2 11.12V4.88c0-.403 0-.735.022-1.006c.023-.281.072-.54.196-.782a2 2 0 0 1 .874-.874c.243-.124.501-.173.782-.196C4.144 2 4.477 2 4.88 2z" clipRule="evenodd"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" className='h-4 w-4 text-teal-700' viewBox="0 0 15 15"><path fill="currentColor" fillRule="evenodd" d="M12.146 1.146a.5.5 0 0 1 .707 0l2 2a.5.5 0 0 1 0 .708l-3.942 3.942a1 1 0 0 1-.26.188L6.724 9.947a.5.5 0 0 1-.671-.67l1.963-3.928a1 1 0 0 1 .188-.26zm.354 1.061l-3.59 3.59l-1.037 2.076l.254.254l2.077-1.038L13.793 3.5zM10 2L9 3H4.9c-.428 0-.72 0-.944.019c-.22.018-.332.05-.41.09a1 1 0 0 0-.437.437c-.04.078-.072.19-.09.41C3 4.18 3 4.472 3 4.9v6.2c0 .428 0 .72.019.944c.018.22.05.332.09.41a1 1 0 0 0 .437.437c.078.04.19.072.41.09c.225.019.516.019.944.019h6.2c.428 0 .72 0 .944-.019c.22-.018.332-.05.41-.09a1 1 0 0 0 .437-.437c.04-.078.072-.19.09-.41c.019-.225.019-.516.019-.944V7l1-1v5.12c0 .403 0 .735-.022 1.006c-.023.281-.072.54-.196.782a2 2 0 0 1-.874.874c-.243.124-.501.173-.782.196c-.27.022-.603.022-1.005.022H4.88c-.403 0-.735 0-1.006-.022c-.281-.023-.54-.072-.782-.196a2 2 0 0 1-.874-.874c-.124-.243-.173-.501-.196-.782C2 11.856 2 11.523 2 11.12V4.88c0-.403 0-.735.022-1.006c.023-.281.072-.54.196-.782a2 2 0 0 1 .874-.874c.243-.124.501-.173.782-.196C4.144 2 4.477 2 4.88 2z" clipRule="evenodd"/></svg>
                           </button>
                           <button className="w-4 h-4 text-gray-400 hover:text-gray-600">
-                            <svg xmlns="http://www.w3.org/2000/svg" className='h-5 w-5 text-teal-700' viewBox="0 0 15 15"><path fill="currentColor" fillRule="evenodd" d="M5.5 1a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1zM3 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 0 1H11v8a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V4h-.5a.5.5 0 0 1-.5-.5M5 4h5v8H5z" clipRule="evenodd"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" className='h-4 w-4 text-teal-700' viewBox="0 0 15 15"><path fill="currentColor" fillRule="evenodd" d="M5.5 1a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1zM3 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 0 1H11v8a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V4h-.5a.5.5 0 0 1-.5-.5M5 4h5v8H5z" clipRule="evenodd"/></svg>
                           </button>
                           <button className="w-4 h-4 text-gray-400 hover:text-gray-600">
-                            <svg xmlns="http://www.w3.org/2000/svg" className='h-5 w-5 text-teal-700' viewBox="0 0 15 15"><path fill="currentColor" fillRule="evenodd" d="M1 9.5A1.5 1.5 0 0 0 2.5 11H4v-1H2.5a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5V4H5.5A1.5 1.5 0 0 0 4 5.5v7A1.5 1.5 0 0 0 5.5 14h7a1.5 1.5 0 0 0 1.5-1.5v-7A1.5 1.5 0 0 0 12.5 4H11V2.5A1.5 1.5 0 0 0 9.5 1h-7A1.5 1.5 0 0 0 1 2.5zm4-4a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5z" clipRule="evenodd"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" className='h-4 w-4 text-teal-700' viewBox="0 0 15 15"><path fill="currentColor" fillRule="evenodd" d="M1 9.5A1.5 1.5 0 0 0 2.5 11H4v-1H2.5a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5V4H5.5A1.5 1.5 0 0 0 4 5.5v7A1.5 1.5 0 0 0 5.5 14h7a1.5 1.5 0 0 0 1.5-1.5v-7A1.5 1.5 0 0 0 12.5 4H11V2.5A1.5 1.5 0 0 0 9.5 1h-7A1.5 1.5 0 0 0 1 2.5zm4-4a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5z" clipRule="evenodd"/></svg>
                           </button>
                         </div>
-                        <span className="text-[12px] font-medium text-teal-500">{order.invoiceNo}</span>
-                        <span className="px-2 py-1 text-xs text-yellow-400 rounded">website</span>
+                        <span className="text-[10px] font-medium text-teal-500">{order.invoiceNo}</span>
+                        <span className="px-2 py-1 text-[10px] text-yellow-400 rounded">website</span>
                       </div>
                     </td>
                   )}
                   {visibleColumns.date && (
                     <td className="px-4 py-4">
-                      <div className="text-sm">
-                        <div className="text-gray-900 dark:text-gray-200 font-semibold text-[12px]">Created <span className="font-light">{order.created}</span></div>
-                        <div className="text-gray-900 dark:text-gray-200 font-semibold text-[12px]">Shipping <span className="font-light">{order.shipping}</span></div>
+                      <div className="text-[11px]">
+                        <div className="text-gray-900 dark:text-gray-200 font-semibold text-[10px]">Created <span className="font-light">{order.created}</span></div>
+                        <div className="text-gray-900 dark:text-gray-200 font-semibold text-[10px]">Shipping <span className="font-light">{order.shipping}</span></div>
                       </div>
                     </td>
                   )}
                   {visibleColumns.customer && (
                     <td className="px-4 py-4">
-                      <div className="text-sm">
+                      <div className="text-[11px]">
                         <div className="font-medium text-teal-500">{order.customer}</div>
                         <div className='flex items-center gap-1'>
                            <span className={`inline-flex px-2 text-[11px] font-semibold rounded ${
@@ -529,29 +529,29 @@ const [isModalOpen, setIsModalOpen] = useState(false);
                   )}
                   {visibleColumns.pickUpAddress && (
                     <td className="px-4 py-4">
-                      <div className="text-sm">
-                        <span className="text-gray-700  font-medium bg-gray-100 p-1 rounded">{order.pickupLocation}</span>
+                      <div className="text-[11px]">
+                        <span className="text-gray-700  font-medium bg-gray-100 dark:bg-gray-700 dark:text-gray-300 p-1 rounded">{order.pickupLocation}</span>
                         <div className="text-teal-600">Healthy Eats</div>
                       </div>
                     </td>
                   )}
                   {visibleColumns.paymentsInfo && (
-                    <td className="px-4 py-4">
-                      <div className="text-sm">
-                        <div className='text-[12px] font-semibold'>Sales Amount: <span className="font-normal">{order.salesAmount}</span></div>
-                        <div className='text-[12px] font-semibold'>Paid Amount: <span className="font-normal">{order.paidAmount}</span></div>
-                        <div className='text-[12px] font-semibold'>Due Amount: <span className="font-normal">{order.dueAmount}</span></div>
+                    <td className="px-4 py-4 dark:text-gray-400">
+                      <div className="text-[11px]">
+                        <div className='text-[11px] font-semibold'>Sales Amount: <span className="font-normal">{order.salesAmount}</span></div>
+                        <div className='text-[11px] font-semibold'>Paid Amount: <span className="font-normal">{order.paidAmount}</span></div>
+                        <div className='text-[11px] font-semibold'>Due Amount: <span className="font-normal">{order.dueAmount}</span></div>
                       </div>
                     </td>
                   )}
                   {visibleColumns.deliveryPartner && (
                     <td className="px-4 py-4">
-                      <span className="text-[12px] text-teal-600 font-medium">{order.deliveryPartner}</span>
+                      <span className="text-[11px] text-teal-600 font-medium">{order.deliveryPartner}</span>
                     </td>
                   )}
                   {visibleColumns.deliveryFee && (
                     <td className="px-4 py-4">
-                      <div className="text-sm">
+                      <div className="text-[11px]">
                         <div className="font-medium text-gray-900 dark:text-gray-200">{order.deliveryFee}</div>
                         <span className="text-green-600 bg-teal-100 p-1 rounded">{order.priority}</span>
                       </div>

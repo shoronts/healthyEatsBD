@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Section</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        section {
+            font-family: 'Arial', sans-serif;
+            padding: 20px;
+        }
+
+        .video-section {
+            max-width: 1220px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .video-row {
+            display: grid;
+            grid-template-columns: repeat(5,1fr);
+            gap: 15px;
+            justify-content: space-between;
+        }
+
+        .video-card {
+            flex: 1;
+            min-width: 220px;
+            background: white;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .video-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+        }
+
+        .video-thumbnail {
+            position: relative;
+            width: 100%;
+            height: 500px;
+            overflow: hidden;
+        }
+
+        .video-thumbnail video {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .video-card:hover .video-thumbnail video {
+            transform: scale(1.05);
+        }
+
+        .video-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .overlay-title {
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            margin-bottom: 4px;
+        }
+
+        .overlay-subtitle {
+            color: white;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            text-align: center;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        .video-info {
+            padding: 15px;
+            text-align: center;
+        }
+
+        .video-title {
+            color: #87CEEB;
+            font-size: 14px;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .video-price {
+            color: #87CEEB;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .play-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 60px;
+            height: 60px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0.8;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            border: none;
+            z-index: 10;
+        }
+
+        .video-card:hover .play-button {
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1.1);
+        }
+
+        .play-button::before {
+            content: '';
+            width: 0;
+            height: 0;
+            border-left: 18px solid #333;
+            border-top: 12px solid transparent;
+            border-bottom: 12px solid transparent;
+            margin-left: 4px;
+        }
+
+        .video-paused .play-button::before {
+            border: none;
+            width: 4px;
+            height: 20px;
+            background: #333;
+            margin: 0 2px;
+            box-shadow: 8px 0 0 #333;
+        }
+
+        .video-container {
+            position: relative;
+            cursor: pointer;
+        }
+
+        .video-container video {
+            pointer-events: none;
+        }
+
+        /* Brand tag for last video */
+        .brand-tag {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(255, 255, 255, 0.9);
+            color: #333;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 10px;
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .video-row {
+                overflow-x: scroll;
+                -webkit-overflow-scrolling: touch;
+                scrollbar-width: none;
+                -ms-overflow-style: none;
+            }
+            
+            .video-row::-webkit-scrollbar {
+                display: none;
+            }
+            
+            .video-card {
+                min-width: 180px;
+            }
+        }
+    </style>
+</head>
+<body>
+  <section>
+      <div class="video-section">
+        <div class="video-row">
+            <!-- Video 1: Moong Harvest -->
+            <div class="video-card">
+                <div class="video-thumbnail">
+                    <div class="video-container">
+                        <video muted loop preload="metadata">
+                            <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4">
+                            <source src="https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="video-overlay">
+                            <div class="overlay-title">MOONG HARVEST</div>
+                            <div class="overlay-subtitle">Farm Scenes</div>
+                        </div>
+                        <button class="play-button" onclick="toggleVideo(this)"></button>
+                    </div>
+                </div>
+                <div class="video-info">
+                    <div class="video-title">Moring Cup 2Pcs</div>
+                    <div class="video-price">Price ৳ 99/-</div>
+                </div>
+            </div>
+
+            <!-- Video 2: Begun Posto -->
+            <div class="video-card">
+                <div class="video-thumbnail">
+                    <div class="video-container">
+                        <video muted loop preload="metadata">
+                            <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4" type="video/mp4">
+                            <source src="https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_2mb.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="video-overlay">
+                            <div class="overlay-title">BEGUN POSTO</div>
+                            <div class="overlay-subtitle">Eggplant cooked in poppy seeds</div>
+                        </div>
+                        <button class="play-button" onclick="toggleVideo(this)"></button>
+                    </div>
+                </div>
+                <div class="video-info">
+                    <div class="video-title">Moring Cup 2Pcs</div>
+                    <div class="video-price">Price ৳ 99/-</div>
+                </div>
+            </div>
+
+            <!-- Video 3: Nature Scene -->
+            <div class="video-card">
+                <div class="video-thumbnail">
+                    <div class="video-container">
+                        <video muted loop preload="metadata">
+                            <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4" type="video/mp4">
+                            <source src="https://sample-videos.com/zip/10/mp4/SampleVideo_640x360_1mb.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="video-overlay">
+                            <div class="overlay-title">NATURE</div>
+                            <div class="overlay-subtitle">Peaceful Moments</div>
+                        </div>
+                        <button class="play-button" onclick="toggleVideo(this)"></button>
+                    </div>
+                </div>
+                <div class="video-info">
+                    <div class="video-title">Moring Cup 2Pcs</div>
+                    <div class="video-price">Price ৳ 99/-</div>
+                </div>
+            </div>
+
+            <!-- Video 4: Food Scene -->
+            <div class="video-card">
+                <div class="video-thumbnail">
+                    <div class="video-container">
+                        <video muted loop preload="metadata">
+                            <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4" type="video/mp4">
+                            <source src="https://sample-videos.com/zip/10/mp4/SampleVideo_720x480_1mb.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="video-overlay">
+                            <div class="overlay-title">DELICIOUS</div>
+                            <div class="overlay-subtitle">Traditional Recipe</div>
+                        </div>
+                        <button class="play-button" onclick="toggleVideo(this)"></button>
+                    </div>
+                </div>
+                <div class="video-info">
+                    <div class="video-title">Moring Cup 2Pcs</div>
+                    <div class="video-price">Price ৳ 99/-</div>
+                </div>
+            </div>
+
+            <!-- Video 5: Branded Content -->
+            <div class="video-card">
+                <div class="video-thumbnail">
+                    <div class="video-container">
+                        <video muted loop preload="metadata">
+                            <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4" type="video/mp4">
+                            <source src="https://sample-videos.com/zip/10/mp4/SampleVideo_1920x1080_1mb.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="video-overlay">
+                            <div class="overlay-title">উৎসেৰ মোলক</div>
+                            <div class="overlay-subtitle">Premium Quality Product</div>
+                        </div>
+                        <div class="brand-tag">TWO BROTHERS</div>
+                        <button class="play-button" onclick="toggleVideo(this)"></button>
+                    </div>
+                </div>
+                <div class="video-info">
+                    <div class="video-title">Moring Cup 2Pcs</div>
+                    <div class="video-price">Price ৳ 99/-</div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+    
+    <script>
+        function toggleVideo(button) {
+            const videoContainer = button.parentElement;
+            const video = videoContainer.querySelector('video');
+            const overlay = videoContainer.querySelector('.video-overlay');
+            
+            if (video.paused) {
+                // Play video
+                video.play();
+                overlay.style.opacity = '0.3';
+                button.style.opacity = '0';
+                videoContainer.classList.add('video-playing');
+            } else {
+                // Pause video
+                video.pause();
+                overlay.style.opacity = '1';
+                button.style.opacity = '0.8';
+                videoContainer.classList.remove('video-playing');
+            }
+        }
+        
+        // Auto-pause when video ends
+        document.querySelectorAll('video').forEach(video => {
+            video.addEventListener('ended', function() {
+                const container = this.parentElement;
+                const overlay = container.querySelector('.video-overlay');
+                const button = container.querySelector('.play-button');
+                
+                overlay.style.opacity = '1';
+                button.style.opacity = '0.8';
+                container.classList.remove('video-playing');
+            });
+            
+            // Handle video loading
+            video.addEventListener('loadedmetadata', function() {
+                this.currentTime = 1; // Show a frame from the video instead of black screen
+            });
+        });
+        
+        // Pause all other videos when one starts playing
+        document.querySelectorAll('video').forEach(video => {
+            video.addEventListener('play', function() {
+                document.querySelectorAll('video').forEach(otherVideo => {
+                    if (otherVideo !== this && !otherVideo.paused) {
+                        otherVideo.pause();
+                        const otherContainer = otherVideo.parentElement;
+                        const otherOverlay = otherContainer.querySelector('.video-overlay');
+                        const otherButton = otherContainer.querySelector('.play-button');
+                        otherOverlay.style.opacity = '1';
+                        otherButton.style.opacity = '0.8';
+                        otherContainer.classList.remove('video-playing');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

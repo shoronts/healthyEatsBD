@@ -5,7 +5,7 @@ import Image from 'next/image';
 import shopify from '@/app/(auth)/assets/shopify.png';
 import magneto from '@/app/(auth)/assets/daraz.jpeg';
 import wooCommarce from '@/app/(auth)/assets/woo.jpeg';
-export default function Page() {
+export default function SettingsPage() {
   const [showApiKey, setShowApiKey] = useState(false);
   const [activeTab, setActiveTab] = useState('General Details');
   const [activeSubTab, setActiveSubTab] = useState('General');

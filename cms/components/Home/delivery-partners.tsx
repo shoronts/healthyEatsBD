@@ -8,7 +8,7 @@ interface DeliveryPartnersProps {
 
 export default function DeliveryPartners({ dateRange }: DeliveryPartnersProps) {
   return (
-    <div className=" dark:bg-[#0F172A] bg-white rounded-lg shadow p-4">
+    <div className=" dark:bg-gray-900 bg-white rounded-lg shadow p-4">
       <div className="flex justify-between items-center mb-4">
         <div className="flex items-center space-x-2">
           <h2 className="text-lg font-medium">Delivery Partners' Orders</h2>
@@ -17,12 +17,18 @@ export default function DeliveryPartners({ dateRange }: DeliveryPartnersProps) {
         </div>
         <div className="flex items-center space-x-2">
           <div className="text-xs text-gray-500">{dateRange}</div>
-          <button className="h-8 bg-gray-100 dark:bg-[#0F172A] text-xs border-0 rounded px-3 py-1 hover:bg-gray-200 focus:outline-none focus:ring-1 focus:ring-teal-500">
-            By In-Transit
-          </button>
-          <button className="h-8 bg-gray-100 dark:bg-[#0F172A] text-xs border-0 rounded px-3 py-1 hover:bg-gray-200 focus:outline-none focus:ring-1 focus:ring-teal-500">
-            Today
-          </button>
+            <select className="px-3 py-2 border-none dark:border-gray-700 rounded shadow-sm text-sm dark:bg-gray-800">
+      <option value="Last 7 Days">By-In-Transit</option>
+      <option value="Last 30 Days">Last 30 Days</option>
+      <option value="Last 6 Months">Last 6 Months</option>
+      <option value="Last Year">Last Year</option>
+    </select>
+    <select className="px-3 py-2 border-none dark:border-gray-700 rounded shadow-sm text-sm dark:bg-gray-800">
+      <option value="Daily">Today</option>
+      <option value="Weekly">Weekly</option>
+      <option value="Monthly">Monthly</option>
+      <option value="Yearly">Yearly</option>
+    </select>
         </div>
       </div>
 

@@ -3,6 +3,7 @@ import { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import { useTheme } from "@/context/theme-context";
 import Link from "next/link";
+import { HtmlContext } from "next/dist/server/route-modules/pages/vendored/contexts/entrypoints";
 
 export default function Header() {
   const { theme, toggleTheme } = useTheme();
@@ -12,7 +13,10 @@ export default function Header() {
   const [notificationsOpen, setNotificationsOpen] = useState(false);
   const [languageOpen, setLanguageOpen] = useState(false);
   const [cartOpen, setCartOpen] = useState(false);
+  const [link,setLink]=useState(false);
      const notificationsRef = useRef<HTMLDivElement>(null);
+     const serchRef = useRef<HTMLDivElement>(null);
+     const linkRef=useRef<HTMLDivElement>(null);
 
 
   // Close dropdown when clicking outside
@@ -33,6 +37,13 @@ export default function Header() {
       ) {
         setIsDropdownOpen(false);
       }
+
+      if (
+      serchRef.current &&
+      !serchRef.current.contains(target)
+    ) {
+      setSearchOpen(false);
+    }
     }
 
     document.addEventListener("mousedown", handleClickOutside);
@@ -147,7 +158,7 @@ export default function Header() {
         >
           <div className="relative">
             <button
-              className="text-gray-400 hover:text-gray-500 dark:hover:text-indigo-600 dark:hover:text-gray-100 light:hover:text-gray-800 transition-colors"
+              className="text-gray-400 hover:text-gray-500 dark:hover:text-indigo-600 light:hover:text-gray-800 transition-colors"
               onClick={toggleTheme}
               aria-label="Toggle theme"
             >
@@ -229,13 +240,6 @@ export default function Header() {
                   <div className="divide-y divide-gray-200 dark:divide-gray-700">
                     {/* Notification 1 */}
                     <div className="flex items-start p-3 gap-3">
-                      <div className="w-10 h-10 rounded-full bg-[#2a304a] overflow-hidden flex-shrink-0">
-                        <img
-                          src="/placeholder.svg?height=40&width=40"
-                          alt="Profile"
-                          className="w-full h-full object-cover"
-                        />
-                      </div>
                       <div className="flex-1">
                         <div className="flex items-center gap-1">
                           <span className="dark:text-gray-300 text-gray-600">
@@ -252,13 +256,6 @@ export default function Header() {
 
                     {/* Notification 2 */}
                     <div className="flex items-start p-3 gap-3">
-                      <div className="w-10 h-10 rounded-full bg-[#2a304a] overflow-hidden flex-shrink-0">
-                        <img
-                          src="/placeholder.svg?height=40&width=40"
-                          alt="Profile"
-                          className="w-full h-full object-cover"
-                        />
-                      </div>
                       <div className="flex-1">
                         <div className="flex items-center gap-1">
                           <span className="dark:text-gray-300 text-gray-600">New message</span>
@@ -272,11 +269,6 @@ export default function Header() {
 
                     {/* Notification 3 */}
                     <div className="flex items-start p-3 gap-3">
-                      <div className="w-10 h-10 rounded-full bg-[#2a304a] overflow-hidden flex-shrink-0 flex items-center justify-center">
-                        <span className="text-red-500 font-bold text-sm">
-                          MD
-                        </span>
-                      </div>
                       <div className="flex-1">
                         <div className="flex items-center gap-1">
                           <span className="dark:text-gray-300 text-gray-600">Revised Order</span>
@@ -289,19 +281,8 @@ export default function Header() {
                       </div>
                     </div>
 
-                    {/* System Notifications Header */}
-                    <div className="flex justify-between items-center p-3">
-                      <h3 className="text-gray-300">System Notifications</h3>
-                      <div className="w-12 h-6 bg-[#7367F0] rounded-full relative">
-                        <div className="absolute right-1 top-1 w-4 h-4 bg-white rounded-full"></div>
-                      </div>
-                    </div>
-
                     {/* System Notification 1 */}
                     <div className="flex items-start p-3 gap-3">
-                      <div className="w-6 h-6 rounded-full bg-red-500/20 flex items-center justify-center flex-shrink-0">
-                        <span className="text-red-500 text-xs">×</span>
-                      </div>
                       <div className="flex-1">
                         <div className="flex items-center gap-1">
                           <span className="dark:text-gray-300 text-gray-600">Server down</span>
@@ -315,9 +296,6 @@ export default function Header() {
 
                     {/* System Notification 2 */}
                     <div className="flex items-start p-3 gap-3">
-                      <div className="w-6 h-6 rounded-full bg-green-500/20 flex items-center justify-center flex-shrink-0">
-                        <span className="text-green-500 text-xs">✓</span>
-                      </div>
                       <div className="flex-1">
                         <div className="flex items-center gap-1">
                           <span className="dark:text-gray-300 text-gray-600">Sales report</span>
@@ -363,10 +341,10 @@ export default function Header() {
           </div>
 
           {/* Dropdown Menu */}
-          <div
+          <div ref={serchRef}
             className={`${
               searchOpen ? "opacity-100" : "pointer-events-none opacity-0"
-            } absolute left-0 top-0 z-20 flex h-16 w-full items-center bg-[#1a2036] px-4 transition-all duration-200 md:px-6`}
+            } absolute left-0 top-0 z-20 flex h-16 w-full items-center bg-gray-200 dark:bg-[#1a2036] px-4 transition-all duration-200 md:px-6`}
           >
             <div className="flex w-full items-center">
               
@@ -385,7 +363,7 @@ export default function Header() {
               <input
                 type="text"
                 placeholder="Explore..."
-                className="w-full bg-transparent text-white outline-none placeholder:text-gray-400"
+                className="w-full bg-transparent dark:text-white outline-none placeholder:text-gray-400 text-gray-700"
                 autoFocus={searchOpen}
               />
               <button
@@ -397,8 +375,9 @@ export default function Header() {
             </div>
           </div>
           {isDropdownOpen && (
-            <div className="absolute right-0 top-12 w-48 mt-9 bg-white dark:bg-slate-800 rounded-md shadow-lg py-1 z-10 border border-gray-200 dark:border-slate-700 transition-all duration-200 transform origin-top-right mr-16">
+            <div ref={dropdownRef} className="absolute right-0 top-12 w-48 mt-9 bg-white dark:bg-slate-800 rounded-md shadow-lg py-1 z-10 border border-gray-200 dark:border-slate-700 transition-all duration-200 transform origin-top-right mr-16">
               <Link
+              onClick={() => setIsDropdownOpen(false)}
                 href="/userProfile"
                 className="flex items-center px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-slate-700"
               >
@@ -407,6 +386,7 @@ export default function Header() {
                 Profile
               </Link>
               <Link
+              onClick={() => setIsDropdownOpen(false)}
                 href="http://localhost:3000/company"
                 className="flex items-center px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-slate-700"
               >
@@ -415,6 +395,7 @@ export default function Header() {
                Company Settings
               </Link>
                <Link
+              onClick={() => setIsDropdownOpen(false)}
                 href="http://localhost:3000/company/payments"
                 className="flex items-center px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-slate-700"
               >
@@ -422,6 +403,7 @@ export default function Header() {
                 payment
               </Link>
                <Link
+              onClick={() => setIsDropdownOpen(false)}
                 href="/whatsNew"
                 className="flex items-center px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-slate-700"
               >
@@ -429,6 +411,7 @@ export default function Header() {
                 Realease notes
               </Link>
                  <Link
+              onClick={() => setIsDropdownOpen(false)}
                 href="#"
                 className="flex items-center px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-slate-700"
               >
@@ -436,6 +419,7 @@ export default function Header() {
                 Help Desk
               </Link>
                  <Link
+              onClick={() => setIsDropdownOpen(false)}
                 href="#"
                 className="flex items-center px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-slate-700"
               >
@@ -444,6 +428,7 @@ export default function Header() {
               </Link>
               <div className="border-t border-gray-200 dark:border-slate-700 my-1"></div>
               <Link
+              onClick={() => setIsDropdownOpen(false)}
                 href="#"
                 className="flex items-center px-4 py-2 text-sm text-red-500 hover:bg-gray-100 dark:hover:bg-slate-700"
               >

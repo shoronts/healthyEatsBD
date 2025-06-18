@@ -2,7 +2,7 @@ import { InfoIcon } from "lucide-react"
 
 export default function SalesAmount() {
   return (
-    <div className="bg-white rounded-lg shadow p-4 text-gray-900 dark:bg-slate-900 dark:text-white transition-colors duration-200">
+    <div className="bg-teal-50 rounded-lg shadow dark:shadow-gray-800 p-4 text-gray-900 dark:bg-gray-900 dark:text-white transition-colors duration-200">
       <div className="flex justify-between items-center mb-4">
         <div className="flex items-center space-x-2">
           <h2 className="text-lg font-medium">Sales Amount</h2>

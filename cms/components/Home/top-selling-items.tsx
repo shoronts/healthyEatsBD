@@ -45,10 +45,10 @@ export default function TopSellingItems() {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
       {products.map((product) => (
-        <div key={product.id} className="border dark:border-gray-700 rounded-lg p-4 bg-white dark:bg-gray-900">
+        <div key={product.id} className="border border-gray-100 dark:border-gray-700 rounded-lg p-4 bg-white dark:bg-gray-900">
           <div className="flex justify-center mb-4">
             <Image
-              src={product.image || "/placeholder.svg"}
+              src={'/asseits/demo.png'}
               alt={product.name}
               width={100}
               height={100}

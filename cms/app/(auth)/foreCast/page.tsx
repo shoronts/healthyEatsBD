@@ -45,7 +45,7 @@ const ForeCast = () => {
             <select
               value={timeRange}
               onChange={(e) => setTimeRange(e.target.value)}
-              className="px-3 py-1 border rounded shadow-sm text-sm"
+              className="px-3 py-1 border rounded shadow-sm text-sm dark:bg-gray-800"
             >
               {timeOptions.map((opt) => (
                 <option key={opt} value={opt}>{opt}</option>
@@ -54,7 +54,7 @@ const ForeCast = () => {
             <select
               value={frequency}
               onChange={(e) => setFrequency(e.target.value)}
-              className="px-3 py-1 border rounded shadow-sm text-sm"
+              className="px-3 py-1 border rounded shadow-sm text-sm dark:bg-gray-800"
             >
               {frequencyOptions.map((opt) => (
                 <option key={opt} value={opt}>{opt}</option>
@@ -82,7 +82,7 @@ const ForeCast = () => {
             <select
               value={timeRange}
               onChange={(e) => setTimeRange(e.target.value)}
-              className="px-3 py-1 border rounded shadow-sm text-sm"
+              className="px-3 py-1 border rounded shadow-sm text-sm dark:bg-gray-800"
             >
               {timeOptions.map((opt) => (
                 <option key={opt} value={opt}>{opt}</option>
@@ -91,7 +91,7 @@ const ForeCast = () => {
             <select
               value={frequency}
               onChange={(e) => setFrequency(e.target.value)}
-              className="px-3 py-1 border rounded shadow-sm text-sm"
+              className="px-3 py-1 border rounded shadow-sm text-sm dark:bg-gray-800"
             >
               {frequencyOptions.map((opt) => (
                 <option key={opt} value={opt}>{opt}</option>
