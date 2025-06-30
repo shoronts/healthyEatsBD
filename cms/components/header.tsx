@@ -72,7 +72,7 @@ export default function Header() {
   };
 
   return (
-    <header className="w-full px-4">
+    <header className="w-full px-4 relative">
       <div className="h-16 my-3 mx-auto bg-[#FFFFFF] dark:bg-slate-800 border-b border-gray-200 dark:border-slate-700  flex items-center justify-between px-6 py-4 rounded-header transition-colors duration-200 shadow-[rgba(0,_0,_0,_0.1)_0px_0px_5px_0px,_rgba(0,_0,_0,_0.1)_0px_0px_1px_0px] dark:shadow-none">
         <div className="flex items-center space-x-4">
           <Link href="#" className="dark:text-gray-300 hover:text-indigo-600 dark:hover:text-gray-100 text-gray-600">
@@ -344,7 +344,7 @@ export default function Header() {
           <div ref={serchRef}
             className={`${
               searchOpen ? "opacity-100" : "pointer-events-none opacity-0"
-            } absolute left-0 top-0 z-20 flex h-16 w-full items-center bg-gray-200 dark:bg-[#1a2036] px-4 transition-all duration-200 md:px-6`}
+            } absolute top-0 z-20 flex h-16 items-center bg-gray-200 dark:bg-[#1a2036] transition-all duration-200 md:px-6 left-4 right-4 rounded-header`}
           >
             <div className="flex w-full items-center">
               
@@ -378,7 +378,7 @@ export default function Header() {
             <div ref={dropdownRef} className="absolute right-0 top-12 w-48 mt-9 bg-white dark:bg-slate-800 rounded-md shadow-lg py-1 z-10 border border-gray-200 dark:border-slate-700 transition-all duration-200 transform origin-top-right mr-16">
               <Link
               onClick={() => setIsDropdownOpen(false)}
-                href="/userProfile"
+                href="/profilepage"
                 className="flex items-center px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-slate-700"
               >
                 

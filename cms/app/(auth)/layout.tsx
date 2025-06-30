@@ -1,3 +1,4 @@
+
 import type React from "react";
 import { Inter } from "next/font/google";
 import "../globals.css";
@@ -15,9 +16,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${inter.className} text-gray-900 dark:text-white transition-colors duration-200 dark:bg-gray-900 bg-white`}
-      >
+      <body>
+        <div className="dark:text-white transition-colors duration-200 dark:bg-gray-900 bg-white">
+
         <ThemeProvider>
           <div className="flex min-h-screen">
             <div className="sticky top-0 h-screen">
@@ -32,6 +33,8 @@ export default function RootLayout({
             </div>
           </div>
         </ThemeProvider>
+        </div>
+
       </body>
     </html>
   );

@@ -1,5 +1,5 @@
 "use client";
-
+import { ChevronUp, ChevronDown, Lock, Users, User } from 'lucide-react';
 import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -12,6 +12,12 @@ export default function HeaderWithSidebar() {
   const handleToggle = () => setExpanded(!expanded);
   const shouldExpand = expanded || isHovering;
   const handleActive=()=>setActive(!active);
+   const [isOpen, setIsOpen] = useState(false);
+  const [selectedOption, setSelectedOption] = useState('Permission Groups');
+  const handleOptionSelect = (option: typeof options[0]) => {
+    setSelectedOption(option.label);
+    setIsOpen(false);
+  };
   return (
     <div className="flex h-screen">
       {/* Sidebar */}
@@ -248,16 +254,17 @@ export default function HeaderWithSidebar() {
               </Link>
             </li>
 
-                          <li>
-              <Link
-                href="/users"
-                 className={`flex items-center gap-3 py-3 px-4 text-slate-700 dark:text-gray-300 hover:bg-teal-900 hover:text-white hover:font-semibold dark:hover:bg-slate-700 transition-all  ${
-                  pathname === "/access"
+<li className="relative">
+  <button
+    onClick={() => setIsOpen(!isOpen)}
+    className={`flex items-center gap-3 py-3 px-4 text-slate-700 dark:text-gray-300 hover:bg-teal-900 hover:text-white hover:font-semibold dark:hover:bg-slate-700 transition-all w-full ${
+                  pathname === "/location"
                     ? "bg-teal-800 dark:bg-gray-700 text-white font-semibold "
                     : ""
                 }}`}
-              >
-                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 15 15"><path fill="currentColor" fillRule="evenodd" d="M7.499 0C6.326 0 5.36.39 4.738 1.194C4.238 1.839 4 2.682 4 3.634h1c0-.79.197-1.4.528-1.828c.388-.5 1.024-.806 1.97-.806c.859 0 1.465.265 1.86.686c.4.426.642 1.074.642 1.95V6H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h9a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1h-1V3.636c0-1.055-.293-1.974-.912-2.634C9.465.338 8.57 0 7.498 0M3 7h9v6H3z" clipRule="evenodd"/></svg>
+  >
+    <div className="flex items-center gap-3">
+     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 15 15"><path fill="currentColor" fillRule="evenodd" d="M7.499 0C6.326 0 5.36.39 4.738 1.194C4.238 1.839 4 2.682 4 3.634h1c0-.79.197-1.4.528-1.828c.388-.5 1.024-.806 1.97-.806c.859 0 1.465.265 1.86.686c.4.426.642 1.074.642 1.95V6H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h9a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1h-1V3.636c0-1.055-.293-1.974-.912-2.634C9.465.338 8.57 0 7.498 0M3 7h9v6H3z" clipRule="evenodd"/></svg>
                 <span
                   className={`transition-all duration-300 whitespace-nowrap ${
                     shouldExpand
@@ -267,12 +274,72 @@ export default function HeaderWithSidebar() {
                 >
                   Access
                 </span>
+    </div>
+    {isOpen ? (
+      <ChevronUp className="w-4 h-4 text-gray-500" />
+    ) : (
+      <ChevronDown className="w-4 h-4 text-gray-500" />
+    )}
+  </button>
+
+  {/* Dropdown inside same <li> */}
+  {isOpen && (
+    <div className="absolute top-full left-0 right-0 mt-1 bg-white dark:bg-slate-800  rounded-lg shadow-lg z-10 overflow-hidden border border-gray-100">
+       <Link
+                href="/permitions"
+                 className={`flex items-center gap-3 py-3 px-4 text-slate-700 dark:text-gray-300 hover:bg-teal-900 hover:text-white hover:font-semibold dark:hover:bg-slate-700 transition-all  ${
+                  pathname === "/products"
+                    ? "bg-teal-800 dark:bg-gray-700 text-white font-semibold "
+                    : ""
+                }}`}
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 24 24">
+  <path
+    fill="none"
+    stroke="currentColor"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    strokeWidth="1.5"
+    d="M17 19.5c0-1.657-2.239-3-5-3s-5 1.343-5 3m14-3c0-1.23-1.234-2.287-3-2.75M3 16.5c0-1.23 1.234-2.287 3-2.75m12-4.014a3 3 0 1 0-4-4.472M6 9.736a3 3 0 0 1 4-4.472m2 8.236a3 3 0 1 1 0-6a3 3 0 0 1 0 6"
+  />
+</svg>
+
+                <span
+                  className={`transition-all duration-300 whitespace-nowrap ${
+                    shouldExpand
+                      ? "opacity-100 w-auto"
+                      : "opacity-0 w-0 overflow-hidden"
+                  }`}
+                >
+                  Permition Group
+                </span>
               </Link>
-            </li>
 
+               <Link
+                href="/users"
+                 className={`flex items-center gap-3 py-3 px-4 text-slate-700 dark:text-gray-300 hover:bg-teal-900 hover:text-white hover:font-semibold dark:hover:bg-slate-700 transition-all  ${
+                  pathname === "/products"
+                    ? "bg-teal-800 dark:bg-gray-700 text-white font-semibold "
+                    : ""
+                }}`}
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" className='h-5 w-5' viewBox="0 0 24 24"><path fill="currentColor" d="M12 12q-1.65 0-2.825-1.175T8 8t1.175-2.825T12 4t2.825 1.175T16 8t-1.175 2.825T12 12m-8 6v-.8q0-.85.438-1.562T5.6 14.55q1.55-.775 3.15-1.162T12 13t3.25.388t3.15 1.162q.725.375 1.163 1.088T20 17.2v.8q0 .825-.587 1.413T18 20H6q-.825 0-1.412-.587T4 18m2 0h12v-.8q0-.275-.137-.5t-.363-.35q-1.35-.675-2.725-1.012T12 15t-2.775.338T6.5 16.35q-.225.125-.363.35T6 17.2zm6-8q.825 0 1.413-.587T14 8t-.587-1.412T12 6t-1.412.588T10 8t.588 1.413T12 10m0 8"/></svg>
+                <span
+                  className={`transition-all duration-300 whitespace-nowrap ${
+                    shouldExpand
+                      ? "opacity-100 w-auto"
+                      : "opacity-0 w-0 overflow-hidden"
+                  }`}
+                >
+                  Users
+                </span>
+              </Link>
+    </div>
+  )}
+</li>
 
-            
           </ul>
+
         </nav>
       </div>
     </div>

@@ -15,7 +15,7 @@ export default function Page() {
 
   return (
     <div className="bg-gray-50 dark:bg-gray-900 min-h-screen p-6">
-      <div className="max-w-3xl bg-white dark:bg-gray-900 rounded-lg shadow-sm">
+      <div className="max-w-4xl bg-white dark:bg-gray-900 rounded-lg shadow-sm">
         {/* Main Tabs */}
 
         {/* Sub Tabs */}
@@ -178,12 +178,26 @@ export default function Page() {
                   </div>
                   <div className="flex items-center">
                     <span className="mr-2 text-xs text-gray-500">Disabled</span>
-                    <div className="relative">
-                      <input type="checkbox" className="sr-only" />
-                      <div className="w-10 h-6 bg-gray-300 rounded-full cursor-pointer">
-                        <div className="w-5 h-5 bg-white rounded-full shadow transform translate-x-0.5 translate-y-0.5"></div>
-                      </div>
-                    </div>
+                     <div className="relative inline-block">
+      <input
+        type="checkbox"
+        className="sr-only"
+        checked={isOn}
+        onChange={toggleSwitch}
+      />
+      <div
+        onClick={toggleSwitch}
+        className={`w-10 h-6 rounded-full cursor-pointer transition-colors duration-300 ${
+          isOn ? "bg-green-500" : "bg-gray-300"
+        }`}
+      >
+        <div
+          className={`w-5 h-5 bg-white rounded-full shadow transition-transform duration-300 transform ${
+            isOn ? "translate-x-5" : "translate-x-0.5"
+          } translate-y-0.5`}
+        ></div>
+      </div>
+    </div>
                   </div>
                 </div>
                 <input
@@ -378,14 +392,26 @@ export default function Page() {
                     Sync Product Price 
                     <span className="ml-1 text-gray-400">ⓘ</span>
                   </label>
-                  <div className="flex items-center">
-                    <div className="relative flex-1">
-                      <input type="checkbox" className="sr-only" />
-                      <div className="w-10 h-6 bg-gray-300 rounded-full cursor-pointer">
-                        <div className="w-5 h-5 bg-white rounded-full shadow transform translate-x-0.5 translate-y-0.5"></div>
-                      </div>
-                    </div>
-                  </div>
+                  <div className="relative inline-block">
+      <input
+        type="checkbox"
+        className="sr-only"
+        checked={isOn}
+        onChange={toggleSwitch}
+      />
+      <div
+        onClick={toggleSwitch}
+        className={`w-10 h-6 rounded-full cursor-pointer transition-colors duration-300 ${
+          isOn ? "bg-green-500" : "bg-gray-300"
+        }`}
+      >
+        <div
+          className={`w-5 h-5 bg-white rounded-full shadow transition-transform duration-300 transform ${
+            isOn ? "translate-x-5" : "translate-x-0.5"
+          } translate-y-0.5`}
+        ></div>
+      </div>
+    </div>
                 </div>
               </div>
 
@@ -411,9 +437,9 @@ export default function Page() {
                 <h3 className="text-lg font-medium text-gray-900 mb-6">E-Commerce Feature Flags</h3>
                 
                 {/* First Row */}
-                <div className="grid grid-cols-4 gap-6 mb-6">
+                <div className="grid grid-cols-3 gap-6 mb-6">
                   {/* Delivery Success Rate */}
-                  <div>
+                  <div className='border border-gray-200 dark:border-gray-800 p-5'>
                     <div className="flex items-center mb-3">
                       <span className="text-sm font-medium text-gray-700">Delivery Success Rate</span>
                       <span className="ml-1 text-gray-400">ⓘ</span>
@@ -421,15 +447,29 @@ export default function Page() {
                     <div className="mb-3">
                       <span className="text-xs text-gray-600">Enabled</span>
                       <div className="flex items-center mt-1">
-                        <div className="relative">
-                          <input type="checkbox" className="sr-only" checked readOnly />
-                          <div className="w-10 h-6 bg-blue-500 rounded-full cursor-pointer">
-                            <div className="w-5 h-5 bg-white rounded-full shadow transform translate-x-4 translate-y-0.5"></div>
-                          </div>
-                        </div>
+                         <div className="relative inline-block">
+      <input
+        type="checkbox"
+        className="sr-only"
+        checked={isOn}
+        onChange={toggleSwitch}
+      />
+      <div
+        onClick={toggleSwitch}
+        className={`w-10 h-6 rounded-full cursor-pointer transition-colors duration-300 ${
+          isOn ? "bg-green-500" : "bg-gray-300"
+        }`}
+      >
+        <div
+          className={`w-5 h-5 bg-white rounded-full shadow transition-transform duration-300 transform ${
+            isOn ? "translate-x-5" : "translate-x-0.5"
+          } translate-y-0.5`}
+        ></div>
+      </div>
+    </div>
                       </div>
                     </div>
-                    <div className="space-y-2">
+                    <div className="flex gap-3 items-center">
                       <label className="flex items-center">
                         <input
                           type="radio"
@@ -451,7 +491,7 @@ export default function Page() {
                   </div>
 
                   {/* Purchase & Vendor */}
-                  <div>
+                  <div className='border border-gray-200 dark:border-gray-800 p-5'>
                     <div className="flex items-center mb-3">
                       <span className="text-sm font-medium text-gray-700">Purchase & Vendor</span>
                       <span className="ml-1 text-gray-400">ⓘ</span>
@@ -470,7 +510,7 @@ export default function Page() {
                   </div>
 
                   {/* Expenses */}
-                  <div>
+                  <div className='border border-gray-200 dark:border-gray-800 p-5'>
                     <div className="flex items-center mb-3">
                       <span className="text-sm font-medium text-gray-700">Expenses</span>
                       <span className="ml-1 text-gray-400">ⓘ</span>
@@ -494,7 +534,7 @@ export default function Page() {
                 {/* Second Row */}
                 <div className="grid grid-cols-4 gap-6 mb-6">
                   {/* Inventory */}
-                  <div>
+                  <div className='border border-gray-200 dark:border-gray-800 p-5'>
                     <div className="flex items-center mb-3">
                       <span className="text-sm font-medium text-gray-700">Inventory</span>
                       <span className="ml-1 text-gray-400">ⓘ</span>
@@ -502,15 +542,29 @@ export default function Page() {
                     <div className="mb-3">
                       <span className="text-xs text-gray-600">Enabled</span>
                       <div className="flex items-center mt-1">
-                        <div className="relative">
-                          <input type="checkbox" className="sr-only" checked readOnly />
-                          <div className="w-10 h-6 bg-blue-500 rounded-full cursor-pointer">
-                            <div className="w-5 h-5 bg-white rounded-full shadow transform translate-x-4 translate-y-0.5"></div>
-                          </div>
-                        </div>
+                         <div className="relative inline-block">
+      <input
+        type="checkbox"
+        className="sr-only"
+        checked={isOn}
+        onChange={toggleSwitch}
+      />
+      <div
+        onClick={toggleSwitch}
+        className={`w-10 h-6 rounded-full cursor-pointer transition-colors duration-300 ${
+          isOn ? "bg-green-500" : "bg-gray-300"
+        }`}
+      >
+        <div
+          className={`w-5 h-5 bg-white rounded-full shadow transition-transform duration-300 transform ${
+            isOn ? "translate-x-5" : "translate-x-0.5"
+          } translate-y-0.5`}
+        ></div>
+      </div>
+    </div>
                       </div>
                     </div>
-                    <div className="space-y-2">
+                    <div className="flex gap-3 items-center">
                       <label className="flex items-center">
                         <input
                           type="radio"
@@ -532,7 +586,7 @@ export default function Page() {
                   </div>
 
                   {/* Understocked Inventory */}
-                  <div>
+                  <div className='border border-gray-200 dark:border-gray-800 p-5'>
                     <div className="flex items-center mb-3">
                       <span className="text-sm font-medium text-gray-700">Understocked Inventory</span>
                       <span className="ml-1 text-gray-400">ⓘ</span>
@@ -540,18 +594,32 @@ export default function Page() {
                     <div className="mb-3">
                       <span className="text-xs text-gray-600">Enabled</span>
                       <div className="flex items-center mt-1">
-                        <div className="relative">
-                          <input type="checkbox" className="sr-only" checked readOnly />
-                          <div className="w-10 h-6 bg-blue-500 rounded-full cursor-pointer">
-                            <div className="w-5 h-5 bg-white rounded-full shadow transform translate-x-4 translate-y-0.5"></div>
-                          </div>
-                        </div>
+                         <div className="relative inline-block">
+      <input
+        type="checkbox"
+        className="sr-only"
+        checked={isOn}
+        onChange={toggleSwitch}
+      />
+      <div
+        onClick={toggleSwitch}
+        className={`w-10 h-6 rounded-full cursor-pointer transition-colors duration-300 ${
+          isOn ? "bg-green-500" : "bg-gray-300"
+        }`}
+      >
+        <div
+          className={`w-5 h-5 bg-white rounded-full shadow transition-transform duration-300 transform ${
+            isOn ? "translate-x-5" : "translate-x-0.5"
+          } translate-y-0.5`}
+        ></div>
+      </div>
+    </div>
                       </div>
                     </div>
                   </div>
 
                   {/* Forecast */}
-                  <div>
+                  <div className='border border-gray-200 dark:border-gray-800 p-5'>
                     <div className="flex items-center mb-3">
                       <span className="text-sm font-medium text-gray-700">Forecast</span>
                       <span className="ml-1 text-gray-400">ⓘ</span>
@@ -559,18 +627,32 @@ export default function Page() {
                     <div className="mb-3">
                       <span className="text-xs text-gray-600">Enabled</span>
                       <div className="flex items-center mt-1">
-                        <div className="relative">
-                          <input type="checkbox" className="sr-only" checked readOnly />
-                          <div className="w-10 h-6 bg-blue-500 rounded-full cursor-pointer">
-                            <div className="w-5 h-5 bg-white rounded-full shadow transform translate-x-4 translate-y-0.5"></div>
-                          </div>
-                        </div>
+                         <div className="relative inline-block">
+      <input
+        type="checkbox"
+        className="sr-only"
+        checked={isOn}
+        onChange={toggleSwitch}
+      />
+      <div
+        onClick={toggleSwitch}
+        className={`w-10 h-6 rounded-full cursor-pointer transition-colors duration-300 ${
+          isOn ? "bg-green-500" : "bg-gray-300"
+        }`}
+      >
+        <div
+          className={`w-5 h-5 bg-white rounded-full shadow transition-transform duration-300 transform ${
+            isOn ? "translate-x-5" : "translate-x-0.5"
+          } translate-y-0.5`}
+        ></div>
+      </div>
+    </div>
                       </div>
                     </div>
                   </div>
 
                   {/* Insights */}
-                  <div>
+                  <div className='border border-gray-200 dark:border-gray-800 p-5'>
                     <div className="flex items-center mb-3">
                       <span className="text-sm font-medium text-gray-700">Insights</span>
                       <span className="ml-1 text-gray-400">ⓘ</span>
@@ -766,12 +848,26 @@ export default function Page() {
                     <div className="mb-4">
                       <span className="text-xs text-gray-600">Enabled</span>
                       <div className="flex items-center mt-1">
-                        <div className="relative">
-                          <input type="checkbox" className="sr-only" checked readOnly />
-                          <div className="w-10 h-6 bg-blue-500 rounded-full cursor-pointer">
-                            <div className="w-5 h-5 bg-white rounded-full shadow transform translate-x-4 translate-y-0.5"></div>
-                          </div>
-                        </div>
+                         <div className="relative inline-block">
+      <input
+        type="checkbox"
+        className="sr-only"
+        checked={isOn}
+        onChange={toggleSwitch}
+      />
+      <div
+        onClick={toggleSwitch}
+        className={`w-10 h-6 rounded-full cursor-pointer transition-colors duration-300 ${
+          isOn ? "bg-green-500" : "bg-gray-300"
+        }`}
+      >
+        <div
+          className={`w-5 h-5 bg-white rounded-full shadow transition-transform duration-300 transform ${
+            isOn ? "translate-x-5" : "translate-x-0.5"
+          } translate-y-0.5`}
+        ></div>
+      </div>
+    </div>
                       </div>
                     </div>
                     
