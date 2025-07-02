@@ -1,9 +1,8 @@
 "use client";
-import { useTheme } from "@/context/theme-context";
+import { ThemeToggle } from "@/context/theme-tougle";
 import Link from "next/link";
 
 export default function Footer() {
-  const { theme } = useTheme();
 
   return (
     <footer className="">

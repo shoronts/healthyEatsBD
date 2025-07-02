@@ -1,7 +1,7 @@
 "use client"
 
 import Image from "next/image"
-
+import productsss from "@/components/Home/asseits/demo.png"
 const products = [
   {
     id: 1,
@@ -48,11 +48,10 @@ export default function TopSellingItems() {
         <div key={product.id} className="border border-gray-100 dark:border-gray-700 rounded-lg p-4 bg-white dark:bg-gray-900">
           <div className="flex justify-center mb-4">
             <Image
-              src={'/asseits/demo.png'}
+              src={productsss}
               alt={product.name}
               width={100}
-              height={100}
-              className="object-contain"
+              height={50}
             />
           </div>
           <div className="space-y-2">

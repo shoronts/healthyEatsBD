@@ -27,7 +27,7 @@ export default function Dashboard() {
 
       <TrendCharts />
 
-      <OrderWorkflow dateRange={dateRange} />
+      {/* <OrderWorkflow dateRange={dateRange} /> */}
 
       <OrderSource dateRange={dateRange} />
 

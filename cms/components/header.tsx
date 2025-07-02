@@ -1,12 +1,13 @@
 "use client";
 import { useState, useRef, useEffect } from "react";
 import Image from "next/image";
-import { useTheme } from "@/context/theme-context";
+import { useTheme } from "next-themes";
 import Link from "next/link";
 import { HtmlContext } from "next/dist/server/route-modules/pages/vendored/contexts/entrypoints";
+import { ClientOnly } from "@/context/client-only";
 
 export default function Header() {
-  const { theme, toggleTheme } = useTheme();
+  const { theme, setTheme } = useTheme();
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
   const [searchOpen, setSearchOpen] = useState(false);
@@ -157,9 +158,10 @@ export default function Header() {
           ref={dropdownRef}
         >
           <div className="relative">
+            <ClientOnly>
             <button
               className="text-gray-400 hover:text-gray-500 dark:hover:text-indigo-600 light:hover:text-gray-800 transition-colors"
-              onClick={toggleTheme}
+              onClick={()=>setTheme(theme==="light"?"dark":"light")}
               aria-label="Toggle theme"
             >
               {theme === "dark" ? (
@@ -192,6 +194,7 @@ export default function Header() {
                 </svg>
               )}
             </button>
+            </ClientOnly>
           </div>
           <div className="relative">
             <button
